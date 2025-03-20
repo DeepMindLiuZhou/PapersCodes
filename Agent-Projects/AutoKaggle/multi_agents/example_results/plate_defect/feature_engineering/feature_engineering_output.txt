@@ -1,0 +1,84 @@
+Feature importance for Pastry:
+                  Feature  Importance
+23      Orientation_Index    0.047909
+15           Square_Index    0.036047
+16        Outside_X_Index    0.036007
+14            Empty_Index    0.033897
+11     Length_of_Conveyer    0.033659
+9   Minimum_of_Luminosity    0.032800
+0                      id    0.032750
+24       Luminosity_Index    0.031236
+13            Edges_Index    0.029271
+28              X_Y_Ratio    0.028973
+Feature importance for Z_Scratch:
+                  Feature  Importance
+11     Length_of_Conveyer    0.122734
+12  Steel_Plate_Thickness    0.067995
+32            X_Maximum^2    0.042333
+35    X_Minimum*X_Maximum    0.037800
+2               X_Maximum    0.036971
+14            Empty_Index    0.030631
+1               X_Minimum    0.030611
+39  TypeOfSteel_A300_True    0.028614
+31            X_Minimum^2    0.026711
+40  TypeOfSteel_A400_True    0.025033
+Feature importance for K_Scatch:
+                    Feature  Importance
+26                  X_Range    0.110899
+6               X_Perimeter    0.081002
+5              Pixels_Areas    0.078096
+29  Luminosity_Area_Product    0.073553
+16          Outside_X_Index    0.073073
+37    Log_Sum_of_Luminosity    0.063001
+20               LogOfAreas    0.058766
+25           SigmoidOfAreas    0.058587
+21              Log_X_Index    0.046516
+38         Log_Pixels_Areas    0.036771
+Feature importance for Stains:
+                    Feature  Importance
+20               LogOfAreas    0.093742
+29  Luminosity_Area_Product    0.086134
+38         Log_Pixels_Areas    0.082061
+5              Pixels_Areas    0.072528
+25           SigmoidOfAreas    0.052921
+37    Log_Sum_of_Luminosity    0.051900
+8         Sum_of_Luminosity    0.041229
+12    Steel_Plate_Thickness    0.040861
+7               Y_Perimeter    0.039001
+22              Log_Y_Index    0.033109
+Feature importance for Dirtiness:
+                 Feature  Importance
+23     Orientation_Index    0.043985
+13           Edges_Index    0.043499
+15          Square_Index    0.039530
+0                     id    0.035805
+17         Edges_X_Index    0.034542
+35   X_Minimum*X_Maximum    0.032032
+24      Luminosity_Index    0.031572
+14           Empty_Index    0.030905
+30  Perimeter_Area_Ratio    0.030178
+28             X_Y_Ratio    0.030068
+Feature importance for Bumps:
+                    Feature  Importance
+23        Orientation_Index    0.033430
+14              Empty_Index    0.032655
+15             Square_Index    0.032452
+11       Length_of_Conveyer    0.031253
+13              Edges_Index    0.031230
+29  Luminosity_Area_Product    0.030647
+24         Luminosity_Index    0.030472
+9     Minimum_of_Luminosity    0.030020
+0                        id    0.029386
+22              Log_Y_Index    0.028999
+Feature importance for Other_Faults:
+                  Feature  Importance
+14            Empty_Index    0.035385
+0                      id    0.035373
+9   Minimum_of_Luminosity    0.032967
+26                X_Range    0.032401
+24       Luminosity_Index    0.031961
+28              X_Y_Ratio    0.031473
+13            Edges_Index    0.031016
+30   Perimeter_Area_Ratio    0.029168
+12  Steel_Plate_Thickness    0.028942
+17          Edges_X_Index    0.028508

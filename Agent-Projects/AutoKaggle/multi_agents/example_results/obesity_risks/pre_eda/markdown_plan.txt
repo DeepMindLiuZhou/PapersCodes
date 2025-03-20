@@ -1,0 +1,62 @@
+## PLAN
+
+### STEP 1
+**Task:** Load and Inspect the Data
+
+**Tools, involved features and correct parameters:**
+- Tools: Pandas (`read_csv`, `head`, `info`)
+- Involved Features: All features in both `train.csv` and `test.csv`
+
+**Expected output or Impact on data:**
+- Display of the first few rows of the train and test datasets
+- Summary information including data types and non-null counts
+
+**Constraints:**
+- Ensure the datasets are loaded correctly and are in a DataFrame format
+
+### STEP 2
+**Task:** Basic Statistical Analysis
+
+**Tools, involved features and correct parameters:**
+- Tools: Pandas (`describe`, `value_counts`)
+- Involved Features:
+  - Numerical: `Age`, `Height`, `Weight`, `FCVC`, `NCP`, `CH2O`, `FAF`, `TUE`
+  - Categorical: `Gender`, `family_history_with_overweight`, `FAVC`, `CAEC`, `SMOKE`, `SCC`, `CALC`, `MTRANS`
+
+**Expected output or Impact on data:**
+- Summary statistics for numerical features
+- Frequency distribution for categorical features
+
+**Constraints:**
+- Ensure all statistics are printed in a clear and understandable format
+
+### STEP 3
+**Task:** Identify Missing Values and Inconsistencies
+
+**Tools, involved features and correct parameters:**
+- Tools: Pandas (`isnull`, `sum`), Matplotlib/Seaborn (boxplots)
+- Involved Features: All features
+
+**Expected output or Impact on data:**
+- List of features with missing values and their counts
+- Boxplots for numerical features to identify potential outliers
+
+**Constraints:**
+- Ensure the process is efficient and does not generate excessive output
+
+### STEP 4
+**Task:** Initial Data Visualization
+
+**Tools, involved features and correct parameters:**
+- Tools: Matplotlib/Seaborn (histograms, bar charts, pairplot, heatmap)
+- Involved Features: All features
+
+**Expected output or Impact on data:**
+- Histograms for numerical features
+- Bar charts for categorical features
+- Pairplot for key numerical features
+- Heatmap showing correlations between numerical features
+
+**Constraints:**
+- Limit the number of plots to a maximum of 10
+- Ensure plots are clear and provide valuable insights

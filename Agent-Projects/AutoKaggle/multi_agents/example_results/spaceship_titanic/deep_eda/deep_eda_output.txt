@@ -1,0 +1,263 @@
+Statistics for Age:
+count    8693.000000
+mean       28.698263
+std        14.094836
+min         0.000000
+25%        20.000000
+50%        27.000000
+75%        37.000000
+max        62.500000
+Name: Age, dtype: float64
+Skewness: 0.32968354524870225
+Kurtosis: -0.12257764479040523
+Statistics for RoomService:
+count    8693.000000
+mean       25.603819
+std        42.684904
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%        41.000000
+max       102.500000
+Name: RoomService, dtype: float64
+Skewness: 1.177529510371911
+Kurtosis: -0.536582896489616
+Statistics for FoodCourt:
+count    8693.000000
+mean       38.283331
+std        63.544215
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%        61.000000
+max       152.500000
+Name: FoodCourt, dtype: float64
+Skewness: 1.1719612914882047
+Kurtosis: -0.5495071244103804
+Statistics for ShoppingMall:
+count    8693.000000
+mean       13.746118
+std        22.861582
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%        22.000000
+max        55.000000
+Name: ShoppingMall, dtype: float64
+Skewness: 1.176306153442014
+Kurtosis: -0.5357145340558556
+Statistics for Spa:
+count    8693.000000
+mean       33.111642
+std        54.619266
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%        53.000000
+max       132.500000
+Name: Spa, dtype: float64
+Skewness: 1.1820479849092536
+Kurtosis: -0.5059445737204546
+Statistics for VRDeck:
+count    8693.000000
+mean       24.850339
+std        41.364912
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%        40.000000
+max       100.000000
+Name: VRDeck, dtype: float64
+Skewness: 1.1862556777133193
+Kurtosis: -0.5065785783364642
+Value counts for HomePlanet:
+HomePlanet
+Earth     4803
+Europa    2131
+Mars      1759
+Name: count, dtype: int64
+Value counts for CryoSleep:
+CryoSleep
+False    5656
+True     3037
+Name: count, dtype: int64
+Value counts for Cabin:
+Cabin
+G/734/S     207
+C/21/P        7
+B/201/P       7
+G/1368/P      7
+E/13/S        7
+           ... 
+G/556/P       1
+E/231/S       1
+G/545/S       1
+G/543/S       1
+F/947/P       1
+Name: count, Length: 6560, dtype: int64
+Value counts for Destination:
+Destination
+TRAPPIST-1e      6097
+55 Cancri e      1800
+PSO J318.5-22     796
+Name: count, dtype: int64
+Value counts for VIP:
+VIP
+False    8494
+True      199
+Name: count, dtype: int64
+Value counts for Name:
+Name
+Alraium Disivering    202
+Asch Stradick           2
+Keitha Josey            2
+Troya Schwardson        2
+Loree Wolfernan         2
+                     ... 
+Jamela Griffy           1
+Hardy Griffy            1
+Salley Mckinn           1
+Mall Frasp              1
+Propsh Hontichre        1
+Name: count, Length: 8473, dtype: int64
+Mean of Age for Transported:
+Transported
+False    29.757242
+True     27.654523
+Name: Age, dtype: float64
+Median of Age for Transported:
+Transported
+False    27.0
+True     27.0
+Name: Age, dtype: float64
+Mean of RoomService for Transported:
+Transported
+False    40.021553
+True     11.393559
+Name: RoomService, dtype: float64
+Median of RoomService for Transported:
+Transported
+False    1.0
+True     0.0
+Name: RoomService, dtype: float64
+Mean of FoodCourt for Transported:
+Transported
+False    46.385400
+True     30.297853
+Name: FoodCourt, dtype: float64
+Median of FoodCourt for Transported:
+Transported
+False    0.0
+True     0.0
+Name: FoodCourt, dtype: float64
+Mean of ShoppingMall for Transported:
+Transported
+False    18.129085
+True      9.426222
+Name: ShoppingMall, dtype: float64
+Median of ShoppingMall for Transported:
+Transported
+False    0.0
+True     0.0
+Name: ShoppingMall, dtype: float64
+Mean of Spa for Transported:
+Transported
+False    51.559328
+True     14.929420
+Name: Spa, dtype: float64
+Median of Spa for Transported:
+Transported
+False    2.0
+True     0.0
+Name: Spa, dtype: float64
+Mean of VRDeck for Transported:
+Transported
+False    38.015064
+True     11.875057
+Name: VRDeck, dtype: float64
+Median of VRDeck for Transported:
+Transported
+False    1.0
+True     0.0
+Name: VRDeck, dtype: float64
+Cross-tabulation of HomePlanet vs Transported:
+Transported  False  True 
+HomePlanet               
+Earth         2749   2054
+Europa         727   1404
+Mars           839    920
+Chi-square test result for HomePlanet vs Transported:
+Chi2: 318.93444995471856, p-value: 5.549631517016864e-70
+Cross-tabulation of CryoSleep vs Transported:
+Transported  False  True 
+CryoSleep                
+False         3761   1895
+True           554   2483
+Chi-square test result for CryoSleep vs Transported:
+Chi2: 1838.5677340571679, p-value: 0.0
+Cross-tabulation of Cabin vs Transported:
+Transported  False  True 
+Cabin                    
+A/0/P            1      1
+A/0/S            2      0
+A/1/S            0      3
+A/10/P           1      0
+A/10/S           0      1
+...            ...    ...
+T/0/P            1      0
+T/1/P            1      0
+T/2/P            1      0
+T/2/S            1      0
+T/3/P            0      1
+
+[6560 rows x 2 columns]
+Chi-square test result for Cabin vs Transported:
+Chi2: 6849.431812445361, p-value: 0.006121140153794818
+Cross-tabulation of Destination vs Transported:
+Transported    False  True 
+Destination                
+55 Cancri e      702   1098
+PSO J318.5-22    395    401
+TRAPPIST-1e     3218   2879
+Chi-square test result for Destination vs Transported:
+Chi2: 105.56297434781096, p-value: 1.1947894351445014e-23
+Cross-tabulation of VIP vs Transported:
+Transported  False  True 
+VIP                      
+False         4192   4302
+True           123     76
+Chi-square test result for VIP vs Transported:
+Chi2: 11.575951627085105, p-value: 0.0006681023600149099
+Cross-tabulation of Name vs Transported:
+Transported        False  True 
+Name                           
+Aard Curle             1      0
+Aarjel Jaff            1      0
+Aarjel Rhuba           1      0
+Aark Ches              1      0
+Aark Homin             0      1
+...                  ...    ...
+Zosmark Unaasor        0      1
+Zosmas Ineedeve        0      1
+Zosmas Mormonized      0      1
+Zubeneb Flesping       0      1
+Zubeneb Pasharne       1      0
+
+[8473 rows x 2 columns]
+Chi-square test result for Name vs Transported:
+Chi2: 8475.00835261013, p-value: 0.48873943766185834
+
+    Key Insights:
+    1. Age shows a skewed distribution with a few young passengers.
+    2. Expenditure features (RoomService, FoodCourt, ShoppingMall, Spa, VRDeck) have many zero values.
+    3. CryoSleep and VIP status have noticeable effects on whether a passenger was transported.
+    4. HomePlanet and Destination show significant relationships with the target variable.
+    5. Cabin feature needs to be split into separate deck, num, and side features.
+    
+    Recommendations for Feature Engineering:
+    1. Create binary features for whether expenditure features are zero.
+    2. Split Cabin into deck, num, and side.
+    3. Encode categorical features using suitable methods (e.g., one-hot encoding).
+    4. Consider interaction features between HomePlanet and Destination.
+    5. Create age groups for better handling of age skewness.
+    

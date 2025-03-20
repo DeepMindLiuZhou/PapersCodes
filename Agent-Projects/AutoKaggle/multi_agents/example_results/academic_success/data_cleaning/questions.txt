@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What specific missing values were addressed during the data cleaning process, and what imputation methods were used for both numerical and categorical features?
+
+### Question 2
+Which features were removed due to excessive missing values, and what was the rationale behind the chosen threshold?
+
+### Question 3
+What outlier handling methods were applied, and how did these methods affect the distribution of numerical features?
+
+### Question 4
+How were categorical features standardized, and what common issues (e.g., typos, case sensitivity) were corrected?
+
+### Question 5
+What were the outcomes of the duplicate removal process, and how many duplicate rows were identified and eliminated?
+
+### Question 6
+What insights or patterns emerged during the data cleaning phase that should be explored further in the In-depth Exploratory Data Analysis?

@@ -1,0 +1,43 @@
+Train data shape after removing duplicates: (165034, 14)
+Test data shape after removing duplicates: (110023, 13)
+Outliers handled in train and test data.
+Data types after conversion in train data:
+ id                   int64
+CustomerId           int64
+Surname             object
+CreditScore        float64
+Geography           object
+Gender              object
+Age                float64
+Tenure               int64
+Balance            float64
+NumOfProducts        int64
+HasCrCard            Int64
+IsActiveMember       Int64
+EstimatedSalary    float64
+Exited               int64
+dtype: object
+Data types after conversion in test data:
+ id                   int64
+CustomerId           int64
+Surname             object
+CreditScore        float64
+Geography           object
+Gender              object
+Age                float64
+Tenure               int64
+Balance            float64
+NumOfProducts        int64
+HasCrCard            Int64
+IsActiveMember       Int64
+EstimatedSalary    float64
+dtype: object
+Unique values in Geography (train): ['France', 'Spain', 'Germany']
+Categories (3, object): ['France', 'Germany', 'Spain']
+Unique values in Geography (test): ['France', 'Germany', 'Spain']
+Categories (3, object): ['France', 'Germany', 'Spain']
+Unique values in Gender (train): ['Male', 'Female']
+Categories (2, object): ['Female', 'Male']
+Unique values in Gender (test): ['Female', 'Male']
+Categories (2, object): ['Female', 'Male']
+Cleaned data saved successfully.

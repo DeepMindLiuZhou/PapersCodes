@@ -1,0 +1,17 @@
+Feature 1,Feature 2,Pearson Correlation
+Curricular units 1st sem (enrolled),Curricular units 2nd sem (enrolled),0.9731448039216481
+Curricular units 1st sem (evaluations),Curricular units 2nd sem (evaluations),0.7698686574105524
+Curricular units 1st sem (approved),Curricular units 1st sem (grade),0.8559608517674807
+Curricular units 1st sem (approved),Curricular units 2nd sem (approved),0.924451312520702
+Curricular units 1st sem (approved),Curricular units 2nd sem (grade),0.8469181273310271
+Curricular units 1st sem (grade),Curricular units 1st sem (approved),0.8559608517674807
+Curricular units 1st sem (grade),Curricular units 2nd sem (approved),0.8085036995705129
+Curricular units 1st sem (grade),Curricular units 2nd sem (grade),0.8818574062535913
+Curricular units 2nd sem (enrolled),Curricular units 1st sem (enrolled),0.9731448039216481
+Curricular units 2nd sem (evaluations),Curricular units 1st sem (evaluations),0.7698686574105524
+Curricular units 2nd sem (approved),Curricular units 1st sem (approved),0.924451312520702
+Curricular units 2nd sem (approved),Curricular units 1st sem (grade),0.8085036995705129
+Curricular units 2nd sem (approved),Curricular units 2nd sem (grade),0.8720002739487485
+Curricular units 2nd sem (grade),Curricular units 1st sem (approved),0.8469181273310271
+Curricular units 2nd sem (grade),Curricular units 1st sem (grade),0.8818574062535913
+Curricular units 2nd sem (grade),Curricular units 2nd sem (approved),0.8720002739487485

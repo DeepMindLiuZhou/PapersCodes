@@ -1,0 +1,123 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- Id
+
+### Numerical type
+- MSSubClass
+- LotFrontage
+- LotArea
+- OverallQual
+- OverallCond
+- YearBuilt
+- YearRemodAdd
+- MasVnrArea
+- BsmtFinSF1
+- BsmtFinSF2
+- BsmtUnfSF
+- TotalBsmtSF
+- 1stFlrSF
+- 2ndFlrSF
+- LowQualFinSF
+- GrLivArea
+- BsmtFullBath
+- BsmtHalfBath
+- FullBath
+- HalfBath
+- BedroomAbvGr
+- KitchenAbvGr
+- TotRmsAbvGrd
+- Fireplaces
+- GarageYrBlt
+- GarageCars
+- GarageArea
+- WoodDeckSF
+- OpenPorchSF
+- EnclosedPorch
+- 3SsnPorch
+- ScreenPorch
+- PoolArea
+- MiscVal
+- MoSold
+- YrSold
+- SalePrice (for train data only)
+
+### Categorical type
+- MSZoning
+- Street
+- Alley
+- LotShape
+- LandContour
+- Utilities
+- LotConfig
+- LandSlope
+- Neighborhood
+- Condition1
+- Condition2
+- BldgType
+- HouseStyle
+- RoofStyle
+- RoofMatl
+- Exterior1st
+- Exterior2nd
+- MasVnrType
+- ExterQual
+- ExterCond
+- Foundation
+- BsmtQual
+- BsmtCond
+- BsmtExposure
+- BsmtFinType1
+- BsmtFinType2
+- Heating
+- HeatingQC
+- CentralAir
+- Electrical
+- KitchenQual
+- Functional
+- FireplaceQu
+- GarageType
+- GarageFinish
+- GarageQual
+- GarageCond
+- PavedDrive
+- PoolQC
+- Fence
+- MiscFeature
+- SaleType
+- SaleCondition
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset comprises various features related to house attributes and their corresponding sale prices. The features span across different categories including numerical, categorical, and identifiers. Key observations include:
+
+- **Identifiers**: Each house is uniquely identified by the feature `Id`.
+- **Numerical Features**: These features include measurements like `LotFrontage`, `LotArea`, and `GrLivArea`, as well as counts like `BedroomAbvGr` and `GarageCars`. These features are likely to be continuous variables.
+- **Categorical Features**: These features include categories such as `MSZoning`, `Street`, `Alley`, `LotShape`, etc. These represent non-numeric data that categorizes houses based on different attributes.
+- **Target Variable**: The target variable `SalePrice` represents the house prices and is only available in the training dataset.
+
+Notable patterns:
+- The `OverallQual` and `OverallCond` features likely represent overall quality and condition ratings on a scale.
+- `YearBuilt` and `YearRemodAdd` indicate the year the house was built and the year it was remodeled, respectively.
+- Features like `GarageType`, `GarageFinish`, `GarageQual`, and `GarageCond` provide detailed information about garages.
+
+## Target Variable
+- **SalePrice**: This is the target variable for the training dataset. It represents the sale price of the houses.
+
+# Submission format (if applicable)
+The submission file should include the following columns:
+- Id (integer): Unique identifier for each house.
+- SalePrice (float): Predicted sale price for each house.
+
+Example:
+```
+Id,SalePrice
+1461,200000
+1462,181500
+1463,223500
+...
+```

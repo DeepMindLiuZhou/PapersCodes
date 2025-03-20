@@ -1,0 +1,111 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- Id
+
+### Numerical type
+- MSSubClass
+- LotFrontage
+- LotArea
+- OverallQual
+- OverallCond
+- YearBuilt
+- YearRemodAdd
+- MasVnrArea
+- BsmtFinSF1
+- BsmtFinSF2
+- BsmtUnfSF
+- TotalBsmtSF
+- 1stFlrSF
+- 2ndFlrSF
+- LowQualFinSF
+- GrLivArea
+- BsmtFullBath
+- BsmtHalfBath
+- FullBath
+- HalfBath
+- BedroomAbvGr
+- KitchenAbvGr
+- TotRmsAbvGrd
+- Fireplaces
+- GarageYrBlt
+- GarageCars
+- GarageArea
+- WoodDeckSF
+- OpenPorchSF
+- EnclosedPorch
+- 3SsnPorch
+- ScreenPorch
+- PoolArea
+- MiscVal
+- MoSold
+- YrSold
+- SalePrice (Target Variable)
+
+### Categorical type
+- MSZoning
+- Street
+- Alley
+- LotShape
+- LandContour
+- Utilities
+- LotConfig
+- LandSlope
+- Neighborhood
+- Condition1
+- Condition2
+- BldgType
+- HouseStyle
+- RoofStyle
+- RoofMatl
+- Exterior1st
+- Exterior2nd
+- MasVnrType
+- ExterQual
+- ExterCond
+- Foundation
+- BsmtQual
+- BsmtCond
+- BsmtExposure
+- BsmtFinType1
+- BsmtFinType2
+- Heating
+- HeatingQC
+- CentralAir
+- Electrical
+- KitchenQual
+- Functional
+- FireplaceQu
+- GarageType
+- GarageFinish
+- GarageQual
+- GarageCond
+- PavedDrive
+- PoolQC
+- Fence
+- MiscFeature
+- SaleType
+- SaleCondition
+
+### Datetime type
+- N/A
+
+## Detailed data description
+The dataset consists of various features describing houses, which can be broadly categorized into types like numerical, categorical, and ID types. The numerical features include measurements and counts related to the physical attributes of the houses such as lot size, number of rooms, and year built. The categorical features describe the qualitative aspects of the houses such as zoning, neighborhood, and building styles. 
+
+Notable patterns:
+- Numerical features span a wide range of values, indicating diverse property sizes and attributes.
+- Categorical features include a mix of binary and multi-class categories.
+- Some features have missing values, e.g., Alley and LotFrontage, which might need imputation or special handling in model training.
+
+## Target Variable
+- **SalePrice**: This is the variable we are trying to predict. It represents the sale price of the house.
+
+# Submission format (if applicable)
+The submission file should include the following columns:
+- **Id**: The unique identifier for each house.
+- **SalePrice**: The predicted sale price for each house.
+
+Both columns need to be present in the submission file, with 'Id' being an integer and 'SalePrice' being a numerical value.

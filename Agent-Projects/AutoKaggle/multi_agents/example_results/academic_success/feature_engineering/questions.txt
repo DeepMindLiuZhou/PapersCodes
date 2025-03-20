@@ -1,0 +1,24 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What categorical features were encoded, and what techniques were used for their transformation?
+
+### Question 4
+What numerical features were scaled or normalized, and what methods were used?
+
+### Question 5
+What new features were created during interaction and polynomial feature generation, and how might they impact model performance?
+
+### Question 6
+How were missing values handled, and what imputation strategies were implemented?
+
+### Question 7
+Were there any features that were identified as unnecessary or redundant during the feature engineering process? If so, which ones and why?
+
+### Question 8
+What insights or patterns were observed from the engineered features that could guide model selection or tuning in the next phase?

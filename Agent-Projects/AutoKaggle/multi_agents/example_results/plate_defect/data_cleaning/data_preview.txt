@@ -1,0 +1,80 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `id`: Unique identifier for each data point, which will NOT be used in model training.
+
+### Numerical type
+- `X_Minimum`
+- `X_Maximum`
+- `Y_Minimum`
+- `Y_Maximum`
+- `Pixels_Areas`
+- `X_Perimeter`
+- `Y_Perimeter`
+- `Sum_of_Luminosity`
+- `Minimum_of_Luminosity`
+- `Maximum_of_Luminosity`
+- `Length_of_Conveyer`
+- `Steel_Plate_Thickness`
+- `Edges_Index`
+- `Empty_Index`
+- `Square_Index`
+- `Outside_X_Index`
+- `Edges_X_Index`
+- `Edges_Y_Index`
+- `Outside_Global_Index`
+- `LogOfAreas`
+- `Log_X_Index`
+- `Log_Y_Index`
+- `Orientation_Index`
+- `Luminosity_Index`
+- `SigmoidOfAreas`
+
+### Categorical type
+- `TypeOfSteel_A300`: Binary categorical feature (0 or 1).
+- `TypeOfSteel_A400`: Binary categorical feature (0 or 1).
+- `Pastry`: Binary target variable (0 or 1).
+- `Z_Scratch`: Binary target variable (0 or 1).
+- `K_Scatch`: Binary target variable (0 or 1).
+- `Stains`: Binary target variable (0 or 1).
+- `Dirtiness`: Binary target variable (0 or 1).
+- `Bumps`: Binary target variable (0 or 1).
+- `Other_Faults`: Binary target variable (0 or 1).
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset contains various features related to the properties and characteristics of steel plates. The features include measurements of dimensions, luminosity, and indices such as perimeter and area. There are also binary categorical features indicating the type of steel used (TypeOfSteel_A300 or TypeOfSteel_A400).
+
+Notable patterns include:
+- The data includes both continuous numerical features (e.g., `Pixels_Areas`, `Sum_of_Luminosity`) and binary categorical features (e.g., `TypeOfSteel_A300`, `TypeOfSteel_A400`).
+- The indices and logarithmic features suggest that some form of scaling or standardization might be involved in the preprocessing.
+- Target variables are all binary, indicating the presence or absence of various types of faults in the steel plates.
+
+## Target Variable
+The target variables represent different types of faults that can occur in steel plates:
+- `Pastry`
+- `Z_Scratch`
+- `K_Scatch`
+- `Stains`
+- `Dirtiness`
+- `Bumps`
+- `Other_Faults`
+
+Each target variable is a binary indicator (0 or 1), where 1 indicates the presence of the fault and 0 indicates its absence.
+
+# Submission format (if applicable)
+The submission file should contain the following columns:
+- `id`: Unique identifier for the test data points.
+- `Pastry`: Predicted binary value for the presence of pastry fault.
+- `Z_Scratch`: Predicted binary value for the presence of Z scratch fault.
+- `K_Scatch`: Predicted binary value for the presence of K scratch fault.
+- `Stains`: Predicted binary value for the presence of stains.
+- `Dirtiness`: Predicted binary value for the presence of dirtiness.
+- `Bumps`: Predicted binary value for the presence of bumps.
+- `Other_Faults`: Predicted binary value for the presence of other faults.
+
+Each column should contain the predictions (0 or 1) for each corresponding target variable.

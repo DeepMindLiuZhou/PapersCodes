@@ -1,0 +1,58 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- id
+- CustomerId
+- Surname
+
+### Numerical type
+- CreditScore
+- Age
+- Tenure
+- Balance
+- NumOfProducts
+- HasCrCard
+- IsActiveMember
+- EstimatedSalary
+
+### Categorical type
+- Geography
+- Gender
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of customer information from a bank, including both demographic details and banking activity. Here’s a brief breakdown of the key features:
+
+- **id**: Unique identifier for each record.
+- **CustomerId**: Unique identifier for each customer.
+- **Surname**: The surname of the customer.
+- **CreditScore**: Numerical value representing the creditworthiness of the customer.
+- **Geography**: The country where the customer resides (France, Spain, Germany).
+- **Gender**: The gender of the customer (Male, Female).
+- **Age**: Age of the customer.
+- **Tenure**: Number of years the customer has been with the bank.
+- **Balance**: The account balance of the customer.
+- **NumOfProducts**: Number of products the customer has purchased through the bank.
+- **HasCrCard**: Indicates if the customer has a credit card (1 if yes, 0 if no).
+- **IsActiveMember**: Indicates if the customer is an active member (1 if yes, 0 if no).
+- **EstimatedSalary**: The estimated annual salary of the customer.
+
+### Notable Patterns and Characteristics
+- The **CreditScore** ranges widely across customers, reflecting varied creditworthiness.
+- **Age** distribution shows a mix of younger and older customers.
+- **Balance** includes customers with zero balance and those with substantial amounts.
+- **NumOfProducts** generally varies between 1 and 2.
+- **HasCrCard** and **IsActiveMember** are binary features.
+- **EstimatedSalary** also varies widely, indicating a diverse customer base in terms of income.
+
+## Target Variable
+- **Exited**: This target variable indicates whether a customer has exited the bank (1 if yes, 0 if no).
+
+# Submission format (if applicable)
+The submission file should include the following columns:
+- **id**: Unique identifier for each record (Integer).
+- **Exited**: Prediction of whether the customer has exited the bank (Binary: 0 or 1).

@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What are the key statistics and distributions for numerical features (Age, SibSp, Parch, Fare)?
+
+### Question 4
+Which categorical features (Survived, Pclass, Sex, Ticket, Cabin, Embarked) have missing values, and what are their proportions?
+
+### Question 5
+What are the notable outliers identified in the numerical features, and which features do they primarily affect?
+
+### Question 6
+Based on the preliminary analysis, what specific strategies should be employed in the Data Cleaning phase to address identified issues like missing values or data inconsistencies?

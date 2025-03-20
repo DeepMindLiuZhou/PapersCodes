@@ -1,0 +1,80 @@
+## PLAN
+
+### STEP 1
+Task: Detect and Handle Outliers in Numerical Features Using the IQR Method
+Tools, involved features and correct parameters:
+- **Tool:** `detect_and_handle_outliers_iqr`
+  - **Parameters for Training Data:**
+    - `columns`: [`bone_length`, `rotting_flesh`, `hair_length`, `has_soul`]
+    - `factor`: `1.5`
+    - `method`: `remove`
+  - **Parameters for Testing Data:**
+    - `columns`: [`bone_length`, `rotting_flesh`, `hair_length`, `has_soul`]
+    - `factor`: `1.5`
+    - `method`: `clip`
+- **Features Involved:** `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`
+
+Expected output or Impact on data:
+- **Training Data:** Outliers are removed, resulting in a cleaned `cleaned_train.csv`.
+- **Testing Data:** Outliers are clipped to the nearest boundary values, maintaining the original sample size in `cleaned_test.csv`.
+
+Constraints:
+- Clipping should not distort the overall feature distribution.
+- Avoid removing a large portion of the training data to preserve valuable information.
+- Ensure consistent outlier handling between training and testing datasets to maintain model robustness.
+
+### STEP 2
+Task: Verify and Ensure Consistency in Categorical Features Across Datasets
+Tools, involved features and correct parameters:
+- **Tools:**
+  - Pandas’ `unique()` and `set` operations for identifying unique categories.
+  - Pandas’ `replace()` or `map()` for standardizing categories.
+- **Features Involved:** `color`
+
+Expected output or Impact on data:
+- **Both Datasets:** `color` categories are standardized and consistent across `cleaned_train.csv` and `cleaned_test.csv`.
+
+Constraints:
+- Do not introduce new categories that were not originally present.
+- Ensure that standardization does not lead to information loss or misrepresentation of the original data.
+- Maintain the integrity of categorical information during the standardization process.
+
+### STEP 3
+Task: Validate and Convert Data Types for All Features
+Tools, involved features and correct parameters:
+- **Tool:** `convert_data_types`
+  - **Parameters:**
+    - `columns` and `target_type` for each feature:
+      - `id`: `int`
+      - `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`: `float`
+      - `color`: `str`
+      - `type` (Training Data Only): `str`
+- **Additional Actions:**
+  - Use Pandas’ `to_numeric()` with `errors='coerce'` for handling conversion errors.
+- **Features Involved:** `id`, `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`, `color`, `type` (training only)
+
+Expected output or Impact on data:
+- **Both Datasets:** All features have the correct and consistent data types in `cleaned_train.csv` and `cleaned_test.csv`.
+- **Data Integrity:** Minimizes errors during subsequent analysis and model training by ensuring appropriate data types.
+
+Constraints:
+- Prevent inadvertent introduction of NaN values or errors during type conversions.
+- Maintain consistent data types across both datasets to avoid modeling issues.
+- Do not alter the `type` feature in the testing data, as it does not exist there.
+
+### STEP 4
+Task: Confirm Absence of Duplicate Records
+Tools, involved features and correct parameters:
+- **Tool:** `remove_duplicates`
+  - **Parameters:**
+    - `columns`: [`id`]
+    - `keep`: `first`
+- **Features Involved:** `id`, all other feature columns (`bone_length`, `rotting_flesh`, `hair_length`, `has_soul`, `color`, `type`)
+
+Expected output or Impact on data:
+- **Both Datasets:** All duplicate records are removed, ensuring `cleaned_train.csv` and `cleaned_test.csv` contain only unique entries.
+
+Constraints:
+- Preserve the first occurrence of any duplicate row as specified by the `keep` parameter.
+- Ensure that removing duplicates does not result in the loss of unique and valuable information.
+- Validate that no duplicates exist after the removal process, as indicated by previous reports.

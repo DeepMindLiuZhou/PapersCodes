@@ -1,0 +1,103 @@
+# FEATURE INFO
+## TARGET VARIABLE
+type
+## FEATURES BEFORE THIS PHASE
+['id', 'bone_length', 'rotting_flesh', 'hair_length', 'has_soul', 'color', 'type']
+## FEATURES AFTER THIS PHASE
+['id', 'hair_length_has_soul', 'hair_length', 'has_soul', 'bone_to_flesh_ratio', 'bone_length', 'bone_length_squared', 'rotting_flesh', 'rotting_flesh_squared', 'soul_to_hair_ratio', 'bone_length_rotting_flesh', 'type']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+**What files did you process? Which files were generated? Answer with detailed file path.**
+### Answer 1
+- **Processed Files:**
+  - Input: 
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/cleaned_train.csv`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/cleaned_test.csv`
+  - Output:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/processed_train.csv`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/processed_test.csv`
+
+### Question 2
+**Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.**
+### Answer 2
+- **Involved Features:**
+  - **Numerical Features:**
+    - `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`
+  - **Categorical Feature:**
+    - `color`
+  
+- **Changes:**
+  - **Created Features:**
+    - Interaction Features:
+      - `hair_length_has_soul` (`hair_length` × `has_soul`)
+      - `bone_length_rotting_flesh` (`bone_length` × `rotting_flesh`)
+    - Polynomial Features:
+      - `bone_length_squared` (`bone_length`²)
+      - `rotting_flesh_squared` (`rotting_flesh`²)
+    - Ratio Features:
+      - `bone_to_flesh_ratio` (`bone_length` / `rotting_flesh`)
+      - `soul_to_hair_ratio` (`has_soul` / `hair_length`)
+  
+  - **Modified Feature Types:**
+    - `color`: Converted to multiple binary columns through One-Hot Encoding, replacing the original categorical variable.
+
+### Question 3
+**What new features were created during the Feature Engineering phase, and how do they relate to the target variable (`type`)?**
+### Answer 3
+- **New Features Created:**
+  - `hair_length_has_soul`
+  - `bone_length_rotting_flesh`
+  - `bone_length_squared`
+  - `rotting_flesh_squared`
+  - `bone_to_flesh_ratio`
+  - `soul_to_hair_ratio`
+  
+- **Relation to Target Variable:**
+  - These features capture interactions and non-linear relationships between the numerical features, which may correlate with the `type` of creature (Ghoul, Goblin, Ghost). For instance, higher ratios or squared values may indicate specific traits distinguishing different creature types.
+
+### Question 4
+**Which categorical encoding method was applied to the `color` feature, and how might this choice impact model performance?**
+### Answer 4
+- **Encoding Method:**
+  - One-Hot Encoding was applied to the `color` feature, creating binary indicator columns for each category.
+
+- **Impact on Model Performance:**
+  - This method allows the model to better capture the relationship between color and the target variable without imposing ordinal relationships. However, it could lead to a high dimensionality issue if the number of categories increases significantly.
+
+### Question 5
+**What normalization or scaling techniques were applied to the numerical features, and are there specific algorithms that would benefit from these transformations?**
+### Answer 5
+- **Scaling Technique:**
+  - StandardScaler was used to standardize the numerical features, transforming them to have a mean of 0 and a standard deviation of 1.
+
+- **Algorithms Benefiting from this Transformation:**
+  - Algorithms like Support Vector Machines (SVM), Logistic Regression, and K-Means Clustering benefit from feature scaling as they are sensitive to the scale of the input features.
+
+### Question 6
+**How did the feature selection process influence the final set of features used for modeling? What criteria were used to retain or discard features?**
+### Answer 6
+- **Influence:**
+  - The selection process refined the feature set to include only the most relevant features, reducing dimensionality and potential overfitting.
+  
+- **Criteria for Retention:**
+  - Features were retained based on their importance scores derived from a Random Forest Classifier. A threshold of the top N features was used to ensure the model focuses on the most significant predictors.
+
+### Question 7
+**Were there any interactions or transformations among numerical features that showed significant correlations with the target variable? If so, which ones?**
+### Answer 7
+- **Significant Interactions:**
+  - Interaction features like `hair_length_has_soul` and `bone_length_rotting_flesh` were created, as they capture relationships that may correlate with the `type` variable. The analysis of these interactions should reveal patterns distinguishing between the creature types.
+
+### Question 8
+**What challenges or limitations were encountered during the Feature Engineering phase, and how should they be addressed in the Model Building phase?**
+### Answer 8
+- **Challenges:**
+  - Potential multicollinearity among newly created interaction features could skew model performance.
+  - The risk of overfitting when selecting features based solely on training data.
+
+- **Addressing in Model Building:**
+  - Implement cross-validation during feature selection to ensure generalizability and prevent overfitting.
+  - Regularization techniques (like Lasso) could help manage multicollinearity and improve model robustness.

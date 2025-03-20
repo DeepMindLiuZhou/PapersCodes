@@ -1,0 +1,66 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Survived
+## FEATURES BEFORE THIS PHASE
+['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
+## FEATURES AFTER THIS PHASE
+['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked', 'Title', 'FamilySize', 'IsAlone', 'FarePerPerson', 'AgeGroup', 'FareGroup', 'Pclass_1', 'Pclass_2', 'Pclass_3', 'Sex_female', 'Sex_male', 'Embarked_C', 'Embarked_Q', 'Embarked_S', 'Title_Master', 'Title_Miss', 'Title_Mr', 'Title_Mrs', 'Title_Rare', 'AgeGroup_Adult', 'AgeGroup_Child', 'AgeGroup_MiddleAged', 'AgeGroup_Teen', 'FareGroup_High', 'FareGroup_Low', 'FareGroup_Medium', 'FareGroup_VeryHigh']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+Processed files:
+- **Input files**: 
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/cleaned_train.csv`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/cleaned_test.csv`
+  
+- **Output files**:
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/processed_train.csv`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/processed_test.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+### Answer 2
+**Features involved and their changes:**
+- **Created**:
+  - **Title**: Extracted and standardized from `Name`.
+  - **FamilySize**: Created from `SibSp` and `Parch`.
+  - **IsAlone**: Created from `FamilySize`.
+  - **FarePerPerson**: Created from `Fare` and `FamilySize`.
+  - **AgeGroup**: Categorical transformation of `Age`.
+  - **FareGroup**: Categorical transformation of `Fare`.
+  
+- **Transformed**:
+  - `Age`: Binned into categories (`AgeGroup`).
+  - `Fare`: Binned into categories (`FareGroup`).
+  
+- **Modified**:
+  - No features were deleted; all existing features remained but were transformed or had new features created from them.
+
+### Question 3
+How were categorical variables handled, and what encoding techniques were applied?
+### Answer 3
+Categorical variables were handled using:
+- **One-Hot Encoding**: Applied to the following features: `Pclass`, `Sex`, `Embarked`, `Title`, `AgeGroup`, and `FareGroup`. This technique converts categorical variables into binary columns, making them suitable for machine learning models.
+
+### Question 4
+Were any numerical features normalized or standardized, and what techniques were used?
+### Answer 4
+Yes, numerical features were standardized using:
+- **Standardization**: Applied to `Age`, `Fare`, and `FarePerPerson`. The standardization method transforms these features to have a mean of `0` and a variance of `1`, which helps improve model performance.
+
+### Question 5
+What feature selection methods, if any, were employed to identify the most relevant features for modeling?
+### Answer 5
+No explicit feature selection methods were mentioned in the phase. However, the new features created and transformations applied are likely aimed at improving feature relevance for modeling.
+
+### Question 6
+What potential challenges or limitations were identified during feature engineering that could affect model performance?
+### Answer 6
+Potential challenges:
+- **Standardization Consistency**: Ensuring that the same scaling parameters are applied to both training and test datasets is crucial to avoid data leakage.
+- **Handling Missing Values**: The original dataset contained missing values in `Age` and `Cabin`, and decisions on these could impact model performance.
+- **Meaningful Binning**: Ensuring bins for `Age` and `Fare` are meaningful and cover all ranges to avoid loss of important information.

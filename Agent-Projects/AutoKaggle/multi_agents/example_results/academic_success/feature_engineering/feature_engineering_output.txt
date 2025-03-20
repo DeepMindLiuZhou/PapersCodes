@@ -1,0 +1,8 @@
+Binary categorical features encoded successfully.
+Numerical features scaled and normalized successfully.
+Created interaction feature: Admission_grade_x_GDP
+Created interaction feature: Age_at_enrollment_x_Educational_special_needs
+Polynomial and interaction features created successfully.
+Number of features with missing values: 0
+No missing values detected after feature engineering.
+Feature Engineering Phase Completed: 'processed_train.csv' and 'processed_test.csv' have been saved successfully at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/.

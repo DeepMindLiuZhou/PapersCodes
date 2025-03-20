@@ -1,0 +1,79 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `id`
+
+### Numerical type
+- `bone_length`
+- `rotting_flesh`
+- `hair_length`
+- `has_soul`
+
+### Categorical type
+- `color`
+- `type`
+
+### Datetime type
+- None
+
+## Detailed data description
+
+The dataset consists of both training and testing datasets with the following characteristics:
+
+- **Training Data:**
+  - **Records:** 10
+  - **Features:**
+    - **Numerical:**
+      - `bone_length`: Values range from approximately 0.28 to 0.78.
+      - `rotting_flesh`: Values range from approximately 0.25 to 0.88.
+      - `hair_length`: Values range from approximately 0.17 to 0.81.
+      - `has_soul`: Values range from approximately 0.14 to 0.79.
+    - **Categorical:**
+      - `color`: Categories include clear, green, black, white, blue.
+      - `type`: Categories include Ghoul, Goblin, Ghost.
+  - **Distribution:**
+    - **Type Distribution:**
+      - Ghoul: 4 instances
+      - Goblin: 3 instances
+      - Ghost: 3 instances
+    - **Color Distribution:**
+      - clear: 2 instances
+      - green: 3 instances
+      - black: 3 instances
+      - white: 2 instances
+      - blue: 2 instances
+
+- **Testing Data:**
+  - **Records:** 10
+  - **Features:**
+    - **Numerical:**
+      - `bone_length`: Values range from approximately 0.29 to 0.64.
+      - `rotting_flesh`: Values range from approximately 0.31 to 0.68.
+      - `hair_length`: Values range from approximately 0.29 to 0.67.
+      - `has_soul`: Values range from approximately 0.10 to 0.70.
+    - **Categorical:**
+      - `color`: Categories include black, white, blue, clear.
+  - **Observations:**
+    - The testing data does not include the `type` feature as it is intended for prediction.
+    - `color` categories in the test set overlap with those in the training set.
+
+## Target Variable
+
+- **`type`**
+  - **Description:** The target variable represents the classification of each entity into one of three categories: Ghoul, Goblin, or Ghost.
+
+# Submission format (if applicable)
+
+- **File Format:** Typically CSV
+- **Required Columns:**
+  - `id` (Numeric): Unique identifier for each test data point.
+  - `type` (Categorical): Predicted class for each test data point (`Ghoul`, `Goblin`, or `Ghost`).
+
+Example:
+| id  | type   |
+|-----|--------|
+| 3   | Ghoul  |
+| 6   | Goblin |
+| ... | ...    |

@@ -1,0 +1,75 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Transported
+## FEATURES BEFORE THIS PHASE
+['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age', 'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck', 'Name', 'Transported']
+## FEATURES AFTER THIS PHASE
+['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age', 'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck', 'Name', 'Transported']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Answer 1
+- **Processed Files:**
+  - Training data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/train.csv`
+  - Testing data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/test.csv`
+
+- **Generated Files:**
+  - Cleaned training data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/cleaned_train.csv`
+  - Cleaned testing data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/cleaned_test.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+
+### Answer 2
+- **Features Involved:**
+  - **Categorical Features:** `HomePlanet`, `CryoSleep`, `Cabin`, `Destination`, `VIP`, `Name`
+    - **Changes:** Missing values filled with the mode.
+  - **Numerical Features:** `Age`, `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`
+    - **Changes:** Missing values filled with the median. Outliers detected and clipped using the IQR method.
+  
+- **Feature Modifications:** 
+  - **Modified Features:** 
+    - `CryoSleep`, `VIP`: Converted to boolean.
+    - `Age`, `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`: Converted to float.
+    - `HomePlanet`, `Cabin`, `Destination`, `Name`: Converted to categorical (string).
+  
+- **Deleted/Created Features:** No features were deleted or created during this phase.
+
+### Question 3
+What missing values were addressed during the cleaning phase, and what methods were utilized to handle them?
+
+### Answer 3
+- **Missing Values Addressed:**
+  - **Categorical Features:** `HomePlanet`, `CryoSleep`, `Cabin`, `Destination`, `VIP`, `Name` were filled using the mode.
+  - **Numerical Features:** `Age`, `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck` were filled using the median.
+
+### Question 4
+Which features had outliers detected, and how were these outliers handled in terms of clipping or removal?
+
+### Answer 4
+- **Features with Detected Outliers:**
+  - `Age`, `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`
+  
+- **Handling Method:**
+  - Outliers were treated by clipping them to acceptable ranges based on the IQR method with a factor of 1.5.
+
+### Question 5
+What consistency checks were performed to ensure the integrity of relationships between features, particularly for CryoSleep passengers?
+
+### Answer 5
+- **Consistency Checks for CryoSleep:**
+  - For passengers who had `CryoSleep` set to True, the expense features (`RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`) were set to 0 to ensure that these passengers did not incur any charges while in suspended animation.
+
+### Question 6
+What potential issues or considerations should be kept in mind when conducting the In-depth Exploratory Data Analysis based on the data cleaning process?
+
+### Answer 6
+- **Considerations for In-depth EDA:**
+  - **Impact of Imputation:** The choice of mode and median for filling missing values may affect the distribution and relationships of features; it's crucial to explore how these choices influence subsequent analyses.
+  - **Outlier Treatment:** Clipping may lead to loss of extreme values that could be significant; consider whether to analyze the original data or the cleaned data depending on the analysis goals.
+  - **Consistency of CryoSleep Feature:** Ensure that the expenses of CryoSleep passengers are accurately represented to avoid misleading interpretations.
+  - **Data Types:** Confirm that all features have been accurately converted to their intended types to avoid any issues with statistical analyses or modeling.

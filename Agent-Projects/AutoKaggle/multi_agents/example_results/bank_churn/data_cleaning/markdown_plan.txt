@@ -1,0 +1,71 @@
+## PLAN
+
+### STEP 1
+Task: Remove Duplicates
+Tools, involved features and correct parameters:
+- Tool: `remove_duplicates`
+- Involved features: All columns
+- Parameters for train_data: 
+  ```python
+  remove_duplicates(data=train_data, columns=None, keep='first', inplace=True)
+  ```
+- Parameters for test_data: 
+  ```python
+  remove_duplicates(data=test_data, columns=None, keep='first', inplace=True)
+  ```
+Expected output or Impact on data: Cleaned datasets without any duplicate rows.
+Constraints: Ensure no valuable data is lost during the removal process.
+
+### STEP 2
+Task: Detect and Handle Outliers
+Tools, involved features and correct parameters:
+- Tool: `detect_and_handle_outliers_iqr`
+- Involved features: `CreditScore`, `Age`, `Tenure`, `Balance`, `EstimatedSalary`
+- Parameters for train_data: 
+  ```python
+  detect_and_handle_outliers_iqr(data=train_data, columns=['CreditScore', 'Age', 'Tenure', 'Balance', 'EstimatedSalary'], factor=1.5, method='clip')
+  ```
+- Parameters for test_data: 
+  ```python
+  detect_and_handle_outliers_iqr(data=test_data, columns=['CreditScore', 'Age', 'Tenure', 'Balance', 'EstimatedSalary'], factor=1.5, method='clip')
+  ```
+Expected output or Impact on data: Datasets with outliers detected and handled by clipping them to the threshold values.
+Constraints: Ensure the method used does not distort the data distribution significantly.
+
+### STEP 3
+Task: Ensure Consistency in Data Types
+Tools, involved features and correct parameters:
+- Tool: `convert_data_types`
+- Involved features: 
+  - Numerical: `CreditScore`, `Age`, `Tenure`, `Balance`, `EstimatedSalary`
+  - Binary: `HasCrCard`, `IsActiveMember`
+- Parameters for train_data: 
+  ```python
+  convert_data_types(data=train_data, columns=['CreditScore', 'Age', 'Tenure', 'Balance', 'EstimatedSalary'], target_type='float')
+  convert_data_types(data=train_data, columns=['HasCrCard', 'IsActiveMember'], target_type='int')
+  ```
+- Parameters for test_data: 
+  ```python
+  convert_data_types(data=test_data, columns=['CreditScore', 'Age', 'Tenure', 'Balance', 'EstimatedSalary'], target_type='float')
+  convert_data_types(data=test_data, columns=['HasCrCard', 'IsActiveMember'], target_type='int')
+  ```
+Expected output or Impact on data: Consistent data types across both datasets.
+Constraints: Maintain data integrity and ensure no data loss during conversion.
+
+### STEP 4
+Task: Align Categorical Values
+Tools, involved features and correct parameters:
+- Tool: `pd.Categorical` from pandas library
+- Involved features: `Geography`, `Gender`
+- Parameters: 
+  ```python
+  train_data['Geography'] = pd.Categorical(train_data['Geography'])
+  train_data['Gender'] = pd.Categorical(train_data['Gender'])
+  test_data['Geography'] = pd.Categorical(test_data['Geography'])
+  test_data['Gender'] = pd.Categorical(test_data['Gender'])
+  ```
+Expected output or Impact on data: Consistent categorical values across both datasets.
+Constraints: Ensure that the categories in `Geography` and `Gender` are consistent.
+
+### Final Output
+- Cleaned Datasets: `cleaned_train.csv` and `cleaned_test.csv`

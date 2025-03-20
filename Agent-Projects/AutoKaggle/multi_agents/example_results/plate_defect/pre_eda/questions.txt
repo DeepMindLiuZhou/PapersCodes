@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files were processed, and what outputs were generated during this phase?
+
+### Question 2
+Which features were involved in the analysis, and what changes or observations were noted regarding their data types?
+
+### Question 3
+What is the extent of missing values in the dataset, and which features have the highest proportions of missing data?
+
+### Question 4
+What outliers were detected in the numerical features, and which specific features were most affected?
+
+### Question 5
+What initial insights were gained regarding the distributions of the numerical and categorical features?
+
+### Question 6
+How do the features correlate with each other, and are there any notable relationships that suggest potential cleaning requirements (e.g., multicollinearity)?

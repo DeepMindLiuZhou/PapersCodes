@@ -1,0 +1,80 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Transported
+## FEATURES BEFORE THIS PHASE
+['PassengerId', 'Cabin', 'Age', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck', 'Name', 'Transported', 'RoomService_flag', 'FoodCourt_flag', 'ShoppingMall_flag', 'Spa_flag', 'VRDeck_flag', 'AgeGroup', 'Cabin_deck', 'Cabin_number', 'Cabin_side', 'RoomService_log', 'FoodCourt_log', 'ShoppingMall_log', 'Spa_log', 'VRDeck_log', 'HomePlanet_Europa', 'HomePlanet_Mars', 'CryoSleep_True', 'Destination_PSO J318.5-22', 'Destination_TRAPPIST-1e', 'VIP_True']
+## FEATURES AFTER THIS PHASE
+['PassengerId', 'Cabin', 'Age', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck', 'Name', 'Transported', 'RoomService_flag', 'FoodCourt_flag', 'ShoppingMall_flag', 'Spa_flag', 'VRDeck_flag', 'AgeGroup', 'Cabin_deck', 'Cabin_number', 'Cabin_side', 'RoomService_log', 'FoodCourt_log', 'ShoppingMall_log', 'Spa_log', 'VRDeck_log', 'HomePlanet_Europa', 'HomePlanet_Mars', 'CryoSleep_True', 'Destination_PSO J318.5-22', 'Destination_TRAPPIST-1e', 'VIP_True']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+The following files were processed:
+- **Training File:** `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/processed_train.csv`
+- **Test File:** `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/processed_test.csv`
+
+The generated file is:
+- **Submission File:** `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/submission.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+**Features Involved:**
+- **Target Variable:** `Transported`
+- **Features Used for Training:** Age, RoomService, FoodCourt, ShoppingMall, Spa, VRDeck, and various binary flags.
+
+**Changes Made:**
+- The target variable `Transported` was separated from the training dataset.
+- Non-numeric columns (`PassengerId`, `Name`, `Cabin`) were deleted from both the training and test datasets.
+- No feature types were modified; however, the dataset was cleaned to ensure only numeric features were used for model training.
+
+### Question 3
+What models were trained during this phase, and what were their respective performance metrics (accuracy, precision, recall, etc.)?
+### Answer 3
+**Trained Models:**
+- Logistic Regression
+- Random Forest Classifier
+- XGBoost
+
+**Performance Metrics:**
+- **Logistic Regression:** Score: 0.7642
+- **Random Forest:** Score: 0.7642
+- **XGBoost:** Score: 0.7878 (Best Model)
+
+### Question 4
+What criteria were used to select the best-performing model, and what were the reasons for its selection?
+### Answer 4
+**Criteria for Model Selection:**
+- The model with the highest cross-validation score was selected.
+
+**Reasons for Selection:**
+- XGBoost achieved the highest score of 0.7878, indicating superior predictive performance compared to the other models. It was selected based on objective performance metrics demonstrating its robustness in predicting the target variable.
+
+### Question 5
+Were there any challenges or limitations encountered during model training or validation, and how were they addressed?
+### Answer 5
+**Challenges Encountered:**
+- Limited computational resources restricted the number of models that could be trained (maximum of three).
+
+**Addressed By:**
+- Careful selection of models, focusing on those known for effective performance in binary classification tasks.
+- Utilized an automated model training tool to streamline the process and ensure efficient use of resources.
+
+### Question 6
+What steps were taken to ensure the submission file, containing predictions for the test dataset, adhered to the competition requirements?
+### Answer 6
+**Submission File Preparation:**
+- Created a DataFrame containing `PassengerId` from the test dataset and the predicted `Transported` values.
+- Saved the submission in the required format as a CSV file, ensuring it included the necessary columns.
+
+### Question 7
+Based on the model performance and findings from this phase, what recommendations or strategies would you suggest for future phases or additional analyses?
+### Answer 7
+**Future Recommendations:**
+- **Documentation of Performance Metrics:** Summarize metrics such as accuracy, precision, and recall for each model to better understand performance.
+- **Error Handling:** Implement error handling to manage potential issues during data loading or model training.
+- **Parameter Tuning:** Consider hyperparameter tuning using Grid Search or Random Search to further optimize model performance.
+- **Feature Importance Analysis:** Conduct a feature importance analysis to identify which features contribute most to model predictions, guiding further feature engineering efforts.

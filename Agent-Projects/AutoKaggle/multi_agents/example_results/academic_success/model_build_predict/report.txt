@@ -1,0 +1,56 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Target
+## FEATURES BEFORE THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target', 'Admission_grade_x_GDP', 'Age_at_enrollment_x_Educational_special_needs', 'Admission grade.1', 'GDP.1', 'Age at enrollment.1', 'Admission grade^2', 'Admission grade GDP', 'Admission grade Age at enrollment', 'GDP^2', 'GDP Age at enrollment', 'Age at enrollment^2']
+## FEATURES AFTER THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target', 'Admission_grade_x_GDP', 'Age_at_enrollment_x_Educational_special_needs', 'Admission grade.1', 'GDP.1', 'Age at enrollment.1', 'Admission grade^2', 'Admission grade GDP', 'Admission grade Age at enrollment', 'GDP^2', 'GDP Age at enrollment', 'Age at enrollment^2']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What models were trained during this phase, and what were their respective cross-validated accuracy scores?
+### Answer 1
+The models trained during this phase include:
+- **Random Forest**
+- **Logistic Regression**
+
+The specific cross-validated accuracy scores were not provided in the code or outputs, but they would typically be generated as part of the model training and validation process. The best model was selected based on mean accuracy.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+During this phase, the following changes were made to the features:
+1. **Separation of Target Variable**: The `Target` variable was separated from the training set, creating `X_train` (features) and `y_train` (target).
+2. **Removal of Non-Numeric Features**: All non-numeric columns were dropped from both training and test sets to retain only numeric features.
+3. **Feature Scaling**: Numerical features were standardized using `StandardScaler`, ensuring uniformity across feature scales.
+
+### Question 3
+How did the selected model perform on the validation dataset compared to the training dataset, and what does this indicate about potential overfitting or underfitting?
+### Answer 3
+The performance on the validation dataset was not explicitly shared within the provided output. However:
+- If the accuracy on the training dataset was significantly higher than that on the validation dataset, it could indicate overfitting.
+- Conversely, if both accuracies were low, it might suggest underfitting.
+
+To assess this accurately, comparisons of cross-validated accuracy scores from the training phase with validation scores would be necessary.
+
+### Question 4
+What challenges or obstacles did you encounter during model training and validation, and how were they addressed?
+### Answer 4
+Challenges included:
+- **Non-Numeric Features**: Non-numeric columns were identified and removed, which could have led to potential information loss if those features were valuable. This was addressed by ensuring that only numeric features were retained.
+- **Feature Alignment**: Feature alignment between training and test sets was ensured to prevent data leakage, handled by dropping mismatched columns.
+
+Implementing error handling and more comprehensive checks could improve robustness in future iterations.
+
+### Question 5
+What are the key insights or recommendations for future competitions based on the model building and validation outcomes?
+### Answer 5
+Key insights and recommendations include:
+1. **Model Selection**: Rethink the model selection process to include a wider variety of models and hyperparameter tuning to identify the best performing configurations.
+2. **Feature Importance Analysis**: Incorporate feature importance analysis after model training to understand which features contribute most to the predictions.
+3. **Documentation and Code Quality**: Improve documentation and add error handling mechanisms to enhance code readability and maintainability.
+4. **Visualization of Results**: While no visualizations were generated in this phase, future iterations could benefit from plotting model performance metrics to visually assess model comparisons.
+
+This structured approach will help in iterative improvements in future competitions.

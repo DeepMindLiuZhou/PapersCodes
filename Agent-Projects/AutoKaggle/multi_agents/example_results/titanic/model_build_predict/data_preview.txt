@@ -1,0 +1,71 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- PassengerId
+
+### Numerical type
+- Survived
+- Pclass
+- Age
+- SibSp
+- Parch
+- Fare
+- FamilySize
+- IsAlone
+- FarePerPerson
+- Pclass_1
+- Pclass_2
+- Pclass_3
+- Sex_female
+- Sex_male
+- Embarked_C
+- Embarked_Q
+- Embarked_S
+- Title_Master
+- Title_Miss
+- Title_Mr
+- Title_Mrs
+- Title_Rare
+- AgeGroup_Adult
+- AgeGroup_Child
+- AgeGroup_MiddleAged
+- AgeGroup_Teen
+- FareGroup_High
+- FareGroup_Low
+- FareGroup_Medium
+- FareGroup_VeryHigh
+
+### Categorical type
+- Name
+- Sex
+- Ticket
+- Cabin
+- Embarked
+- Title
+- AgeGroup
+- FareGroup
+
+### Datetime type
+- None
+
+## Detailed data description
+The data provided consists of processed information from the Titanic passenger list. Key features include demographics (Age, Sex), socio-economic status (Pclass, Fare), family structure (SibSp, Parch, FamilySize, IsAlone), ticket information (Ticket, Cabin, Embarked), and engineered features (Title, AgeGroup, FareGroup).
+
+Notable patterns:
+- The `Survived` column is the target variable indicating whether a passenger survived (1) or not (0).
+- Age and Fare have been standardized.
+- Cabin information is missing for many passengers.
+- Embarked locations are encoded as `Embarked_C`, `Embarked_Q`, and `Embarked_S`.
+- Titles extracted from names provide additional categorical information (e.g., Mr, Mrs, Miss, Master, Rare).
+- FamilySize and IsAlone are derived from SibSp and Parch.
+- Age and Fare have been grouped into categories like AgeGroup and FareGroup, which are also one-hot encoded.
+
+## Target Variable
+- Survived: This is the target variable indicating whether the passenger survived (1) or not (0).
+
+# Submission format (if applicable)
+The submission format required includes:
+- PassengerId: Unique identifier for each passenger.
+- Survived: Predicted survival status (0 for not survived, 1 for survived).

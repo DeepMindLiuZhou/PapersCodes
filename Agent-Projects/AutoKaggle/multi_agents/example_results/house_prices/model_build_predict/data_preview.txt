@@ -1,0 +1,184 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- Id
+
+### Numerical type
+- MSSubClass
+- LotFrontage
+- LotArea
+- OverallQual
+- OverallCond
+- YearBuilt
+- YearRemodAdd
+- MasVnrArea
+- BsmtFinSF1
+- BsmtFinSF2
+- BsmtUnfSF
+- TotalBsmtSF
+- 1stFlrSF
+- 2ndFlrSF
+- LowQualFinSF
+- GrLivArea
+- BsmtFullBath
+- BsmtHalfBath
+- FullBath
+- HalfBath
+- BedroomAbvGr
+- KitchenAbvGr
+- TotRmsAbvGrd
+- Fireplaces
+- GarageYrBlt
+- GarageCars
+- GarageArea
+- WoodDeckSF
+- OpenPorchSF
+- EnclosedPorch
+- 3SsnPorch
+- ScreenPorch
+- PoolArea
+- MiscVal
+- MoSold
+- YrSold
+- HouseAge
+- YearsSinceRemod
+- TotalBath
+- TotalPorchSF
+- TotalSF
+- OverallQual_SF
+- MSZoning_C (all)
+- MSZoning_FV
+- MSZoning_RH
+- MSZoning_RL
+- MSZoning_RM
+- Street_Grvl
+- Street_Pave
+- Alley_Grvl
+- Alley_Missing
+- Alley_Pave
+- Neighborhood_Blmngtn
+- Neighborhood_Blueste
+- Neighborhood_BrDale
+- Neighborhood_BrkSide
+- Neighborhood_ClearCr
+- Neighborhood_CollgCr
+- Neighborhood_Crawfor
+- Neighborhood_Edwards
+- Neighborhood_Gilbert
+- Neighborhood_IDOTRR
+- Neighborhood_MeadowV
+- Neighborhood_Mitchel
+- Neighborhood_NAmes
+- Neighborhood_NPkVill
+- Neighborhood_NWAmes
+- Neighborhood_NoRidge
+- Neighborhood_NridgHt
+- Neighborhood_OldTown
+- Neighborhood_SWISU
+- Neighborhood_Sawyer
+- Neighborhood_SawyerW
+- Neighborhood_Somerst
+- Neighborhood_StoneBr
+- Neighborhood_Timber
+- Neighborhood_Veenker
+- HouseStyle_1.5Fin
+- HouseStyle_1.5Unf
+- HouseStyle_1Story
+- HouseStyle_2.5Fin
+- HouseStyle_2.5Unf
+- HouseStyle_2Story
+- HouseStyle_SFoyer
+- HouseStyle_SLvl
+- RoofStyle_Flat
+- RoofStyle_Gable
+- RoofStyle_Gambrel
+- RoofStyle_Hip
+- RoofStyle_Mansard
+- RoofStyle_Shed
+- Condition1_Artery
+- Condition1_Feedr
+- Condition1_Norm
+- Condition1_PosA
+- Condition1_PosN
+- Condition1_RRAe
+- Condition1_RRAn
+- Condition1_RRNe
+- Condition1_RRNn
+- Condition2_Artery
+- Condition2_Feedr
+- Condition2_Norm
+- Condition2_PosA
+- Condition2_PosN
+- Condition2_RRAe
+- Condition2_RRAn
+- Condition2_RRNn
+- BldgType_1Fam
+- BldgType_2fmCon
+- BldgType_Duplex
+- BldgType_Twnhs
+- BldgType_TwnhsE
+
+### Categorical type
+- LotShape
+- LandContour
+- Utilities
+- LotConfig
+- LandSlope
+- RoofMatl
+- Exterior1st
+- Exterior2nd
+- ExterQual
+- ExterCond
+- Foundation
+- BsmtQual
+- BsmtCond
+- BsmtExposure
+- BsmtFinType1
+- BsmtFinType2
+- Heating
+- HeatingQC
+- CentralAir
+- Electrical
+- KitchenQual
+- Functional
+- GarageType
+- GarageFinish
+- GarageQual
+- GarageCond
+- PavedDrive
+- PoolQC
+- Fence
+- MiscFeature
+- SaleType
+- SaleCondition
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset comprises various features related to residential homes. These features are categorized into numerical and categorical types. The numerical features include dimensions, quality ratings, and counts of various attributes of the properties. Meanwhile, the categorical features describe the characteristics of the properties, such as their shape, configuration, and quality ratings.
+
+Notable patterns include:
+- The presence of different quality and condition ratings for both the exterior and the basement.
+- Various types of configurations for the lot and garage.
+- Multiple neighborhood indicators.
+- Different types of roof materials and styles.
+- Multiple indicators for heating and electrical systems.
+
+The data also includes derived features such as:
+- HouseAge
+- YearsSinceRemod
+- TotalBath
+- TotalPorchSF
+- TotalSF
+- OverallQual_SF
+
+## Target Variable
+The target variable is 'SalePrice', which represents the sale price of the houses. This variable is used to train models to predict house prices based on the given features.
+
+# Submission format (if applicable)
+The submission file format includes the following columns:
+- Id: Unique identifier for each property (integer)
+- SalePrice: Predicted sale price of the property (float)

@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "owl"
+version = "0.0.1"
+description = "Optimized Workforce Learning for General Multi-Agent Assistance in Real-World Task Automation"
+authors = [{ name = "CAMEL-AI.org" }]
+requires-python = ">=3.10,<3.13"
+readme = "README.md"
+license = "Apache-2.0"
+keywords = [
+    "optimized-workforce-learning",
+    "multi-agent-assistance",
+    "task-automation",
+    "real-world-tasks",
+    "artificial-intelligence",
+    "agent-collaboration",
+    "workforce-optimization",
+    "learning-systems"
+]
+dependencies = [
+    "camel-ai[all]==0.2.32",
+    "chunkr-ai>=0.0.41",
+    "docx2markdown>=0.1.1",
+    "gradio>=3.50.2",
+    "mcp-simple-arxiv==0.2.2",
+    "mcp-server-fetch==2025.1.17",
+]
+
+[project.urls]
+Homepage = "https://www.camel-ai.org/"
+Repository = "https://github.com/camel-ai/owl"
+Documentation = "https://docs.camel-ai.org"
+
+[tool.hatch.build.targets.wheel]
+packages = ["owl"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = false
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = false
+disallow_untyped_decorators = false
+no_implicit_optional = false
+strict_optional = false
+ignore_missing_imports = true
+allow_redefinition = true
+disable_error_code = ["assignment", "arg-type", "return-value"]
+
+[[tool.mypy.overrides]]
+module = "camel.*"
+ignore_missing_imports = true
+follow_imports = "skip"
+
+[[tool.mypy.overrides]]
+module = "utils"
+ignore_missing_imports = true

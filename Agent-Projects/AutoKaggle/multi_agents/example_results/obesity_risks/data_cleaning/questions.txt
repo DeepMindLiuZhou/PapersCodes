@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What specific missing values were identified in the dataset, and what imputation methods were used to address them?
+
+### Question 4
+Which features exhibited outliers, and what methods were employed to handle them?
+
+### Question 5
+What transformations were applied to ensure consistency across categorical and numerical features, and how did these transformations affect the dataset?
+
+### Question 6
+What potential challenges or limitations were encountered during the data cleaning phase that may affect the forthcoming exploratory analysis?

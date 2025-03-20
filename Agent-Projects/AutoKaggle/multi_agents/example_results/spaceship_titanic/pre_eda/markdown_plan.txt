@@ -1,0 +1,56 @@
+## PLAN
+
+### STEP 1
+**Task:** Data Overview and Initial Examination
+**Tools, involved features and correct parameters:**
+- **Tools:** Pandas
+- **Features:** All features
+- **Parameters:**
+  - Load datasets using Pandas (`pd.read_csv`)
+  - Check data types and missing values using `df.info()`
+  - Get basic statistics using `df.describe()`
+  - Get initial overview of categorical features using `df['column_name'].value_counts()`
+**Expected output or Impact on data:**
+- Summary of data types, missing values, and basic statistics
+**Constraints:** 
+- Ensure efficient handling of large datasets by limiting print outputs to the first few entries
+
+### STEP 2
+**Task:** Distribution Analysis of Numerical Features
+**Tools, involved features and correct parameters:**
+- **Tools:** Matplotlib, Seaborn
+- **Features:** Age, RoomService, FoodCourt, ShoppingMall, Spa, VRDeck
+- **Parameters:**
+  - Plot histograms using `matplotlib.pyplot.hist` or `seaborn.histplot`
+  - Identify outliers using `seaborn.boxplot`
+**Expected output or Impact on data:**
+- Histograms and box plots for each numerical feature
+**Constraints:**
+- Limit the number of generated images to 6 histograms and 6 box plots
+
+### STEP 3
+**Task:** Distribution Analysis of Categorical Features
+**Tools, involved features and correct parameters:**
+- **Tools:** Seaborn, Pandas
+- **Features:** HomePlanet, CryoSleep, Cabin, Destination, VIP, Name
+- **Parameters:**
+  - Plot bar plots using `seaborn.countplot`
+  - Print unique value counts using `df['column_name'].value_counts()`
+**Expected output or Impact on data:**
+- Bar plots and unique value counts for each categorical feature
+**Constraints:**
+- Focus on the most informative plots and limit the number of generated images
+
+### STEP 4
+**Task:** Missing Values and Data Consistency Check
+**Tools, involved features and correct parameters:**
+- **Tools:** Pandas, Seaborn
+- **Features:** All features
+- **Parameters:**
+  - Visualize missing values using `seaborn.heatmap`
+  - Print summary of missing values using `df.isnull().sum()`
+  - Cross-check related features for consistency (e.g., `CryoSleep` and zero values in amenities)
+**Expected output or Impact on data:**
+- Heatmap of missing values, summary of missing values, and consistency check report
+**Constraints:**
+- Ensure efficient visualization by focusing on critical features

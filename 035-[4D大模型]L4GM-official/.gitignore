@@ -1,0 +1,8 @@
+workspace*
+logs
+log*
+pretrained
+
+__pycache__/
+scripts_acc/
+results/

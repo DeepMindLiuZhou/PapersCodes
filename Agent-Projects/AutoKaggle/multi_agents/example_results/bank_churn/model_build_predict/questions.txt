@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What models were trained, and what were their respective AUC ROC scores during validation?
+
+### Question 2
+What preprocessing steps were taken to prepare the training and test datasets?
+
+### Question 3
+How did the feature selection impact model performance? Were any features particularly influential?
+
+### Question 4
+Were there any challenges faced during model training or validation, and how were they addressed?
+
+### Question 5
+What is the final format of the submission file, and does it meet the competition requirements?
+
+### Question 6
+Based on the findings from this phase, what recommendations would you make for future projects or iterations of this model?

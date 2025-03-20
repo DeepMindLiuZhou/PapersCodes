@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What statistical summaries were generated for the numerical features (`bone_length`, `rotting_flesh`, `hair_length`, `has_soul`), and how do these metrics inform potential scaling or transformation needs?
+
+### Question 2
+What patterns or significant associations were identified between the categorical features (`color`, `type`), and how might these inform the creation of new features?
+
+### Question 3
+Which numerical features exhibit strong correlations with the target variable (`type`), and what implications do these correlations have for feature selection in the next phase?
+
+### Question 4
+What visual insights were gained from the analysis, particularly regarding the distributions of numerical features across different creature types?
+
+### Question 5
+Were any outliers detected in the numerical features, and should they be addressed through engineering techniques such as capping or removal?
+
+### Question 6
+Based on the findings from the in-depth analysis, what specific feature engineering strategies do you recommend to improve model robustness and predictive power?

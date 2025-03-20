@@ -1,0 +1,31 @@
+X_train shape: (371, 10)
+y_train shape: (371,)
+X_test shape: (529, 10)
+Finished model training: XGBoost
+Finished model training: SVM
+Finished model training: random forest
+Model: XGBoost, Best Params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}, Score: 0.725438960454158
+Model: SVM, Best Params: {'C': 0.1, 'gamma': 'scale', 'kernel': 'linear'}, Score: 0.6795278414292603
+Model: random forest, Best Params: {'max_depth': 10, 'min_samples_split': 2, 'n_estimators': 10}, Score: 0.6960523733693642
+Best Model Selected: GradientBoostingClassifier
+Cross-Validation Accuracy Scores: [0.81333333 0.72972973 0.67567568 0.71621622 0.7027027 ]
+Mean CV Accuracy: 0.7275
+Standard Deviation of CV Accuracy: 0.0465
+Sample of Submission File:
+   id    type
+0   3   Ghoul
+1   6  Goblin
+2   9   Ghoul
+3  10   Ghost
+4  13   Ghost
+
+Submission file saved successfully at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/submission.csv
+Sample of Submission File:
+   id    type
+0   3   Ghoul
+1   6  Goblin
+2   9   Ghoul
+3  10   Ghost
+4  13   Ghost
+
+Submission file saved successfully at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/model_build_predict/images/submission_example.csv

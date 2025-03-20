@@ -1,0 +1,118 @@
+## PLAN
+
+### STEP 1
+Task: **Handle Missing Values**
+Tools, involved features and correct parameters:
+- **Tools:**
+  - `fill_missing_values`
+    - **Numerical Features:** 
+      - Columns: `Previous qualification (grade)`, `Admission grade`, `Curricular units 1st sem (credited)`, `Curricular units 1st sem (enrolled)`, `Curricular units 1st sem (evaluations)`, `Curricular units 1st sem (approved)`, `Curricular units 1st sem (grade)`, `Curricular units 1st sem (without evaluations)`, `Curricular units 2nd sem (credited)`, `Curricular units 2nd sem (enrolled)`, `Curricular units 2nd sem (evaluations)`, `Curricular units 2nd sem (approved)`, `Curricular units 2nd sem (grade)`, `Curricular units 2nd sem (without evaluations)`, `Unemployment rate`, `Inflation rate`, `GDP`
+      - Method: `median`
+    - **Categorical Features:** 
+      - Columns: `Marital status`, `Application mode`, `Course`, `Previous qualification`, `Nationality`, `Mother's qualification`, `Father's qualification`, `Mother's occupation`, `Father's occupation`, `Displaced`, `Educational special needs`, `Debtor`, `Tuition fees up to date`, `Gender`, `Scholarship holder`, `International`
+      - Method: `mode`
+  - `remove_columns_with_missing_data`
+    - **Parameters:** 
+      - `thresh`: `0.6` (remove columns with more than 60% missing values)
+- **Features Involved:** All features in both `train.csv` and `test.csv`
+
+Expected output or Impact on data:
+- Datasets (`cleaned_train.csv` and `cleaned_test.csv`) with missing values imputed appropriately.
+- Removal of columns with excessive missing values (above 60%), reducing noise and potential biases.
+
+Constraints:
+- Prevent introduction of significant bias through imputation.
+- Maintain consistency in handling missing values across both training and test datasets to avoid data leakage.
+
+---
+
+### STEP 2
+Task: **Detect and Handle Outliers in Numerical Features**
+Tools, involved features and correct parameters:
+- **Tools:**
+  - `detect_and_handle_outliers_iqr`
+    - **Parameters:**
+      - `factor`: `1.5` (to identify outliers)
+      - `method`: `clip` (to cap outlier values)
+- **Features Involved:** 
+  - Numerical Features:
+    - `Previous qualification (grade)`
+    - `Admission grade`
+    - `Curricular units 1st sem (credited)`
+    - `Curricular units 1st sem (enrolled)`
+    - `Curricular units 1st sem (evaluations)`
+    - `Curricular units 1st sem (approved)`
+    - `Curricular units 1st sem (grade)`
+    - `Curricular units 1st sem (without evaluations)`
+    - `Curricular units 2nd sem (credited)`
+    - `Curricular units 2nd sem (enrolled)`
+    - `Curricular units 2nd sem (evaluations)`
+    - `Curricular units 2nd sem (approved)`
+    - `Curricular units 2nd sem (grade)`
+    - `Curricular units 2nd sem (without evaluations)`
+    - `Unemployment rate`
+    - `Inflation rate`
+    - `GDP`
+
+Expected output or Impact on data:
+- Numerical features with outliers capped at the upper and lower bounds based on the IQR method.
+- Enhanced robustness and performance of subsequent models by reducing the impact of extreme values.
+
+Constraints:
+- Do not remove outliers from the test dataset to maintain consistency.
+- Ensure clipping preserves the overall data distribution without artificially compressing feature ranges.
+
+---
+
+### STEP 3
+Task: **Normalize and Standardize Categorical Features**
+Tools, involved features and correct parameters:
+- **Tools:**
+  - `convert_data_types`
+    - **Parameters:**
+      - **Categorical Columns:** 
+        - `Marital status`, `Application mode`, `Course`, `Previous qualification`, `Nationality`, `Mother's qualification`, `Father's qualification`, `Mother's occupation`, `Father's occupation`, `Displaced`, `Educational special needs`, `Debtor`, `Tuition fees up to date`, `Gender`, `Scholarship holder`, `International`
+      - `target_type`: `str`
+- **Methods:**
+  - Utilize pandas string methods to:
+    - Convert all categorical strings to lowercase.
+    - Strip leading and trailing whitespaces.
+    - Correct common typos based on predefined mappings or manual inspection.
+- **Features Involved:** 
+  - All categorical features listed above in both `train.csv` and `test.csv`
+
+Expected output or Impact on data:
+- Categorical features are standardized with consistent formatting, eliminating discrepancies such as case sensitivity and unwanted spaces.
+- Enhanced data quality, facilitating smoother downstream processing and modeling.
+
+Constraints:
+- Avoid merging distinct categories inadvertently during standardization.
+- Preserve the semantic meaning of each category to maintain data integrity.
+
+---
+
+### STEP 4
+Task: **Remove Duplicate Rows and Convert Data Types**
+Tools, involved features and correct parameters:
+- **Tools:**
+  - `remove_duplicates`
+    - **Parameters:**
+      - `columns`: All columns except `id`
+      - `keep`: `first`
+  - `convert_data_types`
+    - **Parameters:**
+      - **Numerical Columns:** Ensure data types are `int` or `float` as appropriate.
+      - **Categorical Columns:** Ensure data types are `str`.
+      - **ID Column:** Convert to `str` to preserve formatting.
+- **Features Involved:** 
+  - All features in both `train.csv` and `test.csv`
+
+Expected output or Impact on data:
+- Removal of duplicate rows, ensuring each `id` remains unique.
+- All features possess appropriate and consistent data types, enhancing data integrity and readiness for analysis and modeling.
+
+Constraints:
+- Preserve the unique identifier (`id`) to maintain traceability.
+- Prevent loss of information by avoiding inappropriate type conversions, such as removing leading zeros in `id` by keeping it as `str`.
+
+---

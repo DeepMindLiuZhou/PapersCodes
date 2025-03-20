@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What new features were created during this phase, and how do they relate to existing features?
+
+### Question 4
+Which existing features were transformed, and what impact did these transformations have on their distributions?
+
+### Question 5
+How were categorical variables handled, and what encoding methods were applied? Were there any challenges faced in this process?
+
+### Question 6
+Based on the findings from this phase, what key features should be prioritized for inclusion in the modeling phase, and why?

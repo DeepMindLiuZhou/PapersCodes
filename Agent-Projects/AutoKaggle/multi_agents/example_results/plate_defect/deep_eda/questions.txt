@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What are the key statistical insights derived from the numerical features, and how do they inform the potential transformations or new features that could be created?
+
+### Question 4
+Which numerical features exhibit significant correlations with the target variables, and how can these relationships be leveraged in feature engineering?
+
+### Question 5
+What patterns or trends were observed in the categorical features when analyzed against the target variables? Are there any derived categorical features that could be beneficial?
+
+### Question 6
+Based on the findings from the exploratory data analysis, what specific feature engineering actions are recommended, and how should they be prioritized?

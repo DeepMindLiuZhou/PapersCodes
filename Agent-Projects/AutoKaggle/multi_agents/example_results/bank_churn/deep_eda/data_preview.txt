@@ -1,0 +1,49 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- id
+- CustomerId
+- Surname
+
+### Numerical type
+- CreditScore
+- Age
+- Tenure
+- Balance
+- NumOfProducts
+- HasCrCard
+- IsActiveMember
+- EstimatedSalary
+
+### Categorical type
+- Geography
+- Gender
+
+### Datetime type
+- None
+
+## Detailed data description
+The provided dataset consists of customer information from a bank, separated into training and test sets. The features include demographic information (such as Geography, Gender, and Age), financial details (such as CreditScore, Balance, and EstimatedSalary), and customer activity indicators (such as NumOfProducts, HasCrCard, and IsActiveMember). 
+
+### Notable Patterns and Characteristics:
+- **CreditScore**: Varies significantly among customers, indicating different levels of creditworthiness.
+- **Geography**: Includes customers from France, Spain, and Germany.
+- **Gender**: Data includes both males and females.
+- **Age**: Ranges from young adults to older individuals.
+- **Tenure**: Indicates the number of years the customer has been with the bank.
+- **Balance**: Some customers have a balance of 0, while others have significant balances.
+- **NumOfProducts**: Customers have either 1 or 2 products.
+- **HasCrCard**: Indicates whether a customer has a credit card (1) or not (0).
+- **IsActiveMember**: Indicates whether a customer is an active member (1) or not (0).
+- **EstimatedSalary**: Varies widely among customers.
+
+## Target Variable
+- **Exited**: This is the target variable indicating whether the customer has exited the bank (1) or not (0).
+
+# Submission format (if applicable)
+For the submission file, the format should include the `id` and the predicted `Exited` status. The required columns and their types are:
+
+- **id**: Integer (unique identifier for each customer)
+- **Exited**: Integer (prediction of whether the customer has exited the bank, with 1 indicating exit and 0 indicating no exit)

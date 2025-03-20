@@ -1,0 +1,92 @@
+## PLAN
+
+### STEP 1
+Task: Perform Descriptive Statistics and Distribution Plots
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, NumPy, Matplotlib, Seaborn
+- **Features:** All numerical (`CreditScore`, `Age`, `Tenure`, `Balance`, `EstimatedSalary`) and categorical (`Geography`, `Gender`, `HasCrCard`, `IsActiveMember`) features
+- **Parameters:** Use `describe()` for numerical features, `value_counts()` for categorical features, histograms, and box plots for distributions
+Expected output or Impact on data:
+- Descriptive statistics and frequency counts for features
+- Distribution plots for numerical features
+Constraints:
+- Limit to 5 key distribution plots
+
+### STEP 2
+Task: Analyze Target Variable
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, Seaborn
+- **Features:** `Exited`
+- **Parameters:** Calculate proportions, use count plots
+Expected output or Impact on data:
+- Proportion of exited vs non-exited customers
+- Count plot visualization
+Constraints:
+- Ensure clear visualization of proportions
+
+### STEP 3
+Task: Conduct Correlation Analysis and Visualize
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, Seaborn
+- **Features:** Numerical features
+- **Parameters:** Compute correlation matrix, visualize using heatmap with `annot=False`
+Expected output or Impact on data:
+- Correlation matrix
+- Heatmap visualization
+Constraints:
+- Optimize for efficiency with large datasets
+
+### STEP 4
+Task: Explore Categorical Features vs Target
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, Seaborn
+- **Features:** `Geography`, `Gender`, `HasCrCard`, `IsActiveMember`
+- **Parameters:** Use count plots and bar plots
+Expected output or Impact on data:
+- Visualizations showing relationships between categorical features and `Exited`
+Constraints:
+- Limit to 4 key plots
+
+### STEP 5
+Task: Explore Numerical Features vs Target
+Tools, involved features and correct parameters:
+- **Tools:** Seaborn
+- **Features:** `CreditScore`, `Age`, `Tenure`, `Balance`, `EstimatedSalary`
+- **Parameters:** Use box plots and violin plots
+Expected output or Impact on data:
+- Visualizations showing relationships between numerical features and `Exited`
+Constraints:
+- Limit to 5 key plots
+
+### STEP 6
+Task: Conduct Pair Plot Analysis
+Tools, involved features and correct parameters:
+- **Tools:** Seaborn
+- **Features:** `CreditScore`, `Age`, `Balance`, `EstimatedSalary`, `Exited`
+- **Parameters:** Generate pair plots
+Expected output or Impact on data:
+- Pair plot visualizations showing interactions between key features
+Constraints:
+- Reduce sample size if needed for efficiency
+
+### STEP 7
+Task: Explore Feature Interactions with Target
+Tools, involved features and correct parameters:
+- **Tools:** Seaborn
+- **Features:** Combinations such as `Geography` & `Balance`, `Age` & `CreditScore`
+- **Parameters:** Use joint plots or facet grids
+Expected output or Impact on data:
+- Visualizations showing interactions between multiple features and `Exited`
+Constraints:
+- Limit to 4 key interactions
+
+### STEP 8
+Task: Summarize Key Insights and Provide Recommendations
+Tools, involved features and correct parameters:
+- **Tools:** Text format
+- **Parameters:** Summarize findings from analyses, provide detailed recommendations for feature engineering
+Expected output or Impact on data:
+- Summary report of key insights
+- Recommendations for feature transformations, new feature creation, or feature selection
+Constraints:
+- Ensure clarity and detail in recommendations

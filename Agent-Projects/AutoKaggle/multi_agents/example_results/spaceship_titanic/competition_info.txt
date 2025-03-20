@@ -1,0 +1,61 @@
+# Competition Information
+## 1. Competition Overview
+The "Spaceship Titanic" competition challenges participants to predict which passengers were transported to an alternate dimension after a collision with a spacetime anomaly. This engaging narrative sets the stage for a classification problem.
+
+## 2. Files
+- **train.csv**: Contains personal records for approximately 8,700 passengers, including the target variable (`Transported`) for training.
+- **test.csv**: Includes around 4,300 passenger records without the target variable, used for making predictions.
+- **sample_submission.csv**: A template demonstrating the required format for submissions.
+
+## 3. Problem Definition
+The task is to classify passengers into two categories: those who were transported to another dimension (True) and those who were not (False).
+
+## 4. Data Information
+### 4.1 Data type
+#### 4.1.1 ID type
+- `PassengerId`: Unique identifier for each passenger.
+
+#### 4.1.2 Numerical type
+- `Age`: Age of the passenger.
+- `RoomService`: Amount billed for room service.
+- `FoodCourt`: Amount billed for food court services.
+- `ShoppingMall`: Amount billed for shopping mall services.
+- `Spa`: Amount billed for spa services.
+- `VRDeck`: Amount billed for VR Deck services.
+
+#### 4.1.3 Categorical type
+- `HomePlanet`: Planet of origin.
+- `CryoSleep`: Indicates if the passenger is in suspended animation.
+- `Cabin`: Cabin number.
+- `Destination`: Planet of destination.
+- `VIP`: Whether the passenger is a VIP.
+- `Name`: Full name of the passenger.
+- `Transported`: Target variable (only in training data).
+
+#### 4.1.4 Datetime type
+- None.
+
+### 4.2 Detailed data description
+The training dataset includes features that provide insights into passengers, such as their home planet, cryosleep status, age, VIP status, cabin information, and spending across various luxury services.
+
+## 5. Target Variable
+- **Transported**: A binary variable indicating whether a passenger was transported (True) or not (False), present only in the training dataset.
+
+## 6. Evaluation Metrics
+Submissions will be evaluated based on **classification accuracy**, measuring the percentage of correct predictions made by the model.
+
+## 7. Submission Format
+The final submission should be a CSV file with the format:
+```
+PassengerId,Transported
+0013_01,False
+0018_01,False
+0019_01,False
+0021_01,False
+...
+```
+
+## 8. Other Key Aspects
+- **Rolling Leaderboard**: The leaderboard refreshes every two months, invalidating older submissions.
+- **Community Engagement**: Participants are encouraged to engage in forums and use Kaggle Notebooks for collaborative analysis.
+- **Getting Started**: Designed as a beginner-friendly competition, suitable for those new to data science and machine learning.

@@ -1,0 +1,63 @@
+## PLAN
+
+### STEP 1
+**Task:** Univariate Analysis of Key Features
+- **Tools, involved features and correct parameters:**
+  - `pandas.describe()` for summary statistics.
+  - `seaborn.histplot()` and `matplotlib.pyplot` for visualizing distributions.
+  - Numerical features: `SalePrice`, `LotArea`, `GrLivArea`, `TotalBsmtSF`, `OverallQual`, `YearBuilt`.
+  - `pandas.value_counts()` for analyzing categorical features.
+- **Expected output or Impact on data:**
+  - Text summary of numerical feature statistics.
+  - Histograms for key numerical features.
+  - Frequency counts for categorical features.
+- **Constraints:**
+  - Limit to key numerical features that are likely to impact `SalePrice`.
+  - Maximize efficiency by plotting multiple histograms in a grid layout.
+  - Print top categories for features with high cardinality.
+
+### STEP 2
+**Task:** Bivariate Analysis with Target Variable
+- **Tools, involved features and correct parameters:**
+  - `pandas.corr()` and `seaborn.heatmap()` for correlation analysis.
+  - Numerical features: All numerical features along with `SalePrice`.
+  - `seaborn.scatterplot()` for scatter plots.
+  - Features: `GrLivArea`, `TotalBsmtSF`, `LotArea`, `OverallQual`.
+  - `seaborn.boxplot()` for box plots.
+  - Features: `Neighborhood`, `BldgType`, `HouseStyle`, `OverallQual`.
+- **Expected output or Impact on data:**
+  - Correlation matrix and heatmap.
+  - Scatter plots for significant numerical features.
+  - Box plots for key categorical features.
+- **Constraints:**
+  - Focus on features with high correlation to `SalePrice`.
+  - Limit scatter plots to features with significant correlation.
+  - Prioritize features with high cardinality and diverse categories.
+
+### STEP 3
+**Task:** Feature Interactions
+- **Tools, involved features and correct parameters:**
+  - `seaborn.pairplot()` for pairwise scatter plots.
+  - Features: `GrLivArea`, `TotalBsmtSF`, `OverallQual`, `YearBuilt`, `SalePrice`.
+  - `pandas.groupby()`, `pandas.agg()` for interaction analysis.
+  - Features: `OverallQual`, `YearBuilt`, `Neighborhood`, `SalePrice`.
+- **Expected output or Impact on data:**
+  - Pairwise scatter plots matrix.
+  - Text summary of interaction analysis results.
+- **Constraints:**
+  - Select a subset of features to avoid overly complex visualizations.
+  - Focus on combinations likely to show significant interactions.
+
+### STEP 4
+**Task:** Visualizing Key Insights and Patterns
+- **Tools, involved features and correct parameters:**
+  - `matplotlib.pyplot`, `seaborn.barplot()` for important feature visualizations.
+  - Features: Features with the highest impact on `SalePrice`.
+  - Text summary for recommendations.
+  - Insights from all analyzed features.
+- **Expected output or Impact on data:**
+  - Visualizations of key insights.
+  - Detailed text summary with actionable recommendations for feature engineering.
+- **Constraints:**
+  - Limit the number of visualizations to the most impactful insights.
+  - Ensure recommendations are specific and actionable.

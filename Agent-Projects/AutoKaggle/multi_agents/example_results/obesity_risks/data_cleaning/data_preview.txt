@@ -1,0 +1,64 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- id
+
+### Numerical type
+- Age
+- Height
+- Weight
+- FCVC
+- NCP
+- CH2O
+- FAF
+- TUE
+
+### Categorical type
+- Gender
+- family_history_with_overweight
+- FAVC
+- CAEC
+- SMOKE
+- SCC
+- CALC
+- MTRANS
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of various features related to individuals' demographics, lifestyle, and dietary habits, which are used to predict their obesity levels. Here are some detailed observations:
+
+- **Gender**: This is a categorical variable with values 'Male' and 'Female'.
+- **Age**: This numerical feature represents the age of individuals, with values ranging from 17 to 31.641081 in the training data.
+- **Height**: This numerical feature represents the height of individuals in meters, with values ranging from 1.553127 to 1.914186 in the training data.
+- **Weight**: This numerical feature represents the weight of individuals in kilograms, with values ranging from 50.165754 to 131.274851 in the training data.
+- **family_history_with_overweight**: This categorical feature indicates whether individuals have a family history of being overweight, with values 'yes' and 'no'.
+- **FAVC**: This categorical feature indicates whether individuals frequently consume high-calorie food, with values 'yes' and 'no'.
+- **FCVC**: This numerical feature represents the frequency of vegetable consumption, with values ranging from 1 to 4.
+- **NCP**: This numerical feature represents the number of main meals, with values ranging from 1 to 3.
+- **CAEC**: This categorical feature indicates the frequency of food consumption between meals, with values 'no', 'Sometimes', 'Frequently', and 'Always'.
+- **SMOKE**: This categorical feature indicates whether individuals smoke, with values 'yes' and 'no'.
+- **CH2O**: This numerical feature represents daily water intake in liters, with values ranging from 0.094851 to 3.0.
+- **SCC**: This categorical feature indicates whether individuals monitor their calorie consumption, with values 'yes' and 'no'.
+- **FAF**: This numerical feature represents physical activity frequency in hours per week, with values ranging from 0.0 to 3.0.
+- **TUE**: This numerical feature represents time using technology devices in hours, with values ranging from 0.0 to 2.0.
+- **CALC**: This categorical feature indicates the frequency of alcohol consumption, with values 'no', 'Sometimes', 'Frequently', and 'Always'.
+- **MTRANS**: This categorical feature represents the main means of transportation, with values 'Automobile', 'Public_Transportation', 'Walking', and 'Motorbike'.
+
+## Target Variable
+The target variable is **NObeyesdad**, which categorizes the obesity levels of individuals. The categories include:
+- Insufficient_Weight
+- Normal_Weight
+- Overweight_Level_I
+- Overweight_Level_II
+- Obesity_Type_I
+- Obesity_Type_II
+- Obesity_Type_III
+
+# Submission format (if applicable)
+For submission, the required columns are:
+- id (Integer)
+- NObeyesdad (Categorical: Insufficient_Weight, Normal_Weight, Overweight_Level_I, Overweight_Level_II, Obesity_Type_I, Obesity_Type_II, Obesity_Type_III)

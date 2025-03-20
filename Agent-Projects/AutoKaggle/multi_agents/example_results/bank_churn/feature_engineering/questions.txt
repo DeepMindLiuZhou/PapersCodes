@@ -1,0 +1,24 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What new features were created during the Feature Engineering phase, and what insights were used to determine their relevance?
+
+### Question 4
+How were the existing features transformed, and what specific changes were made to enhance model performance?
+
+### Question 5
+What encoding techniques were applied to the categorical variables, and how were they chosen to avoid pitfalls like the dummy variable trap?
+
+### Question 6
+Which features were standardized or normalized, and what considerations were taken into account during this process?
+
+### Question 7
+What potential multicollinearity issues might arise from the newly created features, and how can these be addressed before modeling?
+
+### Question 8
+Based on the findings from the Feature Engineering phase, what features do you believe are most critical for the model, and what criteria will you use to select features for modeling?

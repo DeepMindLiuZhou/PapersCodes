@@ -1,0 +1,65 @@
+## PLAN
+
+### STEP 1
+Task: Create new features
+Tools, involved features and correct parameters:
+- **Binary Flags for Expenditure**:
+  - **Tools**: Pandas
+  - **Features**: `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`
+  - **Parameters**: Create binary columns for each expenditure indicating if the value is greater than zero.
+- **Age Groups**:
+  - **Tools**: Pandas `cut` function
+  - **Features**: `Age`
+  - **Parameters**: Define age bins and create a new categorical feature.
+- **Cabin Feature Decomposition**:
+  - **Tools**: Pandas
+  - **Features**: `Cabin`
+  - **Parameters**: Split `Cabin` into `deck`, `number`, and `side`.
+- **Interaction Features**:
+  - **Tools**: `create_feature_combinations`
+  - **Features**: `HomePlanet`, `Destination`, `CryoSleep`
+  - **Parameters**: Generate interaction features for meaningful combinations.
+Expected output or Impact on data:
+- New binary columns (`RoomService_flag`, `FoodCourt_flag`, etc.)
+- New categorical column (`AgeGroup`)
+- New columns (`Cabin_deck`, `Cabin_number`, `Cabin_side`)
+- New interaction columns (`HomePlanet_Destination_interaction`, `CryoSleep_RoomService_interaction`)
+Constraints: Ensure new features are logically consistent and add meaningful information.
+
+### STEP 2
+Task: Transform existing features
+Tools, involved features and correct parameters:
+- **Log Transformation for Expenditure Features**:
+  - **Tools**: Pandas
+  - **Features**: `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`
+  - **Parameters**: Apply log transformation (e.g., `log(x + 1)`).
+- **One-Hot Encoding for Categorical Features**:
+  - **Tools**: `one_hot_encode`
+  - **Features**: `HomePlanet`, `CryoSleep`, `Cabin_deck`, `Cabin_side`, `Destination`, `VIP`, `AgeGroup`
+  - **Parameters**: Encode categorical features using one-hot encoding.
+Expected output or Impact on data:
+- Transformed columns (`RoomService_log`, `FoodCourt_log`, etc.)
+- One-hot encoded columns for each categorical feature.
+Constraints: Manage dimensionality to avoid the curse of dimensionality, especially with high-cardinality features.
+
+### STEP 3
+Task: Normalize or standardize numerical features
+Tools, involved features and correct parameters:
+- **Scaling Numerical Features**:
+  - **Tools**: `scale_features`
+  - **Features**: `Age`, `RoomService_log`, `FoodCourt_log`, `ShoppingMall_log`, `Spa_log`, `VRDeck_log`
+  - **Parameters**: Use the `standard` method to scale features.
+Expected output or Impact on data:
+- Scaled numerical features.
+Constraints: Ensure scaling is consistent and applied after data splitting to avoid data leakage.
+
+### STEP 4
+Task: Feature selection
+Tools, involved features and correct parameters:
+- **Correlation-Based Feature Selection**:
+  - **Tools**: `correlation_feature_selection`
+  - **Features**: All features post-transformation
+  - **Parameters**: Use a threshold of 0.5 for correlation with the target (`Transported`).
+Expected output or Impact on data:
+- A reduced set of features with strong correlations to the target.
+Constraints: Consider multicollinearity and ensure selected features are relevant and meaningful for modeling.

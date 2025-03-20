@@ -1,0 +1,74 @@
+# FEATURE INFO
+## TARGET VARIABLE
+SalePrice
+## FEATURES BEFORE THIS PHASE
+['Id', 'MSSubClass', 'MSZoning', 'LotFrontage', 'LotArea', 'Street', 'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType', 'HouseStyle', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1', 'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual', 'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual', 'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC', 'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType', 'SaleCondition', 'SalePrice']
+## FEATURES AFTER THIS PHASE
+['Id', 'MSSubClass', 'MSZoning', 'LotFrontage', 'LotArea', 'Street', 'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType', 'HouseStyle', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1', 'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual', 'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual', 'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC', 'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType', 'SaleCondition', 'SalePrice']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+Processed files:
+- `cleaned_train.csv` located at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/cleaned_train.csv`
+- `cleaned_test.csv` located at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/cleaned_test.csv`
+
+Generated files:
+- Various visualizations saved as images, including:
+  - Univariate analysis histograms: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/deep_eda/images/univariate_numerical_histograms.png`
+  - Correlation matrix heatmap: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/deep_eda/images/correlation_matrix.png`
+  - Bivariate scatter plots: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/deep_eda/images/bivariate_scatter_plots.png`
+  - Bivariate box plots: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/deep_eda/images/bivariate_box_plots.png`
+  - Pairwise scatter plots: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/deep_eda/images/pairwise_scatter_plots.png`
+  - OverallQual vs SalePrice bar plot: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/deep_eda/images/overallqual_vs_saleprice.png`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. 
+### Answer 2
+Features involved in this phase:
+- **Numerical Features**: `SalePrice`, `LotArea`, `GrLivArea`, `TotalBsmtSF`, `OverallQual`, `YearBuilt`
+- **Categorical Features**: `MSZoning`, `Neighborhood`, `BldgType`, `HouseStyle`
+
+No features were deleted, but the analysis provided insights into the importance of existing features for future modeling. No modifications to feature types were made, as all features were retained in their existing formats.
+
+### Question 3
+What are the key statistical insights from the univariate analysis of numerical features, particularly those most correlated with `SalePrice`?
+### Answer 3
+- **SalePrice**: Mean = $180,921, Std = $79,443, Min = $34,900, Max = $755,000.
+- **LotArea**: Mean = 9,647 sq ft, Std = 3,594 sq ft, with values ranging from 1,481 to 17,673 sq ft.
+- **GrLivArea**: Mean = 1,566 sq ft, Std = 505 sq ft, indicating a strong skew toward larger homes.
+- **TotalBsmtSF**: Mean = 1,049 sq ft, Std = 436 sq ft, with a notable presence of homes having no basement.
+- **OverallQual**: Mean = 6.1 (scale 1-10), Std = 1.38, suggesting a moderate overall quality across properties.
+- **YearBuilt**: Mean = 1971, indicating a mix of older and newer homes.
+
+### Question 4
+Which numerical features displayed the highest correlation with the target variable `SalePrice`, and what visualizations effectively communicate these relationships?
+### Answer 4
+- **OverallQual**: Strongest positive correlation (0.79).
+- **GrLivArea**: Next strongest correlation (0.71).
+- **TotalBsmtSF**: Moderate correlation (0.61).
+- **GarageCars**: Correlation of 0.64.
+- **Visualizations**: Scatter plots for `OverallQual`, `GrLivArea`, and `TotalBsmtSF` effectively illustrate these relationships, showing upward trends in sale prices with increases in these features.
+
+### Question 5
+What patterns or differences were observed in the bivariate analysis of categorical features against `SalePrice`, and which categorical features showed the most significant impact?
+### Answer 5
+- **MSZoning**: `RL` has the highest median sale price (~$200,000) while `C (all)` is the lowest (~$75,000).
+- **Neighborhood**: `NridgHt` shows the highest median sale prices, while `Meadow V` has the lowest. Variability in prices indicates affluent areas versus less desirable ones.
+- **BldgType**: Single-family homes (`1Fam`) have higher sale prices compared to other types.
+- **HouseStyle**: `2Story` homes tend to command higher prices, while `1Story` homes have moderate prices.
+
+### Question 6
+What specific visualizations or insights emerged as the most impactful during the exploration of key features, and how can these insights direct feature engineering efforts?
+### Answer 6
+- **Pairwise scatter plots**: Show strong relationships between `GrLivArea`, `TotalBsmtSF`, `OverallQual`, and `SalePrice`.
+- **Bar plots for OverallQual**: Clearly illustrate the strong positive correlation with sale price.
+- **Recommendations for Feature Engineering**: Emphasize the importance of size (GrLivArea) and quality (OverallQual) features for predictive modeling.
+- **Further Recommendations**:
+  1. **Handling Missing Values**: Use imputation techniques for features with missing values, particularly for categorical variables like `Alley`, `PoolQC`, etc.
+  2. **Outlier Treatment**: Consider capping outliers in numerical features, especially `SalePrice`, to reduce skewness in data modeling.
+  3. **Create Interaction Features**: Develop features such as `OverallQual * YearBuilt` and create composite features combining `GrLivArea`, `TotalBsmtSF`, and `LotArea` for a holistic property size representation.
+  4. **Categorical Encoding**: Use one-hot encoding or target encoding for categorical variables like `Neighborhood` and `MSZoning` to capture their influence effectively.

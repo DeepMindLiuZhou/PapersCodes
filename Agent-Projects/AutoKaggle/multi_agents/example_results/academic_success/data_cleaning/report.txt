@@ -1,0 +1,88 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Target
+## FEATURES BEFORE THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target']
+## FEATURES AFTER THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target']
+# REPORT
+
+## QUESTIONS AND ANSWERS
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+The following files were processed:
+- **Input Files:**
+  - `train.csv`: Located at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/train.csv`
+  - `test.csv`: Located at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/test.csv`
+  
+- **Output Files:**
+  - `cleaned_train.csv`: Generated and saved at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/cleaned_train.csv`
+  - `cleaned_test.csv`: Generated and saved at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/cleaned_test.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Features Involved:**
+  - **Numerical Features:** 
+    - Previous qualification (grade)
+    - Admission grade
+    - Curricular units (credited/enrolled/evaluations/approved/grade for both semesters)
+    - Unemployment rate
+    - Inflation rate
+    - GDP
+  - **Categorical Features:**
+    - Marital status
+    - Application mode
+    - Course
+    - Previous qualification
+    - Nationality
+    - Mother's qualification
+    - Father's qualification
+    - Mother's occupation
+    - Father's occupation
+    - Displaced
+    - Educational special needs
+    - Debtor
+    - Tuition fees up to date
+    - Gender
+    - Scholarship holder
+    - International
+
+- **Changes Made:**
+  - **Imputation:** Missing values in numerical features were filled with the median, while categorical features were filled with the mode.
+  - **Feature Deletion:** Features with more than 60% missing values were removed to reduce noise and potential biases.
+  - **Data Type Modification:** Categorical features were standardized to lowercase and stripped of whitespaces. Numerical features were ensured to be in appropriate types (float).
+
+### Question 3
+What specific missing values were addressed during the data cleaning process, and what imputation methods were used for both numerical and categorical features?
+### Answer 3
+- **Numerical Features:** Missing values were addressed using the median for the following features:
+  - Previous qualification (grade), Admission grade, Curricular units (credited/enrolled/evaluations/approved/grade for both semesters), Unemployment rate, Inflation rate, GDP.
+  
+- **Categorical Features:** Missing values were addressed using the mode for:
+  - Marital status, Application mode, Course, Previous qualification, Nationality, Mother's qualification, Father's qualification, Mother's occupation, Father's occupation, Displaced, Educational special needs, Debtor, Tuition fees up to date, Gender, Scholarship holder, International.
+
+### Question 4
+What outlier handling methods were applied, and how did these methods affect the distribution of numerical features?
+### Answer 4
+- Outliers were handled using the IQR (Interquartile Range) method with a factor of 1.5. Outliers were clipped at the upper and lower bounds, which enhanced the robustness of the numerical features while preserving the overall distribution without dramatically compressing feature ranges.
+
+### Question 5
+How were categorical features standardized, and what common issues (e.g., typos, case sensitivity) were corrected?
+### Answer 5
+- Categorical features were standardized by:
+  - Converting all strings to lowercase.
+  - Stripping leading and trailing whitespaces.
+  - A placeholder for correcting common typos based on predefined mappings was noted but not yet implemented.
+
+### Question 6
+What were the outcomes of the duplicate removal process, and how many duplicate rows were identified and eliminated?
+### Answer 6
+- The duplicate removal process ensured all rows, except for the unique identifier (`id`), were checked for duplicates. The specific number of duplicates eliminated was not stated, but this step ensured that each `id` remained unique across the datasets.
+
+### Question 7
+What insights or patterns emerged during the data cleaning phase that should be explored further in the In-depth Exploratory Data Analysis?
+### Answer 7
+- While no visual insights were provided, the handling of missing values and outliers suggests areas of interest for further analysis. Exploring how the cleaned features correlate with the target variable (academic risk classification) may reveal significant insights in the next exploratory analysis phase.

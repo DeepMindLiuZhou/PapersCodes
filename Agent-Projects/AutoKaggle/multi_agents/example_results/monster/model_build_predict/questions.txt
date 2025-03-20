@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What models were trained during this phase, and what were their respective performance metrics?
+
+### Question 2
+Which model was selected as the best-performing model, and what criteria were used for this selection?
+
+### Question 3
+What preprocessing steps were applied to the training and test sets to ensure consistency, and how did these affect the model's performance?
+
+### Question 4
+What were the key challenges encountered during model training and validation, and how were they addressed?
+
+### Question 5
+How were the predictions generated for the test set, and what steps were taken to validate the submission format?
+
+### Question 6
+What recommendations can be made based on the model's performance and the overall workflow of this phase for future competitions or similar tasks?

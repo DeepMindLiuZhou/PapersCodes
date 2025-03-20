@@ -1,0 +1,62 @@
+# Data Information
+## Data Type
+### ID type
+- `id`
+
+### Numerical type
+- `bone_length`
+- `rotting_flesh`
+- `hair_length`
+- `has_soul`
+
+### Categorical type
+- `color`
+- `type`
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset is divided into training and testing sets. 
+
+**Training Data:**
+- **Features:**
+  - `id`: Unique identifier for each data point.
+  - `bone_length`: Numerical value representing the length of bones.
+  - `rotting_flesh`: Numerical value indicating the extent of flesh rotting.
+  - `hair_length`: Numerical value representing the length of hair.
+  - `has_soul`: Numerical value indicating the presence of a soul.
+  - `color`: Categorical value describing the color attribute.
+- **Target Variable:**
+  - `type`: Categorical variable with possible classes such as "Ghoul", "Goblin", and "Ghost".
+
+**Testing Data:**
+- Contains the same features as the training data except for the `type` column, which needs to be predicted.
+
+**Notable Patterns and Characteristics:**
+- **Numerical Features:**
+  - Values range between approximately 0.1 and 0.88.
+  - There may be correlations between `has_soul` and other numerical features like `rotting_flesh` or `bone_length`.
+- **Categorical Features:**
+  - `color` includes categories like "clear", "green", "black", "white", and "blue".
+  - Certain `type` classes may be associated with specific `color` categories (e.g., "Ghoul" often has "clear" or "black" color).
+  
+## Target Variable
+- **`type`**: This is the target variable that represents the classification category of each entity. The possible classes include:
+  - **Ghoul**
+  - **Goblin**
+  - **Ghost**
+
+# Submission format (if applicable)
+The submission file should be in CSV format containing the following columns:
+- `id`: Unique identifier for each test data point.
+- `type`: Predicted class for each test data point. The value should be one of the predefined categories ("Ghoul", "Goblin", "Ghost").
+
+Example:
+```csv
+id,type
+3,Ghoul
+6,Goblin
+9,Ghost
+...
+```

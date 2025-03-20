@@ -1,0 +1,20 @@
+tyro
+accelerate==0.28.0
+imageio
+imageio-ffmpeg
+lpips
+Pillow
+safetensors
+scikit-image
+scikit-learn
+scipy
+tqdm
+kiui >= 0.2.3
+roma
+plyfile
+
+# mvdream
+diffusers==0.27.2
+huggingface_hub==0.23.5
+transformers
+

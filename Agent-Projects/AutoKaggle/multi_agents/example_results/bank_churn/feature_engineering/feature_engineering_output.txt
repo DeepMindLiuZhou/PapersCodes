@@ -1,0 +1,53 @@
+      AgeGroup  HasBalance Region_Balance_Interaction  Active_Card_User
+0  Middle-aged           0                   France_0                 0
+1  Middle-aged           0                   France_0                 1
+2  Middle-aged           0                   France_0                 0
+3  Middle-aged           1                   France_1                 1
+4  Middle-aged           0                    Spain_0                 1
+      AgeGroup  HasBalance Region_Balance_Interaction  Active_Card_User
+0        Young           0                   France_0                 0
+1  Middle-aged           0                   France_0                 0
+2  Middle-aged           0                   France_0                 0
+3  Middle-aged           0                   France_0                 0
+4  Middle-aged           1                  Germany_1                 0
+   CreditScore  EstimatedSalary
+0     0.569231        12.108741
+1     0.472189        10.809819
+2     0.592899        12.127396
+3     0.363314        11.345239
+4     0.682840         9.620450
+   CreditScore  EstimatedSalary
+0     0.375148        11.989021
+1     0.604734        11.192035
+2     0.540828        11.841388
+3     0.600000        11.643362
+4     0.768047        11.845332
+   id  CustomerId  ... Geography_Germany  Geography_Spain
+0   0    15674932  ...             False            False
+1   1    15749177  ...             False            False
+2   2    15694510  ...             False            False
+3   3    15741417  ...             False            False
+4   4    15766172  ...             False             True
+
+[5 rows x 19 columns]
+       id  CustomerId  ... Geography_Germany  Geography_Spain
+0  165034    15773898  ...             False            False
+1  165035    15782418  ...             False            False
+2  165036    15807120  ...             False            False
+3  165037    15808905  ...             False            False
+4  165038    15607314  ...              True            False
+
+[5 rows x 18 columns]
+        Age   Balance
+0 -0.596933 -0.883163
+1 -0.596933 -0.883163
+2  0.258796 -0.883163
+3 -0.474686  1.486918
+4 -0.596933 -0.883163
+        Age   Balance
+0 -1.819403 -0.883163
+1  0.992278 -0.883163
+2 -0.474686 -0.883163
+3 -0.230192 -0.883163
+4  0.014302  1.047249
+Processed data saved successfully.

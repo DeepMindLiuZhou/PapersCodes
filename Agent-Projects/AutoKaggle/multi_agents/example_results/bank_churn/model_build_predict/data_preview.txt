@@ -1,0 +1,79 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- id
+- CustomerId
+- Surname
+
+### Numerical type
+- CreditScore
+- Age
+- Tenure
+- Balance
+- NumOfProducts
+- HasCrCard
+- IsActiveMember
+- EstimatedSalary
+
+### Categorical type
+- Gender
+- AgeGroup
+- HasBalance
+- Region_Balance_Interaction
+- Active_Card_User
+- Geography_Germany
+- Geography_Spain
+
+### Datetime type
+- None
+
+## Detailed data description
+The provided dataset contains information on customers, focusing on whether they exited (left) the bank. Below is a detailed description of the data:
+
+- **id, CustomerId, Surname:** These are unique identifiers for each customer and will not be used in model training.
+- **CreditScore:** This is a numerical feature representing the credit score of the customer.
+- **Gender:** This is a categorical feature where 0 represents female and 1 represents male.
+- **Age:** This is a numerical feature representing the age of the customer.
+- **Tenure:** This is a numerical feature representing the number of years a customer has been with the bank.
+- **Balance:** This is a numerical feature representing the account balance of the customer.
+- **NumOfProducts:** This is a numerical feature representing the number of products the customer has with the bank.
+- **HasCrCard:** This is a numerical feature representing whether the customer has a credit card (1) or not (0).
+- **IsActiveMember:** This is a numerical feature representing whether the customer is an active member (1) or not (0).
+- **EstimatedSalary:** This is a numerical feature representing the estimated salary of the customer.
+- **AgeGroup:** This is a categorical feature representing the age group of the customer (e.g., Young, Middle-aged).
+- **HasBalance:** This is a categorical feature indicating whether the customer has a balance (1) or not (0).
+- **Region_Balance_Interaction:** This is a categorical feature indicating the interaction between the region and balance status (e.g., France_0, Spain_0).
+- **Active_Card_User:** This is a categorical feature indicating whether the customer is an active card user (1) or not (0).
+- **Geography_Germany:** This is a categorical feature indicating whether the customer is from Germany (True) or not (False).
+- **Geography_Spain:** This is a categorical feature indicating whether the customer is from Spain (True) or not (False).
+
+The dataset is divided into training and test sets, with the training set including the target variable "Exited," which indicates whether a customer exited the bank.
+
+### Notable patterns and characteristics:
+- The majority of the features are numerical, with some categorical features created through feature engineering.
+- The target variable "Exited" is binary, indicating whether a customer has exited the bank (1) or not (0).
+
+## Target Variable
+- **Exited:** This binary target variable indicates whether a customer exited the bank (1) or not (0).
+
+# Submission format (if applicable)
+The submission file should be in CSV format with the following columns:
+- **id:** Unique identifier for each test data point.
+- **Exited:** Probability or prediction of whether the customer exited the bank.
+
+Example:
+```
+id,Exited
+165034,0.5
+165035,0.5
+165036,0.5
+165037,0.5
+165038,0.5
+165039,0.5
+165040,0.5
+165041,0.5
+165042,0.5
+165043,0.5
+```

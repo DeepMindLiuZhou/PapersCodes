@@ -1,0 +1,24 @@
+## QUESTIONS
+### Question 1
+What models were selected and trained during this phase, and what were the reasons for choosing these specific models?
+
+### Question 2
+What were the cross-validation performance metrics (e.g., RMSE) for each model, and which model performed the best?
+
+### Question 3
+What were the key findings regarding feature importance or the impact of specific features on model predictions?
+
+### Question 4
+What preprocessing steps were taken to ensure data consistency between the training and test datasets, and were there any challenges faced during this process?
+
+### Question 5
+Were there any unexpected results or patterns observed during model training and validation?
+
+### Question 6
+What recommendations do you have for future data science competitions based on the experiences and findings from this phase?
+
+### Question 7
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 8
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.

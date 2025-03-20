@@ -1,0 +1,204 @@
+Train Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 8693 entries, 0 to 8692
+Data columns (total 14 columns):
+ #   Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   PassengerId   8693 non-null   object 
+ 1   HomePlanet    8492 non-null   object 
+ 2   CryoSleep     8476 non-null   object 
+ 3   Cabin         8494 non-null   object 
+ 4   Destination   8511 non-null   object 
+ 5   Age           8514 non-null   float64
+ 6   VIP           8490 non-null   object 
+ 7   RoomService   8512 non-null   float64
+ 8   FoodCourt     8510 non-null   float64
+ 9   ShoppingMall  8485 non-null   float64
+ 10  Spa           8510 non-null   float64
+ 11  VRDeck        8505 non-null   float64
+ 12  Name          8493 non-null   object 
+ 13  Transported   8693 non-null   bool   
+dtypes: bool(1), float64(6), object(7)
+memory usage: 891.5+ KB
+None
+
+Train Dataset Description:
+               Age   RoomService  ...           Spa        VRDeck
+count  8514.000000   8512.000000  ...   8510.000000   8505.000000
+mean     28.827930    224.687617  ...    311.138778    304.854791
+std      14.489021    666.717663  ...   1136.705535   1145.717189
+min       0.000000      0.000000  ...      0.000000      0.000000
+25%      19.000000      0.000000  ...      0.000000      0.000000
+50%      27.000000      0.000000  ...      0.000000      0.000000
+75%      38.000000     47.000000  ...     59.000000     46.000000
+max      79.000000  14327.000000  ...  22408.000000  24133.000000
+
+[8 rows x 6 columns]
+
+Test Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4277 entries, 0 to 4276
+Data columns (total 13 columns):
+ #   Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   PassengerId   4277 non-null   object 
+ 1   HomePlanet    4190 non-null   object 
+ 2   CryoSleep     4184 non-null   object 
+ 3   Cabin         4177 non-null   object 
+ 4   Destination   4185 non-null   object 
+ 5   Age           4186 non-null   float64
+ 6   VIP           4184 non-null   object 
+ 7   RoomService   4195 non-null   float64
+ 8   FoodCourt     4171 non-null   float64
+ 9   ShoppingMall  4179 non-null   float64
+ 10  Spa           4176 non-null   float64
+ 11  VRDeck        4197 non-null   float64
+ 12  Name          4183 non-null   object 
+dtypes: float64(6), object(7)
+memory usage: 434.5+ KB
+None
+
+Test Dataset Description:
+               Age   RoomService  ...           Spa        VRDeck
+count  4186.000000   4195.000000  ...   4176.000000   4197.000000
+mean     28.658146    219.266269  ...    303.052443    310.710031
+std      14.179072    607.011289  ...   1117.186015   1246.994742
+min       0.000000      0.000000  ...      0.000000      0.000000
+25%      19.000000      0.000000  ...      0.000000      0.000000
+50%      26.000000      0.000000  ...      0.000000      0.000000
+75%      37.000000     53.000000  ...     50.000000     36.000000
+max      79.000000  11567.000000  ...  19844.000000  22272.000000
+
+[8 rows x 6 columns]
+
+Value counts for HomePlanet in train dataset:
+HomePlanet
+Earth     4602
+Europa    2131
+Mars      1759
+Name: count, dtype: int64
+
+Value counts for CryoSleep in train dataset:
+CryoSleep
+False    5439
+True     3037
+Name: count, dtype: int64
+
+Value counts for Cabin in train dataset:
+Cabin
+G/734/S     8
+G/109/P     7
+B/201/P     7
+G/1368/P    7
+G/981/S     7
+           ..
+G/556/P     1
+E/231/S     1
+G/545/S     1
+G/543/S     1
+F/947/P     1
+Name: count, Length: 6560, dtype: int64
+
+Value counts for Destination in train dataset:
+Destination
+TRAPPIST-1e      5915
+55 Cancri e      1800
+PSO J318.5-22     796
+Name: count, dtype: int64
+
+Value counts for VIP in train dataset:
+VIP
+False    8291
+True      199
+Name: count, dtype: int64
+
+Value counts for Name in train dataset:
+Name
+Gollux Reedall        2
+Elaney Webstephrey    2
+Grake Porki           2
+Sus Coolez            2
+Apix Wala             2
+                     ..
+Jamela Griffy         1
+Hardy Griffy          1
+Salley Mckinn         1
+Mall Frasp            1
+Propsh Hontichre      1
+Name: count, Length: 8473, dtype: int64
+
+Unique value counts for HomePlanet:
+HomePlanet
+Earth     4602
+Europa    2131
+Mars      1759
+Name: count, dtype: int64
+
+Unique value counts for CryoSleep:
+CryoSleep
+False    5439
+True     3037
+Name: count, dtype: int64
+
+Unique value counts for Cabin:
+Cabin
+G/734/S     8
+G/109/P     7
+B/201/P     7
+G/1368/P    7
+G/981/S     7
+           ..
+G/556/P     1
+E/231/S     1
+G/545/S     1
+G/543/S     1
+F/947/P     1
+Name: count, Length: 6560, dtype: int64
+
+Unique value counts for Destination:
+Destination
+TRAPPIST-1e      5915
+55 Cancri e      1800
+PSO J318.5-22     796
+Name: count, dtype: int64
+
+Unique value counts for VIP:
+VIP
+False    8291
+True      199
+Name: count, dtype: int64
+
+Unique value counts for Name:
+Name
+Gollux Reedall        2
+Elaney Webstephrey    2
+Grake Porki           2
+Sus Coolez            2
+Apix Wala             2
+                     ..
+Jamela Griffy         1
+Hardy Griffy          1
+Salley Mckinn         1
+Mall Frasp            1
+Propsh Hontichre      1
+Name: count, Length: 8473, dtype: int64
+
+Summary of missing values in train dataset:
+PassengerId       0
+HomePlanet      201
+CryoSleep       217
+Cabin           199
+Destination     182
+Age             179
+VIP             203
+RoomService     181
+FoodCourt       183
+ShoppingMall    208
+Spa             183
+VRDeck          188
+Name            200
+Transported       0
+dtype: int64
+
+Passengers in CryoSleep with zero expenses:
+3037

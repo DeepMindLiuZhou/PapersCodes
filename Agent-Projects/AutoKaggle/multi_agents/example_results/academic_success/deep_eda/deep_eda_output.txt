@@ -1,0 +1,1708 @@
+Comprehensive Univariate Analysis of Numerical Features:
+
+Feature: Previous qualification (grade)
+  Mean: 132.3513
+  Median: 133.1000
+  Standard Deviation: 10.7503
+  Min: 102.5000
+  25%: 125.0000
+  50%: 133.1000
+  75%: 140.0000
+  Max: 162.5000
+  Skewness: 0.1409
+  Kurtosis: 0.5819
+
+
+Saved histogram for 'Previous qualification (grade)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Previous_qualification_(grade)_histogram.png
+Saved box plot for 'Previous qualification (grade)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Previous_qualification_(grade)_boxplot.png
+
+Feature: Admission grade
+  Mean: 125.1990
+  Median: 124.6000
+  Standard Deviation: 12.0471
+  Min: 97.0000
+  25%: 118.0000
+  50%: 124.6000
+  75%: 132.0000
+  Max: 153.0000
+  Skewness: 0.1533
+  Kurtosis: 0.0069
+
+
+Saved histogram for 'Admission grade' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Admission_grade_histogram.png
+Saved box plot for 'Admission grade' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Admission_grade_boxplot.png
+
+Feature: Curricular units 1st sem (credited)
+  Mean: 0.0000
+  Median: 0.0000
+  Standard Deviation: 0.0000
+  Min: 0.0000
+  25%: 0.0000
+  50%: 0.0000
+  75%: 0.0000
+  Max: 0.0000
+  Skewness: nan
+  Kurtosis: nan
+
+
+Saved histogram for 'Curricular units 1st sem (credited)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(credited)_histogram.png
+Saved box plot for 'Curricular units 1st sem (credited)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(credited)_boxplot.png
+
+Feature: Curricular units 1st sem (enrolled)
+  Mean: 5.8928
+  Median: 6.0000
+  Standard Deviation: 0.8831
+  Min: 3.5000
+  25%: 5.0000
+  50%: 6.0000
+  75%: 6.0000
+  Max: 7.5000
+  Skewness: -0.2842
+  Kurtosis: 0.4827
+
+
+Saved histogram for 'Curricular units 1st sem (enrolled)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(enrolled)_histogram.png
+Saved box plot for 'Curricular units 1st sem (enrolled)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(enrolled)_boxplot.png
+
+Feature: Curricular units 1st sem (evaluations)
+  Mean: 7.4181
+  Median: 7.0000
+  Standard Deviation: 2.9284
+  Min: 1.5000
+  25%: 6.0000
+  50%: 7.0000
+  75%: 9.0000
+  Max: 13.5000
+  Skewness: -0.1585
+  Kurtosis: 0.1426
+
+
+Saved histogram for 'Curricular units 1st sem (evaluations)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(evaluations)_histogram.png
+Saved box plot for 'Curricular units 1st sem (evaluations)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(evaluations)_boxplot.png
+
+Feature: Curricular units 1st sem (approved)
+  Mean: 4.1662
+  Median: 5.0000
+  Standard Deviation: 2.6394
+  Min: 0.0000
+  25%: 2.0000
+  50%: 5.0000
+  75%: 6.0000
+  Max: 12.0000
+  Skewness: -0.3393
+  Kurtosis: -0.5950
+
+
+Saved histogram for 'Curricular units 1st sem (approved)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(approved)_histogram.png
+Saved box plot for 'Curricular units 1st sem (approved)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(approved)_boxplot.png
+
+Feature: Curricular units 1st sem (grade)
+  Mean: 11.3987
+  Median: 12.1667
+  Standard Deviation: 2.6619
+  Min: 6.6952
+  25%: 10.6667
+  50%: 12.1667
+  75%: 13.3143
+  Max: 17.2857
+  Skewness: -0.8253
+  Kurtosis: -0.5757
+
+
+Saved histogram for 'Curricular units 1st sem (grade)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(grade)_histogram.png
+Saved box plot for 'Curricular units 1st sem (grade)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(grade)_boxplot.png
+
+Feature: Curricular units 1st sem (without evaluations)
+  Mean: 0.0000
+  Median: 0.0000
+  Standard Deviation: 0.0000
+  Min: 0.0000
+  25%: 0.0000
+  50%: 0.0000
+  75%: 0.0000
+  Max: 0.0000
+  Skewness: nan
+  Kurtosis: nan
+
+
+Saved histogram for 'Curricular units 1st sem (without evaluations)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(without_evaluations)_histogram.png
+Saved box plot for 'Curricular units 1st sem (without evaluations)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(without_evaluations)_boxplot.png
+
+Feature: Curricular units 2nd sem (credited)
+  Mean: 0.0000
+  Median: 0.0000
+  Standard Deviation: 0.0000
+  Min: 0.0000
+  25%: 0.0000
+  50%: 0.0000
+  75%: 0.0000
+  Max: 0.0000
+  Skewness: nan
+  Kurtosis: nan
+
+
+Saved histogram for 'Curricular units 2nd sem (credited)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(credited)_histogram.png
+Saved box plot for 'Curricular units 2nd sem (credited)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(credited)_boxplot.png
+
+Feature: Curricular units 2nd sem (enrolled)
+  Mean: 5.9251
+  Median: 6.0000
+  Standard Deviation: 0.9302
+  Min: 3.5000
+  25%: 5.0000
+  50%: 6.0000
+  75%: 6.0000
+  Max: 7.5000
+  Skewness: -0.0852
+  Kurtosis: 0.2523
+
+
+Saved histogram for 'Curricular units 2nd sem (enrolled)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(enrolled)_histogram.png
+Saved box plot for 'Curricular units 2nd sem (enrolled)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(enrolled)_boxplot.png
+
+Feature: Curricular units 2nd sem (evaluations)
+  Mean: 7.3359
+  Median: 7.0000
+  Standard Deviation: 2.9674
+  Min: 1.5000
+  25%: 6.0000
+  50%: 7.0000
+  75%: 9.0000
+  Max: 13.5000
+  Skewness: -0.2070
+  Kurtosis: 0.0065
+
+
+Saved histogram for 'Curricular units 2nd sem (evaluations)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(evaluations)_histogram.png
+Saved box plot for 'Curricular units 2nd sem (evaluations)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(evaluations)_boxplot.png
+
+Feature: Curricular units 2nd sem (approved)
+  Mean: 4.0049
+  Median: 5.0000
+  Standard Deviation: 2.7633
+  Min: 0.0000
+  25%: 1.0000
+  50%: 5.0000
+  75%: 6.0000
+  Max: 13.5000
+  Skewness: -0.1960
+  Kurtosis: -0.8719
+
+
+Saved histogram for 'Curricular units 2nd sem (approved)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(approved)_histogram.png
+Saved box plot for 'Curricular units 2nd sem (approved)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(approved)_boxplot.png
+
+Feature: Curricular units 2nd sem (grade)
+  Mean: 10.8661
+  Median: 12.1429
+  Standard Deviation: 3.4226
+  Min: 5.1339
+  25%: 10.0000
+  50%: 12.1429
+  75%: 13.2440
+  Max: 18.0000
+  Skewness: -0.8428
+  Kurtosis: -0.8033
+
+
+Saved histogram for 'Curricular units 2nd sem (grade)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(grade)_histogram.png
+Saved box plot for 'Curricular units 2nd sem (grade)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(grade)_boxplot.png
+
+Feature: Curricular units 2nd sem (without evaluations)
+  Mean: 0.0000
+  Median: 0.0000
+  Standard Deviation: 0.0000
+  Min: 0.0000
+  25%: 0.0000
+  50%: 0.0000
+  75%: 0.0000
+  Max: 0.0000
+  Skewness: nan
+  Kurtosis: nan
+
+
+Saved histogram for 'Curricular units 2nd sem (without evaluations)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(without_evaluations)_histogram.png
+Saved box plot for 'Curricular units 2nd sem (without evaluations)' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(without_evaluations)_boxplot.png
+
+Feature: Unemployment rate
+  Mean: 11.5203
+  Median: 11.1000
+  Standard Deviation: 2.6534
+  Min: 7.6000
+  25%: 9.4000
+  50%: 11.1000
+  75%: 12.7000
+  Max: 16.2000
+  Skewness: 0.2307
+  Kurtosis: -0.9528
+
+
+Saved histogram for 'Unemployment rate' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Unemployment_rate_histogram.png
+Saved box plot for 'Unemployment rate' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Unemployment_rate_boxplot.png
+
+Feature: Inflation rate
+  Mean: 1.2282
+  Median: 1.4000
+  Standard Deviation: 1.3988
+  Min: -0.8000
+  25%: 0.3000
+  50%: 1.4000
+  75%: 2.6000
+  Max: 3.7000
+  Skewness: 0.2349
+  Kurtosis: -1.0697
+
+
+Saved histogram for 'Inflation rate' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Inflation_rate_histogram.png
+Saved box plot for 'Inflation rate' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Inflation_rate_boxplot.png
+
+Feature: GDP
+  Mean: -0.0809
+  Median: 0.3200
+  Standard Deviation: 2.2514
+  Min: -4.0600
+  25%: -1.7000
+  50%: 0.3200
+  75%: 1.7900
+  Max: 3.5100
+  Skewness: -0.3769
+  Kurtosis: -1.0608
+
+
+Saved histogram for 'GDP' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/GDP_histogram.png
+Saved box plot for 'GDP' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/GDP_boxplot.png
+
+Feature: Age at enrollment
+  Mean: 22.2787
+  Median: 19.0000
+  Standard Deviation: 6.8892
+  Min: 17.0000
+  25%: 18.0000
+  50%: 19.0000
+  75%: 23.0000
+  Max: 70.0000
+  Skewness: 2.3697
+  Kurtosis: 5.8157
+
+
+Saved histogram for 'Age at enrollment' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Age_at_enrollment_histogram.png
+Saved box plot for 'Age at enrollment' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Age_at_enrollment_boxplot.png
+
+Descriptive statistics saved to 'numerical_descriptive_stats.csv'
+Detailed Univariate Analysis of Categorical Features:
+
+Feature: Marital status
+                Count  Proportion (%)
+Marital status                       
+1               70189           91.73
+2                5296            6.92
+4                 866            1.13
+5                 116            0.15
+6                  35            0.05
+3                  16            0.02
+
+
+Saved value counts for 'Marital status' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Marital_status_value_counts.csv
+Categories in 'Marital status' with less than 5% proportion:
+                Count  Proportion (%)
+Marital status                       
+4                 866            1.13
+5                 116            0.15
+6                  35            0.05
+3                  16            0.02
+
+
+Saved count plot for 'Marital status' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Marital_status_countplot.png
+
+Feature: Application mode
+                  Count  Proportion (%)
+Application mode                       
+1                 35227           46.04
+17                16523           21.59
+39                14519           18.97
+44                 3012            3.94
+43                 2671            3.49
+7                  1498            1.96
+18                 1256            1.64
+42                  551            0.72
+51                  442            0.58
+16                  265            0.35
+53                  225            0.29
+15                  183            0.24
+5                    87            0.11
+10                   43            0.06
+2                     8            0.01
+27                    2            0.00
+12                    1            0.00
+26                    1            0.00
+4                     1            0.00
+35                    1            0.00
+9                     1            0.00
+3                     1            0.00
+
+
+Saved value counts for 'Application mode' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Application_mode_value_counts.csv
+Categories in 'Application mode' with less than 5% proportion:
+                  Count  Proportion (%)
+Application mode                       
+44                 3012            3.94
+43                 2671            3.49
+7                  1498            1.96
+18                 1256            1.64
+42                  551            0.72
+51                  442            0.58
+16                  265            0.35
+53                  225            0.29
+15                  183            0.24
+5                    87            0.11
+10                   43            0.06
+2                     8            0.01
+27                    2            0.00
+12                    1            0.00
+26                    1            0.00
+4                     1            0.00
+35                    1            0.00
+9                     1            0.00
+3                     1            0.00
+
+
+Saved count plot for 'Application mode' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Application_mode_countplot.png
+
+Feature: Course
+        Count  Proportion (%)
+Course                       
+9500    12074           15.78
+9773     8214           10.73
+9238     7935           10.37
+9147     7741           10.12
+9254     5425            7.09
+9085     5373            7.02
+9670     4760            6.22
+9991     4057            5.30
+9003     3733            4.88
+9070     3281            4.29
+9853     3198            4.18
+9119     3004            3.93
+171      2859            3.74
+8014     2438            3.19
+9130     1606            2.10
+9556      746            0.97
+33         72            0.09
+979         1            0.00
+39          1            0.00
+
+
+Saved value counts for 'Course' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Course_value_counts.csv
+Categories in 'Course' with less than 5% proportion:
+        Count  Proportion (%)
+Course                       
+9003     3733            4.88
+9070     3281            4.29
+9853     3198            4.18
+9119     3004            3.93
+171      2859            3.74
+8014     2438            3.19
+9130     1606            2.10
+9556      746            0.97
+33         72            0.09
+979         1            0.00
+39          1            0.00
+
+
+Saved count plot for 'Course' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Course_countplot.png
+
+Feature: Previous qualification
+                        Count  Proportion (%)
+Previous qualification                       
+1                       67183           87.80
+19                       2947            3.85
+39                       2928            3.83
+3                        1401            1.83
+12                        899            1.17
+9                         308            0.40
+40                        259            0.34
+42                        229            0.30
+2                          98            0.13
+6                          98            0.13
+10                         43            0.06
+43                         39            0.05
+38                         38            0.05
+4                          23            0.03
+15                         11            0.01
+5                           3            0.00
+14                          3            0.00
+37                          3            0.00
+11                          2            0.00
+17                          2            0.00
+36                          1            0.00
+
+
+Saved value counts for 'Previous qualification' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Previous_qualification_value_counts.csv
+Categories in 'Previous qualification' with less than 5% proportion:
+                        Count  Proportion (%)
+Previous qualification                       
+19                       2947            3.85
+39                       2928            3.83
+3                        1401            1.83
+12                        899            1.17
+9                         308            0.40
+40                        259            0.34
+42                        229            0.30
+2                          98            0.13
+6                          98            0.13
+10                         43            0.06
+43                         39            0.05
+38                         38            0.05
+4                          23            0.03
+15                         11            0.01
+5                           3            0.00
+14                          3            0.00
+37                          3            0.00
+11                          2            0.00
+17                          2            0.00
+36                          1            0.00
+
+
+Saved count plot for 'Previous qualification' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Previous_qualification_countplot.png
+
+Feature: Nacionality
+             Count  Proportion (%)
+Nacionality                       
+1            76013           99.34
+41             221            0.29
+26              67            0.09
+6               56            0.07
+22              56            0.07
+24              15            0.02
+11              15            0.02
+2               13            0.02
+103             12            0.02
+105              9            0.01
+101              9            0.01
+100              9            0.01
+21               6            0.01
+25               6            0.01
+62               6            0.01
+17               2            0.00
+109              2            0.00
+32               1            0.00
+
+
+Saved value counts for 'Nacionality' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Nacionality_value_counts.csv
+Categories in 'Nacionality' with less than 5% proportion:
+             Count  Proportion (%)
+Nacionality                       
+41             221            0.29
+26              67            0.09
+6               56            0.07
+22              56            0.07
+24              15            0.02
+11              15            0.02
+2               13            0.02
+103             12            0.02
+105              9            0.01
+101              9            0.01
+100              9            0.01
+21               6            0.01
+25               6            0.01
+62               6            0.01
+17               2            0.00
+109              2            0.00
+32               1            0.00
+
+
+Saved count plot for 'Nacionality' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Nacionality_countplot.png
+
+Feature: Mother's qualification
+                        Count  Proportion (%)
+Mother's qualification                       
+1                       20202           26.40
+19                      18980           24.80
+37                      18664           24.39
+38                       9059           11.84
+3                        5890            7.70
+34                       1993            2.60
+2                         613            0.80
+12                        358            0.47
+4                         313            0.41
+5                          99            0.13
+40                         49            0.06
+39                         46            0.06
+9                          45            0.06
+11                         32            0.04
+41                         26            0.03
+6                          21            0.03
+42                         19            0.02
+43                         16            0.02
+10                         15            0.02
+36                         15            0.02
+29                         15            0.02
+35                         10            0.01
+30                         10            0.01
+22                          5            0.01
+14                          5            0.01
+26                          4            0.01
+18                          3            0.00
+44                          2            0.00
+33                          2            0.00
+31                          2            0.00
+15                          1            0.00
+7                           1            0.00
+8                           1            0.00
+28                          1            0.00
+27                          1            0.00
+
+
+Saved value counts for 'Mother's qualification' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Mother's_qualification_value_counts.csv
+Categories in 'Mother's qualification' with less than 5% proportion:
+                        Count  Proportion (%)
+Mother's qualification                       
+34                       1993            2.60
+2                         613            0.80
+12                        358            0.47
+4                         313            0.41
+5                          99            0.13
+40                         49            0.06
+39                         46            0.06
+9                          45            0.06
+11                         32            0.04
+41                         26            0.03
+6                          21            0.03
+42                         19            0.02
+43                         16            0.02
+10                         15            0.02
+36                         15            0.02
+29                         15            0.02
+35                         10            0.01
+30                         10            0.01
+22                          5            0.01
+14                          5            0.01
+26                          4            0.01
+18                          3            0.00
+44                          2            0.00
+33                          2            0.00
+31                          2            0.00
+15                          1            0.00
+7                           1            0.00
+8                           1            0.00
+28                          1            0.00
+27                          1            0.00
+
+
+Saved count plot for 'Mother's qualification' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Mother's_qualification_countplot.png
+
+Feature: Father's qualification
+                        Count  Proportion (%)
+Father's qualification                       
+37                      23290           30.44
+19                      19015           24.85
+1                       15604           20.39
+38                      12253           16.01
+3                        3011            3.94
+34                       1790            2.34
+2                         496            0.65
+12                        294            0.38
+4                         224            0.29
+39                        120            0.16
+5                         100            0.13
+11                         75            0.10
+36                         43            0.06
+29                         25            0.03
+40                         25            0.03
+9                          19            0.02
+14                         18            0.02
+43                         14            0.02
+30                         14            0.02
+41                         13            0.02
+22                         11            0.01
+10                         10            0.01
+6                           9            0.01
+26                          9            0.01
+42                          7            0.01
+35                          5            0.01
+18                          4            0.01
+13                          3            0.00
+44                          3            0.00
+20                          3            0.00
+27                          2            0.00
+7                           2            0.00
+33                          1            0.00
+31                          1            0.00
+21                          1            0.00
+23                          1            0.00
+15                          1            0.00
+24                          1            0.00
+25                          1            0.00
+
+
+Saved value counts for 'Father's qualification' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Father's_qualification_value_counts.csv
+Categories in 'Father's qualification' with less than 5% proportion:
+                        Count  Proportion (%)
+Father's qualification                       
+3                        3011            3.94
+34                       1790            2.34
+2                         496            0.65
+12                        294            0.38
+4                         224            0.29
+39                        120            0.16
+5                         100            0.13
+11                         75            0.10
+36                         43            0.06
+29                         25            0.03
+40                         25            0.03
+9                          19            0.02
+14                         18            0.02
+43                         14            0.02
+30                         14            0.02
+41                         13            0.02
+22                         11            0.01
+10                         10            0.01
+6                           9            0.01
+26                          9            0.01
+42                          7            0.01
+35                          5            0.01
+18                          4            0.01
+13                          3            0.00
+44                          3            0.00
+20                          3            0.00
+27                          2            0.00
+7                           2            0.00
+33                          1            0.00
+31                          1            0.00
+21                          1            0.00
+23                          1            0.00
+15                          1            0.00
+24                          1            0.00
+25                          1            0.00
+
+
+Saved count plot for 'Father's qualification' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Father's_qualification_countplot.png
+
+Feature: Mother's occupation
+                     Count  Proportion (%)
+Mother's occupation                       
+9                    32386           42.32
+4                    16062           20.99
+5                     9452           12.35
+3                     4644            6.07
+7                     4207            5.50
+2                     4087            5.34
+0                     2206            2.88
+90                     978            1.28
+6                      786            1.03
+1                      766            1.00
+8                      243            0.32
+191                    212            0.28
+99                     138            0.18
+194                     79            0.10
+141                     51            0.07
+123                     44            0.06
+144                     25            0.03
+192                     23            0.03
+10                      18            0.02
+152                     13            0.02
+193                     13            0.02
+134                     11            0.01
+132                     11            0.01
+175                     11            0.01
+151                     11            0.01
+143                      9            0.01
+153                      8            0.01
+131                      6            0.01
+122                      6            0.01
+173                      2            0.00
+171                      1            0.00
+172                      1            0.00
+11                       1            0.00
+127                      1            0.00
+38                       1            0.00
+163                      1            0.00
+125                      1            0.00
+124                      1            0.00
+103                      1            0.00
+101                      1            0.00
+
+
+Saved value counts for 'Mother's occupation' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Mother's_occupation_value_counts.csv
+Categories in 'Mother's occupation' with less than 5% proportion:
+                     Count  Proportion (%)
+Mother's occupation                       
+0                     2206            2.88
+90                     978            1.28
+6                      786            1.03
+1                      766            1.00
+8                      243            0.32
+191                    212            0.28
+99                     138            0.18
+194                     79            0.10
+141                     51            0.07
+123                     44            0.06
+144                     25            0.03
+192                     23            0.03
+10                      18            0.02
+152                     13            0.02
+193                     13            0.02
+134                     11            0.01
+132                     11            0.01
+175                     11            0.01
+151                     11            0.01
+143                      9            0.01
+153                      8            0.01
+131                      6            0.01
+122                      6            0.01
+173                      2            0.00
+171                      1            0.00
+172                      1            0.00
+11                       1            0.00
+127                      1            0.00
+38                       1            0.00
+163                      1            0.00
+125                      1            0.00
+124                      1            0.00
+103                      1            0.00
+101                      1            0.00
+
+
+Saved count plot for 'Mother's occupation' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Mother's_occupation_countplot.png
+
+Feature: Father's occupation
+                     Count  Proportion (%)
+Father's occupation                       
+9                    22320           29.17
+7                    12910           16.87
+5                     9661           12.63
+4                     6668            8.71
+3                     5663            7.40
+8                     5111            6.68
+10                    4107            5.37
+6                     2922            3.82
+2                     2236            2.92
+0                     2056            2.69
+1                     1177            1.54
+90                     986            1.29
+99                     150            0.20
+193                     83            0.11
+171                     66            0.09
+144                     62            0.08
+163                     47            0.06
+175                     37            0.05
+103                     29            0.04
+192                     27            0.04
+181                     19            0.02
+152                     18            0.02
+135                     14            0.02
+182                     11            0.01
+151                     10            0.01
+172                     10            0.01
+112                     10            0.01
+102                     10            0.01
+154                      9            0.01
+183                      8            0.01
+123                      8            0.01
+194                      8            0.01
+153                      7            0.01
+122                      7            0.01
+143                      5            0.01
+195                      5            0.01
+131                      5            0.01
+114                      4            0.01
+101                      4            0.01
+141                      4            0.01
+132                      3            0.00
+174                      3            0.00
+134                      3            0.00
+121                      3            0.00
+11                       1            0.00
+19                       1            0.00
+148                      1            0.00
+22                       1            0.00
+124                      1            0.00
+96                       1            0.00
+191                      1            0.00
+125                      1            0.00
+12                       1            0.00
+39                       1            0.00
+161                      1            0.00
+13                       1            0.00
+
+
+Saved value counts for 'Father's occupation' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Father's_occupation_value_counts.csv
+Categories in 'Father's occupation' with less than 5% proportion:
+                     Count  Proportion (%)
+Father's occupation                       
+6                     2922            3.82
+2                     2236            2.92
+0                     2056            2.69
+1                     1177            1.54
+90                     986            1.29
+99                     150            0.20
+193                     83            0.11
+171                     66            0.09
+144                     62            0.08
+163                     47            0.06
+175                     37            0.05
+103                     29            0.04
+192                     27            0.04
+181                     19            0.02
+152                     18            0.02
+135                     14            0.02
+182                     11            0.01
+151                     10            0.01
+172                     10            0.01
+112                     10            0.01
+102                     10            0.01
+154                      9            0.01
+183                      8            0.01
+123                      8            0.01
+194                      8            0.01
+153                      7            0.01
+122                      7            0.01
+143                      5            0.01
+195                      5            0.01
+131                      5            0.01
+114                      4            0.01
+101                      4            0.01
+141                      4            0.01
+132                      3            0.00
+174                      3            0.00
+134                      3            0.00
+121                      3            0.00
+11                       1            0.00
+19                       1            0.00
+148                      1            0.00
+22                       1            0.00
+124                      1            0.00
+96                       1            0.00
+191                      1            0.00
+125                      1            0.00
+12                       1            0.00
+39                       1            0.00
+161                      1            0.00
+13                       1            0.00
+
+
+Saved count plot for 'Father's occupation' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Father's_occupation_countplot.png
+
+Feature: Displaced
+           Count  Proportion (%)
+Displaced                       
+1          43559           56.93
+0          32959           43.07
+
+
+Saved value counts for 'Displaced' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Displaced_value_counts.csv
+Saved count plot for 'Displaced' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Displaced_countplot.png
+
+Feature: Educational special needs
+                           Count  Proportion (%)
+Educational special needs                       
+0                          76232           99.63
+1                            286            0.37
+
+
+Saved value counts for 'Educational special needs' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Educational_special_needs_value_counts.csv
+Categories in 'Educational special needs' with less than 5% proportion:
+                           Count  Proportion (%)
+Educational special needs                       
+1                            286            0.37
+
+
+Saved count plot for 'Educational special needs' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Educational_special_needs_countplot.png
+
+Feature: Debtor
+        Count  Proportion (%)
+Debtor                       
+0       71056           92.86
+1        5462            7.14
+
+
+Saved value counts for 'Debtor' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Debtor_value_counts.csv
+Saved count plot for 'Debtor' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Debtor_countplot.png
+
+Feature: Tuition fees up to date
+                         Count  Proportion (%)
+Tuition fees up to date                       
+1                        68380           89.36
+0                         8138           10.64
+
+
+Saved value counts for 'Tuition fees up to date' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Tuition_fees_up_to_date_value_counts.csv
+Saved count plot for 'Tuition fees up to date' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Tuition_fees_up_to_date_countplot.png
+
+Feature: Gender
+        Count  Proportion (%)
+Gender                       
+0       52352           68.42
+1       24166           31.58
+
+
+Saved value counts for 'Gender' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Gender_value_counts.csv
+Saved count plot for 'Gender' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Gender_countplot.png
+
+Feature: Scholarship holder
+                    Count  Proportion (%)
+Scholarship holder                       
+0                   57588           75.26
+1                   18930           24.74
+
+
+Saved value counts for 'Scholarship holder' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Scholarship_holder_value_counts.csv
+Saved count plot for 'Scholarship holder' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Scholarship_holder_countplot.png
+
+Feature: International
+               Count  Proportion (%)
+International                       
+0              76011           99.34
+1                507            0.66
+
+
+Saved value counts for 'International' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/International_value_counts.csv
+Categories in 'International' with less than 5% proportion:
+               Count  Proportion (%)
+International                       
+1                507            0.66
+
+
+Saved count plot for 'International' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/International_countplot.png
+
+Bivariate Analysis Between Features and Target Variable:
+
+Numerical Features Analysis:
+
+Feature: Previous qualification (grade)
+            count        mean        std    min    25%    50%    75%    max
+Target                                                                     
+Dropout   25296.0  130.944667  10.452671  102.5  125.0  133.1  135.0  162.5
+Enrolled  14940.0  130.272590  10.087201  102.5  123.0  130.0  136.0  162.5
+Graduate  36282.0  134.188024  10.914851  102.5  128.0  133.1  140.0  162.5
+
+
+Pearson Correlation between 'Previous qualification (grade)' and 'Target': 0.1403
+
+Saved box plot for 'Previous qualification (grade)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Previous_qualification_(grade)_vs_Target_boxplot.png
+
+Feature: Admission grade
+            count        mean        std   min    25%    50%    75%    max
+Target                                                                    
+Dropout   25296.0  122.814285  13.176185  97.0  114.8  121.3  130.0  153.0
+Enrolled  14940.0  123.508601  10.869148  97.0  117.0  122.3  130.0  153.0
+Graduate  36282.0  127.557712  11.211417  97.0  120.1  126.8  133.8  153.0
+
+
+Pearson Correlation between 'Admission grade' and 'Target': 0.1787
+
+Saved box plot for 'Admission grade' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Admission_grade_vs_Target_boxplot.png
+
+Feature: Curricular units 1st sem (credited)
+            count  mean  std  min  25%  50%  75%  max
+Target                                               
+Dropout   25296.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+Enrolled  14940.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+Graduate  36282.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+
+
+Pearson Correlation between 'Curricular units 1st sem (credited)' and 'Target': nan
+
+Saved box plot for 'Curricular units 1st sem (credited)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(credited)_vs_Target_boxplot.png
+
+Feature: Curricular units 1st sem (enrolled)
+            count      mean       std  min  25%  50%  75%  max
+Target                                                        
+Dropout   25296.0  5.564141  0.904879  3.5  5.0  6.0  6.0  7.5
+Enrolled  14940.0  5.699933  0.738402  3.5  5.0  6.0  6.0  7.5
+Graduate  36282.0  6.201450  0.814541  3.5  6.0  6.0  7.0  7.5
+
+
+Pearson Correlation between 'Curricular units 1st sem (enrolled)' and 'Target': 0.3261
+
+Saved box plot for 'Curricular units 1st sem (enrolled)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(enrolled)_vs_Target_boxplot.png
+
+Feature: Curricular units 1st sem (evaluations)
+            count      mean       std  min  25%  50%   75%   max
+Target                                                          
+Dropout   25296.0  6.448727  3.934852  1.5  1.5  6.0   9.0  13.5
+Enrolled  14940.0  8.973527  2.353112  1.5  8.0  9.0  11.0  13.5
+Graduate  36282.0  7.453379  1.832705  1.5  6.0  7.0   8.0  13.5
+
+
+Pearson Correlation between 'Curricular units 1st sem (evaluations)' and 'Target': 0.1300
+
+Saved box plot for 'Curricular units 1st sem (evaluations)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(evaluations)_vs_Target_boxplot.png
+
+Feature: Curricular units 1st sem (approved)
+            count      mean       std  min  25%  50%  75%   max
+Target                                                         
+Dropout   25296.0  1.537358  2.220096  0.0  0.0  0.0  3.0  12.0
+Enrolled  14940.0  4.253213  1.743148  0.0  3.0  4.0  5.0  12.0
+Graduate  36282.0  5.963122  1.397950  0.0  5.0  6.0  6.0  12.0
+
+
+Pearson Correlation between 'Curricular units 1st sem (approved)' and 'Target': 0.7364
+
+Saved box plot for 'Curricular units 1st sem (approved)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(approved)_vs_Target_boxplot.png
+
+Feature: Curricular units 1st sem (grade)
+            count       mean       std  ...        50%        75%        max
+Target                                  ...                                 
+Dropout   25296.0   8.822916  2.646559  ...   6.695238  11.500000  17.285714
+Enrolled  14940.0  11.773911  1.486993  ...  12.000000  12.600000  17.285714
+Graduate  36282.0  13.040135  1.331130  ...  13.154286  13.833333  17.285714
+
+[3 rows x 8 columns]
+
+
+Pearson Correlation between 'Curricular units 1st sem (grade)' and 'Target': 0.6914
+
+Saved box plot for 'Curricular units 1st sem (grade)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(grade)_vs_Target_boxplot.png
+
+Feature: Curricular units 1st sem (without evaluations)
+            count  mean  std  min  25%  50%  75%  max
+Target                                               
+Dropout   25296.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+Enrolled  14940.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+Graduate  36282.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+
+
+Pearson Correlation between 'Curricular units 1st sem (without evaluations)' and 'Target': nan
+
+Saved box plot for 'Curricular units 1st sem (without evaluations)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_1st_sem_(without_evaluations)_vs_Target_boxplot.png
+
+Feature: Curricular units 2nd sem (credited)
+            count  mean  std  min  25%  50%  75%  max
+Target                                               
+Dropout   25296.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+Enrolled  14940.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+Graduate  36282.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+
+
+Pearson Correlation between 'Curricular units 2nd sem (credited)' and 'Target': nan
+
+Saved box plot for 'Curricular units 2nd sem (credited)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(credited)_vs_Target_boxplot.png
+
+Feature: Curricular units 2nd sem (enrolled)
+            count      mean       std  min  25%  50%  75%  max
+Target                                                        
+Dropout   25296.0  5.578372  0.923895  3.5  5.0  6.0  6.0  7.5
+Enrolled  14940.0  5.707999  0.759609  3.5  5.0  6.0  6.0  7.5
+Graduate  36282.0  6.256160  0.882709  3.5  6.0  6.0  7.5  7.5
+
+
+Pearson Correlation between 'Curricular units 2nd sem (enrolled)' and 'Target': 0.3298
+
+Saved box plot for 'Curricular units 2nd sem (enrolled)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(enrolled)_vs_Target_boxplot.png
+
+Feature: Curricular units 2nd sem (evaluations)
+            count      mean       std  min  25%  50%   75%   max
+Target                                                          
+Dropout   25296.0  6.059515  3.854013  1.5  1.5  6.0   9.0  13.5
+Enrolled  14940.0  9.057430  2.343791  1.5  8.0  9.0  11.0  13.5
+Graduate  36282.0  7.516992  1.887829  1.5  6.0  7.0   8.0  13.5
+
+
+Pearson Correlation between 'Curricular units 2nd sem (evaluations)' and 'Target': 0.1933
+
+Saved box plot for 'Curricular units 2nd sem (evaluations)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(evaluations)_vs_Target_boxplot.png
+
+Feature: Curricular units 2nd sem (approved)
+            count      mean       std  min  25%  50%  75%   max
+Target                                                         
+Dropout   25296.0  1.122075  1.979071  0.0  0.0  0.0  2.0  13.5
+Enrolled  14940.0  3.945750  1.746671  0.0  3.0  4.0  5.0  13.5
+Graduate  36282.0  6.039110  1.477349  0.0  5.0  6.0  7.0  13.5
+
+
+Pearson Correlation between 'Curricular units 2nd sem (approved)' and 'Target': 0.7837
+
+Saved box plot for 'Curricular units 2nd sem (approved)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(approved)_vs_Target_boxplot.png
+
+Feature: Curricular units 2nd sem (grade)
+            count       mean       std  ...        50%   75%        max
+Target                                  ...                            
+Dropout   25296.0   7.261270  3.194274  ...   5.133929  11.0  18.000000
+Enrolled  14940.0  11.638713  1.745952  ...  11.800000  12.6  17.000000
+Graduate  36282.0  13.061226  1.487164  ...  13.053750  14.0  17.714286
+
+[3 rows x 8 columns]
+
+
+Pearson Correlation between 'Curricular units 2nd sem (grade)' and 'Target': 0.7366
+
+Saved box plot for 'Curricular units 2nd sem (grade)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(grade)_vs_Target_boxplot.png
+
+Feature: Curricular units 2nd sem (without evaluations)
+            count  mean  std  min  25%  50%  75%  max
+Target                                               
+Dropout   25296.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+Enrolled  14940.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+Graduate  36282.0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+
+
+Pearson Correlation between 'Curricular units 2nd sem (without evaluations)' and 'Target': nan
+
+Saved box plot for 'Curricular units 2nd sem (without evaluations)' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Curricular_units_2nd_sem_(without_evaluations)_vs_Target_boxplot.png
+
+Feature: Unemployment rate
+            count       mean       std  min  25%   50%   75%   max
+Target                                                            
+Dropout   25296.0  11.559832  2.816146  7.6  9.4  11.1  13.9  16.2
+Enrolled  14940.0  11.197309  2.651976  7.6  9.4  10.8  12.7  16.2
+Graduate  36282.0  11.625823  2.523482  7.6  9.4  11.1  12.7  16.2
+
+
+Pearson Correlation between 'Unemployment rate' and 'Target': 0.0157
+
+Saved box plot for 'Unemployment rate' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Unemployment_rate_vs_Target_boxplot.png
+
+Feature: Inflation rate
+            count      mean       std  min  25%  50%  75%  max
+Target                                                        
+Dropout   25296.0  1.304016  1.453833 -0.8  0.3  1.4  2.6  3.7
+Enrolled  14940.0  1.208454  1.405668 -0.8  0.3  1.4  2.6  3.7
+Graduate  36282.0  1.183510  1.353993 -0.8  0.3  0.6  2.6  3.7
+
+
+Pearson Correlation between 'Inflation rate' and 'Target': -0.0373
+
+Saved box plot for 'Inflation rate' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Inflation_rate_vs_Target_boxplot.png
+
+Feature: GDP
+            count      mean       std   min   25%   50%   75%   max
+Target                                                             
+Dropout   25296.0 -0.391951  2.238288 -4.06 -3.12  0.32  1.74  3.51
+Enrolled  14940.0 -0.114716  2.236917 -4.06 -1.70  0.32  1.74  3.51
+Graduate  36282.0  0.149847  2.239540 -4.06 -1.70  0.79  1.79  3.51
+
+
+Pearson Correlation between 'GDP' and 'Target': 0.1065
+
+Saved box plot for 'GDP' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/GDP_vs_Target_boxplot.png
+
+Feature: Age at enrollment
+            count       mean       std   min   25%   50%   75%   max
+Target                                                              
+Dropout   25296.0  25.522256  8.358477  17.0  19.0  22.0  29.0  70.0
+Enrolled  14940.0  21.314257  5.570592  17.0  18.0  19.0  21.0  70.0
+Graduate  36282.0  20.414310  5.236051  17.0  18.0  19.0  20.0  62.0
+
+
+Pearson Correlation between 'Age at enrollment' and 'Target': -0.3207
+
+Saved box plot for 'Age at enrollment' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Age_at_enrollment_vs_Target_boxplot.png
+
+Categorical Features Analysis:
+
+Feature: Marital status
+Target          Dropout  Enrolled  Graduate
+Marital status                             
+1                 21726     14036     34427
+2                  2968       735      1593
+3                     7         2         7
+4                   509       147       210
+5                    63        13        40
+6                    23         7         5
+
+
+Chi-Square Test for 'Marital status' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Marital status' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Marital_status_vs_Target_stacked_bar.png
+
+Feature: Application mode
+Target            Dropout  Enrolled  Graduate
+Application mode                             
+1                    6615      7102     21510
+2                       1         1         6
+3                       0         0         1
+4                       0         0         1
+5                      18        28        41
+7                    1081        96       321
+9                       1         0         0
+10                     10         9        24
+12                      0         0         1
+15                     41        58        84
+16                     41        49       175
+17                   4831      3518      8174
+18                    511       188       557
+26                      0         0         1
+27                      1         0         1
+35                      0         0         1
+39                   9725      2033      2761
+42                    249       108       194
+43                   1088       696       887
+44                    901       892      1219
+51                    145       115       182
+53                     37        47       141
+
+
+Chi-Square Test for 'Application mode' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Application mode' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Application_mode_vs_Target_stacked_bar.png
+
+Feature: Course
+Target  Dropout  Enrolled  Graduate
+Course                             
+33           54        10         8
+39            1         0         0
+171        2037       208       614
+979           1         0         0
+8014       1017       257      1164
+9003       1962       728      1043
+9070        691       487      2103
+9085       1741      1366      2266
+9119       1797      1058       149
+9130        877       365       364
+9147       2582      2976      2183
+9238       1566      1092      5277
+9254       2012      1384      2029
+9500       1633      1116      9325
+9556        278       119       349
+9670       1618      1087      2055
+9773       1828       800      5586
+9853       1169      1129       900
+9991       2432       758       867
+
+
+Chi-Square Test for 'Course' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Course' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Course_vs_Target_stacked_bar.png
+
+Feature: Previous qualification
+Target                  Dropout  Enrolled  Graduate
+Previous qualification                             
+1                         19798     13628     33757
+2                            60         8        30
+3                          1042        60       299
+4                            10         5         8
+5                             1         2         0
+6                            45        11        42
+9                           296         6         6
+10                           38         1         4
+11                            1         0         1
+12                          758        43        98
+14                            3         0         0
+15                            9         1         1
+17                            2         0         0
+19                         2158       233       556
+36                            1         0         0
+37                            2         1         0
+38                           21         5        12
+39                          900       848      1180
+40                           89        35       135
+42                           39        46       144
+43                           23         7         9
+
+
+Chi-Square Test for 'Previous qualification' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Previous qualification' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Previous_qualification_vs_Target_stacked_bar.png
+
+Feature: Nacionality
+Target       Dropout  Enrolled  Graduate
+Nacionality                             
+1              25125     14848     36040
+2                  0         0        13
+6                 22        14        20
+11                 1         0        14
+17                 1         0         1
+21                 4         2         0
+22                15         6        35
+24                 1         3        11
+25                 4         1         1
+26                12        19        36
+32                 1         0         0
+41                95        33        93
+62                 1         3         2
+100                4         2         3
+101                6         2         1
+103                1         3         8
+105                3         3         3
+109                0         1         1
+
+
+Chi-Square Test for 'Nacionality' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Nacionality' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Nacionality_vs_Target_stacked_bar.png
+
+Feature: Mother's qualification
+Target                  Dropout  Enrolled  Graduate
+Mother's qualification                             
+1                          5446      4057     10699
+2                           157       161       295
+3                          1935      1364      2591
+4                            78        85       150
+5                            36        26        37
+6                            18         2         1
+7                             1         0         0
+8                             1         0         0
+9                            33         5         7
+10                           10         0         5
+11                           22         2         8
+12                          176        41       141
+14                            4         1         0
+15                            0         0         1
+18                            2         0         1
+19                         5558      4011      9411
+22                            3         0         2
+26                            4         0         0
+27                            0         0         1
+28                            1         0         0
+29                            8         2         5
+30                            3         1         6
+31                            0         0         2
+33                            0         1         1
+34                         1709        57       227
+35                            8         0         2
+36                           11         1         3
+37                         7981      3469      7214
+38                         2024      1634      5401
+39                           32         4        10
+40                           15         6        28
+41                            4         4        18
+42                            8         3         8
+43                            6         3         7
+44                            2         0         0
+
+
+Chi-Square Test for 'Mother's qualification' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Mother's qualification' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Mother's_qualification_vs_Target_stacked_bar.png
+
+Feature: Father's qualification
+Target                  Dropout  Enrolled  Graduate
+Father's qualification                             
+1                          5207      2876      7521
+2                           170       146       180
+3                          1110       644      1257
+4                            79        56        89
+5                            53        22        25
+6                             9         0         0
+7                             1         0         1
+9                            14         1         4
+10                            8         0         2
+11                           36         5        34
+12                          129        24       141
+13                            3         0         0
+14                           10         0         8
+15                            1         0         0
+18                            4         0         0
+19                         5088      4197      9730
+20                            3         0         0
+21                            0         0         1
+22                            7         1         3
+23                            1         0         0
+24                            1         0         0
+25                            1         0         0
+26                            8         0         1
+27                            2         0         0
+29                           21         2         2
+30                            7         2         5
+31                            0         1         0
+33                            1         0         0
+34                         1550        52       188
+35                            4         0         1
+36                           30         4         9
+37                         9190      4306      9794
+38                         2454      2574      7225
+39                           71        21        28
+40                            7         2        16
+41                            6         1         6
+42                            3         1         3
+43                            6         2         6
+44                            1         0         2
+
+
+Chi-Square Test for 'Father's qualification' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Father's qualification' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Father's_qualification_vs_Target_stacked_bar.png
+
+Feature: Mother's occupation
+Target               Dropout  Enrolled  Graduate
+Mother's occupation                             
+0                       1785        67       354
+1                        317       117       332
+2                       1394       998      1695
+3                       1159      1094      2391
+4                       4860      3094      8108
+5                       2586      1993      4873
+6                        267       169       350
+7                       1306       753      2148
+8                         80        35       128
+9                      10536      6339     15511
+10                        14         2         2
+11                         1         0         0
+38                         0         0         1
+90                       832        32       114
+99                       114         8        16
+101                        1         0         0
+103                        0         1         0
+122                        1         4         1
+123                       10        17        17
+124                        0         1         0
+125                        1         0         0
+127                        0         1         0
+131                        0         3         3
+132                        0         5         6
+134                        3         3         5
+141                        2        24        25
+143                        1         3         5
+144                        1        12        12
+151                        1         2         8
+152                        1         6         6
+153                        0         2         6
+163                        0         1         0
+171                        1         0         0
+172                        0         0         1
+173                        0         2         0
+175                        0         5         6
+191                       13        82       117
+192                        3        12         8
+193                        1         5         7
+194                        5        48        26
+
+
+Chi-Square Test for 'Mother's occupation' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Mother's occupation' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Mother's_occupation_vs_Target_stacked_bar.png
+
+Feature: Father's occupation
+Target               Dropout  Enrolled  Graduate
+Father's occupation                             
+0                       1599        71       386
+1                        469       243       465
+2                        915       530       791
+3                       1674      1022      2967
+4                       2361      1335      2972
+5                       2872      2163      4626
+6                        947       728      1247
+7                       3375      2500      7035
+8                       1426       922      2763
+9                       7309      4321     10690
+10                      1406       823      1878
+11                         1         0         0
+12                         1         0         0
+13                         0         1         0
+19                         1         0         0
+22                         0         0         1
+39                         0         0         1
+90                       781        36       169
+96                         0         0         1
+99                       115         9        26
+101                        0         2         2
+102                        1         5         4
+103                        4        11        14
+112                        2         4         4
+114                        0         3         1
+121                        1         2         0
+122                        0         6         1
+123                        2         3         3
+124                        0         0         1
+125                        1         0         0
+131                        1         3         1
+132                        0         1         2
+134                        2         1         0
+135                        1         6         7
+141                        0         3         1
+143                        0         4         1
+144                        6        24        32
+148                        0         0         1
+151                        0         3         7
+152                        1         6        11
+153                        0         1         6
+154                        1         3         5
+161                        0         0         1
+163                        3        26        18
+171                        5        27        34
+172                        1         5         4
+174                        0         0         3
+175                        1        16        20
+181                        0         7        12
+182                        0         4         7
+183                        0         4         4
+191                        0         1         0
+192                        2        14        11
+193                        9        36        38
+194                        0         4         4
+195                        0         1         4
+
+
+Chi-Square Test for 'Father's occupation' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Father's occupation' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Father's_occupation_vs_Target_stacked_bar.png
+
+Feature: Displaced
+Target     Dropout  Enrolled  Graduate
+Displaced                             
+0            13431      6400     13128
+1            11865      8540     23154
+
+
+Chi-Square Test for 'Displaced' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Displaced' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Displaced_vs_Target_stacked_bar.png
+
+Feature: Educational special needs
+Target                     Dropout  Enrolled  Graduate
+Educational special needs                             
+0                            25202     14881     36149
+1                               94        59       133
+
+
+Chi-Square Test for 'Educational special needs' and 'Target': p-value = 0.8900
+
+Saved stacked bar plot for 'Educational special needs' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Educational_special_needs_vs_Target_stacked_bar.png
+
+Feature: Debtor
+Target  Dropout  Enrolled  Graduate
+Debtor                             
+0         21117     14287     35652
+1          4179       653       630
+
+
+Chi-Square Test for 'Debtor' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Debtor' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Debtor_vs_Target_stacked_bar.png
+
+Feature: Tuition fees up to date
+Target                   Dropout  Enrolled  Graduate
+Tuition fees up to date                             
+0                           7645       363       130
+1                          17651     14577     36152
+
+
+Chi-Square Test for 'Tuition fees up to date' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Tuition fees up to date' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Tuition_fees_up_to_date_vs_Target_stacked_bar.png
+
+Feature: Gender
+Target  Dropout  Enrolled  Graduate
+Gender                             
+0         12316      9804     30232
+1         12980      5136      6050
+
+
+Chi-Square Test for 'Gender' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Gender' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Gender_vs_Target_stacked_bar.png
+
+Feature: Scholarship holder
+Target              Dropout  Enrolled  Graduate
+Scholarship holder                             
+0                     23947     12949     20692
+1                      1349      1991     15590
+
+
+Chi-Square Test for 'Scholarship holder' and 'Target': p-value = 0.0000
+
+Saved stacked bar plot for 'Scholarship holder' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/Scholarship_holder_vs_Target_stacked_bar.png
+
+Feature: International
+Target         Dropout  Enrolled  Graduate
+International                             
+0                25124     14848     36039
+1                  172        92       243
+
+
+Chi-Square Test for 'International' and 'Target': p-value = 0.7257
+
+Saved stacked bar plot for 'International' vs 'Target' at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/International_vs_Target_stacked_bar.png
+
+Summary of Feature Associations with Target Variable:
+
+Numerical Features Correlation with Target:
+  Previous qualification (grade): Pearson Correlation = 0.1403
+  Admission grade: Pearson Correlation = 0.1787
+  Curricular units 1st sem (enrolled): Pearson Correlation = 0.3261
+  Curricular units 1st sem (evaluations): Pearson Correlation = 0.1300
+  Curricular units 1st sem (approved): Pearson Correlation = 0.7364
+  Curricular units 1st sem (grade): Pearson Correlation = 0.6914
+  Curricular units 2nd sem (enrolled): Pearson Correlation = 0.3298
+  Curricular units 2nd sem (evaluations): Pearson Correlation = 0.1933
+  Curricular units 2nd sem (approved): Pearson Correlation = 0.7837
+  Curricular units 2nd sem (grade): Pearson Correlation = 0.7366
+  GDP: Pearson Correlation = 0.1065
+  Age at enrollment: Pearson Correlation = -0.3207
+
+
+Categorical Features Chi-Square Test p-values:
+  Marital status: p-value = 0.0000
+  Application mode: p-value = 0.0000
+  Course: p-value = 0.0000
+  Previous qualification: p-value = 0.0000
+  Nacionality: p-value = 0.0000
+  Mother's qualification: p-value = 0.0000
+  Father's qualification: p-value = 0.0000
+  Mother's occupation: p-value = 0.0000
+  Father's occupation: p-value = 0.0000
+  Displaced: p-value = 0.0000
+  Debtor: p-value = 0.0000
+  Tuition fees up to date: p-value = 0.0000
+  Gender: p-value = 0.0000
+  Scholarship holder: p-value = 0.0000
+
+
+Association metrics saved to 'numerical_target_correlations.csv' and 'categorical_target_chi2_pvalues.csv'
+Correlation and Multivariate Analysis of Numerical Features:
+
+Pairs of Numerical Features with |Pearson Correlation| > 0.7:
+
+                                 Feature 1  ... Pearson Correlation
+0      Curricular units 1st sem (enrolled)  ...            0.973145
+1   Curricular units 1st sem (evaluations)  ...            0.769869
+2      Curricular units 1st sem (approved)  ...            0.855961
+3      Curricular units 1st sem (approved)  ...            0.924451
+4      Curricular units 1st sem (approved)  ...            0.846918
+5         Curricular units 1st sem (grade)  ...            0.855961
+6         Curricular units 1st sem (grade)  ...            0.808504
+7         Curricular units 1st sem (grade)  ...            0.881857
+8      Curricular units 2nd sem (enrolled)  ...            0.973145
+9   Curricular units 2nd sem (evaluations)  ...            0.769869
+10     Curricular units 2nd sem (approved)  ...            0.924451
+11     Curricular units 2nd sem (approved)  ...            0.808504
+12     Curricular units 2nd sem (approved)  ...            0.872000
+13        Curricular units 2nd sem (grade)  ...            0.846918
+14        Curricular units 2nd sem (grade)  ...            0.881857
+15        Curricular units 2nd sem (grade)  ...            0.872000
+
+[16 rows x 3 columns]
+
+
+High correlation pairs saved to 'high_correlations_numerical_features.csv'
+
+Variance Inflation Factor (VIF) for Numerical Features:
+
+                                           Feature        VIF
+0                   Previous qualification (grade)   1.493770
+1                                  Admission grade   1.518068
+2              Curricular units 1st sem (credited)        NaN
+3              Curricular units 1st sem (enrolled)  20.381643
+4           Curricular units 1st sem (evaluations)   2.618359
+5              Curricular units 1st sem (approved)  10.043874
+6                 Curricular units 1st sem (grade)   6.024799
+7   Curricular units 1st sem (without evaluations)        NaN
+8              Curricular units 2nd sem (credited)        NaN
+9              Curricular units 2nd sem (enrolled)  20.385022
+10          Curricular units 2nd sem (evaluations)   2.812473
+11             Curricular units 2nd sem (approved)  10.247737
+12                Curricular units 2nd sem (grade)   7.431841
+13  Curricular units 2nd sem (without evaluations)        NaN
+14                               Unemployment rate   1.146024
+15                                  Inflation rate   1.017703
+16                                             GDP   1.148671
+17                               Age at enrollment   1.147604
+
+
+VIF results saved to 'vif_numerical_features.csv'
+
+Features with VIF > 5, indicating multicollinearity:
+
+                                Feature        VIF
+3   Curricular units 1st sem (enrolled)  20.381643
+5   Curricular units 1st sem (approved)  10.043874
+6      Curricular units 1st sem (grade)   6.024799
+9   Curricular units 2nd sem (enrolled)  20.385022
+11  Curricular units 2nd sem (approved)  10.247737
+12     Curricular units 2nd sem (grade)   7.431841
+
+Consider removing or combining these features to reduce multicollinearity.
+
+Saved correlation heatmap at /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/numerical_features_correlation_heatmap.png
+

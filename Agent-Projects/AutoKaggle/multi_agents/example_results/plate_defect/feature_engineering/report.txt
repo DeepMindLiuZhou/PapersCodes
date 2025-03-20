@@ -1,0 +1,87 @@
+# FEATURE INFO
+## TARGET VARIABLE
+K_Scatch, Stains, Z_Scratch, Pastry, Dirtiness, Bumps, Other_Faults
+## FEATURES BEFORE THIS PHASE
+['id', 'X_Minimum', 'X_Maximum', 'Y_Minimum', 'Y_Maximum', 'Pixels_Areas', 'X_Perimeter', 'Y_Perimeter', 'Sum_of_Luminosity', 'Minimum_of_Luminosity', 'Maximum_of_Luminosity', 'Length_of_Conveyer', 'TypeOfSteel_A300', 'TypeOfSteel_A400', 'Steel_Plate_Thickness', 'Edges_Index', 'Empty_Index', 'Square_Index', 'Outside_X_Index', 'Edges_X_Index', 'Edges_Y_Index', 'Outside_Global_Index', 'LogOfAreas', 'Log_X_Index', 'Log_Y_Index', 'Orientation_Index', 'Luminosity_Index', 'SigmoidOfAreas', 'Pastry', 'Z_Scratch', 'K_Scatch', 'Stains', 'Dirtiness', 'Bumps', 'Other_Faults']
+## FEATURES AFTER THIS PHASE
+['id', 'X_Minimum', 'X_Maximum', 'Y_Minimum', 'Y_Maximum', 'Pixels_Areas', 'X_Perimeter', 'Y_Perimeter', 'Sum_of_Luminosity', 'Minimum_of_Luminosity', 'Maximum_of_Luminosity', 'Length_of_Conveyer', 'Steel_Plate_Thickness', 'Edges_Index', 'Empty_Index', 'Square_Index', 'Outside_X_Index', 'Edges_X_Index', 'Edges_Y_Index', 'Outside_Global_Index', 'LogOfAreas', 'Log_X_Index', 'Log_Y_Index', 'Orientation_Index', 'Luminosity_Index', 'SigmoidOfAreas', 'Pastry', 'Z_Scratch', 'K_Scatch', 'Stains', 'Dirtiness', 'Bumps', 'Other_Faults', 'X_Range', 'Y_Range', 'X_Y_Ratio', 'Luminosity_Area_Product', 'Perimeter_Area_Ratio', 'X_Minimum^2', 'X_Maximum^2', 'Y_Minimum^2', 'Y_Maximum^2', 'X_Minimum*X_Maximum', 'Y_Minimum*Y_Maximum', 'Log_Sum_of_Luminosity', 'Log_Pixels_Areas', 'TypeOfSteel_A300_True', 'TypeOfSteel_A400_True']
+# REPORT
+## QUESTIONS AND ANSWERS  
+### Question 1
+**What files did you process? Which files were generated? Answer with detailed file path.**
+### Answer 1
+- **Processed Files:**
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/cleaned_train.csv`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/cleaned_test.csv`
+
+- **Generated Files:**
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/processed_train.csv`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/processed_test.csv`
+
+### Question 2
+**Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.**
+### Answer 2
+- **Involved Features:**
+  - **Numerical:** `X_Minimum`, `X_Maximum`, `Y_Minimum`, `Y_Maximum`, `Pixels_Areas`, `Sum_of_Luminosity`, `X_Perimeter`, `Y_Perimeter`
+  - **Categorical:** `TypeOfSteel_A300`, `TypeOfSteel_A400`, `Pastry`, `Z_Scratch`, `K_Scatch`, `Stains`, `Dirtiness`, `Bumps`, `Other_Faults`
+
+- **Changes:**
+  - **Created Features:**
+    - `X_Range`, `Y_Range`, `X_Y_Ratio`, `Luminosity_Area_Product`, `Perimeter_Area_Ratio`
+    - Polynomial features: `X_Minimum^2`, `X_Maximum^2`, `Y_Minimum^2`, `Y_Maximum^2`, `X_Minimum*X_Maximum`, `Y_Minimum*Y_Maximum`
+  - **Transformed Features:**
+    - `Pixels_Areas`, `Sum_of_Luminosity`, `X_Perimeter`, `Y_Perimeter` were scaled using `MinMaxScaler`.
+    - Log transformations: `Log_Sum_of_Luminosity`, `Log_Pixels_Areas` were created using `np.log1p`.
+  - **Categorical Encoding:**
+    - `TypeOfSteel_A300` and `TypeOfSteel_A400` were one-hot encoded.
+
+### Question 3
+**What new features were created during this phase, and how do they enhance the dataset's potential for model training?**
+### Answer 3
+- New features created include:
+  - **`X_Range` and `Y_Range`:** Captures the range of coordinates, providing insights into size variations.
+  - **`X_Y_Ratio`:** Helps assess aspect ratios of defects.
+  - **`Luminosity_Area_Product`:** Indicates the relationship between luminosity and area.
+  - **`Perimeter_Area_Ratio`:** Provides insights into the shape of the defects.
+  - **Polynomial features:** These capture non-linear relationships that might be important for model training.
+
+These features enhance the dataset by providing additional dimensions of information that can improve model performance.
+
+### Question 4
+**Which existing features were transformed, and what transformations were applied? Were there any issues with the transformations (e.g., zero values in log transformations)?**
+### Answer 4
+- **Transformed Features:**
+  - **Scaling:** `Pixels_Areas`, `Sum_of_Luminosity`, `X_Perimeter`, `Y_Perimeter` were scaled using `MinMaxScaler`.
+  - **Log Transformations:** 
+    - `Log_Sum_of_Luminosity` and `Log_Pixels_Areas` were created using `np.log1p`, which effectively handles zero values by using the log1p function (log(1+x)).
+
+No issues were reported with the transformations, as `np.log1p` was employed to manage potential zero values.
+
+### Question 5
+**How were categorical variables handled, and what encoding techniques were employed? Are there any considerations to avoid multicollinearity?**
+### Answer 5
+- **Handling Categorical Variables:**
+  - Categorical variables `TypeOfSteel_A300` and `TypeOfSteel_A400` were handled using one-hot encoding (`pd.get_dummies`).
+  
+- **Considerations:**
+  - The first category was dropped during one-hot encoding to avoid multicollinearity, ensuring that the model does not suffer from redundancy in the feature space.
+
+### Question 6
+**What insights or patterns emerged from the feature engineering phase that may influence the choice of modeling techniques and evaluation metrics in the next phase?**
+### Answer 6
+1. **Strong Correlations:**
+   - Features such as `X_Minimum`, `X_Maximum`, and `Pixels_Areas` showed strong positive correlations, suggesting they are closely related and may contain redundant information.
+
+2. **Derived Features:**
+   - New polynomial features and interaction terms demonstrate potential predictive power and should be considered in model selection.
+
+3. **Categorical Analysis:**
+   - The relationships between categorical features and numerical features indicate potential for multi-label classification techniques, which will be important for the choice of evaluation metrics (e.g., F1-score, accuracy).
+
+4. **Feature Importance:**
+   - The feature importance analysis revealed key features that contribute significantly to predicting the target variables. This will aid in selecting the most relevant features for modeling.
+
+### Recommendations for Next Steps
+- Focus on the features with high importance while considering potential redundancy.
+- Explore models that effectively handle multi-label outputs, given the nature of the target variable.
+- Continue monitoring for multicollinearity as the modeling phase progresses.

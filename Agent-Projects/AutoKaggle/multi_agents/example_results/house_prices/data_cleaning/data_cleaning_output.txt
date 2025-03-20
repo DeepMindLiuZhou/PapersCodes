@@ -1,0 +1,4 @@
+Missing values handled and columns with excessive missing data removed.
+Outliers detected and handled.
+Data consistency ensured.
+Cleaned datasets saved as 'cleaned_train.csv' and 'cleaned_test.csv'.

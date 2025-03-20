@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What statistical characteristics were observed for each numerical feature, and how might these influence feature engineering decisions?
+
+### Question 2
+What are the relationships between categorical features and the target variable (`NObeyesdad`), and which features show the strongest associations?
+
+### Question 3
+What correlations were found among the numerical features and the target variable, and how can these correlations guide the creation of new features?
+
+### Question 4
+What interactions between features (both numerical and categorical) were identified, and how can these interactions be leveraged in feature engineering?
+
+### Question 5
+What were the results of the chi-square tests for categorical features in relation to the target variable, and which features were found to be significantly dependent?
+
+### Question 6
+What key insights and patterns emerged from the visualizations, and how can these insights shape the feature engineering strategy?

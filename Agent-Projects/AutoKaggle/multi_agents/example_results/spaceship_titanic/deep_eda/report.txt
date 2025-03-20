@@ -1,0 +1,76 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Transported
+## FEATURES BEFORE THIS PHASE
+['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age', 'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck', 'Name', 'Transported']
+## FEATURES AFTER THIS PHASE
+['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age', 'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck', 'Name', 'Transported']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+The files processed during this phase were:
+- **Input Files:**
+  - `cleaned_train.csv`: Path - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/cleaned_train.csv`
+  - `cleaned_test.csv`: Path - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/cleaned_test.csv`
+- **Output Files Generated:**
+  - Histograms and box plots for numerical features (e.g., `histogram_Age.png`, `boxplot_RoomService.png`)
+  - Stacked bar charts for categorical features (e.g., `bar_CryoSleep_vs_Transported.png`, `bar_HomePlanet_vs_Transported.png`)
+  - Correlation heatmap (`correlation_heatmap.png`)
+  - Pair plots (`pairplot_numerical_features.png`)
+  - Pivot heatmap for specific feature interactions (e.g., `pivot_homeplanet_destination.png`)
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+**Features Involved:**
+- **Numerical Features:** `Age`, `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`
+- **Categorical Features:** `HomePlanet`, `CryoSleep`, `Cabin`, `Destination`, `VIP`, `Name`
+
+**Changes:**
+- **Binary Features Created:** Flags for whether expenditure features (RoomService, FoodCourt, ShoppingMall, Spa, VRDeck) had any spending (zero or non-zero).
+- **Cabin Feature Modification:** Proposed to split into three separate features: `deck`, `number`, and `side`.
+- **Age Transformation:** Recommended to categorize age into distinct groups for better modeling.
+
+### Question 3
+What are the key statistical insights from the univariate analysis of numerical features, and how do these insights inform potential transformations or new features for feature engineering?
+### Answer 3
+**Key Statistical Insights:**
+- **Age:** Mean is approximately 28.7 with a slight positive skew (0.33). Suggested to bin age into groups for better analysis.
+- **Expenditure Features:** 
+  - `RoomService` and `FoodCourt` both have high skewness (1.18 and 1.17 respectively) and many zeros, indicating a need to create binary features indicating if spending occurred.
+- **Overall Recommendations:** Consider log transformations for expenditure features to reduce skewness.
+
+### Question 4
+What significant relationships were observed between categorical features and the target variable "Transported"? Which features show the strongest associations, and what implications do these relationships have for feature encoding or interaction terms?
+### Answer 4
+**Observations:**
+- **CryoSleep:** Strong positive correlation; individuals in CryoSleep were more likely to be transported.
+- **Destination:** TRAPPIST-1e has the highest transported rates, while PSO J318.5-22 has the lowest.
+- **HomePlanet:** Europa shows a higher proportion of transported individuals compared to Earth.
+
+**Implications for Feature Encoding:**
+- Recommended to use one-hot encoding for categorical features and consider interaction terms for combinations like HomePlanet and Destination.
+
+### Question 5
+Were there any notable patterns or interactions discovered during the multivariate analysis that could lead to the creation of new features? If so, what are they?
+### Answer 5
+**Notable Patterns:**
+- **Cabin vs. Transported:** Certain cabin assignments have higher proportions of transported individuals. However, the cabin feature's high sparsity indicates a need for more structured analysis.
+- **Correlation Heatmap:** Reveals moderate correlations between expenditure features, which could be leveraged to create interaction features.
+- **Age Analysis:** Younger individuals tend to be more likely transported, suggesting age could be a factor in future modeling.
+
+### Question 6
+Based on the findings from the exploratory data analysis, what specific new features or transformations would you recommend implementing, and why?
+### Answer 6
+**Recommended New Features or Transformations:**
+1. **Binary Features for Expenditure:** Create flags for whether RoomService, FoodCourt, ShoppingMall, Spa, and VRDeck were used.
+2. **Split Cabin Feature:** Separate into `deck`, `number`, and `side` for better clarity and analysis.
+3. **Age Groups:** Transform age into categorical groups to capture non-linear relationships.
+4. **Interaction Features:** Explore interactions between HomePlanet and Destination, as well as CryoSleep and expenditure features.
+5. **One-Hot Encoding:** Apply to categorical variables such as HomePlanet and VIP to improve model performance.
+
+These recommendations aim to enhance model interpretability and predictive power based on the insights gathered during in-depth exploratory data analysis.

@@ -1,0 +1,4 @@
+New features created and datasets saved.
+Log transformation applied and datasets saved.
+Categorical variables encoded and datasets saved.
+Numerical features standardized and datasets saved.

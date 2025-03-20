@@ -1,0 +1,64 @@
+Descriptive Statistics for Numerical Features:
+          CreditScore            Age  ...        Balance  EstimatedSalary
+count  165034.000000  165034.000000  ...  165034.000000    165034.000000
+mean      656.487666      37.883011  ...   55478.086689    112574.822734
+std        79.998222       8.180184  ...   62817.663278     50292.865585
+min       427.500000      18.000000  ...       0.000000        11.580000
+25%       597.000000      32.000000  ...       0.000000     74637.570000
+50%       659.000000      37.000000  ...       0.000000    117948.000000
+75%       710.000000      42.000000  ...  119939.517500    155152.467500
+max       850.000000      57.000000  ...  250898.090000    199992.480000
+
+[8 rows x 5 columns]
+Value Counts for Geography:
+ Geography
+France     94215
+Spain      36213
+Germany    34606
+Name: count, dtype: int64
+Value Counts for Gender:
+ Gender
+Male      93150
+Female    71884
+Name: count, dtype: int64
+Value Counts for HasCrCard:
+ HasCrCard
+1    124428
+0     40606
+Name: count, dtype: int64
+Value Counts for IsActiveMember:
+ IsActiveMember
+0    82885
+1    82149
+Name: count, dtype: int64
+Proportion of Exited vs Non-Exited Customers:
+ Exited
+0    0.788401
+1    0.211599
+Name: proportion, dtype: float64
+Correlation Matrix:
+                  CreditScore       Age  ...  EstimatedSalary    Exited
+CreditScore         1.000000 -0.010760  ...        -0.001765 -0.027399
+Age                -0.010760  1.000000  ...        -0.002886  0.363828
+Tenure              0.000962 -0.011423  ...         0.000971 -0.019565
+Balance             0.007039  0.069056  ...         0.008586  0.129743
+EstimatedSalary    -0.001765 -0.002886  ...         1.000000  0.018827
+Exited             -0.027399  0.363828  ...         0.018827  1.000000
+
+[6 rows x 6 columns]
+
+    Key Insights:
+    1. Numerical features such as Age, Balance, and EstimatedSalary show significant variation among customers.
+    2. The proportion of exited customers is lower compared to non-exited customers.
+    3. Correlation analysis reveals some relationships between features like Age and Balance.
+    4. Categorical features like Geography and Gender have distinct distributions across the target variable.
+    5. Key feature interactions show specific patterns that might be useful for feature engineering.
+    
+    Recommendations for Feature Engineering:
+    1. Create new features based on interactions between key numerical features (e.g., Balance-to-EstimatedSalary ratio).
+    2. Encode categorical features using techniques like One-Hot Encoding or Label Encoding.
+    3. Consider feature scaling for numerical features to improve model performance.
+    4. Explore polynomial features or interactions between numerical features to capture more complex relationships.
+    5. Perform further analysis to identify potential outliers or anomalies in the data.
+    
+    

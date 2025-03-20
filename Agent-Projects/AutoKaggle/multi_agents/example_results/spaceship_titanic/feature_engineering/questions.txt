@@ -1,0 +1,24 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What new features were created during the feature engineering phase, and how do they relate to the target variable 'Transported'?
+
+### Question 4
+What transformations were applied to existing features, and what impact do these transformations have on the distribution of the data?
+
+### Question 5
+Which features were selected for modeling based on correlation with the target variable, and what correlation threshold was used?
+
+### Question 6
+How were categorical variables handled, and what encoding techniques were applied to ensure they are suitable for modeling?
+
+### Question 7
+Were any numerical features normalized or standardized, and what methods were utilized?
+
+### Question 8
+What challenges or inconsistencies were encountered during feature engineering, and how might they affect the next phase of model building?

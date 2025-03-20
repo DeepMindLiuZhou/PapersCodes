@@ -1,0 +1,79 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Exited
+## FEATURES BEFORE THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited']
+## FEATURES AFTER THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited']
+# REPORT
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - Training Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/cleaned_train.csv`
+  - Test Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/cleaned_test.csv`
+
+- **Generated Files:**
+  - Distribution Plots: 
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/distribution_CreditScore.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/distribution_Age.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/distribution_Tenure.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/distribution_Balance.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/distribution_EstimatedSalary.png`
+  - Box Plots for Numerical Features:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/boxplot_Age_exited.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/boxplot_Balance_exited.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/boxplot_CreditScore_exited.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/boxplot_EstimatedSalary_exited.png`
+  - Violin Plots for Numerical Features vs Target: 
+    - Similar file paths as box plots.
+  - Count Plots for Target Variable and Categorical Features:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/deep_eda/images/countplot_exited.png`
+    - Other plots for categorical features.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Features Involved:**
+  - **Numerical Features:** `CreditScore`, `Age`, `Tenure`, `Balance`, `NumOfProducts`, `HasCrCard`, `IsActiveMember`, `EstimatedSalary`
+  - **Categorical Features:** `Geography`, `Gender`, `Exited`
+
+- **Changes:**
+  - **Statistical Analysis:** No features were deleted, but descriptive statistics and visualizations were generated for all involved features.
+  - **Correlation Analysis:** Correlation matrix computed; no features were modified or deleted.
+  - **Visualizations:** Plots were created to visualize distributions, relationships with the target variable, and feature interactions.
+
+### Question 3
+What statistical insights did you gather from the numerical features, and how do these insights inform potential transformations or new feature creation?
+### Answer 3
+- **Insights:**
+  - **CreditScore:** Ranges from 427 to 850, indicating varying creditworthiness. Potential transformation: normalization or standardization.
+  - **Age:** Median age around 37, with outliers suggesting a need for age groupings (e.g., young, middle-aged, senior).
+  - **Balance:** Significant variation with many zeros; consider creating a binary feature indicating whether a customer has a positive balance.
+  - **EstimatedSalary:** Wide range; consider logarithmic transformation to reduce skewness.
+
+### Question 4
+How did the categorical features correlate with the target variable `Exited`, and what potential new categorical features could be derived from these insights?
+### Answer 4
+- **Insights:**
+  - **Geography:** Different exit rates among countries, suggesting potential geographical segmentation.
+  - **Gender:** Analyzed against exit status; potential for creating a feature combining gender and geography.
+  - **HasCrCard & IsActiveMember:** Both show distinct distributions in exit status; could create an interaction feature (e.g., `Active_Card_User`).
+
+### Question 5
+What were the key interactions observed between pairs of features, and how could these interactions be expressed as new features?
+### Answer 5
+- **Key Interactions:**
+  - **Age and Balance:** Older customers tend to have higher balances and exit rates. Potential new feature: `Age_Balance_Ratio`.
+  - **Geography and Balance:** Different geographical regions show different balance distributions. Potential new feature: `Region_Balance_Interaction`.
+  
+### Question 6
+Based on the findings from correlation analysis, which features should be prioritized for engineering, and what specific transformations would optimize their predictive power?
+### Answer 6
+- **Prioritized Features:**
+  - **Age:** Consider binning into categories for better modeling.
+  - **Balance:** Create a binary feature indicating whether the balance is zero.
+  - **CreditScore:** Normalize or standardize to improve model performance.
+  - **Geography & Gender:** One-hot encode to capture categorical relationships effectively.

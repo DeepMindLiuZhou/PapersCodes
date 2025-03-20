@@ -1,0 +1,53 @@
+## PLAN
+
+### STEP 1
+Task: Univariate Analysis of Key Features
+Tools, involved features and correct parameters:
+- **Statistical Summary**: Pandas, numerical features (Pclass, Age, SibSp, Parch, Fare)
+- **Distribution Plots**: Matplotlib, Seaborn; histograms (`bins=30`), KDE plots (`shade=True`), box plots
+- **Categorical Features Analysis**: Seaborn’s `countplot`, categorical features (Sex, Embarked, Cabin)
+- **Survival Rate Analysis**: Pandas, Seaborn; calculate survival rates, bar plots
+
+Expected output or Impact on data:
+- Text: Summary statistics
+- Plots: Histograms, KDE plots, box plots, bar plots showing distributions and survival rates
+
+Constraints: Limit generated images to a maximum of 10, focus on critical visualizations.
+
+### STEP 2
+Task: Bivariate Analysis to Explore Relationships
+Tools, involved features and correct parameters:
+- **Correlation Matrix**: Pandas, Seaborn’s `heatmap` (`annot=True`)
+- **Pairwise Plots**: Seaborn’s `pairplot` (`hue='Survived'`)
+- **Cross-Tabulation**: Pandas, Seaborn; cross-tabulations, stacked bar plots
+- **Box Plots for Numerical-Categorical Interaction**: Seaborn’s `boxplot`
+
+Expected output or Impact on data:
+- Text: Correlation matrix
+- Plots: Heatmaps, pair plots, stacked bar plots, box plots showing feature interactions
+
+Constraints: Ensure runtime efficiency for large datasets.
+
+### STEP 3
+Task: Multivariate Analysis to Identify Feature Interactions
+Tools, involved features and correct parameters:
+- **Multivariate Plots**: Seaborn’s `violinplot`
+- **Facet Grid Plots**: Seaborn’s `FacetGrid`
+- **Interaction Plots**: Matplotlib, Statsmodels
+- **Survival Analysis**: Lifelines library
+
+Expected output or Impact on data:
+- Plots: Violin plots, facet grid plots, interaction plots, survival curves
+
+Constraints: Focus on critical visualizations with valuable insights.
+
+### STEP 4
+Task: Summarize Insights and Provide Recommendations for Feature Engineering
+Tools, involved features and correct parameters:
+- **Summary Report**: Compile key insights from univariate, bivariate, and multivariate analyses.
+- **Recommendations**: Provide specific recommendations for feature engineering based on insights.
+
+Expected output or Impact on data:
+- Text: Detailed summary report and recommendations
+
+Constraints: Prioritize textual descriptions and ensure recommendations are actionable.

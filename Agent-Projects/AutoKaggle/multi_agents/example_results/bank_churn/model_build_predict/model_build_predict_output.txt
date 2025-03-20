@@ -1,0 +1,11 @@
+X_train shape: (165034, 22)
+y_train shape: (165034,)
+X_test shape: (110023, 22)
+Finished model training: logistic regression
+Finished model training: random forest
+Finished model training: XGBoost
+Model: logistic regression, Best Params: {'C': 100, 'l1_ratio': 0.5, 'penalty': 'l2', 'solver': 'saga'}, Score: 0.8414881691762354
+Model: random forest, Best Params: {'max_depth': 20, 'min_samples_split': 10, 'n_estimators': 100}, Score: 0.8620898597267246
+Model: XGBoost, Best Params: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100}, Score: 0.8666343502893326
+The best performing model is: GradientBoostingClassifier(max_depth=5)
+Submission file saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/submission.csv

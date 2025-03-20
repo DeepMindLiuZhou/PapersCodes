@@ -1,0 +1,52 @@
+## PLAN
+
+### STEP 1
+Task: Data Preparation
+- **Objective:** Prepare the data for model training by separating the target variable and removing non-numeric or irrelevant columns.
+- **Tools, involved features and correct parameters:**
+  - **Tools:** Pandas
+  - **Features:** 'Exited' (target variable), 'id', 'CustomerId', 'Surname' (columns to be removed)
+  - **Parameters:** None
+- **Expected output or Impact on data:**
+  - `X_train` and `X_test` datasets with only numeric and relevant features.
+  - `y_train` with the target variable extracted.
+- **Constraints:**
+  - Ensure consistency between training and test sets in terms of features.
+
+### STEP 2
+Task: Model Selection and Training
+- **Objective:** Train up to three different models to find the best one for predicting customer churn.
+- **Tools, involved features and correct parameters:**
+  - **Tools:** `train_and_validation_and_select_the_best_model`
+  - **Features:** All features remaining in `X_train` after data preparation
+  - **Parameters:**
+    - `problem_type`: 'binary'
+    - `selected_models`: `["logistic regression", "random forest", "XGBoost"]`
+- **Expected output or Impact on data:**
+  - The best performing trained model based on AUC ROC scores.
+- **Constraints:**
+  - Runtime efficiency, as computational resources are limited.
+
+### STEP 3
+Task: Model Validation
+- **Objective:** Validate the trained models to evaluate their performance.
+- **Tools, involved features and correct parameters:**
+  - **Tools:** `train_and_validation_and_select_the_best_model`
+  - **Features:** Same features as in the training step
+  - **Parameters:** None (the tool will automatically perform cross-validation)
+- **Expected output or Impact on data:**
+  - AUC ROC scores for each model, with the best model selected based on these scores.
+- **Constraints:**
+  - Ensure that the validation process is consistent and reproducible.
+
+### STEP 4
+Task: Model Prediction
+- **Objective:** Use the best-performing model to make predictions on the test set.
+- **Tools, involved features and correct parameters:**
+  - **Tools:** `train_and_validation_and_select_the_best_model`, Pandas
+  - **Features:** All numeric and relevant features in `X_test`
+  - **Parameters:** None
+- **Expected output or Impact on data:**
+  - A submission file in the required format.
+- **Constraints:**
+  - Ensure the submission file matches the required format for the competition.

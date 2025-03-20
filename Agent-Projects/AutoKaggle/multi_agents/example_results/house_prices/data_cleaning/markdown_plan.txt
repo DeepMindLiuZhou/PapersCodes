@@ -1,0 +1,62 @@
+## PLAN
+
+### STEP 1
+Task: Handle Missing Values
+Tools, involved features and correct parameters:
+- **Tools:** `fill_missing_values`, `remove_columns_with_missing_data`
+- **Involved Features:**
+  - **Numerical:** LotFrontage, MasVnrArea, GarageYrBlt, etc.
+  - **Categorical:** Alley, PoolQC, Fence, MiscFeature, etc.
+- **Parameters:**
+  - `fill_missing_values(data, columns, method)`
+  - `remove_columns_with_missing_data(data, thresh)`
+
+Expected output or Impact on data:
+- Cleaned data with no missing values, ready for further analysis.
+
+Constraints:
+- Ensure consistency in imputation methods across both `train.csv` and `test.csv`.
+
+### STEP 2
+Task: Detect and Handle Outliers
+Tools, involved features and correct parameters:
+- **Tools:** `detect_and_handle_outliers_iqr`
+- **Involved Features:** LotArea, GrLivArea, TotalBsmtSF, etc.
+- **Parameters:**
+  - `detect_and_handle_outliers_iqr(data, columns, factor, method)`
+
+Expected output or Impact on data:
+- Data with outliers appropriately handled, minimizing skewness.
+
+Constraints:
+- Avoid removing rows from `test.csv` to maintain data integrity.
+
+### STEP 3
+Task: Ensure Data Consistency
+Tools, involved features and correct parameters:
+- **Tools:** `convert_data_types`, `remove_duplicates`
+- **Involved Features:** All features, ensuring uniformity across the dataset.
+- **Parameters:**
+  - `convert_data_types(data, columns, target_type)`
+  - `remove_duplicates(data, columns, keep)`
+
+Expected output or Impact on data:
+- Consistent and clean data across both `train.csv` and `test.csv`.
+
+Constraints:
+- Ensure no data loss during type conversion and duplication removal.
+
+### STEP 4
+Task: Prepare Cleaned Datasets
+Tools, involved features and correct parameters:
+- **Tools:** `pd.to_csv`
+- **Involved Features:** All features, ensuring a comprehensive cleaned dataset.
+- **Parameters:**
+  - `pd.to_csv('cleaned_train.csv')`
+  - `pd.to_csv('cleaned_test.csv')`
+
+Expected output or Impact on data:
+- Cleaned datasets saved as `cleaned_train.csv` and `cleaned_test.csv`.
+
+Constraints:
+- Ensure no data corruption during the export process.

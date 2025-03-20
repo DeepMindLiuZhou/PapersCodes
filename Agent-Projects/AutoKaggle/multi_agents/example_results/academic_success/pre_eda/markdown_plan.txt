@@ -1,0 +1,135 @@
+## PLAN
+
+### STEP 1
+Task: **Data Overview and Structure Assessment**
+
+Tools, involved features and correct parameters:
+- **Load the Datasets:**
+  - **Tools:** `pandas.read_csv()`
+  - **Features:** `train.csv`, `test.csv`
+  - **Parameters:** Handle delimiters and encoding as necessary.
+- **Inspect Data Dimensions:**
+  - **Tools:** `DataFrame.shape`
+  - **Features:** Entire dataset
+- **List Feature Types:**
+  - **Tools:** `DataFrame.dtypes`
+  - **Features:** All features (`id`, numerical, categorical, `Target`)
+- **Check for Missing Values:**
+  - **Tools:** `DataFrame.isnull().sum()`, `DataFrame.isnull().mean()`
+  - **Features:** All features in both datasets
+- **Examine Target Variable Distribution:**
+  - **Tools:** `DataFrame['Target'].value_counts(normalize=True)`
+  - **Features:** `Target`
+
+Expected output or Impact on data:
+- Display of the number of rows and columns for both `train` and `test` datasets.
+- Table listing each feature with its data type and the count/percentage of missing values.
+- Summary statistics for numerical features.
+- Distribution summary of the `Target` variable classes (`dropout`, `enrolled`, `graduate`).
+
+Constraints:
+- Ensure efficient handling of large datasets to prevent memory issues.
+- Exclude the `id` feature from considerations for model training.
+
+---
+
+### STEP 2
+Task: **Univariate Analysis of Numerical Features**
+
+Tools, involved features and correct parameters:
+- **Summary Statistics:**
+  - **Tools:** `DataFrame.describe()`
+  - **Features:** 
+    - `Previous qualification (grade)`
+    - `Admission grade`
+    - `Curricular units` (various sub-features)
+    - `Unemployment rate`
+    - `Inflation rate`
+    - `GDP`
+- **Distribution Examination:**
+  - **Tools:** `DataFrame.skew()`, `DataFrame.kurt()`
+  - **Features:** Same as above
+- **Identify Outliers:**
+  - **Tools:** Calculation of Q1, Q3, and IQR using `numpy.percentile()` or pandas methods.
+  - **Features:** Same as above
+
+Expected output or Impact on data:
+- Comprehensive table of summary statistics (mean, median, std, min, max) for each numerical feature.
+- Textual descriptions indicating the skewness and kurtosis of each numerical feature (e.g., "Admission grade is right-skewed").
+- Lists of potential outliers for each numerical feature based on the IQR method.
+
+Constraints:
+- Focus solely on textual summaries without generating visual plots.
+- Optimize calculations to handle large datasets efficiently.
+
+---
+
+### STEP 3
+Task: **Univariate Analysis of Categorical Features**
+
+Tools, involved features and correct parameters:
+- **Frequency Distribution:**
+  - **Tools:** `DataFrame['Feature'].value_counts()`, `normalize=True`
+  - **Features:** 
+    - `Marital status`
+    - `Application mode`
+    - `Course`
+    - `Previous qualification`
+    - `Nationality`
+    - `Mother's qualification`
+    - `Father's qualification`
+    - `Mother's occupation`
+    - `Father's occupation`
+    - `Displaced`
+    - `Educational special needs`
+    - `Debtor`
+    - `Tuition fees up to date`
+    - `Gender`
+    - `Scholarship holder`
+    - `International`
+    - `Target` (training set)
+- **Identify Dominant and Rare Categories:**
+  - **Tools:** Analysis based on frequency distributions.
+- **Assess Data Quality:**
+  - **Tools:** `DataFrame['Feature'].unique()`, string manipulation functions for standardization checks.
+  - **Features:** Same as above
+
+Expected output or Impact on data:
+- Tables listing each categorical feature with counts and percentages of each category.
+- Identification of dominant categories (e.g., "80% of students are enrolled") and rare categories.
+- Notes on any inconsistencies or anomalies in category names (e.g., typos, varying cases).
+
+Constraints:
+- Limit the analysis to textual summaries without generating visual plots.
+- Ensure efficient computation, especially for features with a large number of categories.
+
+---
+
+### STEP 4
+Task: **Initial Correlation and Relationship Assessment**
+
+Tools, involved features and correct parameters:
+- **Correlation Matrix for Numerical Features:**
+  - **Tools:** `DataFrame.corr()`
+  - **Features:** All numerical features
+- **Crosstab Analysis for Categorical Features:**
+  - **Tools:** `pandas.crosstab()`
+  - **Features:** Categorical features vs. `Target`
+- **Identify Highly Correlated Features:**
+  - **Tools:** Analysis of correlation matrix to find coefficients above a threshold (e.g., |0.7|)
+  - **Features:** All numerical features
+- **Assess Potential Multicollinearity:**
+  - **Tools:** Inspection of the correlation matrix for multicollinear feature pairs.
+  - **Features:** All numerical and selected categorical features
+
+Expected output or Impact on data:
+- Table showcasing Pearson correlation coefficients between each pair of numerical features.
+- Tables displaying crosstabs between each categorical feature and the `Target` variable, highlighting strong associations.
+- List of feature pairs with high correlation values (e.g., "Admission grade and Previous qualification (grade) have a correlation of 0.85").
+- Notes on potential multicollinearity issues, recommending actions like removing or combining correlated features.
+
+Constraints:
+- Focus on textual descriptions and tables; avoid visual heatmaps to adhere to data output preferences.
+- Optimize calculations to handle the dataset efficiently without excessive runtime.
+
+---

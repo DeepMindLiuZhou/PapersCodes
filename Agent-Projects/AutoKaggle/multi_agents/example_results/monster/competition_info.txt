@@ -1,0 +1,52 @@
+# Competition Information
+## 1. Competition Overview
+The "Ghouls, Goblins, and Ghosts... Boo!" competition challenges participants to classify 900 creatures into three categories: Ghoul, Goblin, and Ghost, using machine learning techniques based on various features.
+
+## 2. Files
+- **train.csv**: The training dataset containing features and the target variable (`type`).
+- **test.csv**: The test dataset containing only features, without the target variable.
+- **sample_submission.csv**: A template for the correct submission format.
+
+## 3. Problem Definition
+The objective is to develop a classification model that accurately predicts the type of creature based on provided features, evaluated by the accuracy of classification.
+
+## 4. Data Information
+### 4.1 Data type
+#### 4.1.1 ID type
+- `id`: Unique identifier for each data point (not used in training).
+
+#### 4.1.2 Numerical type
+- `bone_length`: Average length of bone (normalized between 0 and 1).
+- `rotting_flesh`: Percentage of rotting flesh.
+- `hair_length`: Average hair length (normalized between 0 and 1).
+- `has_soul`: Percentage of soul in the creature.
+
+#### 4.1.3 Categorical type
+- `color`: Dominant color (options: 'white', 'black', 'clear', 'blue', 'green', 'blood').
+- `type`: The target variable (only in training data; options: 'Ghost', 'Goblin', 'Ghoul').
+
+#### 4.1.4 Datetime type
+- None.
+
+### 4.2 Detailed data description
+- **Training Data**: 20 entries with numerical and categorical features, including measurements and the target variable.
+- **Testing Data**: 10 entries with the same features as the training data but without the target variable.
+
+## 5. Target Variable
+- **Target Variable**: `type`
+- **Description**: Classifies the creature into one of three categories: 'Ghoul', 'Goblin', 'Ghost'.
+
+## 6. Evaluation Metrics
+Submissions are evaluated based on categorization accuracy, specifically the percentage of correctly classified creatures.
+
+## 7. Submission Format
+The submission file must include:
+- **Columns**:
+  - `id`: Unique identifier (int).
+  - `type`: Predicted class of the entity (categorical).
+
+## 8. Other Key Aspects
+- Explore relationships between numerical features and the target variable.
+- Investigate interactions between categorical variables and numerical features.
+- Consider normalization and feature scaling to enhance model performance.
+- Look into potential feature engineering opportunities to improve predictive accuracy.

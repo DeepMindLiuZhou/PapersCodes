@@ -1,0 +1,81 @@
+# FEATURE INFO
+## TARGET VARIABLE
+NObeyesdad
+## FEATURES BEFORE THIS PHASE
+['id', 'Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS', 'NObeyesdad']
+## FEATURES AFTER THIS PHASE
+['id', 'Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS', 'NObeyesdad']
+# REPORT
+## QUESTIONS AND ANSWERS  
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - Training Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/obesity_risks/train.csv`
+  - Test Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/obesity_risks/test.csv`
+
+- **Generated Files:**
+  - Cleaned Training Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/obesity_risks/cleaned_train.csv`
+  - Cleaned Test Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/obesity_risks/cleaned_test.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Involved Features:**
+  - **Numerical Features:** `Age`, `Height`, `Weight`, `FCVC`, `NCP`, `CH2O`, `FAF`, `TUE`
+  - **Categorical Features:** `Gender`, `family_history_with_overweight`, `FAVC`, `CAEC`, `SMOKE`, `SCC`, `CALC`, `MTRANS`
+  
+- **Changes Made:**
+  - **Missing Values Imputation:** 
+    - Numerical features were filled with the mean.
+    - Categorical features were filled with the mode.
+  - **Outliers Handling:** 
+    - Numerical features were capped using the IQR method.
+  - **Feature Type Modifications:**
+    - Categorical features were converted to lowercase.
+    - Numerical features and the `id` column were converted to `float` and `int` types respectively.
+  
+- **Deleted or Created Features:**
+  - No features were deleted or created during this phase.
+
+### Question 3
+What specific missing values were identified in the dataset, and what imputation methods were used to address them?
+### Answer 3
+- **Identified Missing Values:**
+  - Missing values were present in both numerical and categorical features.
+  
+- **Imputation Methods Used:**
+  - **Numerical Features:** Filled with the mean of the respective features.
+  - **Categorical Features:** Filled with the mode of the respective features.
+
+### Question 4
+Which features exhibited outliers, and what methods were employed to handle them?
+### Answer 4
+- **Features with Outliers:**
+  - Numerical features: `Age`, `Height`, `Weight`, `FCVC`, `NCP`, `CH2O`, `FAF`, `TUE`
+  
+- **Methods Employed:**
+  - The IQR method was used to detect outliers, and they were capped (using the `clip` method) to reduce their impact on the dataset.
+
+### Question 5
+What transformations were applied to ensure consistency across categorical and numerical features, and how did these transformations affect the dataset?
+### Answer 5
+- **Transformations Applied:**
+  - **Categorical Features:** Converted all categorical values to lowercase to ensure uniformity.
+  - **Numerical Features:** Converted to `float` type to maintain consistency.
+  - **ID Column:** Converted to `int` type for consistency.
+
+- **Effects on Dataset:**
+  - These transformations ensured that data values were consistent and standardized, making further analysis easier and reducing potential errors during model building.
+
+### Question 6
+What potential challenges or limitations were encountered during the data cleaning phase that may affect the forthcoming exploratory analysis?
+### Answer 6
+- **Challenges Encountered:**
+  - **Missing Values:** The imputation methods may not fully represent the underlying data distribution, leading to potential bias in analysis.
+  - **Outliers:** Capping outliers can mask extreme values that might be significant, potentially leading to loss of important insights.
+  - **Data Consistency:** Ensuring all categorical data is consistent can be tricky, especially if there are variations in response entries that are not immediately identifiable.
+  
+- **Limitations:**
+  - The lack of visual insights from visualization could mean that some data patterns may have been overlooked during cleaning.
+  - Potential for introducing errors if any imputation methods were misapplied or if there were unexpected data patterns.

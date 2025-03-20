@@ -1,0 +1,24 @@
+## QUESTIONS
+### Question 1
+What new features were created, and how do they impact the dataset?
+
+### Question 2
+What transformations were made to existing features, and how were they categorized?
+
+### Question 3
+How were categorical variables handled, and what encoding techniques were applied?
+
+### Question 4
+Were any numerical features normalized or standardized, and what techniques were used?
+
+### Question 5
+What feature selection methods, if any, were employed to identify the most relevant features for modeling?
+
+### Question 6
+What potential challenges or limitations were identified during feature engineering that could affect model performance?
+
+### Fixed Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Fixed Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.

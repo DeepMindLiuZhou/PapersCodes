@@ -1,0 +1,76 @@
+# FEATURE INFO
+## TARGET VARIABLE
+SalePrice
+## FEATURES BEFORE THIS PHASE
+['Id', 'MSSubClass', 'MSZoning', 'LotFrontage', 'LotArea', 'Street', 'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType', 'HouseStyle', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrType', 'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1', 'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual', 'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'FireplaceQu', 'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual', 'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC', 'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType', 'SaleCondition', 'SalePrice']
+## FEATURES AFTER THIS PHASE
+['Id', 'MSSubClass', 'MSZoning', 'LotFrontage', 'LotArea', 'Street', 'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType', 'HouseStyle', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrType', 'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1', 'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual', 'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'FireplaceQu', 'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual', 'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC', 'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType', 'SaleCondition', 'SalePrice']
+# REPORT
+## QUESTIONS AND ANSWERS  
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - Training Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/train.csv`
+  - Testing Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/test.csv`
+  
+- **Generated Files:**
+  - Histograms for numerical features saved as:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/pre_eda/images/hist_[feature].png` (for features like LotFrontage, LotArea, etc.)
+  - Box plots for numerical features saved as:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/pre_eda/images/box_[feature].png` (for features like LotFrontage, LotArea, etc.)
+  - Bar plots for categorical features saved as:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/pre_eda/images/bar_[feature].png` (for features like Neighborhood, MSZoning, etc.)
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Involved Features:**
+  - **Numerical Features:** LotFrontage, LotArea, OverallQual, OverallCond, YearBuilt, YearRemodAdd, MasVnrArea, etc.
+  - **Categorical Features:** MSZoning, Street, Alley, LotShape, LandContour, Utilities, Neighborhood, etc.
+
+- **Changes:**
+  - No features were deleted or created in this phase.
+  - Feature types remained the same (numerical and categorical) without modifications.
+
+### Question 3
+What insights were gained regarding the structure and types of data in the datasets?
+### Answer 3
+- The dataset comprises 81 columns in training data and 80 in testing data.
+- Features are divided into identifiers, numerical, and categorical.
+- Notable characteristics include:
+  - **Numerical Features:** Continuous variables (e.g., LotArea, GrLivArea) and count variables (e.g., BedroomAbvGr).
+  - **Categorical Features:** Various categories such as MSZoning and Neighborhood, indicating demographic or zoning classifications.
+- The structure suggests a mixture of residential and possibly commercial real estate data.
+
+### Question 4
+Which features were found to have missing values, and what is the extent (count and percentage) of these missing values?
+### Answer 4
+- **Missing Values in Training Data:**
+  - Example: 
+    - LotFrontage: 330 missing (22.6%)
+    - Alley: 1369 missing (93.8%)
+    - PoolQC: 1453 missing (99.5%)
+  
+- **Missing Values in Testing Data:**
+  - Example:
+    - LotFrontage: 172 missing (22.8%)
+    - Alley: 1352 missing (97.4%)
+    - PoolQC: 1433 missing (99.5%)
+
+### Question 5
+What outliers were detected in the numerical features, and which features are primarily affected by these outliers?
+### Answer 5
+- **Detected Outliers:**
+  - Features such as LotArea displayed a significant number of outliers, particularly on the higher end.
+  - The box plot analysis indicated extreme values above the usual range, suggesting a few properties with exceptionally large lot areas.
+- Other numerical features may also exhibit outliers, but specific details are primarily highlighted for LotArea.
+
+### Question 6
+Based on the findings from this phase, what specific cleaning tasks should be prioritized to prepare the data for the next phases of the competition?
+### Answer 6
+- **Prioritize Cleaning Tasks:**
+  - Address missing values: Implement strategies for imputation or removal based on the percentage of missingness.
+  - Investigate outliers: Determine if outliers are valid data points or errors. Consider transformations or removal for skewed distributions.
+  - Categorical feature imbalances: Analyze categorical features with low frequencies to see if they should be merged with other categories.
+  - Prepare for feature engineering: Identify potential features for creation based on insights, especially from categorical variables.

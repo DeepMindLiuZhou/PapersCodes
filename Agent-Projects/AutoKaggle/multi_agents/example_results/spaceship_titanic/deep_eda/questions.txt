@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What are the key statistical insights from the univariate analysis of numerical features, and how do these insights inform potential transformations or new features for feature engineering?
+
+### Question 2
+What significant relationships were observed between categorical features and the target variable "Transported"? Which features show the strongest associations, and what implications do these relationships have for feature encoding or interaction terms?
+
+### Question 3
+Were there any notable patterns or interactions discovered during the multivariate analysis that could lead to the creation of new features? If so, what are they?
+
+### Question 4
+What visualizations provided the most compelling insights during this phase, and how can they guide the feature engineering process?
+
+### Question 5
+Are there any features that were identified as having high levels of missing values or outliers, and what strategies should be considered to handle them in the feature engineering phase?
+
+### Question 6
+Based on the findings from the exploratory data analysis, what specific new features or transformations would you recommend implementing, and why?

@@ -1,0 +1,79 @@
+# Data Information
+## Data Type
+### ID type
+- id
+
+### Numerical type
+- X_Minimum
+- X_Maximum
+- Y_Minimum
+- Y_Maximum
+- Pixels_Areas
+- X_Perimeter
+- Y_Perimeter
+- Sum_of_Luminosity
+- Minimum_of_Luminosity
+- Maximum_of_Luminosity
+- Length_of_Conveyer
+- Steel_Plate_Thickness
+- Edges_Index
+- Empty_Index
+- Square_Index
+- Outside_X_Index
+- Edges_X_Index
+- Edges_Y_Index
+- Outside_Global_Index
+- LogOfAreas
+- Log_X_Index
+- Log_Y_Index
+- Orientation_Index
+- Luminosity_Index
+- SigmoidOfAreas
+
+### Categorical type
+- TypeOfSteel_A300
+- TypeOfSteel_A400
+- Pastry
+- Z_Scratch
+- K_Scatch
+- Stains
+- Dirtiness
+- Bumps
+- Other_Faults
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset comprises numerical and categorical features extracted from steel plates, likely for the purpose of defect detection. Key features include coordinates (`X_Minimum`, `X_Maximum`, `Y_Minimum`, `Y_Maximum`), area measures (`Pixels_Areas`, `LogOfAreas`), perimeter measures (`X_Perimeter`, `Y_Perimeter`), and luminosity measures (`Sum_of_Luminosity`, `Minimum_of_Luminosity`, `Maximum_of_Luminosity`). There are also indices related to the geometry and placement of defects (`Edges_Index`, `Empty_Index`, `Square_Index`, `Outside_X_Index`, `Edges_X_Index`, `Edges_Y_Index`, `Outside_Global_Index`, `Log_X_Index`, `Log_Y_Index`, `Orientation_Index`, `Luminosity_Index`, `SigmoidOfAreas`). Two categorical features, `TypeOfSteel_A300` and `TypeOfSteel_A400` indicate the type of steel plate.
+
+Notable patterns include:
+- The `id` feature is unique for each data point.
+- Numerical features exhibit various scales and should be normalized for certain machine learning models.
+- Categorical features like `TypeOfSteel_A300` and `TypeOfSteel_A400` are binary indicators.
+- Target variables are multi-label and indicate different types of faults present on the steel plates.
+
+## Target Variable
+The target variables are multi-label and consist of the following:
+- Pastry
+- Z_Scratch
+- K_Scatch
+- Stains
+- Dirtiness
+- Bumps
+- Other_Faults
+
+These variables indicate the presence (1) or absence (0) of specific types of faults on the steel plates.
+
+# Submission format (if applicable)
+The submission file should include the `id` and the predicted values for each of the target variables:
+- id
+- Pastry
+- Z_Scratch
+- K_Scatch
+- Stains
+- Dirtiness
+- Bumps
+- Other_Faults
+
+The `id` should be unique for each row, and the target variables should be binary (0 or 1) indicating the predicted presence or absence of each fault type.

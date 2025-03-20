@@ -1,0 +1,43 @@
+## PLAN
+
+### STEP 1
+Task: Create New Features
+Tools, involved features and correct parameters:
+- **Tools:** Pandas for data manipulation.
+- **Features:**
+  - `HouseAge = YrSold - YearBuilt`
+  - `YearsSinceRemod = YrSold - YearRemodAdd`
+  - `TotalBath = FullBath + 0.5 * HalfBath + BsmtFullBath + 0.5 * BsmtHalfBath`
+  - `TotalPorchSF = OpenPorchSF + EnclosedPorch + 3SsnPorch + ScreenPorch`
+  - `TotalSF = TotalBsmtSF + 1stFlrSF + 2ndFlrSF`
+  - `OverallQual_SF = OverallQual * GrLivArea`
+Expected output or Impact on data: New columns in both train and test datasets with the calculated features.
+Constraints: Ensure that the new features do not introduce multicollinearity or other issues.
+
+### STEP 2
+Task: Transform Existing Features
+Tools, involved features and correct parameters:
+- **Tools:** NumPy for applying `np.log1p()` transformation.
+- **Features:** `LotArea`, `GrLivArea`, `SalePrice` (for the training dataset).
+Expected output or Impact on data: Transformed features with reduced skewness, making the data more suitable for linear models.
+Constraints: Ensure that features containing zero or negative values are handled appropriately (e.g., adding a small constant before log transformation).
+
+### STEP 3
+Task: Handle Categorical Variables
+Tools, involved features and correct parameters:
+- **Label Encoding:**
+  - **Tools:** Sklearn's `LabelEncoder`.
+  - **Features:** `ExterQual`, `ExterCond`, `BsmtQual`, `BsmtCond`, `HeatingQC`, `KitchenQual`, `GarageQual`, `GarageCond`, `PoolQC`, `Fence`.
+- **One-Hot Encoding:**
+  - **Tools:** Pandas' `get_dummies()` function.
+  - **Features:** `MSZoning`, `Street`, `Alley`, `Neighborhood`, `HouseStyle`, `RoofStyle`, `Condition1`, `Condition2`, `BldgType`, etc.
+Expected output or Impact on data: New columns representing encoded categorical features.
+Constraints: Avoid excessive dimensionality; consider grouping rare categories or using target encoding.
+
+### STEP 4
+Task: Normalize or Standardize Numerical Features
+Tools, involved features and correct parameters:
+- **Tools:** Sklearn's `StandardScaler`.
+- **Features:** `LotArea`, `GrLivArea`, `1stFlrSF`, `2ndFlrSF`, `TotalBsmtSF`, `HouseAge`, etc.
+Expected output or Impact on data: Scaled numerical features in both train and test datasets.
+Constraints: Ensure scaling is applied consistently across train and test datasets, using the same parameters.

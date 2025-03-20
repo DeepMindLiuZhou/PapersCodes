@@ -1,0 +1,67 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- id
+
+### Numerical type
+- Age
+- Height
+- Weight
+- FCVC
+- NCP
+- CH2O
+- FAF
+- TUE
+
+### Categorical type
+- Gender
+- family_history_with_overweight
+- FAVC
+- CAEC
+- SMOKE
+- SCC
+- CALC
+- MTRANS
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset provided includes both training and testing data, with a total of 18 features and one target variable (`NObeyesdad`). Below is a description of the features:
+
+- **id**: Unique identifier for each data point.
+- **Gender**: Categorical feature indicating the gender of the individual (Male or Female).
+- **Age**: Numerical feature representing the age of the individual.
+- **Height**: Numerical feature representing the height of the individual in meters.
+- **Weight**: Numerical feature representing the weight of the individual in kilograms.
+- **family_history_with_overweight**: Categorical feature indicating whether the individual has a family history of being overweight (yes or no).
+- **FAVC**: Categorical feature indicating whether the individual frequently consumes high-calorie food (yes or no).
+- **FCVC**: Numerical feature representing the frequency of vegetable consumption.
+- **NCP**: Numerical feature indicating the number of main meals.
+- **CAEC**: Categorical feature representing the frequency of food consumption between meals (Always, Frequently, Sometimes, or no).
+- **SMOKE**: Categorical feature indicating whether the individual smokes (yes or no).
+- **CH2O**: Numerical feature representing the daily water intake in liters.
+- **SCC**: Categorical feature indicating whether the individual monitors their calorie intake (yes or no).
+- **FAF**: Numerical feature representing the frequency of physical activity per week.
+- **TUE**: Numerical feature indicating the time spent using technology devices per day.
+- **CALC**: Categorical feature indicating the frequency of alcohol consumption (Always, Frequently, Sometimes, or no).
+- **MTRANS**: Categorical feature representing the main mode of transportation (Automobile, Public_Transportation, etc.).
+
+### Notable Patterns and Characteristics
+- Most individuals have a family history of being overweight and frequently consume high-calorie food.
+- The frequency of vegetable consumption (FCVC) and the number of main meals (NCP) vary among individuals.
+- The majority of individuals do not smoke and do not monitor their calorie intake.
+- The frequency of physical activity (FAF) and time spent using technology (TUE) show significant variation.
+- Public transportation is the most common mode of transportation.
+
+## Target Variable
+- **NObeyesdad**: This is a categorical target variable indicating the obesity level of the individual. It includes categories such as Insufficient_Weight, Normal_Weight, Overweight_Level_I, Overweight_Level_II, Obesity_Type_I, Obesity_Type_II, and Obesity_Type_III.
+
+# Submission format (if applicable)
+For submission, the file should include the following columns:
+- **id**: Unique identifier for each data point.
+- **NObeyesdad**: Predicted obesity level for each individual.
+
+Each column should retain its original data type, with `id` being an integer and `NObeyesdad` being a categorical string.

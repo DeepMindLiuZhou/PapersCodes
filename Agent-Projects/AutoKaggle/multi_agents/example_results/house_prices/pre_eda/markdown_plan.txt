@@ -1,0 +1,45 @@
+## PLAN
+
+### STEP 1
+**Task:** Data Structure and Summary
+- **Tools, involved features and correct parameters:**
+  - Load datasets using `pandas.read_csv`
+  - Inspect data with `df.head()`, `df.info()`, and `df.describe()`
+  - Use `df.describe(include=['O'])` for categorical features
+- **Expected output or Impact on data:**
+  - Basic understanding of data structure
+  - Summary statistics including mean, standard deviation, min, max, and quartiles for numerical features
+  - Frequency counts for categorical features
+- **Constraints:**
+  - Analyze both training and testing datasets separately
+
+### STEP 2
+**Task:** Missing Values Analysis
+- **Tools, involved features and correct parameters:**
+  - Calculate missing values using `df.isnull().sum()`
+  - Calculate percentage of missing values relative to total rows
+- **Expected output or Impact on data:**
+  - List of features with missing values and their corresponding count and percentage of missingness
+- **Constraints:**
+  - Focus on both training and testing datasets
+
+### STEP 3
+**Task:** Univariate Analysis of Numerical Features
+- **Tools, involved features and correct parameters:**
+  - Visualize distributions with histograms using `sns.histplot` or `plt.hist`
+  - Identify outliers with box plots using `sns.boxplot`
+- **Expected output or Impact on data:**
+  - Histograms and box plots for numerical features with insights into their distributions and any potential outliers
+- **Constraints:**
+  - Limit the number of generated images to a maximum of 10 critical visualizations
+  - Prioritize features likely to influence the target variable `SalePrice`
+
+### STEP 4
+**Task:** Univariate Analysis of Categorical Features
+- **Tools, involved features and correct parameters:**
+  - Visualize frequency distributions with bar plots using `sns.countplot`
+- **Expected output or Impact on data:**
+  - Bar plots for categorical features showing the frequency distribution of categories
+- **Constraints:**
+  - Limit the number of generated images to a maximum of 10 critical visualizations
+  - Highlight any categorical features with imbalances or unusual patterns

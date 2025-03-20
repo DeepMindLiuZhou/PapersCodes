@@ -1,0 +1,129 @@
+## PLAN
+
+### STEP 1
+Task: Encode Categorical Variables  
+Tools, involved features and correct parameters:
+- **Tools:**
+  - Pandas for data manipulation.
+  - Scikit-learn's `LabelEncoder` for binary categories.
+  - Scikit-learn's `OneHotEncoder` for multiclass categories with `handle_unknown='ignore'` and `sparse=False`.
+  - Category Encoders Library (optional) for advanced encoding like Target Encoding.
+- **Involved Features:**
+  - **Binary Categorical Features:**
+    - `Gender`
+    - `Displaced`
+    - `Debtor`
+    - `Scholarship holder`
+    - `International`
+  - **Multiclass Categorical Features:**
+    - `Marital status`
+    - `Application mode`
+    - `Course`
+    - `Previous qualification`
+    - `Nationality`
+    - `Mother's qualification`
+    - `Father's qualification`
+    - `Mother's occupation`
+    - `Father's occupation`
+    - `Educational special needs`
+    - `Tuition fees up to date`
+
+Expected output or Impact on data:
+- Transformed categorical features into numerical formats suitable for machine learning models.
+- Creation of new binary columns for multiclass features through One-Hot Encoding.
+- Consistent encoding between `processed_train.csv` and `processed_test.csv`, ensuring compatibility and preventing errors during model training.
+
+Constraints:
+- **Dimensionality Control:** Limit the number of dummy variables, especially for high-cardinality features like `Course`, to prevent the curse of dimensionality.
+- **Data Leakage Prevention:** Ensure that encoding schemes are exclusively based on the training data without incorporating information from the test set.
+- **Handling Unseen Categories:** Manage categories in the test set that were not present in the training set by using strategies like assigning a default category or ignoring them during encoding.
+
+---
+
+### STEP 2
+Task: Scale and Normalize Numerical Features  
+Tools, involved features and correct parameters:
+- **Tools:**
+  - Scikit-learn's `StandardScaler` for z-score normalization.
+  - Scikit-learn's `MinMaxScaler` for scaling features to a range of [0, 1].
+  - Scikit-learn's `PowerTransformer` (with `method='yeo-johnson'`) for handling skewed distributions.
+  - Pandas for data manipulation and transformation.
+- **Involved Features:**
+  - `Previous qualification (grade)`
+  - `Admission grade`
+  - `Curricular units 1st sem (credited)`
+  - `Curricular units 1st sem (enrolled)`
+  - `Curricular units 1st sem (evaluations)`
+  - `Curricular units 1st sem (approved)`
+  - `Curricular units 1st sem (grade)`
+  - `Curricular units 1st sem (without evaluations)`
+  - `Curricular units 2nd sem (credited)`
+  - `Curricular units 2nd sem (enrolled)`
+  - `Curricular units 2nd sem (evaluations)`
+  - `Curricular units 2nd sem (approved)`
+  - `Curricular units 2nd sem (grade)`
+  - `Curricular units 2nd sem (without evaluations)`
+  - `Unemployment rate`
+  - `Inflation rate`
+  - `GDP`
+  - `Age at enrollment`
+
+Expected output or Impact on data:
+- Numerical features standardized to have a mean of 0 and a standard deviation of 1 or scaled to a [0, 1] range.
+- Reduced skewness in highly skewed numerical features, leading to more normal-like distributions.
+- Enhanced model performance and faster convergence due to uniform feature scaling.
+
+Constraints:
+- **Avoid Information Leakage:** Fit scalers and transformers only on the training data and apply them to both training and test sets using the same parameters.
+- **Numerical Stability:** Ensure that transformations do not introduce extremely large or small values that could cause numerical issues in model training.
+
+---
+
+### STEP 3
+Task: Create Interaction and Polynomial Features  
+Tools, involved features and correct parameters:
+- **Tools:**
+  - Scikit-learn's `PolynomialFeatures` with `degree=2`, `interaction_only=False`, and `include_bias=False` for generating polynomial and interaction terms.
+  - Pandas for manual creation of specific interaction features based on domain knowledge.
+  - Scikit-learn's `RandomForestClassifier` or `XGBoost` for evaluating feature importance.
+- **Involved Features:**
+  - **Potential Interaction Pairs:**
+    - `Admission grade` × `GDP`
+    - `Age at enrollment` × `Educational special needs`
+  - **Numerical Features for Polynomial Terms:**
+    - `Admission grade`
+    - `GDP`
+    - `Age at enrollment`
+    - Any other numerical features identified with non-linear relationships to the target.
+
+Expected output or Impact on data:
+- Introduction of new features that capture interactions and non-linear relationships, potentially enhancing the model's ability to learn complex patterns.
+- A richer feature set that may lead to improved predictive performance and accuracy.
+
+Constraints:
+- **Dimensionality Control:** Limit the number of generated interaction and polynomial features to prevent overfitting and manage computational complexity.
+- **Resource Management:** Ensure that feature creation does not excessively increase the dataset size, adhering to runtime and efficiency constraints.
+- **Relevance Assessment:** Only retain interaction and polynomial features that show meaningful contributions to the target variable based on feature importance evaluations.
+
+---
+
+### STEP 4
+Task: Handle Missing Values and Impute Derived Features  
+Tools, involved features and correct parameters:
+- **Tools:**
+  - Scikit-learn's `SimpleImputer` with strategies like `mean`, `median`, or `most_frequent` for imputing missing values.
+  - Pandas for creating indicator variables and handling data transformations.
+- **Involved Features:**
+  - **All Features After Encoding and Scaling:**
+    - This includes both original and newly created interaction or polynomial features.
+  
+Expected output or Impact on data:
+- Fully imputed datasets (`processed_train.csv` and `processed_test.csv`) with no missing values, ensuring data integrity during model training.
+- Enhanced feature robustness by addressing missing data comprehensively, which can lead to more stable and reliable model performance.
+
+Constraints:
+- **Avoid Information Leakage:** Fit imputers solely on the training data and apply the same imputation strategy to both training and test sets.
+- **Consistent Imputation:** Ensure that the imputation methods are applied uniformly across both datasets to maintain alignment.
+- **Indicator Variables:** For features with substantial missing data, create binary indicators to inform the model about the presence of missingness without introducing bias.
+
+---

@@ -1,0 +1,56 @@
+## PLAN
+
+### STEP 1
+Task: Address Missing Values
+Tools, involved features and correct parameters:
+- Tool: `fill_missing_values`
+- Numerical features: `Age`, `Height`, `Weight`, `FCVC`, `NCP`, `CH2O`, `FAF`, `TUE`
+  - Parameters: `method='mean'`
+- Categorical features: `Gender`, `family_history_with_overweight`, `FAVC`, `CAEC`, `SMOKE`, `SCC`, `CALC`, `MTRANS`
+  - Parameters: `method='mode'`
+Expected output or Impact on data:
+- A dataset with no missing values.
+Constraints:
+- Ensure the imputation method is appropriate for the type of feature.
+- Avoid using the 'constant' method unless there is a specific reason to fill with a fixed value.
+
+### STEP 2
+Task: Handle Outliers
+Tools, involved features and correct parameters:
+- Tool: `detect_and_handle_outliers_iqr`
+- Numerical features: `Age`, `Height`, `Weight`, `FCVC`, `NCP`, `CH2O`, `FAF`, `TUE`
+  - Parameters: `factor=1.5`, `method='clip'`
+Expected output or Impact on data:
+- A dataset with outliers capped to reduce their impact.
+Constraints:
+- Ensure the IQR method is appropriate for the feature distribution.
+- Avoid removing outliers entirely, as this may lead to loss of valuable data points.
+
+### STEP 3
+Task: Ensure Data Consistency
+Tools, involved features and correct parameters:
+- Tool: `convert_data_types`
+- Standardization of categorical values: Convert all categorical features to lowercase.
+  - Features: `Gender`, `family_history_with_overweight`, `FAVC`, `CAEC`, `SMOKE`, `SCC`, `CALC`, `MTRANS`
+  - Parameters: `target_type='str'`
+- Conversion of data types:
+  - Numerical features: `Age`, `Height`, `Weight`, `FCVC`, `NCP`, `CH2O`, `FAF`, `TUE`
+    - Parameters: `target_type='float'`
+  - `id` column:
+    - Parameters: `target_type='int'`
+Expected output or Impact on data:
+- A dataset with consistent and standardized data types and values.
+Constraints:
+- Avoid changing the inherent meaning of the data during conversion.
+- Ensure that all transformations maintain data integrity.
+
+### STEP 4
+Task: Remove Duplicates
+Tools, involved features and correct parameters:
+- Tool: `remove_duplicates`
+  - Parameters: `keep='first'`
+Expected output or Impact on data:
+- A dataset with unique rows, free of duplicates.
+Constraints:
+- Ensure that removing duplicates does not unintentionally delete important data.
+- Verify the dataset after removing duplicates to ensure no unintended changes.

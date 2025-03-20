@@ -1,0 +1,32 @@
+name: l4gm
+channels:
+  - pyg
+  - nvidia/label/cuda-12.1.0
+  - pytorch
+  - conda-forge
+  - xformers
+dependencies:
+  - python=3.10
+  - pytorch=2.5.1
+  - pytorch-cuda=12.1
+  - torchvision
+  - xformers
+  - cuda
+  - cuda-nvcc
+  - numpy<2.0.0
+  - scipy
+  - rich
+  - pip
+  - setuptools
+  - ninja
+  - tqdm
+  - ray-default
+  - flatten-dict
+  - gcc_linux-64=11
+  - gxx_linux-64=11
+  - opencv
+  - transformers
+  - einops
+  - pip:
+    - -r requirements.txt
+    - git+https://github.com/nerfstudio-project/gsplat.git@v1.4.0

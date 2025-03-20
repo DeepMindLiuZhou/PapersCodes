@@ -1,0 +1,5 @@
+Missing values handled.
+Outliers treated.
+Data consistency ensured for CryoSleep passengers.
+Final checks completed and data types converted.
+Cleaned datasets saved.

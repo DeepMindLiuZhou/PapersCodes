@@ -1,0 +1,110 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `Id`
+
+### Numerical type
+- `MSSubClass`
+- `LotFrontage`
+- `LotArea`
+- `OverallQual`
+- `OverallCond`
+- `YearBuilt`
+- `YearRemodAdd`
+- `MasVnrArea`
+- `BsmtFinSF1`
+- `BsmtFinSF2`
+- `BsmtUnfSF`
+- `TotalBsmtSF`
+- `1stFlrSF`
+- `2ndFlrSF`
+- `LowQualFinSF`
+- `GrLivArea`
+- `BsmtFullBath`
+- `BsmtHalfBath`
+- `FullBath`
+- `HalfBath`
+- `BedroomAbvGr`
+- `KitchenAbvGr`
+- `TotRmsAbvGrd`
+- `Fireplaces`
+- `GarageYrBlt`
+- `GarageCars`
+- `GarageArea`
+- `WoodDeckSF`
+- `OpenPorchSF`
+- `EnclosedPorch`
+- `3SsnPorch`
+- `ScreenPorch`
+- `PoolArea`
+- `MiscVal`
+- `MoSold`
+- `YrSold`
+- `SalePrice` (only in train data)
+
+### Categorical type
+- `MSZoning`
+- `Street`
+- `Alley`
+- `LotShape`
+- `LandContour`
+- `Utilities`
+- `LotConfig`
+- `LandSlope`
+- `Neighborhood`
+- `Condition1`
+- `Condition2`
+- `BldgType`
+- `HouseStyle`
+- `RoofStyle`
+- `RoofMatl`
+- `Exterior1st`
+- `Exterior2nd`
+- `ExterQual`
+- `ExterCond`
+- `Foundation`
+- `BsmtQual`
+- `BsmtCond`
+- `BsmtExposure`
+- `BsmtFinType1`
+- `BsmtFinType2`
+- `Heating`
+- `HeatingQC`
+- `CentralAir`
+- `Electrical`
+- `KitchenQual`
+- `Functional`
+- `GarageType`
+- `GarageFinish`
+- `GarageQual`
+- `GarageCond`
+- `PavedDrive`
+- `PoolQC`
+- `Fence`
+- `MiscFeature`
+- `SaleType`
+- `SaleCondition`
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of various attributes related to real estate properties. The features can be broadly divided into categories such as structural attributes (e.g., `BldgType`, `HouseStyle`), quality and condition attributes (e.g., `OverallQual`, `OverallCond`), year attributes (e.g., `YearBuilt`, `YearRemodAdd`), and other specific property characteristics (e.g., `LotArea`, `GrLivArea`, `TotalBsmtSF`). 
+
+Notable patterns or characteristics:
+- The `Id` field uniquely identifies each property.
+- Numerical features such as `LotArea`, `GrLivArea`, and `SalePrice` (in training data) are continuous.
+- Categorical features like `MSZoning`, `Neighborhood`, and `BldgType` represent different categories that describe the property.
+- The dataset contains several missing values in certain columns like `Alley`, `PoolQC`, `Fence`, and `MiscFeature`.
+
+## Target Variable
+The target variable is `SalePrice`, which represents the sale price of the property. This variable is only present in the training data and is what the model will aim to predict.
+
+# Submission format (if applicable)
+The submission file for predictions should include the following columns:
+- `Id`: The unique identifier for each property.
+- `SalePrice`: The predicted sale price for each property.
+
+The `Id` should match the `Id` from the test data, and `SalePrice` should be a numerical value representing the predicted sale price.

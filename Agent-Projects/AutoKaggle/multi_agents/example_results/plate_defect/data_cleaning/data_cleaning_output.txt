@@ -1,0 +1,295 @@
+Missing values in train dataset:
+id                       0
+X_Minimum                0
+X_Maximum                0
+Y_Minimum                0
+Y_Maximum                0
+Pixels_Areas             0
+X_Perimeter              0
+Y_Perimeter              0
+Sum_of_Luminosity        0
+Minimum_of_Luminosity    0
+Maximum_of_Luminosity    0
+Length_of_Conveyer       0
+TypeOfSteel_A300         0
+TypeOfSteel_A400         0
+Steel_Plate_Thickness    0
+Edges_Index              0
+Empty_Index              0
+Square_Index             0
+Outside_X_Index          0
+Edges_X_Index            0
+Edges_Y_Index            0
+Outside_Global_Index     0
+LogOfAreas               0
+Log_X_Index              0
+Log_Y_Index              0
+Orientation_Index        0
+Luminosity_Index         0
+SigmoidOfAreas           0
+Pastry                   0
+Z_Scratch                0
+K_Scatch                 0
+Stains                   0
+Dirtiness                0
+Bumps                    0
+Other_Faults             0
+dtype: int64
+Missing values in test dataset:
+id                       0
+X_Minimum                0
+X_Maximum                0
+Y_Minimum                0
+Y_Maximum                0
+Pixels_Areas             0
+X_Perimeter              0
+Y_Perimeter              0
+Sum_of_Luminosity        0
+Minimum_of_Luminosity    0
+Maximum_of_Luminosity    0
+Length_of_Conveyer       0
+TypeOfSteel_A300         0
+TypeOfSteel_A400         0
+Steel_Plate_Thickness    0
+Edges_Index              0
+Empty_Index              0
+Square_Index             0
+Outside_X_Index          0
+Edges_X_Index            0
+Edges_Y_Index            0
+Outside_Global_Index     0
+LogOfAreas               0
+Log_X_Index              0
+Log_Y_Index              0
+Orientation_Index        0
+Luminosity_Index         0
+SigmoidOfAreas           0
+dtype: int64
+Missing values in train dataset after filling:
+id                       0
+X_Minimum                0
+X_Maximum                0
+Y_Minimum                0
+Y_Maximum                0
+Pixels_Areas             0
+X_Perimeter              0
+Y_Perimeter              0
+Sum_of_Luminosity        0
+Minimum_of_Luminosity    0
+Maximum_of_Luminosity    0
+Length_of_Conveyer       0
+TypeOfSteel_A300         0
+TypeOfSteel_A400         0
+Steel_Plate_Thickness    0
+Edges_Index              0
+Empty_Index              0
+Square_Index             0
+Outside_X_Index          0
+Edges_X_Index            0
+Edges_Y_Index            0
+Outside_Global_Index     0
+LogOfAreas               0
+Log_X_Index              0
+Log_Y_Index              0
+Orientation_Index        0
+Luminosity_Index         0
+SigmoidOfAreas           0
+Pastry                   0
+Z_Scratch                0
+K_Scatch                 0
+Stains                   0
+Dirtiness                0
+Bumps                    0
+Other_Faults             0
+dtype: int64
+Missing values in test dataset after filling:
+id                       0
+X_Minimum                0
+X_Maximum                0
+Y_Minimum                0
+Y_Maximum                0
+Pixels_Areas             0
+X_Perimeter              0
+Y_Perimeter              0
+Sum_of_Luminosity        0
+Minimum_of_Luminosity    0
+Maximum_of_Luminosity    0
+Length_of_Conveyer       0
+TypeOfSteel_A300         0
+TypeOfSteel_A400         0
+Steel_Plate_Thickness    0
+Edges_Index              0
+Empty_Index              0
+Square_Index             0
+Outside_X_Index          0
+Edges_X_Index            0
+Edges_Y_Index            0
+Outside_Global_Index     0
+LogOfAreas               0
+Log_X_Index              0
+Log_Y_Index              0
+Orientation_Index        0
+Luminosity_Index         0
+SigmoidOfAreas           0
+dtype: int64
+Outliers handled in train dataset.
+Outliers handled in test dataset.
+Data types after conversion:
+id                         int64
+X_Minimum                  int64
+X_Maximum                  int64
+Y_Minimum                  int64
+Y_Maximum                float64
+Pixels_Areas               int64
+X_Perimeter              float64
+Y_Perimeter              float64
+Sum_of_Luminosity          int64
+Minimum_of_Luminosity    float64
+Maximum_of_Luminosity    float64
+Length_of_Conveyer         int64
+TypeOfSteel_A300            bool
+TypeOfSteel_A400            bool
+Steel_Plate_Thickness      int64
+Edges_Index              float64
+Empty_Index              float64
+Square_Index             float64
+Outside_X_Index          float64
+Edges_X_Index            float64
+Edges_Y_Index            float64
+Outside_Global_Index     float64
+LogOfAreas               float64
+Log_X_Index              float64
+Log_Y_Index              float64
+Orientation_Index        float64
+Luminosity_Index         float64
+SigmoidOfAreas           float64
+Pastry                     int64
+Z_Scratch                  int64
+K_Scatch                   int64
+Stains                     int64
+Dirtiness                  int64
+Bumps                      int64
+Other_Faults               int64
+dtype: object
+id                         int64
+X_Minimum                  int64
+X_Maximum                  int64
+Y_Minimum                float64
+Y_Maximum                float64
+Pixels_Areas               int64
+X_Perimeter              float64
+Y_Perimeter                int64
+Sum_of_Luminosity        float64
+Minimum_of_Luminosity    float64
+Maximum_of_Luminosity    float64
+Length_of_Conveyer         int64
+TypeOfSteel_A300            bool
+TypeOfSteel_A400            bool
+Steel_Plate_Thickness      int64
+Edges_Index              float64
+Empty_Index              float64
+Square_Index             float64
+Outside_X_Index          float64
+Edges_X_Index            float64
+Edges_Y_Index            float64
+Outside_Global_Index     float64
+LogOfAreas               float64
+Log_X_Index              float64
+Log_Y_Index              float64
+Orientation_Index        float64
+Luminosity_Index         float64
+SigmoidOfAreas           float64
+dtype: object
+Number of duplicate rows removed in train dataset: 0
+Number of duplicate rows removed in test dataset: 0
+Summary statistics of cleaned train dataset:
+                 id     X_Minimum  ...         Bumps  Other_Faults
+count  19219.000000  19219.000000  ...  19219.000000  19219.000000
+mean    9609.000000    709.854675  ...      0.247828      0.341225
+std     5548.191747    531.544189  ...      0.431762      0.474133
+min        0.000000      0.000000  ...      0.000000      0.000000
+25%     4804.500000     49.000000  ...      0.000000      0.000000
+50%     9609.000000    777.000000  ...      0.000000      0.000000
+75%    14413.500000   1152.000000  ...      0.000000      1.000000
+max    19218.000000   1705.000000  ...      1.000000      1.000000
+
+[8 rows x 33 columns]
+Data types of cleaned train dataset:
+id                         int64
+X_Minimum                  int64
+X_Maximum                  int64
+Y_Minimum                  int64
+Y_Maximum                float64
+Pixels_Areas               int64
+X_Perimeter              float64
+Y_Perimeter              float64
+Sum_of_Luminosity          int64
+Minimum_of_Luminosity    float64
+Maximum_of_Luminosity    float64
+Length_of_Conveyer         int64
+TypeOfSteel_A300            bool
+TypeOfSteel_A400            bool
+Steel_Plate_Thickness      int64
+Edges_Index              float64
+Empty_Index              float64
+Square_Index             float64
+Outside_X_Index          float64
+Edges_X_Index            float64
+Edges_Y_Index            float64
+Outside_Global_Index     float64
+LogOfAreas               float64
+Log_X_Index              float64
+Log_Y_Index              float64
+Orientation_Index        float64
+Luminosity_Index         float64
+SigmoidOfAreas           float64
+Pastry                     int64
+Z_Scratch                  int64
+K_Scatch                   int64
+Stains                     int64
+Dirtiness                  int64
+Bumps                      int64
+Other_Faults               int64
+dtype: object
+Summary statistics of cleaned test dataset:
+                 id     X_Minimum  ...  Luminosity_Index  SigmoidOfAreas
+count  12814.000000  12814.000000  ...      12814.000000    12814.000000
+mean   25625.500000    709.331356  ...         -0.140540        0.572401
+std     3699.227509    531.878508  ...          0.093768        0.331974
+min    19219.000000      0.000000  ...         -0.355050        0.119000
+25%    22422.250000     46.000000  ...         -0.192600        0.257000
+50%    25625.500000    776.000000  ...         -0.143900        0.472900
+75%    28828.750000   1152.000000  ...         -0.084300        0.999200
+max    32032.000000   1688.000000  ...          0.078150        1.000000
+
+[8 rows x 26 columns]
+Data types of cleaned test dataset:
+id                         int64
+X_Minimum                  int64
+X_Maximum                  int64
+Y_Minimum                float64
+Y_Maximum                float64
+Pixels_Areas               int64
+X_Perimeter              float64
+Y_Perimeter                int64
+Sum_of_Luminosity        float64
+Minimum_of_Luminosity    float64
+Maximum_of_Luminosity    float64
+Length_of_Conveyer         int64
+TypeOfSteel_A300            bool
+TypeOfSteel_A400            bool
+Steel_Plate_Thickness      int64
+Edges_Index              float64
+Empty_Index              float64
+Square_Index             float64
+Outside_X_Index          float64
+Edges_X_Index            float64
+Edges_Y_Index            float64
+Outside_Global_Index     float64
+LogOfAreas               float64
+Log_X_Index              float64
+Log_Y_Index              float64
+Orientation_Index        float64
+Luminosity_Index         float64
+SigmoidOfAreas           float64
+dtype: object

@@ -1,0 +1,68 @@
+# Data Information
+
+## Data Type
+### ID type
+- id
+
+### Numerical type
+- Age
+- Height
+- Weight
+- CH2O
+- SCC
+- FAF
+- TUE
+- CALC
+
+### Categorical type
+- Gender
+- family_history_with_overweight
+- FAVC
+- FCVC
+- NCP
+- CAEC
+- SMOKE
+- MTRANS
+- NObeyesdad (target variable)
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset comprises two parts: training data and test data. The training data includes 10 records with various features related to individuals' demographics and lifestyle that may influence their weight status. The features include:
+
+- **Gender**: Indicates whether the individual is Male or Female.
+- **Age**: The age of the individual.
+- **Height**: The height of the individual in meters.
+- **Weight**: The weight of the individual in kilograms.
+- **family_history_with_overweight**: Indicates if there is a family history of overweight (yes/no).
+- **FAVC**: Indicates if the individual frequently consumes high caloric food (yes/no).
+- **FCVC**: Frequency of consumption of vegetables.
+- **NCP**: Number of main meals per day.
+- **CAEC**: Consumption of food between meals.
+- **SMOKE**: Indicates if the individual smokes (yes/no).
+- **CH2O**: Daily water consumption in liters.
+- **SCC**: Self-calculated cholesterol.
+- **FAF**: Physical activity frequency.
+- **TUE**: Time spent in physical activity.
+- **CALC**: Caloric intake.
+- **MTRANS**: Mode of transportation.
+
+The target variable, `NObeyesdad`, categorizes individuals into different weight status levels, such as "Normal_Weight," "Overweight_Level_I," "Overweight_Level_II," "Obesity_Type_II," and "Obesity_Type_III."
+
+The test data includes 10 records with the same features but does not contain the target variable.
+
+## Target Variable
+- **NObeyesdad**: This is the target variable that categorizes individuals based on their weight status. The possible categories are:
+  - Normal_Weight
+  - Overweight_Level_I
+  - Overweight_Level_II
+  - Obesity_Type_I
+  - Obesity_Type_II
+  - Obesity_Type_III
+  - Insufficient_Weight
+
+# Submission format (if applicable)
+The submission file for predictions should include the following columns:
+- id: Identifier for each record
+- NObeyesdad: Predicted weight status category

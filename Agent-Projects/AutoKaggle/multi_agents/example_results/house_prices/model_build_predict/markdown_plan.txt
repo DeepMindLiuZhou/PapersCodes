@@ -1,0 +1,78 @@
+## PLAN
+
+### STEP 1
+Task: Data Preparation
+- **Separate Target Variable (`SalePrice`) from Training Data:**
+  - Extract the `SalePrice` column from `processed_train.csv` and store it as `y_train`.
+  - Remove the `SalePrice` column from the training dataset.
+- **Remove Non-Numeric Columns:**
+  - Identify and remove columns that are non-numeric from both the training and test datasets.
+  - Ensure the same columns are removed from both datasets to maintain consistency.
+- **Ensure Consistent Features Across Train and Test Sets:**
+  - Verify that both the training and test datasets have the same features after removing non-numeric columns and the target variable.
+
+Tools, involved features and correct parameters:
+- **Pandas:** For data manipulation (`drop`, `select_dtypes`)
+- **Numpy:** For handling numerical operations
+- **Features:** `SalePrice`, non-numeric columns identified using `select_dtypes`
+
+Expected output or Impact on data:
+- `X_train`: Training dataset with numeric features only
+- `y_train`: Target variable for the training dataset
+- `X_test`: Test dataset with numeric features only
+
+Constraints: Ensure no data leakage by maintaining the same preprocessing steps on both datasets.
+
+### STEP 2
+Task: Model Selection
+- **Choose Three Models for Training:**
+  - Select three models to train and compare. Common choices for regression problems include:
+    1. Linear Regression
+    2. Random Forest Regressor
+    3. Gradient Boosting Regressor
+
+Tools, involved features and correct parameters:
+- **Scikit-learn:** For model selection (`LinearRegression`, `RandomForestRegressor`, `GradientBoostingRegressor`)
+
+Expected output or Impact on data:
+- Selected models for training
+
+Constraints: Limit to three models due to computational resource constraints.
+
+### STEP 3
+Task: Model Training and Validation
+- **Train Models:**
+  - Train each of the three selected models on the `X_train` and `y_train` datasets.
+- **Validate Models:**
+  - Use cross-validation (e.g., K-Fold cross-validation) to evaluate model performance and prevent overfitting.
+  - Calculate performance metrics such as Root Mean Squared Error (RMSE) since the evaluation metric is based on RMSE.
+
+Tools, involved features and correct parameters:
+- **Scikit-learn:** For training and validation (`cross_val_score`, `KFold`)
+- **train_and_validation_and_select_the_best_model:** For automated training and validation
+- **Features:** `X_train`, `y_train`
+
+Expected output or Impact on data:
+- Cross-validation scores for each model
+- Performance comparison of the models
+- Best performing model
+
+Constraints: Efficiently manage runtime and computational resources during cross-validation.
+
+### STEP 4
+Task: Prediction and Submission Preparation
+- **Make Predictions:**
+  - Use the best-performing model from the validation phase to make predictions on the `X_test` dataset.
+- **Prepare Submission File:**
+  - Create a DataFrame with columns `Id` and `SalePrice`.
+  - Populate the `SalePrice` column with the predicted values.
+  - Ensure the `Id` column matches the `Id` column from the test dataset.
+
+Tools, involved features and correct parameters:
+- **Pandas:** For DataFrame manipulation and CSV file generation (`to_csv`)
+- **Features:** `X_test`, `Id` column from the test dataset
+
+Expected output or Impact on data:
+- CSV file ready for submission with columns `Id` and `SalePrice`
+
+Constraints: Ensure the submission file adheres to the required format.

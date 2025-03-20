@@ -1,0 +1,58 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `PassengerId`: Unique identifier for each data point, which will NOT be used in model training.
+
+### Numerical type
+- `Age`: Age of the passenger.
+- `RoomService`: Amount spent on room service.
+- `FoodCourt`: Amount spent at the food court.
+- `ShoppingMall`: Amount spent at the shopping mall.
+- `Spa`: Amount spent at the spa.
+- `VRDeck`: Amount spent on the VR deck.
+- `RoomService_log`: Log-transformed RoomService.
+- `FoodCourt_log`: Log-transformed FoodCourt.
+- `ShoppingMall_log`: Log-transformed ShoppingMall.
+- `Spa_log`: Log-transformed Spa.
+- `VRDeck_log`: Log-transformed VRDeck.
+
+### Categorical type
+- `Cabin`: Cabin identifier.
+- `Name`: Name of the passenger.
+- `Transported`: Whether the passenger was transported or not (target variable).
+- `RoomService_flag`: Binary flag indicating if RoomService is zero.
+- `FoodCourt_flag`: Binary flag indicating if FoodCourt is zero.
+- `ShoppingMall_flag`: Binary flag indicating if ShoppingMall is zero.
+- `Spa_flag`: Binary flag indicating if Spa is zero.
+- `VRDeck_flag`: Binary flag indicating if VRDeck is zero.
+- `AgeGroup`: Age group of the passenger.
+- `Cabin_deck`: Deck of the cabin.
+- `Cabin_number`: Number of the cabin.
+- `Cabin_side`: Side of the cabin.
+- `HomePlanet_Europa`: Binary flag indicating if the home planet is Europa.
+- `HomePlanet_Mars`: Binary flag indicating if the home planet is Mars.
+- `CryoSleep_True`: Binary flag indicating if the passenger is in cryo sleep.
+- `Destination_PSO J318.5-22`: Binary flag indicating if the destination is PSO J318.5-22.
+- `Destination_TRAPPIST-1e`: Binary flag indicating if the destination is TRAPPIST-1e.
+- `VIP_True`: Binary flag indicating if the passenger is a VIP.
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset includes various features related to passengers on a space trip. Notable patterns include:
+- Binary flags for expenditures indicating if the value is zero.
+- Log transformations applied to financial data to handle skewness.
+- Age is categorized into groups.
+- Cabin information is split into deck, number, and side.
+- Binary flags for different home planets, destinations, cryo sleep status, and VIP status are included.
+
+## Target Variable
+- `Transported`: This is the target variable indicating whether the passenger was transported (True) or not (False).
+
+# Submission format (if applicable)
+The submission file should include the following columns:
+- `PassengerId`: Unique identifier for each passenger.
+- `Transported`: Predicted value indicating whether the passenger was transported (True/False).

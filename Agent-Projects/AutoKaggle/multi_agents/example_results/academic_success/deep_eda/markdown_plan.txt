@@ -1,0 +1,107 @@
+## PLAN
+
+### STEP 1
+Task: Comprehensive Univariate Analysis of Numerical Features
+Tools, involved features and correct parameters:
+- **Tools:** Pandas (`describe()`), NumPy, SciPy
+- **Involved Features:**
+  - `Previous qualification (grade)`
+  - `Admission grade`
+  - `Curricular units 1st sem (credited)`
+  - `Curricular units 1st sem (enrolled)`
+  - `Curricular units 1st sem (evaluations)`
+  - `Curricular units 1st sem (approved)`
+  - `Curricular units 1st sem (grade)`
+  - `Curricular units 1st sem (without evaluations)`
+  - `Curricular units 2nd sem (credited)`
+  - `Curricular units 2nd sem (enrolled)`
+  - `Curricular units 2nd sem (evaluations)`
+  - `Curricular units 2nd sem (approved)`
+  - `Curricular units 2nd sem (grade)`
+  - `Curricular units 2nd sem (without evaluations)`
+  - `Unemployment rate`
+  - `Inflation rate`
+  - `GDP`
+  - `Age at enrollment`
+
+Expected output or Impact on data:
+- Generation of descriptive statistics (mean, median, standard deviation, min, max, quartiles) for all numerical features.
+- Textual descriptions of distribution shapes, including skewness and kurtosis.
+- Identification of potential anomalies or unusual patterns in numerical features.
+- Enhanced understanding of each numerical feature's behavior to guide further analysis and feature engineering.
+
+Constraints:
+- Ensure all numerical features are correctly typed (float/int) to avoid inaccuracies in statistics.
+- Maintain computational efficiency by avoiding unnecessary calculations for symmetric distributions.
+- Focus only on significant anomalies that could impact model performance.
+
+### STEP 2
+Task: Detailed Univariate Analysis of Categorical Features
+Tools, involved features and correct parameters:
+- **Tools:** Pandas (`value_counts()`)
+- **Involved Features:**
+  - `Marital status`
+  - `Application mode`
+  - `Course`
+  - `Previous qualification`
+  - `Nacionality`
+  - `Mother's qualification`
+  - `Father's qualification`
+  - `Mother's occupation`
+  - `Father's occupation`
+  - `Displaced`
+  - `Educational special needs`
+  - `Debtor`
+  - `Tuition fees up to date`
+  - `Gender`
+  - `Scholarship holder`
+  - `International`
+
+Expected output or Impact on data:
+- Tables showing frequency counts and proportions for each category within every categorical feature.
+- Summary of class imbalances, highlighting features with categories that dominate or are underrepresented.
+- Identification of potential data quality issues, such as unexpected categories or inconsistent labeling.
+- Improved understanding of categorical feature distributions to inform feature engineering and ensure balanced data for modeling.
+
+Constraints:
+- Ensure categories are correctly labeled without inconsistencies (e.g., case sensitivity, typos).
+- Focus on imbalances exceeding a predefined threshold (e.g., categories constituting less than 5% of the data).
+- Document only issues that have a clear impact on analysis or model performance.
+
+### STEP 3
+Task: Bivariate Analysis Between Features and Target Variable
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, SciPy
+- **Involved Features:**
+  - **Numerical:** All numerical features listed in Step 1
+  - **Categorical:** All categorical features listed in Step 2
+  - **Target Variable:** `Target`
+
+Expected output or Impact on data:
+- Tables summarizing descriptive statistics of numerical features segmented by each target class (`dropout`, `enrolled`, `graduate`).
+- Tables showing the distribution of categorical features across target classes, emphasizing significant associations.
+- Summary of association metrics (e.g., Cramér's V, Chi-Square tests for categorical; Pearson/Spearman correlations for numerical features) indicating strong relationships with the target.
+- Prioritized list of features with significant associations to the target variable, guiding feature engineering and model focus.
+
+Constraints:
+- Ensure segments have sufficient sample sizes for meaningful comparisons.
+- Interpret only statistically significant associations to avoid misleading conclusions.
+- Avoid features that may lead to data leakage or are based on unrealistic scenarios.
+
+### STEP 4
+Task: Correlation and Multivariate Analysis of Numerical Features
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, Statsmodels
+- **Involved Features:** All numerical features listed in Step 1
+
+Expected output or Impact on data:
+- Correlation matrix showing pairwise Pearson correlation coefficients between numerical features, highlighting strong relationships (|r| > 0.7).
+- List of feature pairs with high correlations (e.g., |r| > 0.8) indicating potential multicollinearity.
+- Table of Variance Inflation Factor (VIF) scores for each numerical feature, identifying those with high multicollinearity (e.g., VIF > 5).
+- Recommendations for composite features or feature transformations based on correlation and multicollinearity insights.
+- Informed decisions on feature selection and engineering to enhance model efficacy and reduce multicollinearity issues.
+
+Constraints:
+- Limit the display of the correlation matrix to high correlations to maintain readability.
+- Perform VIF calculations only on features without missing values.
+- Ensure that composite features logically capture essential information and are not merely mathematical artifacts.

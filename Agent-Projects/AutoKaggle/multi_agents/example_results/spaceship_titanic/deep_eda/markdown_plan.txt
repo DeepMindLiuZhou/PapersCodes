@@ -1,0 +1,69 @@
+## PLAN
+
+### STEP 1
+Task: Univariate Analysis on Key Features
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, Matplotlib, Seaborn
+- **Numerical Features:** `Age`, `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`
+  - `describe()` method for basic statistics
+  - Histograms and box plots for visual distributions
+  - Skewness and kurtosis calculations
+- **Categorical Features:** `HomePlanet`, `CryoSleep`, `Cabin`, `Destination`, `VIP`, `Name`
+  - `value_counts()` for frequency distribution
+  - Bar charts for visual distributions
+  - Mode calculation
+Expected output or Impact on data:
+- Textual summary of statistics
+- Histograms and box plots for numerical features
+- Frequency tables and bar charts for categorical features
+Constraints:
+- Limit visualizations to essential ones, focusing on key patterns and insights
+
+### STEP 2
+Task: Bivariate Analysis to Explore Relationships with Target Variable
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, Seaborn
+- **Numerical Features:** `Age`, `RoomService`, `FoodCourt`, `ShoppingMall`, `Spa`, `VRDeck`
+  - Box plots and violin plots against `Transported`
+  - Calculation of means and medians for transported vs. non-transported passengers
+- **Categorical Features:** `HomePlanet`, `CryoSleep`, `Cabin`, `Destination`, `VIP`, `Name`
+  - Cross-tabulation (`pd.crosstab`)
+  - Stacked bar charts
+  - Chi-square tests
+Expected output or Impact on data:
+- Box plots, violin plots, textual summary of mean and median differences for numerical features
+- Cross-tabulation tables, stacked bar charts, chi-square test results for categorical features
+Constraints:
+- Ensure visualizations are clear and interpretable, focusing on significant relationships
+
+### STEP 3
+Task: Multivariate Analysis to Identify Interactions
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, Seaborn
+- **Pairwise Feature Interactions:** All features
+  - Pair plots (`sns.pairplot`)
+  - Correlation heatmap (`sns.heatmap(corr)`)
+- **Combined Feature Analysis:** Selected feature pairs
+  - Pivot tables
+  - Heatmaps
+Expected output or Impact on data:
+- Pair plots, correlation heatmap
+- Pivot tables, heatmaps for combined feature analysis
+Constraints:
+- Focus on the most promising feature pairs to avoid overwhelming analysis and visualizations
+
+### STEP 4
+Task: Visualization of Key Insights and Recommendations for Feature Engineering
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, Seaborn, Matplotlib
+- **Key Insights Summary:** All features
+  - Summarize findings in textual format
+  - Highlight significant relationships, patterns, and potential feature interactions
+- **Recommendations for Feature Engineering:** All features
+  - Recommend new features based on analysis
+  - Suggest transformations or encoding methods for categorical features
+Expected output or Impact on data:
+- Comprehensive report summarizing key insights
+- List of recommended feature engineering strategies
+Constraints:
+- Ensure recommendations are practical and based on solid analytical evidence

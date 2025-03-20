@@ -1,0 +1,77 @@
+## PLAN
+
+### STEP 1
+Task: Data Structure and Types Overview
+Tools, involved features and correct parameters:
+- **Tools:** Pandas
+- **Functions:**
+  - `pd.read_csv()` to load `train.csv` and `test.csv`
+  - `.shape` to get dataset dimensions
+  - `.dtypes` to inspect data types
+  - `.nunique()` to count unique values in categorical features
+- **Involved Features:**
+  - **Training Data:** `id`, `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`, `color`, `type`
+  - **Testing Data:** `id`, `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`, `color`
+
+Expected output or Impact on data:
+- A text summary detailing the number of rows and columns in both datasets, data types of each feature, and the number of unique values for categorical features (`color`, `type`).
+
+Constraints:
+- Ensure both datasets load without errors.
+- Confirm that `test.csv` does not contain the `type` column.
+
+### STEP 2
+Task: Descriptive Statistical Analysis
+Tools, involved features and correct parameters:
+- **Tools:** Pandas
+- **Functions:**
+  - `.describe()` for numerical feature statistics
+  - `.value_counts()` for frequency counts of categorical features
+- **Involved Features:**
+  - **Numerical:** `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`
+  - **Categorical:** `color`
+  - **Target Variable:** `type` (training data only)
+
+Expected output or Impact on data:
+- Text descriptions including summary tables with key statistics for numerical features, frequency tables for `color` and `type`, and insights on class distribution (e.g., any class imbalance).
+
+Constraints:
+- Present statistical information primarily in text format.
+- Avoid generating visualizations unless absolutely necessary.
+
+### STEP 3
+Task: Missing Values and Data Quality Assessment
+Tools, involved features and correct parameters:
+- **Tools:** Pandas, Statistical Methods (e.g., Z-score, IQR)
+- **Functions:**
+  - `.isnull().sum()` to count missing values per feature
+  - `.unique()` to list unique values in categorical features
+  - `.duplicated()` to detect duplicate rows
+- **Involved Features:**
+  - All features: `id`, `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`, `color`, `type` (training only)
+
+Expected output or Impact on data:
+- A text summary showing the number and percentage of missing values per feature, list of numerical features with identified outliers and their counts, confirmation of categorical feature consistency, and the number of duplicate entries if any.
+
+Constraints:
+- Focus on text-based reporting for clarity.
+- Use basic statistical approaches for outlier detection to ensure efficiency.
+
+### STEP 4
+Task: Feature Distributions and Correlation Analysis
+Tools, involved features and correct parameters:
+- **Tools:** Pandas
+- **Functions:**
+  - `.describe()` for univariate statistics
+  - `.corr()` to compute correlation matrix for numerical features
+- **Involved Features:**
+  - **Numerical:** `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`
+  - **Categorical:** `color`
+  - **Target Variable:** `type` (for potential future analyses)
+
+Expected output or Impact on data:
+- Detailed text descriptions of each numerical feature's distribution characteristics, a summary of correlation coefficients highlighting strong relationships, and insights into how `color` relates to numerical features. Selective visualizations like a correlation matrix heatmap may be included if necessary.
+
+Constraints:
+- Prioritize text-based insights to adhere to data output preferences.
+- Limit visualizations to a maximum of 10, focusing only on those that add significant value.

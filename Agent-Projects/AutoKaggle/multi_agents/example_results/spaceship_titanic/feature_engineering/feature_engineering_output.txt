@@ -1,0 +1,5 @@
+Step 1: New features created successfully.
+Step 2: Existing features transformed successfully.
+Step 3: Numerical features normalized successfully.
+Error in Step 4: unsupported operand type(s) for /: 'str' and 'int'
+Feature engineering completed and final datasets saved.

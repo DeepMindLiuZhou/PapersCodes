@@ -1,0 +1,65 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `id`
+
+### Numerical type
+- `Age`
+- `Height`
+- `Weight`
+- `FCVC`
+- `NCP`
+- `CH2O`
+- `FAF`
+- `TUE`
+
+### Categorical type
+- `Gender`
+- `family_history_with_overweight`
+- `FAVC`
+- `CAEC`
+- `SMOKE`
+- `SCC`
+- `CALC`
+- `MTRANS`
+
+### Datetime type
+- None
+
+## Detailed data description
+The provided data consists of several features related to individuals' demographic information, lifestyle habits, and health metrics. Below is a detailed description of the data:
+
+1. **Gender**: Categorical variable indicating the gender of the individual (`male` or `female`).
+2. **Age**: Numerical variable representing the age of the individual.
+3. **Height**: Numerical variable representing the height of the individual in meters.
+4. **Weight**: Numerical variable representing the weight of the individual in kilograms.
+5. **family_history_with_overweight**: Categorical variable indicating whether the individual has a family history of being overweight (`yes` or `no`).
+6. **FAVC**: Categorical variable indicating if the individual frequently consumes high-calorie food (`yes` or `no`).
+7. **FCVC**: Numerical variable indicating the frequency of vegetable consumption.
+8. **NCP**: Numerical variable indicating the number of main meals per day.
+9. **CAEC**: Categorical variable indicating the frequency of food consumption between meals (`no`, `sometimes`, `frequently`, `always`).
+10. **SMOKE**: Categorical variable indicating if the individual smokes (`yes` or `no`).
+11. **CH2O**: Numerical variable indicating the daily water intake in liters.
+12. **SCC**: Categorical variable indicating if the individual monitors their calorie intake (`yes` or `no`).
+13. **FAF**: Numerical variable indicating the frequency of physical activity per week.
+14. **TUE**: Numerical variable indicating the time spent using technology devices daily.
+15. **CALC**: Categorical variable indicating the frequency of alcohol consumption (`no`, `sometimes`, `frequently`, `always`).
+16. **MTRANS**: Categorical variable indicating the primary mode of transportation (`automobile`, `public_transportation`, `walking`, `motorbike`, `bike`).
+
+The cleaned train and test datasets contain these features with some variations in values, indicating diversity in the data. The train dataset includes a target variable while the test dataset does not.
+
+## Target Variable
+- **NObeyesdad**: The target variable represents the obesity level of the individual. It includes categories such as `Insufficient_Weight`, `Normal_Weight`, `Overweight_Level_I`, `Overweight_Level_II`, `Obesity_Type_I`, `Obesity_Type_II`, and `Obesity_Type_III`.
+
+# Submission format (if applicable)
+The submission file should contain the `id` and the predicted `NObeyesdad` for each individual in the test dataset. The format should be as follows:
+
+| id    | NObeyesdad            |
+|-------|------------------------|
+| 20758 | [Predicted Category]   |
+| 20759 | [Predicted Category]   |
+| ...   | ...                    |
+
+The `id` column is a unique identifier for each individual, and the `NObeyesdad` column contains the predicted category of obesity level.

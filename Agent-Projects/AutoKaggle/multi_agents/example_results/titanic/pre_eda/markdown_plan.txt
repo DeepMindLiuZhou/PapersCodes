@@ -1,0 +1,63 @@
+## PLAN
+
+### STEP 1
+Task: Basic Data Overview and Structure
+Tools, involved features and correct parameters:
+- **Tools**: `pandas`
+- **Features**: All features in `train.csv` and `test.csv`
+- **Parameters**:
+  - Load data using `pandas.read_csv()`.
+  - Display first few rows using `head()`.
+  - Print data shape using `shape`.
+  - Display data types and count of non-null values using `info()`.
+  - Generate summary statistics for numerical columns using `describe()`.
+  - Generate summary statistics for categorical columns using `describe(include='object')`.
+Expected output or Impact on data:
+- Printed data types and count of non-null values.
+- Summary statistics for numerical and categorical columns.
+- Identification of columns with missing values.
+Constraints: None.
+
+### STEP 2
+Task: Univariate Analysis of Numerical Features
+Tools, involved features and correct parameters:
+- **Tools**: `seaborn`, `matplotlib`
+- **Features**: `Age`, `SibSp`, `Parch`, `Fare`
+- **Parameters**:
+  - Plot histograms for numerical features.
+  - Generate box plots for numerical features.
+Expected output or Impact on data:
+- Histograms for numerical features.
+- Box plots for numerical features.
+- Insights on distributions and potential outliers.
+Constraints: Limit to essential visualizations to maintain efficiency.
+
+### STEP 3
+Task: Univariate Analysis of Categorical Features
+Tools, involved features and correct parameters:
+- **Tools**: `pandas`, `seaborn`, `matplotlib`
+- **Features**: `Survived`, `Pclass`, `Sex`, `Ticket`, `Cabin`, `Embarked`
+- **Parameters**:
+  - Generate frequency tables using `value_counts()`.
+  - Plot bar charts for categorical features.
+Expected output or Impact on data:
+- Frequency tables for categorical features.
+- Bar plots for categorical features.
+- Insights on class distribution and data imbalance.
+Constraints: Limit to essential visualizations to maintain efficiency.
+
+### STEP 4
+Task: Initial Insights and Summary
+Tools, involved features and correct parameters:
+- **Tools**: Text editor or notebook for documentation
+- **Features**: All features
+- **Parameters**:
+  - Summarize key findings from the univariate analysis.
+  - Highlight features with missing values and outliers.
+  - Provide initial insights to guide the Data Cleaning phase.
+Expected output or Impact on data:
+- A text-based summary report containing:
+  - Key findings from the preliminary EDA.
+  - Identification of problematic areas (missing values, outliers).
+  - Initial insights to guide further analysis.
+Constraints: Ensure clarity and conciseness in the summary report.

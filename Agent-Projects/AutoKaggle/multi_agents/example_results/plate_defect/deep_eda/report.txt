@@ -1,0 +1,74 @@
+# FEATURE INFO
+## TARGET VARIABLE
+K_Scatch, Stains, Z_Scratch, Pastry, Dirtiness, Bumps, Other_Faults
+## FEATURES BEFORE THIS PHASE
+['id', 'X_Minimum', 'X_Maximum', 'Y_Minimum', 'Y_Maximum', 'Pixels_Areas', 'X_Perimeter', 'Y_Perimeter', 'Sum_of_Luminosity', 'Minimum_of_Luminosity', 'Maximum_of_Luminosity', 'Length_of_Conveyer', 'TypeOfSteel_A300', 'TypeOfSteel_A400', 'Steel_Plate_Thickness', 'Edges_Index', 'Empty_Index', 'Square_Index', 'Outside_X_Index', 'Edges_X_Index', 'Edges_Y_Index', 'Outside_Global_Index', 'LogOfAreas', 'Log_X_Index', 'Log_Y_Index', 'Orientation_Index', 'Luminosity_Index', 'SigmoidOfAreas', 'Pastry', 'Z_Scratch', 'K_Scatch', 'Stains', 'Dirtiness', 'Bumps', 'Other_Faults']
+## FEATURES AFTER THIS PHASE
+['id', 'X_Minimum', 'X_Maximum', 'Y_Minimum', 'Y_Maximum', 'Pixels_Areas', 'X_Perimeter', 'Y_Perimeter', 'Sum_of_Luminosity', 'Minimum_of_Luminosity', 'Maximum_of_Luminosity', 'Length_of_Conveyer', 'TypeOfSteel_A300', 'TypeOfSteel_A400', 'Steel_Plate_Thickness', 'Edges_Index', 'Empty_Index', 'Square_Index', 'Outside_X_Index', 'Edges_X_Index', 'Edges_Y_Index', 'Outside_Global_Index', 'LogOfAreas', 'Log_X_Index', 'Log_Y_Index', 'Orientation_Index', 'Luminosity_Index', 'SigmoidOfAreas', 'Pastry', 'Z_Scratch', 'K_Scatch', 'Stains', 'Dirtiness', 'Bumps', 'Other_Faults']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - Training Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/cleaned_train.csv`
+  - Test Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/cleaned_test.csv`
+
+- **Generated Files:**
+  - **Heatmap of Correlation Matrix:** `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/correlation_matrix_heatmap.png`
+  - **Histograms, Boxplots, Count Plots, Scatter Plots** for various features and target variables (multiple paths following the naming convention `hist_{feature}_{target}.png`, `boxplot_{feature}_{target}.png`, etc.).
+  - **Interaction Plots:** `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_{feature1}_{feature2}.png`
+  - **Summary Bar Plot:** `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/summary_TypeOfSteel_A300_Pastry.png`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+### Answer 2
+- **Features Involved:**
+  - **Numerical Features:** `X_Minimum`, `X_Maximum`, `Y_Minimum`, `Y_Maximum`, `Pixels_Areas`, `X_Perimeter`, `Y_Perimeter`, `Sum_of_Luminosity`, `Minimum_of_Luminosity`, `Maximum_of_Luminosity`, `Length_of_Conveyer`, `Steel_Plate_Thickness`, `Edges_Index`, `Empty_Index`, `Square_Index`, `Outside_X_Index`, `Edges_X_Index`, `Edges_Y_Index`, `Outside_Global_Index`, `LogOfAreas`, `Log_X_Index`, `Log_Y_Index`, `Orientation_Index`, `Luminosity_Index`, `SigmoidOfAreas`.
+  - **Categorical Features:** `TypeOfSteel_A300`, `TypeOfSteel_A400`.
+  
+- **Changes:**
+  - No features were deleted or created during this phase. The only modifications were statistical analyses and visualizations, with no alterations to the dataset itself.
+
+### Question 3
+What are the key statistical insights derived from the numerical features, and how do they inform the potential transformations or new features that could be created?
+### Answer 3
+- **Statistical Insights:**
+  - The descriptive statistics reveal a wide range of values in numerical features, indicating potential for transformations.
+  - Notable means and standard deviations suggest that features like `Pixels_Areas` and `Luminosity` could benefit from normalization or log transformations to handle skewness.
+  
+- **Potential Transformations:**
+  - Creating polynomial features from `X_Minimum`, `X_Maximum`, `Y_Minimum`, and `Y_Maximum`.
+  - Combining luminosity features to derive new metrics capturing variations or ranges.
+
+### Question 4
+Which numerical features exhibit significant correlations with the target variables, and how can these relationships be leveraged in feature engineering?
+### Answer 4
+- **Significant Correlations:**
+  - The correlation matrix indicates that features like `Pixels_Areas` and `Edges_Index` may have stronger correlations with certain target variables.
+  
+- **Leveraging Relationships:**
+  - Interaction terms between correlated features can be created, particularly focusing on combinations of indices and luminosity metrics, to capture complex relationships in modeling.
+
+### Question 5
+What patterns or trends were observed in the categorical features when analyzed against the target variables? Are there any derived categorical features that could be beneficial?
+### Answer 5
+- **Patterns Observed:**
+  - The `TypeOfSteel_A300` and `TypeOfSteel_A400` features show distinct patterns when analyzed against target variables — for example, certain types of steel correlate with fewer defects.
+  
+- **Derived Features:**
+  - Consider creating a combined categorical feature that incorporates both steel types for modeling purposes, which may simplify the analysis and enhance predictive power.
+
+### Question 6
+Based on the findings from the exploratory data analysis, what specific feature engineering actions are recommended, and how should they be prioritized?
+### Answer 6
+- **Recommended Actions:**
+  1. Create polynomial and interaction features for numerical features with significant correlations.
+  2. Normalize or log-transform skewed numerical features to enhance model training.
+  3. Develop combined categorical features from `TypeOfSteel_A300` and `TypeOfSteel_A400`.
+  
+- **Prioritization:**
+  - Start with transformations that directly address the skewness in numerical features, followed by the creation of interaction and polynomial features to capture non-linear relationships.
+  - Lastly, focus on categorical feature derivations to optimize the modeling process.

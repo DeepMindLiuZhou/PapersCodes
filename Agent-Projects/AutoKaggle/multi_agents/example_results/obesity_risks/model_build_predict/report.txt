@@ -1,0 +1,72 @@
+# FEATURE INFO
+## TARGET VARIABLE
+NObeyesdad
+## FEATURES BEFORE THIS PHASE
+['id', 'Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS', 'NObeyesdad', 'BMI', 'Age_Category', 'FAF_TUE_Interaction', 'FCVC_Category', 'NCP_Category', 'Gender_female', 'Gender_male', 'CAEC_always', 'CAEC_frequently', 'CAEC_no', 'CAEC_sometimes', 'CALC_always', 'CALC_frequently', 'CALC_no', 'CALC_sometimes', 'MTRANS_automobile', 'MTRANS_bike', 'MTRANS_motorbike', 'MTRANS_public_transportation', 'MTRANS_walking', 'family_history_with_overweight_encoded', 'FAVC_encoded', 'SMOKE_encoded', 'SCC_encoded']
+## FEATURES AFTER THIS PHASE
+['id', 'Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS', 'NObeyesdad', 'BMI', 'Age_Category', 'FAF_TUE_Interaction', 'FCVC_Category', 'NCP_Category', 'Gender_female', 'Gender_male', 'CAEC_always', 'CAEC_frequently', 'CAEC_no', 'CAEC_sometimes', 'CALC_always', 'CALC_frequently', 'CALC_no', 'CALC_sometimes', 'MTRANS_automobile', 'MTRANS_bike', 'MTRANS_motorbike', 'MTRANS_public_transportation', 'MTRANS_walking', 'family_history_with_overweight_encoded', 'FAVC_encoded', 'SMOKE_encoded', 'SCC_encoded']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What models were trained, and which one was selected as the best performing model?  
+### Answer 1
+The models trained were:
+- **RandomForestClassifier**
+- **GradientBoostingClassifier**
+- **XGBClassifier**
+
+The best performing model selected was the **GradientBoostingClassifier** with a maximum depth of 5.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.  
+### Answer 2
+In this phase, the following features were involved:
+- **Numerical features**: Age, Height, Weight, FCVC, NCP, CH2O, FAF, TUE, BMI, FAF_TUE_Interaction.
+- **Categorical features**: Gender (encoded), family_history_with_overweight (encoded), FAVC (encoded), CAEC (encoded), SMOKE (encoded), SCC (encoded), CALC (encoded), MTRANS (encoded), Age_Category, FCVC_Category, NCP_Category.
+
+Changes made:
+- The target variable `NObeyesdad` was separated from the training data.
+- Non-numeric columns including `id`, `Gender`, `Age_Category`, `FCVC_Category`, and `NCP_Category` were removed from both the training and test datasets.
+- Numerical features were normalized, and categorical features were encoded into binary dummy variables before training.
+
+### Question 3
+What were the cross-validation accuracy scores for the models, and how did they compare?  
+### Answer 3
+The cross-validation accuracy scores for the models were:
+- **Random Forest**: 0.895980
+- **XGBoost**: 0.903852
+- **SVM**: 0.875112
+
+The cross-validation scores for the selected **GradientBoostingClassifier** were:
+- [0.89499037, 0.89523121, 0.90438343, 0.90074681, 0.90363768]
+
+The Gradient Boosting model showed the highest performance in terms of accuracy.
+
+### Question 4
+What were the key performance metrics (e.g., confusion matrix, classification report) for the selected model, and what insights can be drawn from them?  
+### Answer 4
+The confusion matrix indicated that true positives and negatives were relatively high across different categories, particularly for `Normal_Weight` and `Obesity_Type_I`. Misclassifications occurred mostly in `Obesity_Type_III` and `Obesity_Type_II`, suggesting areas for model improvement.
+
+The classification report provided precision, recall, and F1 scores for each class, which can help understand the model's performance in balancing false positives and false negatives.
+
+### Question 5
+Were there any significant issues or challenges encountered during model training or validation, such as overfitting or underfitting?  
+### Answer 5
+There were no explicit mentions of significant issues such as overfitting or underfitting. The models were validated using a 5-fold cross-validation strategy, which helps mitigate these concerns.
+
+### Question 6
+What features had the most influence on the model's predictions, and how can this information be used in future analyses?  
+### Answer 6
+While specific feature importance values were not provided, features related to lifestyle habits (e.g., `FAF`, `TUE`, and `BMI`) likely had significant influence based on their relevance to obesity. Understanding feature importance can guide future analyses by identifying lifestyle factors that could be targeted for interventions.
+
+### Question 7
+What are the next steps or recommendations for further investigations based on the findings from this phase?  
+### Answer 7
+Next steps include:
+1. Consider using additional performance metrics such as F1 score or AUC-ROC for a comprehensive evaluation.
+2. Explore adding Logistic Regression or Neural Networks for comparison.
+3. Increase documentation in the code to clarify decision-making processes for future collaborators.
+
+These steps could enhance the robustness of the model and ensure a deeper understanding of the influencing factors on obesity risks.

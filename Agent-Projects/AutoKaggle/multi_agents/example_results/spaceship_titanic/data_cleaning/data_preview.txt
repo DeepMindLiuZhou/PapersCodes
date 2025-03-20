@@ -1,0 +1,55 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- PassengerId
+
+### Numerical type
+- Age
+- RoomService
+- FoodCourt
+- ShoppingMall
+- Spa
+- VRDeck
+
+### Categorical type
+- HomePlanet
+- CryoSleep
+- Cabin
+- Destination
+- VIP
+- Name
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset contains information about passengers on a space journey. The `PassengerId` is a unique identifier for each passenger and will not be used in model training. Here are the key features and their details:
+
+- **HomePlanet**: The planet the passenger is from. This is a categorical feature with values such as 'Earth' and 'Europa'.
+- **CryoSleep**: Indicates whether the passenger elected for suspended animation during the journey. This is a binary categorical feature (True/False).
+- **Cabin**: The cabin number where the passenger is staying, formatted as 'Deck/Num/Side'.
+- **Destination**: The intended destination of the passenger, which is a categorical feature with values like 'TRAPPIST-1e' and '55 Cancri e'.
+- **Age**: The age of the passenger, a numerical feature.
+- **VIP**: Indicates whether the passenger has VIP status. This is a binary categorical feature (True/False).
+- **RoomService, FoodCourt, ShoppingMall, Spa, VRDeck**: These are numerical features representing the amount of money spent by the passenger on various services during the journey.
+- **Name**: The name of the passenger, a categorical feature.
+
+Notable patterns and characteristics:
+- Passengers have a wide range of ages.
+- Some passengers spend significantly on services such as Spa and FoodCourt, while others spend nothing.
+- There are both VIP and non-VIP passengers.
+- The CryoSleep status varies among passengers, with some opting for it and others not.
+
+## Target Variable
+The target variable is `Transported`, which indicates whether the passenger was transported to the destination (True) or not (False).
+
+# Submission format (if applicable)
+The submission file should contain the following columns:
+- `PassengerId`: The unique identifier for each passenger.
+- `Transported`: The predicted status of whether the passenger was transported (True/False).
+
+The types are:
+- `PassengerId`: String
+- `Transported`: Boolean

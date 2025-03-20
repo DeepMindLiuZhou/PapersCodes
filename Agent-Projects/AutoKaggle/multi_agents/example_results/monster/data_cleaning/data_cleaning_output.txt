@@ -1,0 +1,40 @@
+Datasets loaded successfully.
+Training data shape after handling outliers: (371, 7)
+Testing data shape after clipping outliers: (529, 6)
+TASK 1: Outliers handled and cleaned datasets saved.
+Cleaned datasets reloaded successfully.
+Unique colors in training data before standardization: {'black', 'blood', 'blue', 'clear', 'white', 'green'}
+Unique colors in testing data before standardization: {'black', 'blood', 'blue', 'clear', 'white', 'green'}
+Unique colors in training data after standardization: {'black', 'blood', 'blue', 'clear', 'white', 'green'}
+Unique colors in testing data after standardization: {'black', 'blood', 'blue', 'clear', 'white', 'green'}
+No discrepancies found in 'color' categories. No additional handling needed.
+Final unique colors in training data: {'black', 'blood', 'blue', 'clear', 'white', 'green'}
+Final unique colors in testing data: {'black', 'blood', 'blue', 'clear', 'white', 'green'}
+TASK 2: Categorical feature 'color' standardized and cleaned datasets saved.
+Cleaned and standardized datasets reloaded successfully.
+Training data types after conversion:
+id                 Int64
+bone_length      float64
+rotting_flesh    float64
+hair_length      float64
+has_soul         float64
+color             object
+type              object
+dtype: object
+Testing data types after conversion:
+id                 Int64
+bone_length      float64
+rotting_flesh    float64
+hair_length      float64
+has_soul         float64
+color             object
+dtype: object
+TASK 3: Data types validated and converted. Cleaned datasets saved.
+Datasets with updated data types reloaded successfully.
+Training data shape before removing duplicates: (371, 7)
+Training data shape after removing duplicates: (371, 7)
+Testing data shape before removing duplicates: (529, 6)
+Testing data shape after removing duplicates: (529, 6)
+Number of duplicate 'id's in training data after removal: 0
+Number of duplicate 'id's in testing data after removal: 0
+TASK 4: Duplicate records removed. Cleaned datasets saved.

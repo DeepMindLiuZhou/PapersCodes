@@ -1,0 +1,24 @@
+## QUESTIONS
+### Question 1
+What basic statistics did you observe for each feature, and were there any anomalies or unexpected distributions?
+
+### Question 2
+What percentage of missing values exists in each feature, and which features have the highest rates of missingness?
+
+### Question 3
+Which features exhibited outliers, and what methods were used to identify them?
+
+### Question 4
+Were there any inconsistencies in the categorical features, such as unexpected categories or incorrect data types?
+
+### Question 5
+What correlations were observed between numerical features and the target variable (Exited), and which features showed the strongest relationships?
+
+### Question 6
+What initial insights or hypotheses emerged from the exploratory data analysis that could shape the data cleaning strategy?
+
+### Question 7
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 8
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)

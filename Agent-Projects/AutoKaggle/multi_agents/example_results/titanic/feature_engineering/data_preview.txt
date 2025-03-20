@@ -1,0 +1,60 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- PassengerId
+- Ticket
+
+### Numerical type
+- Age
+- Fare
+- SibSp (Number of Siblings/Spouses Aboard)
+- Parch (Number of Parents/Children Aboard)
+
+### Categorical type
+- Pclass (Passenger Class)
+- Name
+- Sex
+- Cabin
+- Embarked (Port of Embarkation)
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset contains information about passengers from the Titanic. Below are the details of each feature:
+
+- **PassengerId**: A unique identifier for each passenger.
+- **Survived**: Indicates if the passenger survived (1) or not (0). (Only available in the training data)
+- **Pclass**: Passenger class (1 = 1st, 2 = 2nd, 3 = 3rd).
+- **Name**: The name of the passenger.
+- **Sex**: Gender of the passenger.
+- **Age**: Age of the passenger. Note that some values are estimated and some are missing.
+- **SibSp**: Number of siblings or spouses aboard the Titanic.
+- **Parch**: Number of parents or children aboard the Titanic.
+- **Ticket**: Ticket number.
+- **Fare**: The fare paid by the passenger.
+- **Cabin**: Cabin number. Many values are missing.
+- **Embarked**: Port of embarkation (C = Cherbourg; Q = Queenstown; S = Southampton).
+
+Notable patterns and characteristics:
+- There are several missing values in the `Cabin` feature.
+- The `Age` feature has some missing values and one estimated value (29.69911764705882).
+- `Fare` values vary significantly, indicating different socio-economic statuses among passengers.
+- The majority of passengers in the provided data embarked from `S` (Southampton).
+
+## Target Variable
+The target variable is `Survived`, which indicates whether a passenger survived (1) or not (0).
+
+# Submission format (if applicable)
+The submission file should include the following columns:
+- `PassengerId` (integer): Unique identifier for each passenger.
+- `Survived` (integer): Prediction of survival status (0 = No, 1 = Yes).
+
+Example:
+| PassengerId | Survived |
+|-------------|----------|
+| 892         | 0        |
+| 893         | 1        |
+| ...         | ...      |

@@ -1,0 +1,68 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Exited
+## FEATURES BEFORE THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited']
+## FEATURES AFTER THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - Training Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/train.csv`
+  - Testing Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/test.csv`
+- **Generated Files:**
+  - Cleaned Training Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/cleaned_train.csv`
+  - Cleaned Testing Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/cleaned_test.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Involved Features:**
+  - **Removed Duplicates:** All columns in both datasets.
+  - **Handled Outliers:** `CreditScore`, `Age`, `Tenure`, `Balance`, `EstimatedSalary` (outliers were clipped).
+  - **Data Type Consistency:** 
+    - Converted to `float`: `CreditScore`, `Age`, `Tenure`, `Balance`, `EstimatedSalary`.
+    - Converted to `int`: `HasCrCard`, `IsActiveMember`.
+  - **Aligned Categorical Values:** `Geography`, `Gender` were standardized to categorical types.
+
+### Question 3
+What duplicates were identified and removed during the cleaning phase?
+### Answer 3
+- Duplicates were removed from both the training and testing datasets, resulting in a cleaned training dataset with a shape of (165034, 14) and a cleaned testing dataset with a shape of (110023, 13).
+
+### Question 4
+Which features had outliers, and what methods were used to handle them?
+### Answer 4
+- **Features with Outliers:**
+  - `CreditScore`, `Age`, `Tenure`, `Balance`, `EstimatedSalary`.
+- **Method Used:** Outliers were detected and handled using the IQR method, specifically by clipping the values to the threshold limits.
+
+### Question 5
+How were missing values treated across the datasets, and what was the proportion of missing data before cleaning?
+### Answer 5
+- The provided information does not specify missing values or their proportions, indicating that no specific treatment was applied within this phase. It is recommended to check for any missing values before proceeding to the next phase.
+
+### Question 6
+What changes were made to ensure data type consistency between the training and testing datasets?
+### Answer 6
+- The following changes were made:
+  - Converted `CreditScore`, `Age`, `Tenure`, `Balance`, `EstimatedSalary` to `float`.
+  - Converted `HasCrCard`, `IsActiveMember` to `int`.
+- Ensured categorical features `Geography` and `Gender` were consistently defined across both datasets.
+
+### Question 7
+Were there any issues with categorical variables, and how were they aligned across both datasets?
+### Answer 7
+- No specific issues were reported with categorical variables. Both `Geography` and `Gender` were aligned by converting them to pandas categorical types, ensuring consistency across both training and testing datasets.
+
+### Question 8
+What other notable data cleaning steps were taken that could influence insights during exploratory data analysis?
+### Answer 8
+- Apart from removing duplicates and handling outliers, the following steps were significant:
+  - Ensured data type consistency across both datasets.
+  - Standardized categorical variables to ensure that subsequent analyses do not encounter discrepancies in the data.

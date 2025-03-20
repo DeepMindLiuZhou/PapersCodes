@@ -1,0 +1,116 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Target
+## FEATURES BEFORE THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target']
+## FEATURES AFTER THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target', 'Admission_grade_x_GDP', 'Age_at_enrollment_x_Educational_special_needs', 'Admission grade.1', 'GDP.1', 'Age at enrollment.1', 'Admission grade^2', 'Admission grade GDP', 'Admission grade Age at enrollment', 'GDP^2', 'GDP Age at enrollment', 'Age at enrollment^2']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - **Input Files:**
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/cleaned_train.csv`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/cleaned_test.csv`
+  - **Output Files:**
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/processed_train.csv`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/processed_test.csv`
+
+---
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+### Answer 2
+- **Involved Features:**
+  - **Categorical Features:**
+    - **Binary Categorical Features:**
+      - `Gender`, `Displaced`, `Debtor`, `Scholarship holder`, `International`
+      - **Changes:** Encoded using `LabelEncoder`.
+    - **Multiclass Categorical Features:**
+      - `Marital status`, `Application mode`, `Course`, `Previous qualification`, `Nacionality`, `Mother's qualification`, `Father's qualification`, `Mother's occupation`, `Father's occupation`, `Educational special needs`, `Tuition fees up to date`
+      - **Changes:** Encoded using `OneHotEncoder`.
+  
+  - **Numerical Features:**
+    - `Previous qualification (grade)`, `Admission grade`, `Curricular units (credited/enrolled/evaluations/approved/grade)`, `Unemployment rate`, `Inflation rate`, `GDP`, `Age at enrollment`
+    - **Changes:** Scaled using `StandardScaler`.
+
+- **New Features Created:**
+  - Interaction features:
+    - `Admission_grade_x_GDP`
+    - `Age_at_enrollment_x_Educational_special_needs`
+  - Polynomial features generated from selected numerical features.
+
+- **No features were deleted in this phase.**
+
+---
+
+### Question 3
+What categorical features were encoded, and what techniques were used for their transformation?
+### Answer 3
+- **Binary Categorical Features:**
+  - Encoded using `LabelEncoder`:
+    - `Gender`, `Displaced`, `Debtor`, `Scholarship holder`, `International`
+
+- **Multiclass Categorical Features:**
+  - Encoded using `OneHotEncoder`:
+    - `Marital status`, `Application mode`, `Course`, `Previous qualification`, `Nacionality`, `Mother's qualification`, `Father's qualification`, `Mother's occupation`, `Father's occupation`, `Educational special needs`, `Tuition fees up to date`
+
+---
+
+### Question 4
+What numerical features were scaled or normalized, and what methods were used?
+### Answer 4
+- **Numerical Features Scaled:**
+  - `Previous qualification (grade)`, `Admission grade`, `Curricular units 1st sem (credited/enrolled/evaluations/approved/grade)`, `Curricular units 2nd sem (credited/enrolled/evaluations/approved/grade)`, `Unemployment rate`, `Inflation rate`, `GDP`, `Age at enrollment`
+  
+- **Methods Used:**
+  - `StandardScaler`: Applied z-score normalization to standardize features.
+
+---
+
+### Question 5
+What new features were created during interaction and polynomial feature generation, and how might they impact model performance?
+### Answer 5
+- **Interaction Features Created:**
+  - `Admission_grade_x_GDP`: Captures the combined effect of admission grade and GDP.
+  - `Age_at_enrollment_x_Educational_special_needs`: Captures the relationship between age at enrollment and educational special needs.
+
+- **Polynomial Features:**
+  - Generated polynomial features from selected numerical features.
+
+**Impact on Model Performance:**
+- These features can capture complex relationships and interactions that might improve the model's predictive power and ability to generalize.
+
+---
+
+### Question 6
+How were missing values handled, and what imputation strategies were implemented?
+### Answer 6
+- **Missing Values Handling:**
+  - No missing values detected in either the training or test datasets after feature engineering.
+  - Therefore, no imputation strategies were applied.
+
+---
+
+### Question 7
+Were there any features that were identified as unnecessary or redundant during the feature engineering process? If so, which ones and why?
+### Answer 7
+- **No features were identified as unnecessary or redundant** during this phase. All features were retained for model training.
+
+---
+
+### Question 8
+What insights or patterns were observed from the engineered features that could guide model selection or tuning in the next phase?
+### Answer 8
+- **Insights:**
+  - The creation of interaction features may reveal non-linear relationships that can enhance model performance.
+  - The scaling of numerical features can help in models sensitive to feature magnitudes, such as gradient-based algorithms.
+  
+- **Model Selection Guidance:**
+  - Consider models that can capture interactions, such as tree-based methods (e.g., Random Forest, XGBoost) or ensemble methods, given the complexity introduced by the new features. 
+
+---

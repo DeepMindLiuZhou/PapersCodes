@@ -1,0 +1,92 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Survived
+## FEATURES BEFORE THIS PHASE
+['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
+## FEATURES AFTER THIS PHASE
+['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - **Train Data:** `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/train.csv`
+  - **Test Data:** `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/test.csv`
+
+- **Generated Files:**
+  - Histograms and box plots for numerical features saved in the directory: 
+    - Histograms: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/pre_eda/images/histogram_<feature>.png`
+    - Box plots: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/pre_eda/images/boxplot_<feature>.png`
+    - Bar charts for categorical features saved in the directory:
+      - Bar charts: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/pre_eda/images/barchart_<feature>.png`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Involved Features:**
+  - **Numerical Features:** Age, SibSp, Parch, Fare
+  - **Categorical Features:** Survived, Pclass, Sex, Ticket, Cabin, Embarked
+
+- **Changes:**
+  - **Modification of Feature Types:** No feature types were modified during this phase.
+  - **Missing Values Detected:**
+    - **Age:** Missing values identified.
+    - **Cabin:** Many missing values.
+    - **Embarked:** Few missing values.
+  - **Outliers Identified:** Outliers in Fare and Age.
+  - **No features were deleted or created in this phase.**
+
+### Question 3
+What are the key statistics and distributions for numerical features (Age, SibSp, Parch, Fare)?
+### Answer 3
+- **Age:**
+  - Range: 0 to 80
+  - Median: ~30
+  - Presence of outliers above 60.
+
+- **SibSp:**
+  - Range: 0 to 8
+  - Most common values are between 0-3.
+
+- **Parch:**
+  - Range: 0 to 6
+  - Similar distribution to SibSp, with most values around 0.
+
+- **Fare:**
+  - Wide range, with some high outliers.
+  - Median fare around 14.45.
+
+### Question 4
+Which categorical features (Survived, Pclass, Sex, Ticket, Cabin, Embarked) have missing values, and what are their proportions?
+### Answer 4
+- **Survived:** No missing values.
+- **Pclass:** No missing values.
+- **Sex:** No missing values.
+- **Ticket:** No missing values.
+- **Cabin:** High proportion of missing values (around 77%).
+- **Embarked:** Few missing values (around 0.5%).
+
+### Question 5
+What are the notable outliers identified in the numerical features, and which features do they primarily affect?
+### Answer 5
+- **Notable Outliers:**
+  - **Fare:** High outliers are significantly higher than the main distribution (e.g., fares above 200).
+  - **Age:** Outliers exist for individuals above the age of 60, with some cases reaching 80.
+
+### Question 6
+Based on the preliminary analysis, what specific strategies should be employed in the Data Cleaning phase to address identified issues like missing values or data inconsistencies?
+### Answer 6
+- **Missing Values:**
+  - **Age:** Consider imputation techniques (mean, median, or predictive models).
+  - **Cabin:** Given the high percentage of missing values, consider dropping the feature or using a separate category for missing values.
+  - **Embarked:** Impute missing values with the most frequent embarkation point.
+
+- **Outliers:**
+  - **Fare:** Consider capping extreme values or using transformations (e.g., log transformation).
+  - **Age:** Investigate outliers to determine if they are valid data points or errors, and consider imputation for those identified as errors.
+
+- **Class Imbalance:**
+  - **Survived:** Explore techniques such as oversampling the minority class or using stratified sampling during model training to address class imbalance.

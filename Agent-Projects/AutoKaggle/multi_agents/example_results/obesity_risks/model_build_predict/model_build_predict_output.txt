@@ -1,0 +1,38 @@
+Data Preparation Completed
+X_train shape: (20758, 29)
+X_test shape: (13840, 29)
+y shape: (20758,)
+Finished model training: random forest
+Finished model training: XGBoost
+Finished model training: SVM
+Model: random forest, Best Params: {'max_depth': None, 'min_samples_split': 5, 'n_estimators': 100}, Score: 0.8959800234210001
+Model: XGBoost, Best Params: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100}, Score: 0.9038516158402145
+Model: SVM, Best Params: {'C': 10, 'gamma': 'auto', 'kernel': 'rbf'}, Score: 0.8751122496594669
+Model Selection and Training Completed
+Best Model: GradientBoostingClassifier(max_depth=5)
+Cross-Validation Accuracy Scores: [0.89499037 0.89523121 0.90438343 0.90074681 0.90363768]
+Confusion Matrix:
+ [[2356  149    0    1    1   12    4]
+ [ 168 2709    7    0    0  173   25]
+ [   4    5 2556   94    9   55  187]
+ [   0    0   72 3153    3    2   18]
+ [   1    0    7    3 4032    3    0]
+ [  23  213   63    0    3 1840  285]
+ [   1   38  188   16    0  217 2062]]
+Classification Report:
+                      precision    recall  f1-score   support
+
+Insufficient_Weight       0.92      0.93      0.93      2523
+      Normal_Weight       0.87      0.88      0.87      3082
+     Obesity_Type_I       0.88      0.88      0.88      2910
+    Obesity_Type_II       0.97      0.97      0.97      3248
+   Obesity_Type_III       1.00      1.00      1.00      4046
+ Overweight_Level_I       0.80      0.76      0.78      2427
+Overweight_Level_II       0.80      0.82      0.81      2522
+
+           accuracy                           0.90     20758
+          macro avg       0.89      0.89      0.89     20758
+       weighted avg       0.90      0.90      0.90     20758
+
+Model Validation Completed
+Prediction and Submission File Preparation Completed

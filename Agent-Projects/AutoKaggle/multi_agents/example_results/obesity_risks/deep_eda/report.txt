@@ -1,0 +1,84 @@
+# FEATURE INFO
+## TARGET VARIABLE
+NObeyesdad
+## FEATURES BEFORE THIS PHASE
+['id', 'Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS', 'NObeyesdad']
+## FEATURES AFTER THIS PHASE
+['id', 'Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS', 'NObeyesdad']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What statistical characteristics were observed for each numerical feature, and how might these influence feature engineering decisions?
+### Answer 1
+- **Age**: 
+  - Mean = 23.58, Std = 4.89, Range = 14-35.
+  - Influence: Age can be categorized into bins (e.g., youth, adult) for modeling.
+- **Height**: 
+  - Mean = 1.70m, Std = 0.09m, Range = 1.45-1.96m.
+  - Influence: Standardizing height might be useful for comparisons.
+- **Weight**: 
+  - Mean = 87.89kg, Std = 26.38kg, Range = 39-165kg.
+  - Influence: Consider creating BMI as a new feature (Weight/Height²).
+- **FCVC**: 
+  - Mean = 2.45, Std = 0.53, Range = 1-3.
+  - Influence: Binning into low, medium, and high frequency can be beneficial.
+- **NCP**: 
+  - Average = 3 meals/day.
+  - Influence: This could be a categorical feature (low, medium, high meal frequency).
+- **CH2O**: 
+  - Varies widely; normalization may help.
+- **FAF**: 
+  - Indicates physical activity frequency, which can be categorized for modeling.
+- **TUE**: 
+  - Varies; possibly create a binary feature for high technology usage.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- The features involved in this phase include:
+  - **Numerical Features**: Age, Height, Weight, FCVC, NCP, CH2O, FAF, TUE.
+  - **Categorical Features**: Gender, family_history_with_overweight, FAVC, CAEC, SMOKE, SCC, CALC, MTRANS.
+  - Target Variable: NObeyesdad.
+  
+- **Changes**:
+  - **Feature Creation**: Potential for creating BMI from Weight and Height.
+  - **Feature Modification**: Features like FCVC and NCP can be binned into categories for easier interpretation.
+  - **No Features Deleted**: All initial features were retained for further analysis.
+
+### Question 3
+What are the relationships between categorical features and the target variable (`NObeyesdad`), and which features show the strongest associations?
+### Answer 3
+- **Gender** shows a notable distribution across obesity categories, with females generally having lower obesity levels.
+- **Family history with overweight** indicates a trend towards higher obesity levels in individuals with such history.
+- **FAVC** (frequent consumption of high-caloric food) is strongly associated with higher obesity levels.
+- **CAEC** (food consumption between meals) shows a correlation where "sometimes" is linked to higher obesity.
+- **SMOKE** and **SCC** also appear to show differences, but FAVC and CAEC are particularly noteworthy for their strong associations.
+
+### Question 4
+What correlations were found among the numerical features and the target variable, and how can these correlations guide the creation of new features?
+### Answer 4
+- A correlation matrix highlights relationships; for example:
+  - Weight positively correlates with obesity levels.
+  - Age shows a slight positive correlation with obesity, suggesting older individuals may have higher obesity.
+- These correlations can guide the creation of features like BMI from weight and height or interaction terms between age and physical activity frequency.
+
+### Question 5
+What were the results of the chi-square tests for categorical features in relation to the target variable, and which features were found to be significantly dependent?
+### Answer 5
+- Chi-square tests indicated significant dependencies for:
+  - **FAVC** (p < 0.01): Strong dependence on obesity levels.
+  - **CAEC** (p < 0.01): Indicates how eating habits impact weight categories.
+  - **SMOKE** and **SCC** also showed significance but were less pronounced.
+- These results can inform which categorical features to focus on for model building.
+
+### Question 6
+What key insights and patterns emerged from the visualizations, and how can these insights shape the feature engineering strategy?
+### Answer 6
+- Visualizations indicated that:
+  - The **"sometimes"** category for **CAEC** and **FAVC** dominated across obesity levels, suggesting these might be key areas for intervention.
+  - A clear preference for **public transportation** was noted across all weight categories, indicating potential lifestyle correlations.
+  - Gender differences in obesity levels suggest that models might benefit from gender-specific features or stratification.
+
+These insights can guide the emphasis on specific features and interactions when modeling, as well as inform public health strategies targeting lifestyle changes.

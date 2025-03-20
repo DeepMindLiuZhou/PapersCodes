@@ -1,0 +1,75 @@
+## PLAN
+
+### STEP 1
+Task: Handling Missing Values
+Tools, involved features and correct parameters:
+- **Tool:** `fill_missing_values`
+- **Features:** 
+  - Numerical: All specified numerical features
+  - Categorical: `TypeOfSteel_A300`, `TypeOfSteel_A400`
+- **Parameters:** 
+  - `method`: 'auto' or specific methods like 'mean', 'median', 'mode', 'constant'
+  - `fill_value`: if using 'constant', specify the value
+
+Expected output or Impact on data: 
+- Print the count of missing values for each feature.
+- Successfully fill missing values in the specified column(s) of data.
+
+Constraints: 
+- Ensure consistency in handling missing values across both datasets.
+
+### STEP 2
+Task: Treating Outliers
+Tools, involved features and correct parameters:
+- **Tool:** `detect_and_handle_outliers_iqr` and `detect_and_handle_outliers_zscore`
+- **Features:** Numerical: `Steel_Plate_Thickness`, `Maximum_of_Luminosity`, `Minimum_of_Luminosity`, and other relevant features
+- **Parameters:** 
+  - `columns`: List of numerical columns to check
+  - `factor` or `threshold`: Typically 1.5 for IQR and 3.0 for Z-score
+  - `method`: 'clip' to cap outliers or 'remove' to delete them
+
+Expected output or Impact on data: 
+- Print summary of outliers detected and handled.
+- Successfully detect and handle outliers in the specified column(s).
+
+Constraints: 
+- Handle outliers consistently across both datasets without removing data entries from the test set.
+
+### STEP 3
+Task: Ensuring Data Consistency
+Tools, involved features and correct parameters:
+- **Tool:** `convert_data_types`
+- **Features:** All features in both `train.csv` and `test.csv`
+- **Parameters:** 
+  - `columns`: List of columns to convert
+  - `target_type`: Desired data type (e.g., `int`, `float`, `bool`)
+
+- **Tool:** `remove_duplicates`
+- **Features:** All features in both `train.csv` and `test.csv`
+- **Parameters:** 
+  - `columns`: None (consider all columns)
+  - `keep`: 'first' to retain the first occurrence
+  - `inplace`: True to modify the DataFrame directly
+
+Expected output or Impact on data: 
+- Print confirmation of data type conversions.
+- Print the number of duplicate rows removed.
+
+Constraints: 
+- Ensure no data loss that might affect model training and testing.
+
+### STEP 4
+Task: Finalizing Cleaned Datasets
+Tools, involved features and correct parameters:
+- **Tool:** Pandas (`data.to_csv()`)
+- **Features:** All features in both `train.csv` and `test.csv`
+- **Parameters:** 
+  - `path_or_buf`: File path for saving (`cleaned_train.csv` and `cleaned_test.csv`)
+  - `index`: False to avoid saving index column
+
+Expected output or Impact on data: 
+- Cleaned datasets saved as `cleaned_train.csv` and `cleaned_test.csv`.
+- Print summary statistics and data types to ensure all cleaning steps are correctly applied.
+
+Constraints: 
+- Ensure the cleaned datasets are ready for the next phase (In-depth EDA).

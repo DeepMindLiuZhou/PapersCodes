@@ -1,0 +1,59 @@
+# Data Information
+## Data Type
+### ID type
+- PassengerId
+
+### Numerical type
+- Age
+- RoomService
+- FoodCourt
+- ShoppingMall
+- Spa
+- VRDeck
+
+### Categorical type
+- HomePlanet
+- CryoSleep
+- Cabin
+- Destination
+- VIP
+- Name
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset pertains to passengers traveling to different destinations in space and their various attributes. The key features include:
+
+- **PassengerId**: Unique identifier for each passenger.
+- **HomePlanet**: The planet from which the passenger originated.
+- **CryoSleep**: Indicates whether the passenger was in cryogenic sleep during the voyage.
+- **Cabin**: The cabin number where the passenger stayed, formatted as Deck/Num/Side.
+- **Destination**: The destination of the passenger.
+- **Age**: The age of the passenger.
+- **VIP**: Indicates whether the passenger has VIP status.
+- **RoomService, FoodCourt, ShoppingMall, Spa, VRDeck**: Expenses incurred by the passenger on various amenities.
+- **Name**: The name of the passenger.
+
+### Notable Patterns and Characteristics
+- **CryoSleep**: Some passengers are in cryosleep, which might influence their expenses on amenities (typically zero).
+- **Cabin**: The cabin feature is divided into three parts, which can be extracted and used as separate features.
+- **Expenses**: Several passengers have zero expenses in amenities, possibly indicating a relationship with cryosleep status or VIP status.
+- **Destination**: Most passengers seem to be traveling to 'TRAPPIST-1e', with some going to '55 Cancri e' and 'PSO J318.5-22'.
+- **Transported**: The target variable, indicating whether the passenger was transported to an alternate dimension.
+
+## Target Variable
+- **Transported**: A boolean variable indicating whether the passenger was transported to another dimension.
+
+# Submission format (if applicable)
+The submission file should likely include the following columns:
+- **PassengerId** (string): The unique identifier for each passenger.
+- **Transported** (boolean): The prediction of whether each passenger was transported.
+
+Example:
+```
+PassengerId,Transported
+0001_01,False
+0002_01,True
+...
+```

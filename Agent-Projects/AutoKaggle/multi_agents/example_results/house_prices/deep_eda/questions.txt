@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What are the key statistical insights from the univariate analysis of numerical features, particularly those most correlated with `SalePrice`?
+
+### Question 2
+Which numerical features displayed the highest correlation with the target variable `SalePrice`, and what visualizations effectively communicate these relationships?
+
+### Question 3
+What patterns or differences were observed in the bivariate analysis of categorical features against `SalePrice`, and which categorical features showed the most significant impact?
+
+### Question 4
+Were there any notable interactions between features that were explored, and what implications do these interactions have for creating new features?
+
+### Question 5
+What specific visualizations or insights emerged as the most impactful during the exploration of key features, and how can these insights direct feature engineering efforts?
+
+### Question 6
+What recommendations can be made for feature engineering based on the insights gained from the in-depth exploratory data analysis, particularly concerning handling missing values and outliers?

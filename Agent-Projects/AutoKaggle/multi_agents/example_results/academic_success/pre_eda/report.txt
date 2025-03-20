@@ -1,0 +1,113 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Target
+## FEATURES BEFORE THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target']
+## FEATURES AFTER THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - Training dataset: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/train.csv`
+  - Test dataset: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/test.csv`
+
+- **Generated Files:**
+  - No new files were generated in this phase as the focus was on data exploration and analysis.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. 
+### Answer 2
+- **Involved Features:**
+  - **Numerical Features:**
+    - `Previous qualification (grade)`
+    - `Admission grade`
+    - Various `Curricular units` (credited/enrolled/evaluations/approved/grades)
+    - `Unemployment rate`
+    - `Inflation rate`
+    - `GDP`
+
+  - **Categorical Features:**
+    - `Marital status`
+    - `Application mode`
+    - `Course`
+    - `Previous qualification`
+    - `Nationality`
+    - `Mother's qualification`
+    - `Father's qualification`
+    - `Mother's occupation`
+    - `Father's occupation`
+    - `Displaced`
+    - `Educational special needs`
+    - `Debtor`
+    - `Tuition fees up to date`
+    - `Gender`
+    - `Scholarship holder`
+    - `International`
+    - `Target` (only in training dataset)
+
+- **Changes:**
+  - No features were deleted or created.
+  - The types of numerical features remained unchanged, but potential outliers were identified.
+  - Categorical features had their distributions analyzed, revealing dominant and rare categories without modification.
+
+### Question 3
+What were the dimensions and the structure of the datasets after loading?
+### Answer 3
+- **Train Dataset:**
+  - Shape: (76518, 38)
+  - Features: 38 total (including `Target`)
+
+- **Test Dataset:**
+  - Shape: (51012, 37)
+  - Features: 37 total (excluding `Target`)
+
+### Question 4
+Which features exhibited missing values, and what were their respective proportions?
+### Answer 4
+- **Train Dataset Missing Values:**
+  - Missing values were checked using `isnull()`, but specific proportions of missing values were not explicitly listed in the output summary.
+
+- **Test Dataset Missing Values:**
+  - Similar checks were performed, but again, specific proportions were not detailed in the output.
+
+### Question 5
+What statistical characteristics were observed in the numerical features, particularly concerning outliers?
+### Answer 5
+- **Summary Statistics:**
+  - Summary statistics showed various characteristics including mean, median, standard deviation, min, and max for each numerical feature.
+  
+- **Outliers:**
+  - Outliers were identified using the IQR method for each numerical feature, with specific numbers of outliers reported.
+
+### Question 6
+What were the distributions and unique categories for each categorical feature, and were any anomalies or inconsistencies detected?
+### Answer 6
+- **Distributions:**
+  - Each categorical feature was analyzed for frequency counts and percentages, identifying dominant and rare categories.
+
+- **Inconsistencies:**
+  - Checks for category name inconsistencies (case sensitivity, leading/trailing spaces) were performed, noting potential issues.
+
+### Question 7
+What correlations were identified among numerical features and their relationship with the target variable?
+### Answer 7
+- **Correlation Analysis:**
+  - A correlation matrix was generated showing the Pearson correlation coefficients among numerical features, identifying highly correlated feature pairs (|correlation| > 0.7).
+
+- **Crosstab Analysis:**
+  - Crosstab analyses between categorical features and the `Target` variable were conducted to identify strong associations.
+
+### Question 8
+Based on the findings from this phase, what specific data cleaning actions are recommended to prepare for the next phase?
+### Answer 8
+- **Data Cleaning Recommendations:**
+  - Handle missing values in both train and test datasets based on their respective proportions.
+  - Address outliers in numerical features, considering methods like capping or removal.
+  - Normalize categorical features to resolve inconsistencies detected.
+  - Consider removing or combining highly correlated features to mitigate multicollinearity issues.
+  - Prepare to encode categorical variables for model building in the next phase.

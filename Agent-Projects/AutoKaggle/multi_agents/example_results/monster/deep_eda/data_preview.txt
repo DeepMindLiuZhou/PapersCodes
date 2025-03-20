@@ -1,0 +1,57 @@
+# Data Information
+## Data Type
+### ID type
+- `id`
+
+### Numerical type
+- `bone_length`
+- `rotting_flesh`
+- `hair_length`
+- `has_soul`
+
+### Categorical type
+- `color`
+
+### Datetime type
+- *None*
+
+## Detailed data description
+The dataset is divided into training and testing subsets. 
+
+- **Training Data**: Consists of 10 records with the following features:
+  - **`id`**: Unique identifier for each creature.
+  - **`bone_length`**: Numerical measurement representing the length of the creature's bones.
+  - **`rotting_flesh`**: Numerical value indicating the extent of flesh decomposition.
+  - **`hair_length`**: Numerical measurement of hair length.
+  - **`has_soul`**: Numerical indicator (likely between 0 and 1) denoting the presence of a soul.
+  - **`color`**: Categorical feature describing the color of the creature (e.g., clear, green, black, white, blue).
+  - **`type`**: Categorical target variable representing the creature type (e.g., Ghoul, Goblin, Ghost).
+
+- **Testing Data**: Consists of 10 records with the same features as the training data, excluding the target variable `type`.
+
+### Notable Patterns and Characteristics:
+- **Color Distribution**: Multiple color categories such as clear, green, black, white, and blue are present, suggesting variability in creature appearances.
+- **Type Distribution**: The target variable includes at least three categories—Ghoul, Goblin, and Ghost—each potentially associated with distinct feature patterns.
+- **Feature Ranges**:
+  - `bone_length` ranges approximately between 0.28 to 0.78.
+  - `rotting_flesh` varies from around 0.14 to 0.88.
+  - `hair_length` spans from approximately 0.17 to 0.81.
+  - `has_soul` values range from about 0.10 to 0.88, possibly indicating different states of being.
+
+## Target Variable
+- **`type`**
+  - **Description**: The target variable represents the classification of each creature into categories such as Ghoul, Goblin, and Ghost. It is a categorical feature used to train the classification model.
+
+# Submission format (if applicable)
+The submission file should be in CSV format with the following columns:
+
+- `id` (integer): Unique identifier for each test data point.
+- `type` (string): Predicted creature type corresponding to each `id`.
+
+**Example:**
+| id  | type   |
+|-----|--------|
+| 3   | Ghoul  |
+| 6   | Goblin |
+| 9   | Ghost  |
+| ... | ...    |

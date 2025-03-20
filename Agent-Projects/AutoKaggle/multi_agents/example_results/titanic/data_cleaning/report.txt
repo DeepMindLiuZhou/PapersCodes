@@ -1,0 +1,82 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Survived
+## FEATURES BEFORE THIS PHASE
+['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
+## FEATURES AFTER THIS PHASE
+['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked']
+# REPORT
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - Training dataset: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/train.csv`
+  - Testing dataset: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/test.csv`
+
+- **Generated Files:**
+  - Cleaned training dataset: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/cleaned_train.csv`
+  - Cleaned testing dataset: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/titanic/cleaned_test.csv`
+
+---
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Features Involved:**
+  - **Age:** Missing values filled with the mean.
+  - **Cabin:** Missing values filled with 'Missing'.
+  - **Embarked:** Missing values filled with the mode.
+  - **Fare:** Missing values filled with the mean (note: this step was not in the original plan).
+  
+- **Feature Type Modifications:**
+  - **Pclass, SibSp, Parch:** Converted to `int`.
+  - **Age, Fare:** Converted to `float`.
+
+- **Deleted/Created Features:** No features were deleted or newly created in this phase.
+
+---
+
+### Question 3
+What missing values were identified and how were they addressed in the dataset?
+### Answer 3
+- **Identified Missing Values:**
+  - **Age:** Some values were missing.
+  - **Cabin:** Many values were missing.
+  - **Embarked:** Some values were missing.
+
+- **Addressed Missing Values:**
+  - **Age:** Filled with the mean age.
+  - **Cabin:** Filled with 'Missing'.
+  - **Embarked:** Filled with the most common value (mode).
+
+---
+
+### Question 4
+What outlier treatment methods were applied, and which features were affected?
+### Answer 4
+- **Outlier Treatment Methods:**
+  - **Fare:** Treated using the IQR method, clipping extreme values based on 1.5 times the IQR.
+  - **Age:** Treated using the IQR method, clipping extreme values based on 1.5 times the IQR.
+
+---
+
+### Question 5
+What are the implications of the cleaning steps taken on the overall dataset distribution, particularly for key features like Age, Fare, and Survived?
+### Answer 5
+- **Age:** Filling missing values with the mean may introduce bias, particularly if age is not normally distributed. This could affect the model's performance in predicting survival.
+- **Fare:** Clipping extreme values helps in reducing the influence of outliers on model training. This can lead to a more robust model but may lose some information about high-paying passengers.
+- **Survived:** The distribution of the target variable should remain unchanged since no values were modified or removed; however, the predictors' adjustments can influence the predictive power regarding survival.
+
+---
+
+### Question 6
+What additional cleaning or preprocessing steps do you foresee as necessary before conducting in-depth exploratory data analysis?
+### Answer 6
+- **Encoding Categorical Variables:** Convert categorical features such as `Sex`, `Embarked`, and possibly `Cabin` into numerical formats suitable for modeling.
+- **Feature Scaling:** Consider scaling numerical features to ensure they are on similar scales, particularly if using algorithms sensitive to feature magnitude.
+- **Handling Cabin Feature:** Further exploration of the `Cabin` feature could be beneficial, as it may contain valuable information that could be encoded.
+- **Additional Outlier Treatment:** Review the `SibSp` and `Parch` features for any outliers that may need treatment.
+
+---

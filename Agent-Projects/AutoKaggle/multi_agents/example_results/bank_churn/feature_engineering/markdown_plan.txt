@@ -1,0 +1,91 @@
+## PLAN
+
+### STEP 1
+Task: Create New Features Based on Insights from In-depth EDA
+Tools, involved features and correct parameters:
+- **Age Bins:**
+  - Tool: `pd.cut()`
+  - Involved Features: `Age`
+  - Parameters: Bins such as 'Young' (18-30), 'Middle-aged' (31-50), and 'Senior' (51+)
+- **Balance Indicator:**
+  - Tool: `np.where()`
+  - Involved Features: `Balance`
+  - Parameters: Binary feature indicating whether the balance is positive
+- **Interaction Features:**
+  - Tool: Custom function using `pd.DataFrame.apply()`
+  - Involved Features: `Geography`, `Balance`
+  - Parameters: Combine `Geography` and `Balance`
+- **Active Card User:**
+  - Tool: `np.where()`
+  - Involved Features: `HasCrCard`, `IsActiveMember`
+  - Parameters: Binary feature indicating if both `HasCrCard` and `IsActiveMember` are 1
+
+Expected output or Impact on data:
+- New categorical feature `AgeGroup`
+- New binary feature `HasBalance`
+- New feature `Region_Balance_Interaction`
+- New binary feature `Active_Card_User`
+
+Constraints:
+- Ensure logical binning criteria
+- Maintain interpretability of new features
+
+### STEP 2
+Task: Transform Existing Features to Improve Model Performance
+Tools, involved features and correct parameters:
+- **Normalize CreditScore:**
+  - Tool: `MinMaxScaler` from `sklearn.preprocessing`
+  - Involved Features: `CreditScore`
+  - Parameters: Normalize to a 0-1 range
+- **Log Transform EstimatedSalary:**
+  - Tool: `np.log1p()`
+  - Involved Features: `EstimatedSalary`
+  - Parameters: Apply logarithmic transformation
+
+Expected output or Impact on data:
+- Transformed `CreditScore`
+- Transformed `EstimatedSalary`
+
+Constraints:
+- Handle zero or negative values in `EstimatedSalary`
+- Ensure consistent transformations across train and test datasets
+
+### STEP 3
+Task: Handle Categorical Variables
+Tools, involved features and correct parameters:
+- **One-Hot Encode Geography:**
+  - Tool: `pd.get_dummies()`
+  - Involved Features: `Geography`
+  - Parameters: Convert `Geography` into binary variables
+- **Encode Gender:**
+  - Tool: `LabelEncoder` from `sklearn.preprocessing`
+  - Involved Features: `Gender`
+  - Parameters: Convert `Gender` to binary (0 for Female, 1 for Male)
+
+Expected output or Impact on data:
+- New binary features for each category in `Geography`
+- Binary feature `Gender`
+
+Constraints:
+- Avoid dummy variable trap (drop one category if necessary)
+- Ensure encoding consistency across train and test datasets
+
+### STEP 4
+Task: Normalize or Standardize Numerical Features
+Tools, involved features and correct parameters:
+- **Standardize Age:**
+  - Tool: `StandardScaler` from `sklearn.preprocessing`
+  - Involved Features: `Age`
+  - Parameters: Standardize to mean 0 and standard deviation 1
+- **Standardize Balance:**
+  - Tool: `StandardScaler` from `sklearn.preprocessing`
+  - Involved Features: `Balance`
+  - Parameters: Standardize to mean 0 and standard deviation 1
+
+Expected output or Impact on data:
+- Standardized `Age`
+- Standardized `Balance`
+
+Constraints:
+- Ensure numerical features are on a similar scale
+- Maintain reproducibility of transformations

@@ -1,0 +1,62 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Exited
+## FEATURES BEFORE THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited', 'AgeGroup', 'HasBalance', 'Region_Balance_Interaction', 'Active_Card_User', 'Geography_Germany', 'Geography_Spain']
+## FEATURES AFTER THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited', 'AgeGroup', 'HasBalance', 'Region_Balance_Interaction', 'Active_Card_User', 'Geography_Germany', 'Geography_Spain']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What models were trained, and what were their respective AUC ROC scores during validation?
+### Answer 1
+Three models were trained:
+1. **Logistic Regression**: AUC ROC Score: 0.8415
+2. **Random Forest**: AUC ROC Score: 0.8621
+3. **XGBoost**: AUC ROC Score: 0.8666
+
+The best performing model was **XGBoost** with an AUC ROC score of **0.8666**.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+The following changes were made to the features:
+- **Modified Feature Types**: Categorical features were transformed into numerical format through one-hot encoding.
+- **Deleted Features**: The following columns were removed:
+  - 'Exited' (from the training set)
+  - 'id'
+  - 'CustomerId'
+  - 'Surname'
+
+This resulted in the creation of new binary features from the categorical columns through one-hot encoding, while ensuring only relevant numeric features remained for model training.
+
+### Question 3
+How did the feature selection impact model performance? Were any features particularly influential?
+### Answer 3
+Feature selection positively impacted model performance by ensuring only relevant features were used for training. While specific influential features were not detailed, features such as 'Age', 'Balance', 'NumOfProducts', and interaction features (e.g., 'Region_Balance_Interaction') are typically significant in predicting customer churn.
+
+### Question 4
+Were there any challenges faced during model training or validation, and how were they addressed?
+### Answer 4
+The information provided did not specify particular challenges encountered during model training or validation. However, it was suggested to implement error handling (e.g., try-except blocks) around the model training process to manage potential errors gracefully.
+
+### Question 5
+What is the final format of the submission file, and does it meet the competition requirements?
+### Answer 5
+The final submission file is in CSV format and includes the following columns:
+- **id**: Unique identifier for each test data point.
+- **Exited**: Probability of whether the customer exited the bank.
+
+The format meets the competition requirements as outlined in the submission guidelines.
+
+### Question 6
+Based on the findings from this phase, what recommendations would you make for future projects or iterations of this model?
+### Answer 6
+1. **Add Inline Comments**: Enhance the code with additional comments explaining the logic behind each block for better readability and maintainability.
+2. **Implement Error Handling**: Use try-except blocks around critical processes to handle potential errors gracefully.
+3. **Hyperparameter Tuning**: Introduce hyperparameter optimization techniques to further enhance model performance beyond the initial training.
+4. **Feature Importance Analysis**: Perform a detailed analysis of feature importance to understand which features significantly impact model predictions, enabling more informed feature selection in future iterations.
+
+These recommendations can improve code robustness and model performance in future projects.

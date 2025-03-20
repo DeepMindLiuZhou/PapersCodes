@@ -1,0 +1,113 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- Id
+
+### Numerical type
+- MSSubClass
+- LotFrontage
+- LotArea
+- OverallQual
+- OverallCond
+- YearBuilt
+- YearRemodAdd
+- MasVnrArea
+- BsmtFinSF1
+- BsmtFinSF2
+- BsmtUnfSF
+- TotalBsmtSF
+- 1stFlrSF
+- 2ndFlrSF
+- LowQualFinSF
+- GrLivArea
+- BsmtFullBath
+- BsmtHalfBath
+- FullBath
+- HalfBath
+- BedroomAbvGr
+- KitchenAbvGr
+- TotRmsAbvGrd
+- Fireplaces
+- GarageYrBlt
+- GarageCars
+- GarageArea
+- WoodDeckSF
+- OpenPorchSF
+- EnclosedPorch
+- 3SsnPorch
+- ScreenPorch
+- PoolArea
+- MiscVal
+- MoSold
+- YrSold
+- SalePrice (only in the train data)
+
+### Categorical type
+- MSZoning
+- Street
+- Alley
+- LotShape
+- LandContour
+- Utilities
+- LotConfig
+- LandSlope
+- Neighborhood
+- Condition1
+- Condition2
+- BldgType
+- HouseStyle
+- RoofStyle
+- RoofMatl
+- Exterior1st
+- Exterior2nd
+- ExterQual
+- ExterCond
+- Foundation
+- BsmtQual
+- BsmtCond
+- BsmtExposure
+- BsmtFinType1
+- BsmtFinType2
+- Heating
+- HeatingQC
+- CentralAir
+- Electrical
+- KitchenQual
+- Functional
+- GarageType
+- GarageFinish
+- GarageQual
+- GarageCond
+- PavedDrive
+- PoolQC
+- Fence
+- MiscFeature
+- SaleType
+- SaleCondition
+
+### Datetime type
+None
+
+## Detailed data description
+
+The dataset contains information about house sales in a particular region. The train data includes 81 features, while the test data includes 80 features (excluding the target variable `SalePrice`). The features are a mix of numerical and categorical data that describe the properties of each house, such as location, size, condition, and various other attributes. Key observations include:
+
+- **Numerical Features**: These features include measurements and counts such as `LotArea`, `YearBuilt`, `GrLivArea`, and `SalePrice`. These are essential for understanding the scale and trends in the data.
+- **Categorical Features**: These features include qualitative attributes such as `MSZoning`, `Street`, `Neighborhood`, and `HouseStyle`. These are crucial for capturing the qualitative aspects of the houses.
+- **Missing Values**: Some features have missing values, such as `Alley`, `MasVnrArea`, and `GarageYrBlt`. These missing values need to be handled appropriately during data preprocessing.
+
+Notable patterns:
+- The dataset seems to represent a variety of house features and conditions which could significantly impact the sale price.
+- Features like `OverallQual`, `GrLivArea`, and `YearBuilt` likely have strong correlations with the target variable `SalePrice`.
+
+## Target Variable
+- **SalePrice**: This is the target variable representing the sale price of the houses in the train dataset. It is a numerical feature that will be the focus of prediction.
+
+# Submission format (if applicable)
+The submission file should include the following columns:
+- **Id**: The unique identifier for each property.
+- **SalePrice**: The predicted sale price for each property.
+
+The file should be in CSV format with the columns `Id` and `SalePrice`.

@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What insights were gained regarding the structure and types of data in the datasets?
+
+### Question 4
+Which features were found to have missing values, and what is the extent (count and percentage) of these missing values?
+
+### Question 5
+What outliers were detected in the numerical features, and which features are primarily affected by these outliers?
+
+### Question 6
+Based on the findings from this phase, what specific cleaning tasks should be prioritized to prepare the data for the next phases of the competition?

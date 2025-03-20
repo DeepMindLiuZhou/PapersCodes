@@ -1,0 +1,302 @@
+Train Data Head:
+   Id  MSSubClass MSZoning  ...  SaleType  SaleCondition SalePrice
+0   1          60       RL  ...        WD         Normal    208500
+1   2          20       RL  ...        WD         Normal    181500
+2   3          60       RL  ...        WD         Normal    223500
+3   4          70       RL  ...        WD        Abnorml    140000
+4   5          60       RL  ...        WD         Normal    250000
+
+[5 rows x 81 columns]
+
+Test Data Head:
+     Id  MSSubClass MSZoning  ...  YrSold  SaleType SaleCondition
+0  1461          20       RH  ...    2010        WD        Normal
+1  1462          20       RL  ...    2010        WD        Normal
+2  1463          60       RL  ...    2010        WD        Normal
+3  1464          60       RL  ...    2010        WD        Normal
+4  1465         120       RL  ...    2010        WD        Normal
+
+[5 rows x 80 columns]
+
+Train Data Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1460 entries, 0 to 1459
+Data columns (total 81 columns):
+ #   Column         Non-Null Count  Dtype  
+---  ------         --------------  -----  
+ 0   Id             1460 non-null   int64  
+ 1   MSSubClass     1460 non-null   int64  
+ 2   MSZoning       1460 non-null   object 
+ 3   LotFrontage    1201 non-null   float64
+ 4   LotArea        1460 non-null   int64  
+ 5   Street         1460 non-null   object 
+ 6   Alley          91 non-null     object 
+ 7   LotShape       1460 non-null   object 
+ 8   LandContour    1460 non-null   object 
+ 9   Utilities      1460 non-null   object 
+ 10  LotConfig      1460 non-null   object 
+ 11  LandSlope      1460 non-null   object 
+ 12  Neighborhood   1460 non-null   object 
+ 13  Condition1     1460 non-null   object 
+ 14  Condition2     1460 non-null   object 
+ 15  BldgType       1460 non-null   object 
+ 16  HouseStyle     1460 non-null   object 
+ 17  OverallQual    1460 non-null   int64  
+ 18  OverallCond    1460 non-null   int64  
+ 19  YearBuilt      1460 non-null   int64  
+ 20  YearRemodAdd   1460 non-null   int64  
+ 21  RoofStyle      1460 non-null   object 
+ 22  RoofMatl       1460 non-null   object 
+ 23  Exterior1st    1460 non-null   object 
+ 24  Exterior2nd    1460 non-null   object 
+ 25  MasVnrType     588 non-null    object 
+ 26  MasVnrArea     1452 non-null   float64
+ 27  ExterQual      1460 non-null   object 
+ 28  ExterCond      1460 non-null   object 
+ 29  Foundation     1460 non-null   object 
+ 30  BsmtQual       1423 non-null   object 
+ 31  BsmtCond       1423 non-null   object 
+ 32  BsmtExposure   1422 non-null   object 
+ 33  BsmtFinType1   1423 non-null   object 
+ 34  BsmtFinSF1     1460 non-null   int64  
+ 35  BsmtFinType2   1422 non-null   object 
+ 36  BsmtFinSF2     1460 non-null   int64  
+ 37  BsmtUnfSF      1460 non-null   int64  
+ 38  TotalBsmtSF    1460 non-null   int64  
+ 39  Heating        1460 non-null   object 
+ 40  HeatingQC      1460 non-null   object 
+ 41  CentralAir     1460 non-null   object 
+ 42  Electrical     1459 non-null   object 
+ 43  1stFlrSF       1460 non-null   int64  
+ 44  2ndFlrSF       1460 non-null   int64  
+ 45  LowQualFinSF   1460 non-null   int64  
+ 46  GrLivArea      1460 non-null   int64  
+ 47  BsmtFullBath   1460 non-null   int64  
+ 48  BsmtHalfBath   1460 non-null   int64  
+ 49  FullBath       1460 non-null   int64  
+ 50  HalfBath       1460 non-null   int64  
+ 51  BedroomAbvGr   1460 non-null   int64  
+ 52  KitchenAbvGr   1460 non-null   int64  
+ 53  KitchenQual    1460 non-null   object 
+ 54  TotRmsAbvGrd   1460 non-null   int64  
+ 55  Functional     1460 non-null   object 
+ 56  Fireplaces     1460 non-null   int64  
+ 57  FireplaceQu    770 non-null    object 
+ 58  GarageType     1379 non-null   object 
+ 59  GarageYrBlt    1379 non-null   float64
+ 60  GarageFinish   1379 non-null   object 
+ 61  GarageCars     1460 non-null   int64  
+ 62  GarageArea     1460 non-null   int64  
+ 63  GarageQual     1379 non-null   object 
+ 64  GarageCond     1379 non-null   object 
+ 65  PavedDrive     1460 non-null   object 
+ 66  WoodDeckSF     1460 non-null   int64  
+ 67  OpenPorchSF    1460 non-null   int64  
+ 68  EnclosedPorch  1460 non-null   int64  
+ 69  3SsnPorch      1460 non-null   int64  
+ 70  ScreenPorch    1460 non-null   int64  
+ 71  PoolArea       1460 non-null   int64  
+ 72  PoolQC         7 non-null      object 
+ 73  Fence          281 non-null    object 
+ 74  MiscFeature    54 non-null     object 
+ 75  MiscVal        1460 non-null   int64  
+ 76  MoSold         1460 non-null   int64  
+ 77  YrSold         1460 non-null   int64  
+ 78  SaleType       1460 non-null   object 
+ 79  SaleCondition  1460 non-null   object 
+ 80  SalePrice      1460 non-null   int64  
+dtypes: float64(3), int64(35), object(43)
+memory usage: 924.0+ KB
+None
+
+Test Data Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1459 entries, 0 to 1458
+Data columns (total 80 columns):
+ #   Column         Non-Null Count  Dtype  
+---  ------         --------------  -----  
+ 0   Id             1459 non-null   int64  
+ 1   MSSubClass     1459 non-null   int64  
+ 2   MSZoning       1455 non-null   object 
+ 3   LotFrontage    1232 non-null   float64
+ 4   LotArea        1459 non-null   int64  
+ 5   Street         1459 non-null   object 
+ 6   Alley          107 non-null    object 
+ 7   LotShape       1459 non-null   object 
+ 8   LandContour    1459 non-null   object 
+ 9   Utilities      1457 non-null   object 
+ 10  LotConfig      1459 non-null   object 
+ 11  LandSlope      1459 non-null   object 
+ 12  Neighborhood   1459 non-null   object 
+ 13  Condition1     1459 non-null   object 
+ 14  Condition2     1459 non-null   object 
+ 15  BldgType       1459 non-null   object 
+ 16  HouseStyle     1459 non-null   object 
+ 17  OverallQual    1459 non-null   int64  
+ 18  OverallCond    1459 non-null   int64  
+ 19  YearBuilt      1459 non-null   int64  
+ 20  YearRemodAdd   1459 non-null   int64  
+ 21  RoofStyle      1459 non-null   object 
+ 22  RoofMatl       1459 non-null   object 
+ 23  Exterior1st    1458 non-null   object 
+ 24  Exterior2nd    1458 non-null   object 
+ 25  MasVnrType     565 non-null    object 
+ 26  MasVnrArea     1444 non-null   float64
+ 27  ExterQual      1459 non-null   object 
+ 28  ExterCond      1459 non-null   object 
+ 29  Foundation     1459 non-null   object 
+ 30  BsmtQual       1415 non-null   object 
+ 31  BsmtCond       1414 non-null   object 
+ 32  BsmtExposure   1415 non-null   object 
+ 33  BsmtFinType1   1417 non-null   object 
+ 34  BsmtFinSF1     1458 non-null   float64
+ 35  BsmtFinType2   1417 non-null   object 
+ 36  BsmtFinSF2     1458 non-null   float64
+ 37  BsmtUnfSF      1458 non-null   float64
+ 38  TotalBsmtSF    1458 non-null   float64
+ 39  Heating        1459 non-null   object 
+ 40  HeatingQC      1459 non-null   object 
+ 41  CentralAir     1459 non-null   object 
+ 42  Electrical     1459 non-null   object 
+ 43  1stFlrSF       1459 non-null   int64  
+ 44  2ndFlrSF       1459 non-null   int64  
+ 45  LowQualFinSF   1459 non-null   int64  
+ 46  GrLivArea      1459 non-null   int64  
+ 47  BsmtFullBath   1457 non-null   float64
+ 48  BsmtHalfBath   1457 non-null   float64
+ 49  FullBath       1459 non-null   int64  
+ 50  HalfBath       1459 non-null   int64  
+ 51  BedroomAbvGr   1459 non-null   int64  
+ 52  KitchenAbvGr   1459 non-null   int64  
+ 53  KitchenQual    1458 non-null   object 
+ 54  TotRmsAbvGrd   1459 non-null   int64  
+ 55  Functional     1457 non-null   object 
+ 56  Fireplaces     1459 non-null   int64  
+ 57  FireplaceQu    729 non-null    object 
+ 58  GarageType     1383 non-null   object 
+ 59  GarageYrBlt    1381 non-null   float64
+ 60  GarageFinish   1381 non-null   object 
+ 61  GarageCars     1458 non-null   float64
+ 62  GarageArea     1458 non-null   float64
+ 63  GarageQual     1381 non-null   object 
+ 64  GarageCond     1381 non-null   object 
+ 65  PavedDrive     1459 non-null   object 
+ 66  WoodDeckSF     1459 non-null   int64  
+ 67  OpenPorchSF    1459 non-null   int64  
+ 68  EnclosedPorch  1459 non-null   int64  
+ 69  3SsnPorch      1459 non-null   int64  
+ 70  ScreenPorch    1459 non-null   int64  
+ 71  PoolArea       1459 non-null   int64  
+ 72  PoolQC         3 non-null      object 
+ 73  Fence          290 non-null    object 
+ 74  MiscFeature    51 non-null     object 
+ 75  MiscVal        1459 non-null   int64  
+ 76  MoSold         1459 non-null   int64  
+ 77  YrSold         1459 non-null   int64  
+ 78  SaleType       1458 non-null   object 
+ 79  SaleCondition  1459 non-null   object 
+dtypes: float64(11), int64(26), object(43)
+memory usage: 912.0+ KB
+None
+
+Train Data Description (Numerical):
+                Id   MSSubClass  ...       YrSold      SalePrice
+count  1460.000000  1460.000000  ...  1460.000000    1460.000000
+mean    730.500000    56.897260  ...  2007.815753  180921.195890
+std     421.610009    42.300571  ...     1.328095   79442.502883
+min       1.000000    20.000000  ...  2006.000000   34900.000000
+25%     365.750000    20.000000  ...  2007.000000  129975.000000
+50%     730.500000    50.000000  ...  2008.000000  163000.000000
+75%    1095.250000    70.000000  ...  2009.000000  214000.000000
+max    1460.000000   190.000000  ...  2010.000000  755000.000000
+
+[8 rows x 38 columns]
+
+Train Data Description (Categorical):
+       MSZoning Street Alley LotShape  ...  Fence MiscFeature SaleType SaleCondition
+count      1460   1460    91     1460  ...    281          54     1460          1460
+unique        5      2     2        4  ...      4           4        9             6
+top          RL   Pave  Grvl      Reg  ...  MnPrv        Shed       WD        Normal
+freq       1151   1454    50      925  ...    157          49     1267          1198
+
+[4 rows x 43 columns]
+
+Test Data Description (Numerical):
+                Id   MSSubClass  ...       MoSold       YrSold
+count  1459.000000  1459.000000  ...  1459.000000  1459.000000
+mean   2190.000000    57.378341  ...     6.104181  2007.769705
+std     421.321334    42.746880  ...     2.722432     1.301740
+min    1461.000000    20.000000  ...     1.000000  2006.000000
+25%    1825.500000    20.000000  ...     4.000000  2007.000000
+50%    2190.000000    50.000000  ...     6.000000  2008.000000
+75%    2554.500000    70.000000  ...     8.000000  2009.000000
+max    2919.000000   190.000000  ...    12.000000  2010.000000
+
+[8 rows x 37 columns]
+
+Test Data Description (Categorical):
+       MSZoning Street Alley LotShape  ...  Fence MiscFeature SaleType SaleCondition
+count      1455   1459   107     1459  ...    290          51     1458          1459
+unique        5      2     2        4  ...      4           3        9             6
+top          RL   Pave  Grvl      Reg  ...  MnPrv        Shed       WD        Normal
+freq       1114   1453    70      934  ...    172          46     1258          1204
+
+[4 rows x 43 columns]
+
+Missing Values in Training Data:
+              Missing Values  Percentage
+PoolQC                  1453   99.520548
+MiscFeature             1406   96.301370
+Alley                   1369   93.767123
+Fence                   1179   80.753425
+MasVnrType               872   59.726027
+FireplaceQu              690   47.260274
+LotFrontage              259   17.739726
+GarageType                81    5.547945
+GarageYrBlt               81    5.547945
+GarageFinish              81    5.547945
+GarageQual                81    5.547945
+GarageCond                81    5.547945
+BsmtFinType2              38    2.602740
+BsmtExposure              38    2.602740
+BsmtFinType1              37    2.534247
+BsmtCond                  37    2.534247
+BsmtQual                  37    2.534247
+MasVnrArea                 8    0.547945
+Electrical                 1    0.068493
+
+Missing Values in Testing Data:
+              Missing Values  Percentage
+PoolQC                  1456   99.794380
+MiscFeature             1408   96.504455
+Alley                   1352   92.666210
+Fence                   1169   80.123372
+MasVnrType               894   61.274846
+FireplaceQu              730   50.034270
+LotFrontage              227   15.558602
+GarageCond                78    5.346127
+GarageYrBlt               78    5.346127
+GarageQual                78    5.346127
+GarageFinish              78    5.346127
+GarageType                76    5.209047
+BsmtCond                  45    3.084304
+BsmtExposure              44    3.015764
+BsmtQual                  44    3.015764
+BsmtFinType1              42    2.878684
+BsmtFinType2              42    2.878684
+MasVnrArea                15    1.028101
+MSZoning                   4    0.274160
+BsmtFullBath               2    0.137080
+BsmtHalfBath               2    0.137080
+Functional                 2    0.137080
+Utilities                  2    0.137080
+GarageCars                 1    0.068540
+GarageArea                 1    0.068540
+TotalBsmtSF                1    0.068540
+KitchenQual                1    0.068540
+BsmtUnfSF                  1    0.068540
+BsmtFinSF2                 1    0.068540
+BsmtFinSF1                 1    0.068540
+Exterior2nd                1    0.068540
+Exterior1st                1    0.068540
+SaleType                   1    0.068540

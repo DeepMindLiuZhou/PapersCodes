@@ -1,0 +1,54 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `id`: Unique identifier for each data point, not used in model training.
+
+### Numerical type
+- `Age`
+- `Height`
+- `Weight`
+- `FCVC`: Frequency of consumption of vegetables (normalized)
+- `NCP`: Number of main meals (normalized)
+- `CH2O`: Daily water intake (normalized)
+- `FAF`: Physical activity frequency (normalized)
+- `TUE`: Time using technology devices (normalized)
+- `BMI`: Body Mass Index (normalized)
+- `FAF_TUE_Interaction`: Interaction term between `FAF` and `TUE` (normalized)
+
+### Categorical type
+- `Gender` (encoded as `Gender_female` and `Gender_male`)
+- `family_history_with_overweight` (encoded as `family_history_with_overweight_encoded`)
+- `FAVC`: Frequent consumption of high caloric food (encoded as `FAVC_encoded`)
+- `CAEC`: Consumption of food between meals (encoded as `CAEC_always`, `CAEC_frequently`, `CAEC_no`, `CAEC_sometimes`)
+- `SMOKE` (encoded as `SMOKE_encoded`)
+- `SCC`: Monitor caloric intake (encoded as `SCC_encoded`)
+- `CALC`: Consumption of alcohol (encoded as `CALC_always`, `CALC_frequently`, `CALC_no`, `CALC_sometimes`)
+- `MTRANS`: Mode of transportation (encoded as `MTRANS_automobile`, `MTRANS_bike`, `MTRANS_motorbike`, `MTRANS_public_transportation`, `MTRANS_walking`)
+- `Age_Category`: Age group classification
+- `FCVC_Category`: Frequency of vegetable consumption classification
+- `NCP_Category`: Number of main meals classification
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset contains information related to individuals' demographics, lifestyle behaviors, and health indicators. The notable features include:
+- **Gender**: Categorical, indicating whether the individual is male or female.
+- **Age**: Numerical, representing the age of the individual in a normalized form.
+- **Height and Weight**: Numerical, representing the physical dimensions of the individual in normalized forms.
+- **BMI**: Numerical, derived from height and weight, indicating the body mass index in a normalized form.
+- **Lifestyle habits**: Including frequency of vegetable consumption (`FCVC`), number of main meals (`NCP`), daily water intake (`CH2O`), physical activity frequency (`FAF`), and time using technology (`TUE`).
+- **Behavioral factors**: Such as family history with overweight, consumption of high caloric food (`FAVC`), smoking status (`SMOKE`), alcohol consumption (`CALC`), and mode of transportation (`MTRANS`).
+- **Health monitoring**: Whether the individual monitors their caloric intake (`SCC`).
+
+The dataset has been pre-processed with numerical features normalized and categorical features encoded into binary dummy variables. Interaction terms between certain lifestyle factors are also included.
+
+## Target Variable
+- `NObeyesdad`: The target variable representing different levels of obesity, including categories such as `Insufficient_Weight`, `Normal_Weight`, `Overweight_Level_I`, `Overweight_Level_II`, `Obesity_Type_I`, `Obesity_Type_II`, and `Obesity_Type_III`.
+
+# Submission format (if applicable)
+The submission file should contain the following columns:
+- `id`: Unique identifier for each test data point.
+- `NObeyesdad`: The predicted obesity level for the corresponding id.

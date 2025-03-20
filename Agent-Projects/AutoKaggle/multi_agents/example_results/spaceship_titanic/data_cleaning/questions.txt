@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What missing values were addressed during the cleaning phase, and what methods were utilized to handle them?
+
+### Question 4
+Which features had outliers detected, and how were these outliers handled in terms of clipping or removal?
+
+### Question 5
+What consistency checks were performed to ensure the integrity of relationships between features, particularly for CryoSleep passengers?
+
+### Question 6
+What potential issues or considerations should be kept in mind when conducting the In-depth Exploratory Data Analysis based on the data cleaning process?

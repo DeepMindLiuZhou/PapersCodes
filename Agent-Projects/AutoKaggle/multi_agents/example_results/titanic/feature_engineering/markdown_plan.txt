@@ -1,0 +1,70 @@
+## PLAN
+
+### STEP 1
+Task: Create New Features
+Tools, involved features and correct parameters:
+- **Title Extraction from Name:**
+  - **Tools:** Pandas, regex
+  - **Features:** `Name`
+  - **Parameters:** Extract and standardize titles like Mr., Mrs., Miss., etc.
+- **Family Size Calculation:**
+  - **Tools:** Pandas
+  - **Features:** `SibSp`, `Parch`
+  - **Parameters:** `FamilySize` = `SibSp` + `Parch` + 1
+- **IsAlone Feature:**
+  - **Tools:** Pandas
+  - **Features:** `FamilySize`
+  - **Parameters:** `IsAlone` = 1 if `FamilySize` == 1, else 0
+- **Fare Per Person:**
+  - **Tools:** Pandas
+  - **Features:** `Fare`, `FamilySize`
+  - **Parameters:** `FarePerPerson` = `Fare` / `FamilySize`
+Expected output or Impact on data:
+- New features: `Title`, `FamilySize`, `IsAlone`, `FarePerPerson`
+- Enhanced dataset with additional predictive features.
+Constraints:
+- Ensure titles are standardized.
+- Handle division by zero in `FarePerPerson`.
+
+### STEP 2
+Task: Transform Existing Features
+Tools, involved features and correct parameters:
+- **Age Binning:**
+  - **Tools:** Pandas cut function
+  - **Features:** `Age`
+  - **Parameters:** Define age bins (e.g., Child, Teen, Adult, Senior)
+- **Fare Binning:**
+  - **Tools:** Pandas qcut function
+  - **Features:** `Fare`
+  - **Parameters:** Define quartiles or custom bins
+Expected output or Impact on data:
+- New categorical features: `AgeGroup`, `FareGroup`
+- Simplified and more informative features.
+Constraints:
+- Ensure bins are meaningful and cover all ranges.
+
+### STEP 3
+Task: Handle Categorical Variables
+Tools, involved features and correct parameters:
+- **One-Hot Encoding:**
+  - **Tools:** `one_hot_encode`
+  - **Features:** `Pclass`, `Sex`, `Embarked`, `Title`, `AgeGroup`, `FareGroup`
+  - **Parameters:** Convert categorical variables into binary columns
+Expected output or Impact on data:
+- One-hot encoded columns for each category.
+- Categorical data transformed for machine learning models.
+Constraints:
+- Ensure consistency of encoded columns between training and test datasets.
+
+### STEP 4
+Task: Normalize or Standardize Numerical Features
+Tools, involved features and correct parameters:
+- **Standardization:**
+  - **Tools:** `scale_features`
+  - **Features:** `Age`, `Fare`, `FarePerPerson`
+  - **Parameters:** `method` = `standard`
+Expected output or Impact on data:
+- Standardized numerical features with mean = 0 and variance = 1.
+- Enhanced model performance.
+Constraints:
+- Apply the same scaling parameters to both training and test datasets.

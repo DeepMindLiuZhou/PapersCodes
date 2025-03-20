@@ -1,0 +1,62 @@
+## PLAN
+
+### STEP 1
+Task: Handle Missing Values
+Tools, involved features and correct parameters:
+- **HomePlanet, CryoSleep, Cabin, Destination, VIP, Name**
+  - Tool: `fill_missing_values`
+  - Method: 'mode'
+- **Age, RoomService, FoodCourt, ShoppingMall, Spa, VRDeck**
+  - Tool: `fill_missing_values`
+  - Method: 'median'
+Expected output or Impact on data: 
+- No missing values in the specified features.
+Constraints: 
+- Ensure the method chosen is appropriate for the data type and distribution.
+
+### STEP 2
+Task: Treat Outliers
+Tools, involved features and correct parameters:
+- **Age, RoomService, FoodCourt, ShoppingMall, Spa, VRDeck**
+  - Tool: `detect_and_handle_outliers_iqr`
+  - Factor: 1.5
+  - Method: 'clip'
+Expected output or Impact on data: 
+- Outliers in the specified features are clipped to acceptable ranges.
+Constraints: 
+- Ensure the IQR method is appropriate for the data distribution.
+
+### STEP 3
+Task: Ensure Data Consistency
+Tools, involved features and correct parameters:
+- **CryoSleep and Expense Features (RoomService, FoodCourt, ShoppingMall, Spa, VRDeck)**
+  - Method: Set expense values to 0 for `CryoSleep` passengers.
+Expected output or Impact on data: 
+- Consistent data where passengers in CryoSleep have zero expenses.
+Constraints: 
+- Verify that CryoSleep status is correctly updated before making changes.
+
+### STEP 4
+Task: Final Checks and Save Cleaned Data
+Tools, involved features and correct parameters:
+- **Remove Duplicates**
+  - Tool: `remove_duplicates`
+- **Convert Data Types**
+  - Tool: `convert_data_types`
+  - Features: 
+    - Convert `CryoSleep` and `VIP` to boolean.
+    - Convert `Age` and expense features to float.
+    - Convert `HomePlanet`, `Cabin`, `Destination`, and `Name` to categorical (string).
+Expected output or Impact on data: 
+- No duplicate rows and correct data types for each feature.
+Constraints: 
+- Ensure data integrity is maintained after removing duplicates and converting data types.
+
+### STEP 5
+Task: Save Cleaned Datasets
+Tools, involved features and correct parameters:
+- Method: Save the cleaned datasets as `cleaned_train.csv` and `cleaned_test.csv`.
+Expected output or Impact on data: 
+- Two cleaned datasets ready for further analysis and model building.
+Constraints: 
+- Ensure the saved datasets maintain the required format and structure.

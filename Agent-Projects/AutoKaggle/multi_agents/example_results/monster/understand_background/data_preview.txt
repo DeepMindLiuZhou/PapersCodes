@@ -1,0 +1,41 @@
+# Data Information
+## Data Type
+### ID type
+- `id` (unique identifier for each data point)
+
+### Numerical type
+- `bone_length`
+- `rotting_flesh`
+- `hair_length`
+- `has_soul`
+
+### Categorical type
+- `color`
+- `type` (only present in training data)
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of both training and testing data. The training data has 6 features plus a target variable, while the testing data contains only features. 
+
+- **Training Data**:
+  - Contains 20 entries with various values for `bone_length`, `rotting_flesh`, `hair_length`, and `has_soul`, which appear to be numerical measurements.
+  - The `color` feature includes categories like 'clear', 'green', 'black', 'white', and 'blue'.
+  - The `type` feature, which is the target variable, includes categories such as 'Ghoul', 'Goblin', and 'Ghost'. 
+
+- **Testing Data**:
+  - Contains 10 entries with the same features as the training data except for the `type` variable.
+
+Notable patterns include:
+- The `type` variable is likely influenced by the values of the numerical features.
+- There appears to be a range of values for each numerical feature, indicating possible variability in the characteristics of each entity. 
+
+## Target Variable
+- **Target Variable**: `type`
+- **Description**: This variable classifies entities into categories such as 'Ghoul', 'Goblin', and 'Ghost' based on the measurements of the other features.
+
+# Submission format (if applicable)
+The submission file for predictions should include the following columns:
+- `id` (int, unique identifier)
+- `type` (categorical, predicted class of the entity)

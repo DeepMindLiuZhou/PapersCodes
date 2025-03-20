@@ -1,0 +1,77 @@
+# FEATURE INFO
+## TARGET VARIABLE
+type
+## FEATURES BEFORE THIS PHASE
+['id', 'bone_length', 'rotting_flesh', 'hair_length', 'has_soul', 'color', 'type']
+## FEATURES AFTER THIS PHASE
+['id', 'bone_length', 'rotting_flesh', 'hair_length', 'has_soul', 'color', 'type']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What statistical summaries were generated for the numerical features (`bone_length`, `rotting_flesh`, `hair_length`, `has_soul`), and how do these metrics inform potential scaling or transformation needs?
+### Answer 1
+The following statistical summaries were generated for the numerical features:
+- **Descriptive Statistics**: Mean, Median, Mode, Standard Deviation, Variance, Skewness, Kurtosis, Minimum, Maximum, and Quartiles (25th, 50th, 75th percentiles).
+
+**Insights on Scaling/Transformation Needs**:
+- **Skewness**: If any feature has high skewness, it may benefit from a transformation (e.g., log transformation) to normalize the distribution.
+- **Range**: Features with wide ranges (e.g., `has_soul` from 0.1 to 0.9) might need scaling (e.g., Min-Max scaling) to make them comparable.
+- **Outliers**: Notable outliers could affect model performance and may need capping or removal.
+
+---
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+The features involved in this phase include:
+- **Numerical Features**: `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`.
+- **Categorical Features**: `color`, `type`.
+
+**Changes**:
+- **No features were deleted**. 
+- **New Features Created**: Potential new features based on categorical relationships (e.g., binary features indicating common colors for specific types).
+
+---
+
+### Question 3
+Which numerical features exhibit strong correlations with the target variable (`type`), and what implications do these correlations have for feature selection in the next phase?
+### Answer 3
+The analysis revealed that numerical features such as `bone_length`, `rotting_flesh`, and `hair_length` exhibited strong correlations with the target variable `type`. Visualizations such as box and violin plots indicated significant differences in means and distributions across types.
+
+**Implications for Feature Selection**:
+- Features with strong correlations should be prioritized for inclusion in the model, as they are likely to improve predictive power.
+
+---
+
+### Question 4
+What visual insights were gained from the analysis, particularly regarding the distributions of numerical features across different creature types?
+### Answer 4
+Violin plots for numerical features displayed the following insights:
+- **`bone_length`**: Ghouls tend to have a longer bone length compared to Goblins and Ghosts.
+- **`rotting_flesh` and `has_soul`**: Showed bimodal distributions, indicating the presence of distinct groups within the data.
+
+These visual insights help in understanding the variability and central tendencies of each feature in relation to the target variable.
+
+---
+
+### Question 5
+Were any outliers detected in the numerical features, and should they be addressed through engineering techniques such as capping or removal?
+### Answer 5
+Box plots indicated the presence of outliers, particularly for `bone_length` in Ghouls. 
+
+**Recommended Actions**:
+- Capping extreme values or removing outliers could be considered to prevent skewing model performance. Further investigation into the reasons for these outliers is recommended.
+
+---
+
+### Question 6
+Based on the findings from the in-depth analysis, what specific feature engineering strategies do you recommend to improve model robustness and predictive power?
+### Answer 6
+1. **Binning**: Create bins for continuous features like `bone_length` and `rotting_flesh` to capture non-linear relationships.
+2. **Interaction Features**: Combine features such as `hair_length` and `has_soul` to create interaction terms, potentially improving model complexity.
+3. **Encoding Categorical Features**: Use one-hot encoding or target encoding for `color` to capture its relationship with `type`.
+4. **Normalization/Standardization**: Normalize features with different scales to ensure they contribute equally to distance calculations in algorithms.
+
+These strategies aim to enhance model robustness and predictive power, leading to better performance in classification tasks.

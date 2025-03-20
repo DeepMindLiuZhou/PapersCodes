@@ -1,0 +1,28 @@
+Data Preparation Completed.
+Finished model training: XGBoost
+Finished model training: SVM
+Finished model training: random forest
+Finished model training: decision tree
+Finished model training: logistic regression
+Model: XGBoost, Best Params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}, Score: 0.8268156424581006
+Model: SVM, Best Params: {'C': 1, 'gamma': 'scale', 'kernel': 'rbf'}, Score: 0.8100558659217877
+Model: random forest, Best Params: {'max_depth': 5, 'min_samples_split': 10, 'n_estimators': 10}, Score: 0.8379888268156425
+Model: decision tree, Best Params: {'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10}, Score: 0.8547486033519553
+Model: logistic regression, Best Params: {'C': 10, 'l1_ratio': 0.5, 'penalty': 'l1', 'solver': 'saga'}, Score: 0.8100558659217877
+Model Training and Validation Completed.
+Model Prediction Completed.
+Submission File Prepared and Saved.
+Data Preparation Completed.
+Finished model training: XGBoost
+Finished model training: SVM
+Finished model training: random forest
+Finished model training: decision tree
+Finished model training: logistic regression
+Model: XGBoost, Best Params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50}, Score: 0.8268156424581006
+Model: SVM, Best Params: {'C': 1, 'gamma': 'scale', 'kernel': 'rbf'}, Score: 0.8100558659217877
+Model: random forest, Best Params: {'max_depth': 5, 'min_samples_split': 5, 'n_estimators': 50}, Score: 0.8156424581005587
+Model: decision tree, Best Params: {'max_depth': 5, 'min_samples_leaf': 1, 'min_samples_split': 10}, Score: 0.8379888268156425
+Model: logistic regression, Best Params: {'C': 10, 'l1_ratio': 0.5, 'penalty': 'l1', 'solver': 'saga'}, Score: 0.8100558659217877
+Model Training and Validation Completed.
+Model Prediction Completed.
+Submission File Prepared and Saved.

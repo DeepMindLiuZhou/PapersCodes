@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What preprocessing steps were taken to prepare the training and test datasets, and how did these steps ensure that there was no leakage of the target variable?
+
+### Question 2
+Which models were trained during this phase, and what were their respective performance metrics (accuracy, precision, recall, etc.)?
+
+### Question 3
+What criteria were used to select the best-performing model, and what were the reasons for its selection?
+
+### Question 4
+Were there any challenges or limitations encountered during model training or validation, and how were they addressed?
+
+### Question 5
+What steps were taken to ensure the submission file, containing predictions for the test dataset, adhered to the competition requirements?
+
+### Question 6
+Based on the model performance and findings from this phase, what recommendations or strategies would you suggest for future phases or additional analyses?

@@ -1,0 +1,58 @@
+## PLAN
+
+### STEP 1
+**Task:** Data Preparation for Model Training
+- **Tools, involved features and correct parameters:**
+  - **Tools:** Pandas
+  - **Features:** `Transported`, `PassengerId`, `Name`, `Cabin`
+  - **Parameters:** `drop`, `pop`, `select_dtypes`
+- **Expected output or Impact on data:**
+  - A clean training dataset (`X_train`) with only numeric features.
+  - A separate target variable (`y`).
+- **Constraints:**
+  - Ensure no leakage of the target variable into the feature set.
+  - Maintain consistency between training and test datasets.
+
+### STEP 2
+**Task:** Model Training
+- **Tools, involved features and correct parameters:**
+  - **Tools:** Scikit-learn, alternatively `train_and_validation_and_select_the_best_model` tool
+  - **Features:** All numeric features (after data preparation)
+  - **Parameters:**
+    - For Scikit-learn: `LogisticRegression`, `RandomForestClassifier`, `GradientBoostingClassifier`, `cross_val_score`
+    - For automated tool: 
+      - `X`: Prepared training data (excluding target variable)
+      - `y`: Target variable
+      - `problem_type`: 'binary'
+      - `selected_models`: `["logistic regression", "random forest", "XGBoost"]`
+- **Expected output or Impact on data:**
+  - Trained models with cross-validation scores.
+  - Performance metrics (e.g., accuracy, precision, recall) for each model.
+- **Constraints:**
+  - Limit to three models due to computational resource constraints.
+  - Ensure reproducibility by setting random states where applicable.
+
+### STEP 3
+**Task:** Model Validation and Selection
+- **Tools, involved features and correct parameters:**
+  - **Tools:** Scikit-learn
+  - **Features:** Performance metrics from model training
+  - **Parameters:** `cross_val_score`
+- **Expected output or Impact on data:**
+  - Best-performing model selected for final predictions.
+- **Constraints:**
+  - Ensure that the model selection is based on objective performance metrics.
+  - Document the reasons for selecting the final model.
+
+### STEP 4
+**Task:** Prediction on Test Data
+- **Tools, involved features and correct parameters:**
+  - **Tools:** Pandas, Scikit-learn
+  - **Features:** All numeric features (after data preparation)
+  - **Parameters:** `predict`
+- **Expected output or Impact on data:**
+  - Predicted `Transported` values for the test dataset.
+  - Submission file ready for submission.
+- **Constraints:**
+  - Maintain consistency in data preprocessing steps between training and test datasets.
+  - Ensure the submission file format adheres to competition requirements.

@@ -1,0 +1,69 @@
+# FEATURE INFO
+## TARGET VARIABLE
+K_Scatch, Stains, Z_Scratch, Pastry, Dirtiness, Bumps, Other_Faults
+## FEATURES BEFORE THIS PHASE
+['id', 'X_Minimum', 'X_Maximum', 'Y_Minimum', 'Y_Maximum', 'Pixels_Areas', 'X_Perimeter', 'Y_Perimeter', 'Sum_of_Luminosity', 'Minimum_of_Luminosity', 'Maximum_of_Luminosity', 'Length_of_Conveyer', 'Steel_Plate_Thickness', 'Edges_Index', 'Empty_Index', 'Square_Index', 'Outside_X_Index', 'Edges_X_Index', 'Edges_Y_Index', 'Outside_Global_Index', 'LogOfAreas', 'Log_X_Index', 'Log_Y_Index', 'Orientation_Index', 'Luminosity_Index', 'SigmoidOfAreas', 'Pastry', 'Z_Scratch', 'K_Scatch', 'Stains', 'Dirtiness', 'Bumps', 'Other_Faults', 'X_Range', 'Y_Range', 'X_Y_Ratio', 'Luminosity_Area_Product', 'Perimeter_Area_Ratio', 'X_Minimum^2', 'X_Maximum^2', 'Y_Minimum^2', 'Y_Maximum^2', 'X_Minimum*X_Maximum', 'Y_Minimum*Y_Maximum', 'Log_Sum_of_Luminosity', 'Log_Pixels_Areas', 'TypeOfSteel_A300_True', 'TypeOfSteel_A400_True']
+## FEATURES AFTER THIS PHASE
+['id', 'X_Minimum', 'X_Maximum', 'Y_Minimum', 'Y_Maximum', 'Pixels_Areas', 'X_Perimeter', 'Y_Perimeter', 'Sum_of_Luminosity', 'Minimum_of_Luminosity', 'Maximum_of_Luminosity', 'Length_of_Conveyer', 'Steel_Plate_Thickness', 'Edges_Index', 'Empty_Index', 'Square_Index', 'Outside_X_Index', 'Edges_X_Index', 'Edges_Y_Index', 'Outside_Global_Index', 'LogOfAreas', 'Log_X_Index', 'Log_Y_Index', 'Orientation_Index', 'Luminosity_Index', 'SigmoidOfAreas', 'Pastry', 'Z_Scratch', 'K_Scatch', 'Stains', 'Dirtiness', 'Bumps', 'Other_Faults', 'X_Range', 'Y_Range', 'X_Y_Ratio', 'Luminosity_Area_Product', 'Perimeter_Area_Ratio', 'X_Minimum^2', 'X_Maximum^2', 'Y_Minimum^2', 'Y_Maximum^2', 'X_Minimum*X_Maximum', 'Y_Minimum*Y_Maximum', 'Log_Sum_of_Luminosity', 'Log_Pixels_Areas', 'TypeOfSteel_A300_True', 'TypeOfSteel_A400_True']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What models were trained during this phase, and what were their respective AUC scores on the validation set?
+### Answer 1
+- **Models Trained:**
+  - Random Forest Classifier (wrapped in MultiOutputClassifier for multilabel classification).
+  
+- **AUC Scores:**
+  - The AUC scores were not explicitly provided in the code or output, as the model evaluation metrics were handled within the `MultiOutputClassifier`. A detailed cross-validation process could be added to report these scores.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Features Involved:**
+  - All features from `processed_train.csv` and `processed_test.csv` were involved in this phase, including numerical and categorical features related to steel plate defects.
+
+- **Changes:**
+  - The target variables (`Pastry`, `Z_Scratch`, `K_Scatch`, `Stains`, `Dirtiness`, `Bumps`, `Other_Faults`) were separated from the training data to create `y_train`.
+  - The `id` column and target columns were dropped from the training data to create `X_train`.
+  - The `id` column was removed from the test data to create `X_test`.
+  - An assertion was included to ensure that the columns in `X_test` matched those in `X_train`.
+
+### Question 3
+Which features had the most significant impact on model performance, and how did you determine their importance?
+### Answer 3
+- **Feature Importance:**
+  - Feature importance was not explicitly assessed in the provided code. To determine feature importance, techniques such as using the `feature_importances_` attribute from the Random Forest model could be implemented post-training.
+  
+- **Determination Method:**
+  - A future step could involve analyzing the `feature_importances_` from the trained model to identify which features contributed most to the predictions.
+
+### Question 4
+Were there any challenges faced during model training or validation, and how were they addressed?
+### Answer 4
+- **Challenges:**
+  - No specific challenges were noted, but potential issues could arise from data quality or model performance variability.
+
+- **Addressed:**
+  - The review suggested incorporating cross-validation during training and hyperparameter tuning to optimize the Random Forest model, which can help enhance robustness and performance.
+
+### Question 5
+What are the predicted probabilities for each defect category in the test set, and how do they compare to the expected distributions?
+### Answer 5
+- **Predicted Probabilities:**
+  - The predicted probabilities for each defect category were aggregated into a DataFrame and saved to a submission file.
+  
+- **Comparison to Expected Distributions:**
+  - The expected distributions were not provided in the context; hence, a direct comparison was not made. This could be assessed through exploratory analysis or visualizations if the distributions of defects were known.
+
+### Question 6
+What recommendations can be made for potential next steps in model improvement or for preparing for deployment based on the current findings?
+### Answer 6
+- **Recommendations:**
+  1. **Incorporate Cross-Validation:** Implement robust cross-validation to accurately assess model performance and variability.
+  2. **Hyperparameter Tuning:** Optimize hyperparameters for the Random Forest model to improve prediction accuracy.
+  3. **Feature Importance Analysis:** Evaluate feature importance to understand which features contribute most to model predictions and consider removing or engineering features accordingly.
+  4. **Error Handling:** Add error handling mechanisms when reading files or during model fitting and prediction stages to manage potential issues effectively.
+
+These steps could lead to improved model performance and a smoother deployment process.

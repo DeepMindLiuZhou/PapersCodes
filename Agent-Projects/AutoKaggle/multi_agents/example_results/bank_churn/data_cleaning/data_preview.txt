@@ -1,0 +1,62 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `id`
+- `CustomerId`
+
+### Numerical type
+- `CreditScore`
+- `Age`
+- `Tenure`
+- `Balance`
+- `NumOfProducts`
+- `HasCrCard`
+- `IsActiveMember`
+- `EstimatedSalary`
+
+### Categorical type
+- `Surname`
+- `Geography`
+- `Gender`
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of banking customer information, including both train and test data. The train data contains the target variable `Exited`, which indicates whether the customer has exited the bank. The features provided are:
+
+- `id`: Unique identifier for each data point.
+- `CustomerId`: Unique identifier for each customer.
+- `Surname`: Customer's surname, a categorical variable.
+- `CreditScore`: Numerical value representing the customer's credit score.
+- `Geography`: Categorical value indicating the customer's country (France, Spain, Germany).
+- `Gender`: Categorical value indicating the customer's gender (Male, Female).
+- `Age`: Numerical value representing the customer's age.
+- `Tenure`: Numerical value indicating the number of years the customer has been with the bank.
+- `Balance`: Numerical value representing the customer's bank account balance.
+- `NumOfProducts`: Numerical value indicating the number of bank products the customer uses.
+- `HasCrCard`: Numerical value (binary) indicating whether the customer has a credit card (1 for yes, 0 for no).
+- `IsActiveMember`: Numerical value (binary) indicating whether the customer is an active member (1 for yes, 0 for no).
+- `EstimatedSalary`: Numerical value representing the customer's estimated salary.
+
+Notable patterns include:
+- The `Balance` and `EstimatedSalary` fields have a wide range of values, indicating varying financial statuses among customers.
+- The `Geography` and `Gender` fields show categorical diversity.
+- `Age` and `Tenure` have typical ranges expected for a banking customer dataset, with age varying from young adults to middle-aged customers, and tenure indicating how long customers have been with the bank.
+
+## Target Variable
+The target variable is `Exited`, which indicates whether a customer has exited the bank (1 for exited, 0 for not exited).
+
+# Submission format (if applicable)
+When submitting predictions, the required format should include the following columns:
+- `id`: Unique identifier for each data point.
+- `Exited`: Predicted value indicating whether the customer has exited the bank (1 for exited, 0 for not exited).
+
+Example submission:
+| id      | Exited |
+|---------|--------|
+| 165034  | 0      |
+| 165035  | 1      |
+| ...     | ...    |

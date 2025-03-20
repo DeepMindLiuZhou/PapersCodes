@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What were the dimensions of the training and testing datasets, and what data types were identified for each feature?
+
+### Question 2
+What are the statistics for the numerical features, and are there any significant discrepancies or anomalies in these distributions?
+
+### Question 3
+Which features have missing values, and what is the extent (number and percentage) of these missing values?
+
+### Question 4
+Were any outliers detected in the numerical features, and if so, which features are they associated with?
+
+### Question 5
+What were the unique values identified in the categorical features, and do any inconsistencies or unexpected values exist?
+
+### Question 6
+Based on the exploratory analysis, what specific data cleaning actions are recommended for the next phase to enhance data quality?

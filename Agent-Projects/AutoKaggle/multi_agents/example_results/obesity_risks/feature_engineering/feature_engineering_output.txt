@@ -1,0 +1,83 @@
+New features added to train_df:
+          BMI Age_Category  FAF_TUE_Interaction
+0  28.259565  Young_Adult             0.000000
+1  23.422091        Youth             1.000000
+2  17.126706        Youth             1.449399
+3  44.855798  Young_Adult             1.145225
+4  25.599151  Young_Adult             1.833602
+New features added to test_df:
+          BMI Age_Category  FAF_TUE_Interaction
+0  35.315411  Young_Adult                  0.0
+1  25.781250  Young_Adult                  0.0
+2  41.324115  Young_Adult                  0.0
+3  42.976937  Young_Adult                  0.0
+4  39.584143  Young_Adult                  0.0
+Transformed features added to train_df:
+   FCVC_Category NCP_Category
+0        Medium       Medium
+1        Medium       Medium
+2        Medium       Medium
+3          High       Medium
+4          High       Medium
+Transformed features added to test_df:
+   FCVC_Category NCP_Category
+0          High       Medium
+1        Medium       Medium
+2          High       Medium
+3        Medium       Medium
+4          High       Medium
+One-hot encoded features added to train_df:
+    id  Gender        Age  ...  FAVC_encoded  SMOKE_encoded SCC_encoded
+0   0    male  24.443011  ...             1              0           0
+1   1  female  18.000000  ...             1              0           0
+2   2  female  18.000000  ...             1              0           0
+3   3  female  20.952737  ...             1              0           0
+4   4    male  31.641081  ...             1              0           0
+
+[5 rows x 42 columns]
+One-hot encoded features added to test_df:
+       id  Gender        Age  ...  FAVC_encoded  SMOKE_encoded SCC_encoded
+0  20758    male  26.899886  ...             1              0           0
+1  20759  female  21.000000  ...             1              0           0
+2  20760  female  26.000000  ...             1              0           0
+3  20761    male  20.979254  ...             1              0           0
+4  20762  female  26.000000  ...             1              0           0
+
+[5 rows x 41 columns]
+Label encoded features added to train_df:
+    id  Gender        Age  ...  FAVC_encoded  SMOKE_encoded SCC_encoded
+0   0    male  24.443011  ...             1              0           0
+1   1  female  18.000000  ...             1              0           0
+2   2  female  18.000000  ...             1              0           0
+3   3  female  20.952737  ...             1              0           0
+4   4    male  31.641081  ...             1              0           0
+
+[5 rows x 42 columns]
+Label encoded features added to test_df:
+       id  Gender        Age  ...  FAVC_encoded  SMOKE_encoded SCC_encoded
+0  20758    male  26.899886  ...             1              0           0
+1  20759  female  21.000000  ...             1              0           0
+2  20760  female  26.000000  ...             1              0           0
+3  20761    male  20.979254  ...             1              0           0
+4  20762  female  26.000000  ...             1              0           0
+
+[5 rows x 41 columns]
+Scaled numerical features in train_df:
+         Age    Height    Weight       BMI  ...  NCP      CH2O       FAF       TUE
+0  0.177121 -0.002793 -0.235713 -0.237872  ...  0.0  1.206594 -1.171141  0.597438
+1 -1.139718 -1.606431 -1.170931 -0.818343  ...  0.0 -0.048349  0.021775  0.636513
+2 -1.139718  0.128501 -1.430012 -1.573755  ...  0.0 -0.195644 -0.138022  1.755239
+3 -0.536230  0.120139  1.644770  1.753585  ...  0.0 -0.584035  0.579896  0.271455
+4  1.648282  2.450672  0.224054 -0.557108  ...  0.0 -0.081469  1.176486  0.523111
+
+[5 rows x 9 columns]
+Scaled numerical features in test_df:
+         Age    Height    Weight       BMI  ...  NCP      CH2O       FAF       TUE
+0  0.653689  1.683176  1.273786  0.627645  ...  0.0  1.298389 -0.141769 -1.005016
+1 -0.537528 -1.114808 -0.818988 -0.524843  ...  0.0  1.583678  0.030307 -1.005016
+2  0.471998 -0.626248  0.927432  1.353976  ...  0.0  0.965029 -1.159701 -0.592995
+3 -0.541716 -1.643012  0.623672  1.553769  ...  0.0  1.234234 -1.046828 -1.005016
+4  0.471998 -0.806087  0.668336  1.143648  ...  0.0  1.016818 -1.159701  0.213881
+
+[5 rows x 9 columns]
+Processed data saved successfully.

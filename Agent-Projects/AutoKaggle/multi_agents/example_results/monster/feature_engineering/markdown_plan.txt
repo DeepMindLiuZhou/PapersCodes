@@ -1,0 +1,88 @@
+## PLAN
+
+### STEP 1
+**Task:** Create Interaction and Derived Features
+
+**Tools, involved features and correct parameters:**  
+- **Tools:** Pandas  
+- **Involved Features:** 
+  - Numerical: `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`
+- **Actions:** 
+  - Create interaction terms such as `hair_length_has_soul` (`hair_length` × `has_soul`) and `bone_length_rotting_flesh` (`bone_length` × `rotting_flesh`)
+  - Generate polynomial features like `bone_length_squared` (`bone_length`²) and `rotting_flesh_squared` (`rotting_flesh`²)
+  - Create ratio features such as `bone_to_flesh_ratio` (`bone_length` / `rotting_flesh`) and `soul_to_hair_ratio` (`has_soul` / `hair_length`)
+
+**Expected output or Impact on data:**  
+- Addition of new features: `hair_length_has_soul`, `bone_length_rotting_flesh`, `bone_length_squared`, `rotting_flesh_squared`, `bone_to_flesh_ratio`, `soul_to_hair_ratio`
+- Enhanced model with more nuanced information capturing interactions and non-linear relationships
+
+**Constraints:**  
+- Prevent multicollinearity by ensuring interaction terms do not overly correlate with existing features
+- Avoid introducing missing or infinite values through derived feature calculations
+
+---
+
+### STEP 2
+**Task:** Encode Categorical Variables
+
+**Tools, involved features and correct parameters:**  
+- **Tools:** Pandas (`get_dummies`), possibly `category_encoders` for target encoding  
+- **Involved Features:**  
+  - Categorical: `color`
+- **Actions:**  
+  - Apply One-Hot Encoding to `color`, creating binary indicators like `color_clear`, `color_green`, `color_black`, `color_white`, `color_blue`
+  - Optionally, apply Target Encoding by replacing `color` categories with mean target values, ensuring techniques to prevent overfitting
+
+**Expected output or Impact on data:**  
+- Transformed `color` feature into numerical format with multiple binary columns or a single encoded numerical column
+- Improved model's ability to leverage categorical information effectively
+
+**Constraints:**  
+- Choose between One-Hot Encoding and Target Encoding based on data distribution and model requirements
+- Limit the number of dummy variables to prevent dimensionality explosion
+- Handle unseen categories in the test set consistently
+
+---
+
+### STEP 3
+**Task:** Normalize and Scale Numerical Features
+
+**Tools, involved features and correct parameters:**  
+- **Tools:** Scikit-learn (`MinMaxScaler`, `StandardScaler`)  
+- **Involved Features:**  
+  - Numerical: `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`, and all newly created interaction and derived features
+- **Actions:**  
+  - Apply Min-Max Scaling to scale features between 0 and 1 for algorithms like Neural Networks
+  - Apply Standardization (Z-score Scaling) to transform features to have a mean of 0 and standard deviation of 1 for algorithms like SVM and Logistic Regression
+  - Fit scalers on training data and transform both training and test datasets using the same parameters
+
+**Expected output or Impact on data:**  
+- All numerical features are scaled to comparable ranges, enhancing model performance and training efficiency
+
+**Constraints:**  
+- Perform scaling after splitting data to avoid data leakage
+- Use the same scaling parameters for both training and test datasets
+
+---
+
+### STEP 4
+**Task:** Feature Selection and Dimensionality Reduction
+
+**Tools, involved features and correct parameters:**  
+- **Tools:** Pandas, Scikit-learn (`RandomForestClassifier`, `GradientBoostingClassifier`, `PCA`)  
+- **Involved Features:**  
+  - All numerical and encoded categorical features
+- **Actions:**  
+  - Conduct correlation analysis (Pearson/Spearman) to identify features strongly correlated with `type` and remove highly correlated redundant features
+  - Utilize tree-based models like Random Forest to derive feature importance scores and select top features
+  - Apply Lasso (L1) regularization to identify significant features
+  - Optionally, perform Principal Component Analysis (PCA) to reduce dimensionality while retaining variance
+
+**Expected output or Impact on data:**  
+- A refined set of relevant and non-redundant features for modeling
+- Reduced computational complexity and potentially enhanced model performance
+
+**Constraints:**  
+- Ensure feature selection methods are consistent across training and test datasets
+- Maintain interpretability if model explainability is required
+- Avoid discarding features solely based on correlation without considering their interaction effects

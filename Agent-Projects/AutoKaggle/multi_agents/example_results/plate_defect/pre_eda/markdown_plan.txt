@@ -1,0 +1,75 @@
+## PLAN
+
+### STEP 1
+Task: Initial Data Exploration and Summary Statistics
+Tools, involved features and correct parameters:
+- **Tools**: pandas
+- **Involved Features**: All features in `train.csv` and `test.csv`
+- **Parameters**:
+  - Load data: File paths for `train.csv` and `test.csv`
+  - Check data structure: `.head()` method
+  - Summary statistics: `.describe()` method (include, exclude), `.value_counts()` for categorical features
+  - Data types: `.dtypes` attribute
+
+Expected output or Impact on data:
+- Printed sample data rows
+- Summary statistics for numerical features
+- Value counts for categorical features
+- Data types for each column
+
+Constraints:
+- Ensure that all operations are efficient and can handle the dataset size.
+
+### STEP 2
+Task: Distribution Analysis
+Tools, involved features and correct parameters:
+- **Tools**: matplotlib, seaborn
+- **Involved Features**: All numerical and categorical features in `train.csv`
+- **Parameters**:
+  - Histograms: `bins=30`, `figsize=(20, 15)`
+  - Boxplots: `orient='h'`, `figsize=(20, 15)`
+  - Bar plots: `palette='viridis'`, `figsize=(10, 5)`
+
+Expected output or Impact on data:
+- Histograms for each numerical feature
+- Boxplots for each numerical feature
+- Bar plots for each categorical feature
+
+Constraints:
+- Limit the number of plots to the most critical features to avoid overload.
+- Ensure plots are clear and interpretable.
+
+### STEP 3
+Task: Missing Values and Anomalies Detection
+Tools, involved features and correct parameters:
+- **Tools**: pandas, numpy
+- **Involved Features**: All features in `train.csv`
+- **Parameters**:
+  - Missing values check: `.isnull().sum()` method combined with percentage calculation
+  - Inconsistency check: `.unique()` method for categorical features
+  - Outlier detection: IQR calculation
+
+Expected output or Impact on data:
+- Percentage of missing values for each feature
+- List of unique values for categorical features
+- Identified outliers and their counts for numerical features
+
+Constraints:
+- Ensure that missing value checks and anomaly detection are computationally efficient.
+
+### STEP 4
+Task: Correlation and Relationships
+Tools, involved features and correct parameters:
+- **Tools**: pandas, seaborn
+- **Involved Features**: All numerical features in `train.csv`
+- **Parameters**:
+  - Correlation matrix: `.corr()` method, `annot=True`, `cmap='coolwarm'`, `figsize=(20, 15)`
+  - Pairplot: `hue='target_column'`, `palette='viridis'`, `diag_kind='kde'`
+
+Expected output or Impact on data:
+- Correlation matrix heatmap
+- Pair plots for key numerical features
+
+Constraints:
+- Limit the number of pair plots to avoid excessive runtime.
+- Ensure plots are interpretable and efficiently generated.

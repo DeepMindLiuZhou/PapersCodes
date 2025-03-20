@@ -1,0 +1,10 @@
+Data Preparation completed successfully.
+Model Selection completed successfully. Models selected:
+Linear Regression
+Random Forest Regressor
+Gradient Boosting Regressor
+Linear Regression RMSE: 0.1354 (+/- 0.0132)
+Random Forest Regressor RMSE: 0.1432 (+/- 0.0089)
+Gradient Boosting Regressor RMSE: 0.1325 (+/- 0.0085)
+Best model: Gradient Boosting Regressor
+Predictions and submission file prepared successfully. Submission saved to: /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/submission.csv

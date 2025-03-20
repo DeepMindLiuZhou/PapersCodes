@@ -1,0 +1,55 @@
+# Competition Information
+## 1. Competition Overview
+The objective of this competition is to predict the probability of various defects on steel plates using synthetic data generated from a deep learning model based on the original Steel Plates Faults dataset. It is designed for participants to practice machine learning skills.
+
+## 2. Files
+- **train.csv**: Training dataset containing features and labels for seven types of defects.
+- **test.csv**: Test dataset without labels; participants must predict defect probabilities.
+- **sample_submission.csv**: Template demonstrating the required format for submissions.
+
+## 3. Problem Definition
+Participants must predict the probabilities for seven binary target variables representing different types of defects on steel plates for each `id` in the test dataset.
+
+## 4. Data Information
+### 4.1 Data type
+#### 4.1.1 ID type
+- `id`: Unique identifier for each data point (not used in model training).
+
+#### 4.1.2 Numerical type
+- `X_Minimum`, `X_Maximum`, `Y_Minimum`, `Y_Maximum`, `Pixels_Areas`, `X_Perimeter`, `Y_Perimeter`, `Sum_of_Luminosity`, `Minimum_of_Luminosity`, `Maximum_of_Luminosity`, `Length_of_Conveyer`, `Steel_Plate_Thickness`, `Edges_Index`, `Empty_Index`, `Square_Index`, `Outside_X_Index`, `Edges_X_Index`, `Edges_Y_Index`, `Outside_Global_Index`, `LogOfAreas`, `Log_X_Index`, `Log_Y_Index`, `Orientation_Index`, `Luminosity_Index`, `SigmoidOfAreas`.
+
+#### 4.1.3 Categorical type
+- `TypeOfSteel_A300`, `TypeOfSteel_A400`, `Pastry`, `Z_Scratch`, `K_Scatch`, `Stains`, `Dirtiness`, `Bumps`, `Other_Faults`.
+
+#### 4.1.4 Datetime type
+- None present in the dataset.
+
+### 4.2 Detailed data description
+The dataset contains features related to steel plate quality, including measurements and indices. It features a mix of normal and defective samples, which is crucial for classification tasks.
+
+## 5. Target Variable
+The target variables to be predicted are:
+- `Pastry`
+- `Z_Scratch`
+- `K_Scatch`
+- `Stains`
+- `Dirtiness`
+- `Bumps`
+- `Other_Faults`
+
+Each variable indicates the presence (1) or absence (0) of a defect.
+
+## 6. Evaluation Metrics
+Submissions are evaluated using the **Area Under the ROC Curve (AUC)**, calculated for each of the seven defect categories and averaged for the final score.
+
+## 7. Submission Format
+The submission file must include:
+```
+id,Pastry,Z_Scratch,K_Scatch,Stains,Dirtiness,Bumps,Other_Faults
+```
+Each column consists of the unique `id` and predicted probabilities for the respective defect categories.
+
+## 8. Other Key Aspects
+- The dataset is synthetically generated, approximating real-world data.
+- Participants can explore the original dataset to understand differences and potentially improve model performance.
+- Community engagement through discussions is encouraged for feedback and improvement.

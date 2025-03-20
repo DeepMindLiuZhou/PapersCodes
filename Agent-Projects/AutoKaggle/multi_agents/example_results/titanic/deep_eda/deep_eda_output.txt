@@ -1,0 +1,51 @@
+Statistical Summary:
+       PassengerId    Survived      Pclass  ...       SibSp       Parch        Fare
+count   891.000000  891.000000  891.000000  ...  891.000000  891.000000  891.000000
+mean    446.000000    0.383838    2.308642  ...    0.523008    0.381594   24.046813
+std     257.353842    0.486592    0.836071  ...    1.102743    0.806057   20.481625
+min       1.000000    0.000000    1.000000  ...    0.000000    0.000000    0.000000
+25%     223.500000    0.000000    2.000000  ...    0.000000    0.000000    7.910400
+50%     446.000000    0.000000    3.000000  ...    0.000000    0.000000   14.454200
+75%     668.500000    1.000000    3.000000  ...    1.000000    0.000000   31.000000
+max     891.000000    1.000000    3.000000  ...    8.000000    6.000000   65.634400
+
+[8 rows x 7 columns]
+
+    ### Summary of Insights from In-depth EDA ###
+    
+    1. **Age**:
+       - Younger passengers had a higher survival rate.
+       - Significant age distribution differences between survivors and non-survivors.
+    
+    2. **Fare**:
+       - Higher ticket fares are associated with higher survival rates.
+       - Wide range of fare values across different classes.
+    
+    3. **Pclass**:
+       - Passengers in higher classes (Pclass 1) had a significantly higher survival rate.
+    
+    4. **Sex**:
+       - Female passengers had a much higher survival rate compared to males.
+    
+    5. **Embarked**:
+       - Passengers embarked from Cherbourg (C) had a higher survival rate.
+    
+    ### Recommendations for Feature Engineering ###
+    
+    1. **Imputation**: 
+       - Impute missing values for 'Age' using median values stratified by 'Pclass' and 'Sex'.
+       - Consider imputing 'Embarked' based on the most frequent port.
+    
+    2. **Feature Scaling**:
+       - Normalize or standardize 'Fare' to handle wide range of values.
+    
+    3. **Encoding**:
+       - Encode categorical features like 'Sex' and 'Embarked' using one-hot encoding.
+    
+    4. **Feature Interaction**:
+       - Create interaction features such as 'Pclass*Age' and 'FamilySize' (SibSp + Parch).
+    
+    5. **New Features**:
+       - Extract titles from 'Name' and create a new 'Title' feature.
+       - Create a 'CabinKnown' feature indicating whether cabin information is present.
+    

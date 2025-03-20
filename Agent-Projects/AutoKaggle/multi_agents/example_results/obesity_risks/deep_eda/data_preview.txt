@@ -1,0 +1,57 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `id`
+
+### Numerical type
+- `Age`
+- `Height`
+- `Weight`
+- `FCVC` (Frequency of consumption of vegetables)
+- `NCP` (Number of main meals)
+- `CH2O` (Consumption of water)
+- `FAF` (Physical activity frequency)
+- `TUE` (Time using technology)
+
+### Categorical type
+- `Gender`
+- `family_history_with_overweight`
+- `FAVC` (Frequent consumption of high caloric food)
+- `CAEC` (Consumption of food between meals)
+- `SMOKE`
+- `SCC` (Monitoring of caloric consumption)
+- `CALC` (Consumption of alcohol)
+- `MTRANS` (Transportation used)
+- `NObeyesdad` (Target variable)
+
+### Datetime type
+- None
+
+## Detailed data description
+The provided data consists of various features related to individuals' demographic information, lifestyle habits, and physical attributes. Here are some notable patterns and characteristics:
+
+- The `Gender` feature is binary (male, female).
+- The `family_history_with_overweight` feature indicates whether there is a family history of being overweight.
+- `FAVC`, `SMOKE`, `SCC`, and `CALC` are binary indicators (yes, no) of specific lifestyle choices or behaviors.
+- `FCVC`, `NCP`, `CH2O`, `FAF`, and `TUE` are numerical features representing the frequency or quantity of certain behaviors or attributes.
+- `CAEC` and `MTRANS` are categorical features representing the frequency of consumption of food between meals and the mode of transportation used, respectively.
+- The target variable `NObeyesdad` represents different levels of obesity and weight status: Normal_Weight, Insufficient_Weight, Overweight_Level_I, Overweight_Level_II, Obesity_Type_I, Obesity_Type_II, and Obesity_Type_III.
+
+## Target Variable
+- `NObeyesdad`: This is the target variable indicating the obesity level of individuals. It includes categories such as Normal_Weight, Insufficient_Weight, Overweight_Level_I, Overweight_Level_II, Obesity_Type_I, Obesity_Type_II, and Obesity_Type_III.
+
+# Submission format (if applicable)
+The submission file should include predictions for the target variable `NObeyesdad` for each data point in the test dataset. The required columns are:
+- `id` (unique identifier for each data point)
+- `NObeyesdad` (predicted obesity level)
+
+Example format:
+```csv
+id,NObeyesdad
+20758,Obesity_Type_II
+20759,Normal_Weight
+20760,Obesity_Type_III
+...
+```

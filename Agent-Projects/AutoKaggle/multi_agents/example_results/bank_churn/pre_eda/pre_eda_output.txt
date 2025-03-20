@@ -1,0 +1,125 @@
+Training Data Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 165034 entries, 0 to 165033
+Data columns (total 14 columns):
+ #   Column           Non-Null Count   Dtype  
+---  ------           --------------   -----  
+ 0   id               165034 non-null  int64  
+ 1   CustomerId       165034 non-null  int64  
+ 2   Surname          165034 non-null  object 
+ 3   CreditScore      165034 non-null  int64  
+ 4   Geography        165034 non-null  object 
+ 5   Gender           165034 non-null  object 
+ 6   Age              165034 non-null  float64
+ 7   Tenure           165034 non-null  int64  
+ 8   Balance          165034 non-null  float64
+ 9   NumOfProducts    165034 non-null  int64  
+ 10  HasCrCard        165034 non-null  float64
+ 11  IsActiveMember   165034 non-null  float64
+ 12  EstimatedSalary  165034 non-null  float64
+ 13  Exited           165034 non-null  int64  
+dtypes: float64(5), int64(6), object(3)
+memory usage: 17.6+ MB
+None
+
+Test Data Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 110023 entries, 0 to 110022
+Data columns (total 13 columns):
+ #   Column           Non-Null Count   Dtype  
+---  ------           --------------   -----  
+ 0   id               110023 non-null  int64  
+ 1   CustomerId       110023 non-null  int64  
+ 2   Surname          110023 non-null  object 
+ 3   CreditScore      110023 non-null  int64  
+ 4   Geography        110023 non-null  object 
+ 5   Gender           110023 non-null  object 
+ 6   Age              110023 non-null  float64
+ 7   Tenure           110023 non-null  int64  
+ 8   Balance          110023 non-null  float64
+ 9   NumOfProducts    110023 non-null  int64  
+ 10  HasCrCard        110023 non-null  float64
+ 11  IsActiveMember   110023 non-null  float64
+ 12  EstimatedSalary  110023 non-null  float64
+dtypes: float64(5), int64(5), object(3)
+memory usage: 10.9+ MB
+None
+
+Training Data Head:
+   id  CustomerId         Surname  ...  IsActiveMember EstimatedSalary Exited
+0   0    15674932  Okwudilichukwu  ...             0.0       181449.97      0
+1   1    15749177   Okwudiliolisa  ...             1.0        49503.50      0
+2   2    15694510           Hsueh  ...             0.0       184866.69      0
+3   3    15741417             Kao  ...             1.0        84560.88      0
+4   4    15766172       Chiemenam  ...             1.0        15068.83      0
+
+[5 rows x 14 columns]
+
+Test Data Head:
+       id  CustomerId    Surname  ...  HasCrCard IsActiveMember EstimatedSalary
+0  165034    15773898   Lucchese  ...        0.0            1.0       160976.75
+1  165035    15782418       Nott  ...        1.0            0.0        72549.27
+2  165036    15807120         K?  ...        1.0            0.0       138882.09
+3  165037    15808905  O'Donnell  ...        1.0            0.0       113931.57
+4  165038    15607314    Higgins  ...        1.0            0.0       139431.00
+
+[5 rows x 13 columns]
+
+Training Data Description:
+                id    CustomerId  ...  EstimatedSalary         Exited
+count  165034.0000  1.650340e+05  ...    165034.000000  165034.000000
+mean    82516.5000  1.569201e+07  ...    112574.822734       0.211599
+std     47641.3565  7.139782e+04  ...     50292.865585       0.408443
+min         0.0000  1.556570e+07  ...        11.580000       0.000000
+25%     41258.2500  1.563314e+07  ...     74637.570000       0.000000
+50%     82516.5000  1.569017e+07  ...    117948.000000       0.000000
+75%    123774.7500  1.575682e+07  ...    155152.467500       0.000000
+max    165033.0000  1.581569e+07  ...    199992.480000       1.000000
+
+[8 rows x 11 columns]
+
+Test Data Description:
+                  id    CustomerId  ...  IsActiveMember  EstimatedSalary
+count  110023.000000  1.100230e+05  ...   110023.000000    110023.000000
+mean   220045.000000  1.569210e+07  ...        0.495233    112315.147765
+std     31761.048671  7.168499e+04  ...        0.499980     50277.048244
+min    165034.000000  1.556570e+07  ...        0.000000        11.580000
+25%    192539.500000  1.563286e+07  ...        0.000000     74440.325000
+50%    220045.000000  1.569018e+07  ...        0.000000    117832.230000
+75%    247550.500000  1.575693e+07  ...        1.000000    154631.350000
+max    275056.000000  1.581569e+07  ...        1.000000    199992.480000
+
+[8 rows x 10 columns]
+
+Missing Values in Training Data:
+id                 0
+CustomerId         0
+Surname            0
+CreditScore        0
+Geography          0
+Gender             0
+Age                0
+Tenure             0
+Balance            0
+NumOfProducts      0
+HasCrCard          0
+IsActiveMember     0
+EstimatedSalary    0
+Exited             0
+dtype: int64
+
+Missing Values in Test Data:
+id                 0
+CustomerId         0
+Surname            0
+CreditScore        0
+Geography          0
+Gender             0
+Age                0
+Tenure             0
+Balance            0
+NumOfProducts      0
+HasCrCard          0
+IsActiveMember     0
+EstimatedSalary    0
+dtype: int64

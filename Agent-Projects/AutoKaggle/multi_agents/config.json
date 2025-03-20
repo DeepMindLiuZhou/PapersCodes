@@ -1,0 +1,177 @@
+{   
+    "user_interaction": {
+        "plan": "False"
+    },
+    "phases": ["Understand Background", "Preliminary Exploratory Data Analysis", "Data Cleaning", 
+                "In-depth Exploratory Data Analysis", "Feature Engineering", "Model Building, Validation, and Prediction"],
+    "phase_to_agents": {
+        "Understand Background": ["Reader", "Reviewer"],
+        "Preliminary Exploratory Data Analysis": ["Planner", "Developer", "Reviewer", "Summarizer"],
+        "Data Cleaning": ["Planner", "Developer", "Reviewer", "Summarizer"],
+        "In-depth Exploratory Data Analysis": ["Planner", "Developer", "Reviewer", "Summarizer"],
+        "Feature Engineering": ["Planner", "Developer", "Reviewer", "Summarizer"],
+        "Model Building, Validation, and Prediction": ["Planner", "Developer", "Reviewer", "Summarizer"]
+    },
+    "phase_to_iterations": {
+        "Understand Background": 0,
+        "Preliminary Exploratory Data Analysis": 0,
+        "Data Cleaning": 0,
+        "In-depth Exploratory Data Analysis": 0,
+        "Feature Engineering": 0,
+        "Model Building, Validation, and Prediction": 0
+    },
+    "phase_to_directory": {
+        "Understand Background": "understand_background",
+        "Preliminary Exploratory Data Analysis": "pre_eda",
+        "Data Cleaning": "data_cleaning",
+        "In-depth Exploratory Data Analysis": "deep_eda",
+        "Feature Engineering": "feature_engineering",
+        "Model Building, Validation, and Prediction": "model_build_predict"
+    },
+    "phase_to_unit_tests": {
+        "Understand Background": [],
+        "Preliminary Exploratory Data Analysis": [],
+        "Data Cleaning": ["test_document_exist", "test_cleaned_train_no_missing_values", "test_cleaned_test_no_missing_values",
+                            "test_cleaned_train_no_duplicated_features", "test_cleaned_test_no_duplicated_features",
+                            "test_cleaned_difference_train_test_columns", "test_cleaned_train_no_missing_target", 
+                            "test_cleaned_train_id_column", "test_cleaned_test_id_column", "test_cleaned_test_no_target_column",
+                            "test_cleaned_train_no_missing_rows", "test_cleaned_test_no_missing_rows"],
+        "In-depth Exploratory Data Analysis": [],
+        "Feature Engineering": ["test_document_exist", "test_processed_train_feature_number", "test_processed_train_no_duplicated_features",
+                                "test_processed_test_no_duplicated_features", "test_processed_difference_train_test_columns", 
+                                "test_processed_train_no_missing_target", "test_processed_train_id_column", "test_processed_test_id_column",
+                                "test_processed_test_no_target_column", "test_processed_train_no_missing_rows", "test_processed_test_no_missing_rows"],
+        "Model Building, Validation, and Prediction": ["test_document_exist", "test_column_names_submission", "test_submission_validity",
+                                                        "test_submission_no_missing_rows"]
+    },
+    "phase_to_ml_tools": {
+        "Understand Background": [],
+        "Preliminary Exploratory Data Analysis": [],
+        "Data Cleaning": ["fill_missing_values", "remove_columns_with_missing_data", "detect_and_handle_outliers_zscore", 
+                            "detect_and_handle_outliers_iqr", "convert_data_types", "remove_duplicates", "format_datetime"],
+        "In-depth Exploratory Data Analysis": [],
+        "Feature Engineering": [],
+        "Model Building, Validation, and Prediction": []
+    },
+    "_phase_to_ml_tools": {
+        "Understand Background": [],
+        "Preliminary Exploratory Data Analysis": [],
+        "Data Cleaning": ["fill_missing_values", "remove_columns_with_missing_data", "detect_and_handle_outliers_zscore", 
+                            "detect_and_handle_outliers_iqr", "convert_data_types", "remove_duplicates", "format_datetime"],
+        "In-depth Exploratory Data Analysis": [],
+        "Feature Engineering": ["one_hot_encode", "label_encode", "frequency_encode", "target_encode", "correlation_feature_selection", 
+                                "variance_feature_selection", "scale_features", "perform_pca", "perform_rfe", "create_polynomial_features", 
+                                "create_feature_combinations"],
+        "Model Building, Validation, and Prediction": ["train_and_validation_and_select_the_best_model"]
+    },
+    "rulebook_parameters": {
+        "Preliminary Exploratory Data Analysis": {
+            "status": 0,
+            "default_rules_with_parameters": {
+                "Missing Values Analysis": [
+                    [1],
+                    [
+                        "If the percentage of missing values in a feature is greater than {placeholder}, then mark the feature as needing to be dropped.",
+                        0.3
+                    ]
+                ]
+            }
+        },
+        "Data Cleaning":{
+            "status": 0,
+            "default_rules_with_parameters": {
+                "Handling Missing Values": [
+                    [1, 0, 1],
+                    [
+                        "If the percentage of missing values in a feature is greater than {placeholder}, dropped the feature.",
+                        0.3
+                    ],
+                    [
+                        "For numerical features, fill missing values with {placeholder}.",
+                        "median"
+                    ],
+                    [
+                        "For categorical features, fill missing values with {placeholder}.",
+                        "mode"
+                    ]
+                ],
+                "Handling Outliers": [
+                    [0, 1],
+                    [
+                        "If you use the standard deviation method to detect outliers, consider truncating or deleting values that exceed {placeholder} standard deviations.",
+                        3
+                    ],
+                    [
+                        "If you use the IQR method to detect outliers, consider truncating or deleting values that exceed {placeholder} IQR.",
+                        1.5
+                    ]
+                ]
+            },
+            "user_defined_rules": {}
+        },
+        "In-depth Exploratory Data Analysis": {
+            "status": 0
+        },
+        "Feature Engineering":{
+            "status": 0,
+            "default_rules_with_parameters": {
+                "Feature Selection": [
+                    [0, 0],
+                    [
+                        "Use correlation-based methods to remove features with a correlation to the target variable below the {placeholder}",
+                        0.05
+                    ],
+                    [
+                        "Use tree-based feature importance methods to retain the top {placeholder} most important features.",
+                        50
+                    ]
+                ],
+                "Feature Transformation": [
+                    [1, 1],
+                    [
+                        "Apply logarithmic transformation to numerical features with skewness greater than the {placeholder}",
+                        0.5
+                    ],
+                    [
+                        "Set the maximum degree for polynomial features. Maximum degree = {placeholder}",
+                        2
+                    ]
+                ],
+                "Feature Encoding": [
+                    [0],
+                    [
+                        "For categorical variables with cardinality below the {placeholder}, use one-hot encoding.\nFor categorical variables with high cardinality, use target encoding or frequency encoding.",
+                        10
+                    ]
+                ],
+                "Feture Interaction": [
+                    [1],
+                    [
+                        "Create interaction terms for important features, limiting the maximum degree of interaction. Maximum degree = {placeholder}",
+                        2
+                    ]
+                ]
+            },
+            "user_defined_rules": {}
+        },
+        "Model Building, Validation, and Prediction": {
+            "status": 0,
+            "default_rules_with_parameters": {
+                "Data Splitting": [
+                    [0],
+                    [
+                        "Split the data into training and testing sets, with the test set proportion set to {placeholder}",
+                        20
+                    ]
+                ],
+                "Cross Validation": [
+                    [0],
+                    [
+                        "Use k-fold cross-validation, setting k to {placeholder}",
+                        5
+                    ]
+                ]
+            }
+        }
+    }
+}

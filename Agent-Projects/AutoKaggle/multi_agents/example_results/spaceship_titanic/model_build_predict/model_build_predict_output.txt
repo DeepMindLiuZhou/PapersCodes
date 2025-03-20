@@ -1,0 +1,16 @@
+Data Preparation for Model Training completed successfully.
+X_train shape: (8693, 26)
+X_test shape: (4277, 26)
+y shape: (8693,)
+Finished model training: logistic regression
+Finished model training: random forest
+Finished model training: XGBoost
+Model: logistic regression, Best Params: {'C': 0.1, 'l1_ratio': 0.5, 'penalty': 'l2', 'solver': 'saga'}, Score: 0.7642323174238068
+Model: random forest, Best Params: {'max_depth': None, 'min_samples_split': 10, 'n_estimators': 100}, Score: 0.7642323174238068
+Model: XGBoost, Best Params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100}, Score: 0.7878090856814262
+Model Training completed successfully.
+Best Model: GradientBoostingClassifier()
+Model Validation and Selection completed successfully.
+Selected Best Model: GradientBoostingClassifier()
+Prediction on Test Data completed successfully.
+Submission file saved at: /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/submission.csv

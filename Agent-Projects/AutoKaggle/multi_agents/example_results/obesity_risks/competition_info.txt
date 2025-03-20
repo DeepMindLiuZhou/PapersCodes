@@ -1,0 +1,52 @@
+# Competition Information
+## 1. Competition Overview
+The "obesity_risks" competition is part of the Kaggle Playground Series, focusing on multi-class prediction of obesity risk factors related to cardiovascular disease. Participants aim to predict weight status categories for individuals based on various demographic and lifestyle factors.
+
+## 2. Files
+- **train.csv**: The training dataset containing features and the categorical target variable `NObeyesdad`.
+- **test.csv**: The test dataset with the same features as the training set but without the target variable, used for making predictions.
+- **sample_submission.csv**: A file demonstrating the correct format for submissions, showing how to organize predictions.
+
+## 3. Problem Definition
+Participants are tasked with predicting the obesity risk classification (`NObeyesdad`) for individuals based on their demographics and lifestyle features.
+
+## 4. Data Information
+### 4.1 Data type
+#### 4.1.1 ID type
+- `id`: Unique identifier for each record (not used in model training).
+
+#### 4.1.2 Numerical type
+- `Age`, `Height`, `Weight`, `CH2O`, `SCC`, `FAF`, `TUE`, `CALC`.
+
+#### 4.1.3 Categorical type
+- `Gender`, `family_history_with_overweight`, `FAVC`, `FCVC`, `NCP`, `CAEC`, `SMOKE`, `MTRANS`, `NObeyesdad` (target variable).
+
+#### 4.1.4 Datetime type
+- None.
+
+### 4.2 Detailed data description
+The dataset includes features reflecting individuals' demographics and lifestyle habits, such as gender, age, height, weight, family history of overweight, dietary habits, physical activity, hydration, and caloric intake.
+
+## 5. Target Variable
+- **NObeyesdad**: Categorizes individuals into weight status classes, including Normal_Weight, Overweight_Level_I, Overweight_Level_II, Obesity_Type_I, Obesity_Type_II, Obesity_Type_III, and Insufficient_Weight.
+
+## 6. Evaluation Metrics
+Submissions are evaluated based on the **accuracy score**, measuring the proportion of correct predictions made by the model.
+
+## 7. Submission Format
+The submission file must include:
+- `id`: Identifier for each record from the test set.
+- `NObeyesdad`: The predicted weight status category.
+  
+Example format:
+```
+id,NObeyesdad
+20758,Normal_Weight
+20759,Normal_Weight
+...
+```
+
+## 8. Other Key Aspects
+- The dataset is synthetically generated, closely resembling real-world data while keeping test labels confidential. 
+- The competition encourages visualizations, clustering, and exploratory data analysis, making it suitable for enhancing data science skills.
+- With a significant number of participants, competitive benchmarking can provide valuable insights into model performance and feature importance.

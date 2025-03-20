@@ -1,0 +1,83 @@
+# FEATURE INFO
+## TARGET VARIABLE
+SalePrice
+## FEATURES BEFORE THIS PHASE
+['Id', 'MSSubClass', 'MSZoning', 'LotFrontage', 'LotArea', 'Street', 'Alley', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'Neighborhood', 'Condition1', 'Condition2', 'BldgType', 'HouseStyle', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'RoofStyle', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1', 'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual', 'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual', 'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC', 'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType', 'SaleCondition', 'SalePrice']
+## FEATURES AFTER THIS PHASE
+['Id', 'MSSubClass', 'LotFrontage', 'LotArea', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1', 'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual', 'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual', 'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC', 'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType', 'SaleCondition', 'SalePrice', 'HouseAge', 'YearsSinceRemod', 'TotalBath', 'TotalPorchSF', 'TotalSF', 'OverallQual_SF', 'MSZoning_C (all)', 'MSZoning_FV', 'MSZoning_RH', 'MSZoning_RL', 'MSZoning_RM', 'Street_Grvl', 'Street_Pave', 'Alley_Grvl', 'Alley_Missing', 'Alley_Pave', 'Neighborhood_Blmngtn', 'Neighborhood_Blueste', 'Neighborhood_BrDale', 'Neighborhood_BrkSide', 'Neighborhood_ClearCr', 'Neighborhood_CollgCr', 'Neighborhood_Crawfor', 'Neighborhood_Edwards', 'Neighborhood_Gilbert', 'Neighborhood_IDOTRR', 'Neighborhood_MeadowV', 'Neighborhood_Mitchel', 'Neighborhood_NAmes', 'Neighborhood_NPkVill', 'Neighborhood_NWAmes', 'Neighborhood_NoRidge', 'Neighborhood_NridgHt', 'Neighborhood_OldTown', 'Neighborhood_SWISU', 'Neighborhood_Sawyer', 'Neighborhood_SawyerW', 'Neighborhood_Somerst', 'Neighborhood_StoneBr', 'Neighborhood_Timber', 'Neighborhood_Veenker', 'HouseStyle_1.5Fin', 'HouseStyle_1.5Unf', 'HouseStyle_1Story', 'HouseStyle_2.5Fin', 'HouseStyle_2.5Unf', 'HouseStyle_2Story', 'HouseStyle_SFoyer', 'HouseStyle_SLvl', 'RoofStyle_Flat', 'RoofStyle_Gable', 'RoofStyle_Gambrel', 'RoofStyle_Hip', 'RoofStyle_Mansard', 'RoofStyle_Shed', 'Condition1_Artery', 'Condition1_Feedr', 'Condition1_Norm', 'Condition1_PosA', 'Condition1_PosN', 'Condition1_RRAe', 'Condition1_RRAn', 'Condition1_RRNe', 'Condition1_RRNn', 'Condition2_Artery', 'Condition2_Feedr', 'Condition2_Norm', 'Condition2_PosA', 'Condition2_PosN', 'Condition2_RRAe', 'Condition2_RRAn', 'Condition2_RRNn', 'BldgType_1Fam', 'BldgType_2fmCon', 'BldgType_Duplex', 'BldgType_Twnhs', 'BldgType_TwnhsE']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - Input Files:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/cleaned_train.csv`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/cleaned_test.csv`
+  - Output Files:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/processed_train.csv`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/processed_test.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+### Answer 2
+- **New Features Created:**
+  - `HouseAge`: Calculated as `YrSold - YearBuilt`
+  - `YearsSinceRemod`: Calculated as `YrSold - YearRemodAdd`
+  - `TotalBath`: Combined total of different bath counts
+  - `TotalPorchSF`: Sum of different porch areas
+  - `TotalSF`: Sum of different floor areas
+  - `OverallQual_SF`: Interaction term between `OverallQual` and `GrLivArea`
+
+- **Transformed Features:**
+  - `LotArea`, `GrLivArea`, `SalePrice`: Log transformation applied to reduce skewness.
+
+- **Categorical Features Handled:**
+  - **Label Encoded:** `ExterQual`, `ExterCond`, `BsmtQual`, `BsmtCond`, `HeatingQC`, `KitchenQual`, `GarageQual`, `GarageCond`, `PoolQC`, `Fence`.
+  - **One-Hot Encoded:** `MSZoning`, `Street`, `Alley`, `Neighborhood`, `HouseStyle`, `RoofStyle`, `Condition1`, `Condition2`, `BldgType`.
+
+- **Deleted Features:** None noted in this phase.
+- **Modified Feature Types:** No feature types were modified; however, categorical features were transformed into numerical representations.
+
+### Question 3
+What new features were created during this phase, and how do they relate to existing features?
+### Answer 3
+- **New Features Created:**
+  - `HouseAge` and `YearsSinceRemod` provide insights into property age and renovations, which can significantly affect the sale price.
+  - `TotalBath` aggregates various bathroom counts into a single metric for simplification.
+  - `TotalPorchSF` and `TotalSF` summarize different areas of the house, emphasizing overall space.
+  - `OverallQual_SF` combines quality and livable area, aiming to capture interactions that affect pricing.
+
+### Question 4
+Which existing features were transformed, and what impact did these transformations have on their distributions?
+### Answer 4
+- **Transformed Features:**
+  - `LotArea`, `GrLivArea`, and `SalePrice` underwent log transformation using `np.log1p()`.
+  
+- **Impact on Distributions:**
+  - The log transformation generally reduces skewness, making distributions more normal. This is beneficial for linear models and improves interpretability of feature effects.
+
+### Question 5
+How were categorical variables handled, and what encoding methods were applied? Were there any challenges faced in this process?
+### Answer 5
+- **Encoding Methods Applied:**
+  - **Label Encoding:** For ordinal categorical variables where the order matters.
+  - **One-Hot Encoding:** For nominal categorical variables to avoid ordinal assumptions.
+
+- **Challenges Faced:**
+  - Ensuring no excessive dimensionality from one-hot encoding. Columns were aligned between train and test datasets, maintaining consistency.
+  - Grouping rare categories might be necessary to reduce complexity, but this was not explicitly noted in the process.
+
+### Question 6
+Based on the findings from this phase, what key features should be prioritized for inclusion in the modeling phase, and why?
+### Answer 6
+- **Key Features to Prioritize:**
+  - `OverallQual_SF`: Strong interaction between quality and area.
+  - `TotalSF`: Represents the total livable space, likely correlating with price.
+  - `HouseAge` and `YearsSinceRemod`: Important for understanding depreciation and renovations.
+  - Log-transformed features (`LotArea`, `GrLivArea`, `SalePrice`) to improve model performance by stabilizing variance.
+
+- **Rationale:**
+  - These features are expected to have high predictive power based on their relationships with `SalePrice` and their ability to capture significant variations in housing prices.

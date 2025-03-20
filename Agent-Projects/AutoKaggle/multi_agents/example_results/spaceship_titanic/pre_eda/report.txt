@@ -1,0 +1,139 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Transported
+## FEATURES BEFORE THIS PHASE
+['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age', 'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck', 'Name', 'Transported']
+## FEATURES AFTER THIS PHASE
+['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age', 'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck', 'Name', 'Transported']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+**What files did you process? Which files were generated? Answer with detailed file path.**
+
+### Answer 1
+- **Processed Files:**
+  - Training dataset: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/train.csv`
+  - Test dataset: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/test.csv`
+
+- **Generated Files:**
+  - Histograms for numerical features stored as:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/histogram_Age.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/histogram_RoomService.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/histogram_FoodCourt.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/histogram_ShoppingMall.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/histogram_Spa.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/histogram_VRDeck.png`
+  
+  - Box plots for numerical features stored as:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/boxplot_Age.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/boxplot_RoomService.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/boxplot_FoodCourt.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/boxplot_ShoppingMall.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/boxplot_Spa.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/boxplot_VRDeck.png`
+
+  - Bar plots for categorical features stored as:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/barplot_HomePlanet.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/barplot_CryoSleep.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/barplot_Cabin.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/barplot_Destination.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/barplot_VIP.png`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/barplot_Name.png`
+
+  - Missing values heatmap stored as:
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/missing_values_heatmap_train.png`
+
+### Question 2
+**Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.**
+
+### Answer 2
+- **Involved Features:**
+  - **PassengerId**: No changes.
+  - **HomePlanet**: No changes.
+  - **CryoSleep**: No changes.
+  - **Cabin**: No changes.
+  - **Destination**: No changes.
+  - **Age**: No changes.
+  - **VIP**: No changes.
+  - **RoomService**: No changes.
+  - **FoodCourt**: No changes.
+  - **ShoppingMall**: No changes.
+  - **Spa**: No changes.
+  - **VRDeck**: No changes.
+  - **Name**: No changes.
+  - **Transported**: No changes.
+
+- **Feature Modifications:**
+  - No features were deleted or created, but a more detailed examination may reveal the need for future feature extraction (e.g., from the Cabin feature).
+
+### Question 3
+**What are the data types and basic statistics of each feature in the dataset, and what notable issues, such as missing values or incorrect data types, have been identified?**
+
+### Answer 3
+- **Data Types:**
+  - `PassengerId`: object
+  - `HomePlanet`: object
+  - `CryoSleep`: object
+  - `Cabin`: object
+  - `Destination`: object
+  - `Age`: float64
+  - `VIP`: object
+  - `RoomService`: float64
+  - `FoodCourt`: float64
+  - `ShoppingMall`: float64
+  - `Spa`: float64
+  - `VRDeck`: float64
+  - `Name`: object
+  - `Transported`: bool
+
+- **Basic Statistics:**
+  - Age has a count of 8514, indicating some missing values.
+  - The expense features (RoomService, FoodCourt, ShoppingMall, Spa, VRDeck) also show counts lower than 8693, meaning they have missing values.
+
+- **Notable Issues:**
+  - Missing values in several features (HomePlanet, CryoSleep, Cabin, Destination, VIP, Age, RoomService, FoodCourt, ShoppingMall, Spa, VRDeck, Name).
+
+### Question 4
+**Which features contain missing values, and what is the proportion of missing data for each of these features?**
+
+### Answer 4
+- **Features with Missing Values and Proportions:**
+  - `HomePlanet`: 2.31% missing
+  - `CryoSleep`: 2.51% missing
+  - `Cabin`: 2.28% missing
+  - `Destination`: 2.09% missing
+  - `VIP`: 2.33% missing
+  - `Age`: 3.07% missing
+  - `RoomService`: 2.09% missing
+  - `FoodCourt`: 2.09% missing
+  - `ShoppingMall`: 3.43% missing
+  - `Spa`: 2.09% missing
+  - `VRDeck`: 2.82% missing
+  - `Name`: 3.43% missing
+
+### Question 5
+**What outliers were detected in numerical features, and how might they impact the analysis or model performance?**
+
+### Answer 5
+- **Outliers Detected:**
+  - Age: Outliers exist beyond the upper whisker (ages above 60 years).
+  - RoomService, FoodCourt, ShoppingMall, Spa, VRDeck: Significant outliers extend to high values (e.g., up to 30,000 in FoodCourt).
+
+- **Impact on Analysis:**
+  - Outliers can skew statistical measures such as mean and variance, potentially leading to misleading interpretations.
+  - Models may become less robust due to the influence of extreme values, impacting predictive performance.
+
+### Question 6
+**Based on the findings from this phase, what specific data cleaning tasks should be prioritized to enhance the quality of the dataset for subsequent analysis?**
+
+### Answer 6
+- **Data Cleaning Tasks to Prioritize:**
+  - Handle missing values, potentially through imputation or removal based on the proportion of missing data.
+  - Investigate outliers in numerical features and assess whether to remove, cap, or transform them.
+  - Consider feature extraction from the `Cabin` feature to create meaningful additional features.
+  - Ensure categorical features are encoded appropriately for modeling.
+  - Validate consistency between related features (e.g., CryoSleep status and expenses).
+
+These tasks will help ensure that the dataset is prepared for more in-depth analyses and model building in the subsequent phases.

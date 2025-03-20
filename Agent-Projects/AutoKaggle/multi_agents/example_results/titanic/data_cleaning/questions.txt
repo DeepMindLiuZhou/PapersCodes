@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What missing values were identified and how were they addressed in the dataset?
+
+### Question 4
+What outlier treatment methods were applied, and which features were affected?
+
+### Question 5
+What are the implications of the cleaning steps taken on the overall dataset distribution, particularly for key features like Age, Fare, and Survived?
+
+### Question 6
+What additional cleaning or preprocessing steps do you foresee as necessary before conducting in-depth exploratory data analysis?

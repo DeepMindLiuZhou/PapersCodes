@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What statistical trends were observed in the numerical features (Pclass, Age, SibSp, Parch, Fare), and how do these trends relate to the target variable (Survived)?
+
+### Question 2
+What relationships were identified between categorical features (Sex, Embarked, Cabin) and the survival rate, and what visualizations were used to illustrate these relationships?
+
+### Question 3
+Were any significant correlations found between the numerical features and the target variable? If so, which features demonstrated the strongest correlations?
+
+### Question 4
+What feature interactions were explored during the multivariate analysis, and what insights were gained from these interactions regarding survival?
+
+### Question 5
+Which features were identified as having high proportions of missing values, and what strategies could be recommended for handling these missing values in feature engineering?
+
+### Question 6
+Based on the insights gained from the exploratory data analysis, what specific feature engineering strategies would you recommend to enhance model performance?

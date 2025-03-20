@@ -1,0 +1,54 @@
+# Competition Information
+
+## 1. Competition Overview
+The "house_prices" competition challenges participants to predict the final sale price of residential homes in Ames, Iowa. The dataset includes 79 explanatory variables, highlighting that various factors influence home pricing beyond common metrics like the number of bedrooms.
+
+## 2. Files
+- **train.csv**: Contains the training dataset with features and the target variable (`SalePrice`) used for model training.
+- **test.csv**: Contains the test dataset with features only, used to evaluate model predictions.
+- **data_description.txt**: Provides detailed descriptions of each column in the datasets, including definitions and possible values for categorical variables.
+- **sample_submission.csv**: A template file showcasing the required format for submissions, including example predictions.
+
+## 3. Problem Definition
+The primary goal is to predict the `SalePrice` for each house based on the features available in the training dataset.
+
+## 4. Data Information
+### 4.1 Data type
+#### 4.1.1 ID type
+- `Id`: Unique identifier for each property (not used in model training).
+
+#### 4.1.2 Numerical type
+- `LotFrontage`, `LotArea`, `OverallQual`, `OverallCond`, `YearBuilt`, `YearRemodAdd`, `MasVnrArea`, `TotalBsmtSF`, `1stFlrSF`, `2ndFlrSF`, `GrLivArea`, `SalePrice`, etc.
+
+#### 4.1.3 Categorical type
+- `MSSubClass`, `MSZoning`, `Street`, `Alley`, `LotShape`, `LandContour`, `Utilities`, `Neighborhood`, `Condition1`, `BldgType`, etc.
+
+#### 4.1.4 Datetime type
+- None present in the dataset.
+
+### 4.2 Detailed data description
+The dataset contains various features providing insights into home characteristics, including lot dimensions, quality ratings, construction year, basement and garage information, and sale conditions.
+
+## 5. Target Variable
+- **SalePrice**: The final sale price of a residential property, which is the main focus for prediction.
+
+## 6. Evaluation Metrics
+Submissions are evaluated using **Root Mean Squared Error (RMSE)**, calculated between the logarithm of the predicted values and the logarithm of the actual sale prices.
+
+## 7. Submission Format
+The required format for submissions includes:
+- A header row with the columns: `Id` and `SalePrice`.
+- Each row representing a unique property ID along with its predicted sale price.
+
+Example format:
+```
+Id,SalePrice
+1461,169000.1
+1462,187724.1233
+1463,175221
+```
+
+## 8. Other Key Aspects
+- **Feature Engineering**: Emphasis on creative feature engineering to enhance model performance.
+- **Advanced Techniques**: Encourages the use of advanced regression techniques like random forests and gradient boosting.
+- **Rolling Leaderboard**: The competition has a rolling leaderboard, providing continuous feedback on model performance.

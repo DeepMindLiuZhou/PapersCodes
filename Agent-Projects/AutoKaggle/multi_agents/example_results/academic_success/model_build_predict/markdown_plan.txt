@@ -1,0 +1,70 @@
+## PLAN
+
+### STEP 1
+Task: **Data Preparation for Modeling**
+- **Tools, involved features and correct parameters:**
+  - **Tools:** Pandas (`read_csv`, `pop`, `drop`)
+  - **Involved Features:** 
+    - Remove `id` and `Target` columns.
+    - Ensure numerical features are retained.
+  - **Parameters:** 
+    - File paths for `processed_train.csv` and `processed_test.csv`.
+- **Expected output or Impact on data:**
+  - `X_train` and `y_train` DataFrames separated.
+  - `X_test` DataFrame prepared without `id` and non-numeric columns.
+- **Constraints:**
+  - Maintain feature alignment between training and test sets.
+  - Prevent data leakage by excluding `Target` from test data.
+
+### STEP 2
+Task: **Feature Scaling and Transformation Verification**
+- **Tools, involved features and correct parameters:**
+  - **Tools:** Scikit-learn (`StandardScaler`), Pandas (`describe`)
+  - **Involved Features:** All numerical features in `X_train` and `X_test` (e.g., `Admission grade`, `GDP`, `Age at enrollment`)
+  - **Parameters:** 
+    - Use `StandardScaler` for scaling numerical features.
+- **Expected output or Impact on data:**
+  - Scaled `X_train_scaled` and `X_test_scaled` ensuring uniform feature scales.
+  - Verified consistency in feature engineering between datasets.
+- **Constraints:**
+  - Apply scaling parameters derived from `X_train` to `X_test`.
+  - Avoid introducing new features during verification.
+
+### STEP 3
+Task: **Model Training, Validation, and Selection**
+- **Tools, involved features and correct parameters:**
+  - **Tools:** `train_and_validation_and_select_the_best_model`
+  - **Involved Features:** 
+    - All preprocessed numerical features in `X_train_scaled`.
+    - Target variable `y_train`.
+  - **Parameters:** 
+    - `problem_type`: `"multiclass"`
+    - `selected_models`: `["Random Forest", "XGBoost", "Logistic Regression"]`
+- **Expected output or Impact on data:**
+  - Trained models with cross-validated accuracy scores.
+  - Selection of the best-performing model based on mean accuracy.
+- **Constraints:**
+  - Limit training to three selected models to adhere to computational resources.
+  - Ensure reproducibility by setting a consistent `random_state`.
+
+### STEP 4
+Task: **Prediction and Submission Preparation**
+- **Tools, involved features and correct parameters:**
+  - **Tools:** Scikit-learn (`predict` method), Pandas (`DataFrame`, `to_csv`)
+  - **Involved Features:** 
+    - `id` from `test_df`
+    - Predicted `Target` labels from the best model.
+  - **Parameters:** 
+    - Ensure `submission.csv` follows the format:
+      ```
+      id,Target
+      76518,Graduate
+      76519,Graduate
+      76520,Graduate
+      ```
+- **Expected output or Impact on data:**
+  - `submission.csv` file ready for competition submission with accurate `Target` predictions.
+- **Constraints:**
+  - Ensure `id` values in submission match those in `processed_test.csv`.
+  - Validate that `Target` predictions are correctly formatted as categorical labels (`dropout`, `enrolled`, `graduate`).
+  - Confirm no missing values in the submission file.

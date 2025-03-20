@@ -1,0 +1,24 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What duplicates were identified and removed during the cleaning phase?
+
+### Question 4
+Which features had outliers, and what methods were used to handle them?
+
+### Question 5
+How were missing values treated across the datasets, and what was the proportion of missing data before cleaning?
+
+### Question 6
+What changes were made to ensure data type consistency between the training and testing datasets?
+
+### Question 7
+Were there any issues with categorical variables, and how were they aligned across both datasets?
+
+### Question 8
+What other notable data cleaning steps were taken that could influence insights during exploratory data analysis?

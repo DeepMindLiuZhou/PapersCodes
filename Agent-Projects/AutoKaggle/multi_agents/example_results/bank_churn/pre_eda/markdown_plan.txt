@@ -1,0 +1,57 @@
+## PLAN
+
+### STEP 1: Initial Data Exploration
+Task: Gain an initial understanding of the datasets and their structure.
+Tools, involved features and correct parameters:
+- **Tools**: pandas
+- **Involved Features**: All features
+- **Parameters**: 
+  - Use `pd.read_csv()` to load data
+  - Use `.info()`, `.head()`, and `.describe()` methods for data overview
+Expected output or Impact on data:
+- DataFrames for train and test data
+- Text printout of data overview and basic statistics
+Constraints:
+- None
+
+### STEP 2: Data Distribution and Visualization
+Task: Understand the distribution and spread of each feature.
+Tools, involved features and correct parameters:
+- **Tools**: matplotlib, seaborn
+- **Involved Features**: All features
+- **Parameters**:
+  - **Histograms**: Use `sns.histplot()` for numerical features
+  - **Bar Plots**: Use `sns.countplot()` for categorical features
+  - **Box Plots**: Use `sns.boxplot()` for numerical features
+Expected output or Impact on data:
+- Visual representation of numerical and categorical feature distributions
+- Insights into the skewness, spread, and outliers of the data
+Constraints:
+- Limit to critical visualizations with valuable insights
+
+### STEP 3: Missing Values and Data Inconsistencies
+Task: Identify and quantify missing values and inconsistencies within the datasets.
+Tools, involved features and correct parameters:
+- **Tools**: pandas
+- **Involved Features**: All features
+- **Parameters**:
+  - Use `.isnull().sum()` to count missing values
+  - Check for negative values in numerical features
+Expected output or Impact on data:
+- Text report on missing values and data inconsistencies
+Constraints:
+- Ensure categorical features have valid categories
+
+### STEP 4: Correlation Analysis
+Task: Identify relationships between numerical features and the target variable.
+Tools, involved features and correct parameters:
+- **Tools**: pandas, seaborn
+- **Involved Features**: Numerical features and target variable (Exited)
+- **Parameters**:
+  - **Correlation Matrix**: Use `train_data.corr()` and `sns.heatmap()`
+  - **Pairplots**: Use `sns.pairplot()` with numerical features and target variable
+Expected output or Impact on data:
+- Visual correlation matrix highlighting significant relationships
+- Visual pairplots showing potential linear or non-linear relationships
+Constraints:
+- Limit to critical features and visualizations with valuable insights

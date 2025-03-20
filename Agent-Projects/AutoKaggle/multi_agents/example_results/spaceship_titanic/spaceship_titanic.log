@@ -1,0 +1,446 @@
+2024-10-20 23:30:02,033 - root - INFO - Start SOP for competition: spaceship_titanic
+2024-10-20 23:30:02,034 - root - INFO - Current State: State: Understand Background, Current Step: 0, Current Agent: Reader, Finished: False
+2024-10-20 23:30:02,048 - agent_base - INFO - Agent reader is created with model gpt-4o-mini.
+2024-10-20 23:30:02,049 - agent_base - INFO - State Understand Background - Agent reader is executing.
+2024-10-20 23:30:16,978 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-20 23:30:16,979 - agent_base - INFO - State Understand Background - Agent reviewer is executing.
+2024-10-20 23:30:23,151 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:30:23,211 - root - INFO - Current State: State: Preliminary Exploratory Data Analysis, Current Step: 0, Current Agent: Planner, Finished: False
+2024-10-20 23:30:23,228 - agent_base - INFO - Agent planner is created with model gpt-4o.
+2024-10-20 23:30:23,229 - agent_base - INFO - State Preliminary Exploratory Data Analysis - Agent planner is executing.
+2024-10-20 23:30:32,751 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-10-20 23:30:57,216 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:30:57,262 - agent_base - INFO - Agent developer is created with model gpt-4o.
+2024-10-20 23:30:57,263 - agent_base - INFO - State Preliminary Exploratory Data Analysis - Agent developer is executing.
+2024-10-20 23:31:23,559 - agents.developer - INFO - The 1-th try.
+2024-10-20 23:31:23,601 - agents.developer - INFO - All files in directory '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/' have been deleted successfully.
+2024-10-20 23:32:35,819 - agents.developer - INFO - Code executed successfully without errors.
+2024-10-20 23:32:35,823 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/pre_eda_error.txt' doesn't exist, you don't need to delete it.
+2024-10-20 23:32:35,831 - agents.developer - INFO - Start the 1-th unit test.
+2024-10-20 23:32:35,842 - agents.developer - INFO - There are 0 not pass tests.
+2024-10-20 23:32:35,842 - agents.developer - INFO - All unit tests passed.
+2024-10-20 23:32:35,844 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/pre_eda_not_pass_information.txt' doesn't exist, you don't need to delete it.
+2024-10-20 23:32:35,866 - agents.developer - INFO - State Preliminary Exploratory Data Analysis - Agent developer finishes working.
+2024-10-20 23:32:35,871 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-20 23:32:35,872 - agent_base - INFO - State Preliminary Exploratory Data Analysis - Agent reviewer is executing.
+2024-10-20 23:32:46,292 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:32:46,293 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:32:46,319 - agent_base - INFO - Agent summarizer is created with model gpt-4o-mini.
+2024-10-20 23:32:46,319 - agent_base - INFO - State Preliminary Exploratory Data Analysis - Agent summarizer is executing.
+2024-10-20 23:32:59,552 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:33:51,990 - root - INFO - Current State: State: Data Cleaning, Current Step: 0, Current Agent: Planner, Finished: False
+2024-10-20 23:33:52,000 - agent_base - INFO - Agent planner is created with model gpt-4o.
+2024-10-20 23:33:52,000 - agent_base - INFO - State Data Cleaning - Agent planner is executing.
+2024-10-20 23:34:42,118 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:34:42,180 - agent_base - INFO - Agent developer is created with model gpt-4o.
+2024-10-20 23:34:42,181 - agent_base - INFO - State Data Cleaning - Agent developer is executing.
+2024-10-20 23:34:45,228 - agent_base - INFO - Extracting tools' description for developer in phase: Data Cleaning
+2024-10-20 23:34:46,710 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:35:17,681 - agents.developer - INFO - The 1-th try.
+2024-10-20 23:35:20,203 - agents.developer - INFO - Code executed successfully without errors.
+2024-10-20 23:35:20,206 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/data_cleaning/data_cleaning_error.txt' doesn't exist, you don't need to delete it.
+2024-10-20 23:35:20,217 - agents.developer - INFO - Start the 1-th unit test.
+2024-10-20 23:35:20,226 - tools.unit_test - INFO - Test 'test_document_exist' succeeded
+2024-10-20 23:35:20,260 - tools.unit_test - INFO - Test 'test_cleaned_train_no_missing_values' failed: There are missing values in the cleaned_train.csv file. Detailed missing value information:
+RoomService: 181 (2.08%)
+FoodCourt: 183 (2.11%)
+ShoppingMall: 208 (2.39%)
+Spa: 183 (2.11%)
+VRDeck: 188 (2.16%)
+Name: 200 (2.30%)
+Do NOT fill the missing values with another NaN-type value, such as 'None', 'NaN', or 'nan'.
+2024-10-20 23:35:20,275 - tools.unit_test - INFO - Test 'test_cleaned_test_no_missing_values' failed: There are missing values in the cleaned_test.csv file. Detailed missing value information:
+RoomService: 82 (1.92%)
+FoodCourt: 106 (2.48%)
+ShoppingMall: 98 (2.29%)
+Spa: 101 (2.36%)
+VRDeck: 80 (1.87%)
+Name: 94 (2.20%)
+NOTE that apply the same methods as applied in cleaned_train.csv to deal with missing values.
+2024-10-20 23:35:20,299 - tools.unit_test - INFO - Test 'test_cleaned_train_no_duplicated_features' succeeded
+2024-10-20 23:35:20,309 - tools.unit_test - INFO - Test 'test_cleaned_test_no_duplicated_features' succeeded
+2024-10-20 23:35:20,379 - tools.unit_test - INFO - Test 'test_cleaned_difference_train_test_columns' succeeded
+2024-10-20 23:35:20,432 - tools.unit_test - INFO - Test 'test_cleaned_train_no_missing_target' succeeded
+2024-10-20 23:35:20,454 - tools.unit_test - INFO - Test 'test_cleaned_train_id_column' succeeded
+2024-10-20 23:35:20,466 - tools.unit_test - INFO - Test 'test_cleaned_test_id_column' succeeded
+2024-10-20 23:35:20,517 - tools.unit_test - INFO - Test 'test_cleaned_test_no_target_column' succeeded
+2024-10-20 23:35:20,564 - tools.unit_test - INFO - Test 'test_cleaned_train_no_missing_rows' succeeded
+2024-10-20 23:35:20,589 - tools.unit_test - INFO - Test 'test_cleaned_test_no_missing_rows' succeeded
+2024-10-20 23:35:20,590 - agents.developer - INFO - There are 2 not pass tests.
+2024-10-20 23:35:20,591 - agents.developer - INFO - Unit tests failed.
+2024-10-20 23:35:20,591 - agents.developer - INFO - Test 9: There are missing values in the cleaned_train.csv file. Detailed missing value information:
+RoomService: 181 (2.08%)
+FoodCourt: 183 (2.11%)
+ShoppingMall: 208 (2.39%)
+Spa: 183 (2.11%)
+VRDeck: 188 (2.16%)
+Name: 200 (2.30%)
+Do NOT fill the missing values with another NaN-type value, such as 'None', 'NaN', or 'nan'.
+2024-10-20 23:35:20,592 - agents.developer - INFO - Test 10: There are missing values in the cleaned_test.csv file. Detailed missing value information:
+RoomService: 82 (1.92%)
+FoodCourt: 106 (2.48%)
+ShoppingMall: 98 (2.29%)
+Spa: 101 (2.36%)
+VRDeck: 80 (1.87%)
+Name: 94 (2.20%)
+NOTE that apply the same methods as applied in cleaned_train.csv to deal with missing values.
+2024-10-20 23:35:20,600 - agents.developer - INFO - Start debugging the code.
+2024-10-20 23:36:22,351 - agents.developer - INFO - Code executed successfully without errors.
+2024-10-20 23:36:22,354 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/data_cleaning/data_cleaning_error.txt' doesn't exist, you don't need to delete it.
+2024-10-20 23:36:22,360 - agents.developer - INFO - Start the 2-th unit test.
+2024-10-20 23:36:22,367 - tools.unit_test - INFO - Test 'test_document_exist' succeeded
+2024-10-20 23:36:22,390 - tools.unit_test - INFO - Test 'test_cleaned_train_no_missing_values' succeeded
+2024-10-20 23:36:22,401 - tools.unit_test - INFO - Test 'test_cleaned_test_no_missing_values' succeeded
+2024-10-20 23:36:22,419 - tools.unit_test - INFO - Test 'test_cleaned_train_no_duplicated_features' succeeded
+2024-10-20 23:36:22,431 - tools.unit_test - INFO - Test 'test_cleaned_test_no_duplicated_features' succeeded
+2024-10-20 23:36:22,492 - tools.unit_test - INFO - Test 'test_cleaned_difference_train_test_columns' succeeded
+2024-10-20 23:36:22,536 - tools.unit_test - INFO - Test 'test_cleaned_train_no_missing_target' succeeded
+2024-10-20 23:36:22,553 - tools.unit_test - INFO - Test 'test_cleaned_train_id_column' succeeded
+2024-10-20 23:36:22,567 - tools.unit_test - INFO - Test 'test_cleaned_test_id_column' succeeded
+2024-10-20 23:36:22,613 - tools.unit_test - INFO - Test 'test_cleaned_test_no_target_column' succeeded
+2024-10-20 23:36:22,651 - tools.unit_test - INFO - Test 'test_cleaned_train_no_missing_rows' succeeded
+2024-10-20 23:36:22,676 - tools.unit_test - INFO - Test 'test_cleaned_test_no_missing_rows' succeeded
+2024-10-20 23:36:22,677 - agents.developer - INFO - There are 0 not pass tests.
+2024-10-20 23:36:22,677 - agents.developer - INFO - All unit tests passed.
+2024-10-20 23:36:22,680 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/data_cleaning/data_cleaning_not_pass_information.txt' doesn't exist, you don't need to delete it.
+2024-10-20 23:36:22,712 - agents.developer - INFO - State Data Cleaning - Agent developer finishes working.
+2024-10-20 23:36:22,719 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-20 23:36:22,720 - agent_base - INFO - State Data Cleaning - Agent reviewer is executing.
+2024-10-20 23:36:38,462 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:36:38,463 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:36:38,510 - agent_base - INFO - Agent summarizer is created with model gpt-4o-mini.
+2024-10-20 23:36:38,511 - agent_base - INFO - State Data Cleaning - Agent summarizer is executing.
+2024-10-20 23:37:06,165 - root - INFO - Current State: State: In-depth Exploratory Data Analysis, Current Step: 0, Current Agent: Planner, Finished: False
+2024-10-20 23:37:06,184 - agent_base - INFO - Agent planner is created with model gpt-4o.
+2024-10-20 23:37:06,184 - agent_base - INFO - State In-depth Exploratory Data Analysis - Agent planner is executing.
+2024-10-20 23:37:58,996 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-20 23:37:59,035 - agent_base - INFO - Agent developer is created with model gpt-4o.
+2024-10-20 23:37:59,036 - agent_base - INFO - State In-depth Exploratory Data Analysis - Agent developer is executing.
+2024-10-20 23:38:21,830 - agents.developer - INFO - The 1-th try.
+2024-10-20 23:38:21,865 - agents.developer - INFO - All files in directory '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/deep_eda/images/' have been deleted successfully.
+2024-10-20 23:58:22,135 - agents.developer - INFO - Code execution timed out.
+2024-10-20 23:58:22,444 - agents.developer - INFO - Start debugging the code.
+2024-10-20 23:58:22,963 - tools.debug - INFO - Debug times: 1
+2024-10-20 23:59:14,376 - agents.developer - INFO - The 2-th try.
+2024-10-20 23:59:14,619 - agents.developer - INFO - All files in directory '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/deep_eda/images/' have been deleted successfully.
+2024-10-21 00:19:14,836 - agents.developer - INFO - Code execution timed out.
+2024-10-21 00:19:14,992 - agents.developer - INFO - Start debugging the code.
+2024-10-21 00:19:15,340 - tools.debug - INFO - Debug times: 2
+2024-10-21 00:19:58,169 - agents.developer - INFO - The 3-th try.
+2024-10-21 00:19:58,405 - agents.developer - INFO - All files in directory '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/deep_eda/images/' have been deleted successfully.
+2024-10-21 00:39:58,577 - agents.developer - INFO - Code execution timed out.
+2024-10-21 00:39:58,715 - agents.developer - INFO - Start debugging the code.
+2024-10-21 00:39:58,981 - tools.debug - INFO - Debug times: 3
+2024-10-21 00:40:20,571 - agents.developer - INFO - The developer asks for help when debugging the code. Regenerating the code.
+2024-10-21 00:40:20,571 - agents.developer - INFO - The 4-th try.
+2024-10-21 00:41:01,246 - agents.developer - INFO - All error messages saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/deep_eda/all_error_messages.txt
+2024-10-21 00:41:01,246 - agents.developer - INFO - The developer asks for help when debugging the code. Regenerating the code.
+2024-10-21 00:41:01,253 - agents.developer - INFO - The 4-th try.
+2024-10-21 00:41:01,409 - agents.developer - INFO - All files in directory '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/deep_eda/images/' have been deleted successfully.
+2024-10-21 00:49:18,409 - root - INFO - Start SOP for competition: spaceship_titanic
+2024-10-21 00:49:18,410 - root - INFO - Current State: State: Understand Background, Current Step: 0, Current Agent: Reader, Finished: False
+2024-10-21 00:49:18,424 - agent_base - INFO - Agent reader is created with model gpt-4o-mini.
+2024-10-21 00:49:18,424 - agent_base - INFO - State Understand Background - Agent reader is executing.
+2024-10-21 00:49:40,877 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-21 00:49:40,878 - agent_base - INFO - State Understand Background - Agent reviewer is executing.
+2024-10-21 00:49:46,011 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:49:46,066 - root - INFO - Current State: State: Preliminary Exploratory Data Analysis, Current Step: 0, Current Agent: Planner, Finished: False
+2024-10-21 00:49:46,094 - agent_base - INFO - Agent planner is created with model gpt-4o.
+2024-10-21 00:49:46,094 - agent_base - INFO - State Preliminary Exploratory Data Analysis - Agent planner is executing.
+2024-10-21 00:49:56,131 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-10-21 00:50:23,312 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:50:23,338 - agent_base - INFO - Agent developer is created with model gpt-4o.
+2024-10-21 00:50:23,339 - agent_base - INFO - State Preliminary Exploratory Data Analysis - Agent developer is executing.
+2024-10-21 00:50:48,027 - agents.developer - INFO - The 1-th try.
+2024-10-21 00:50:48,157 - agents.developer - INFO - All files in directory '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/images/' have been deleted successfully.
+2024-10-21 00:51:52,562 - agents.developer - INFO - Code executed successfully without errors.
+2024-10-21 00:51:52,566 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/pre_eda_error.txt' doesn't exist, you don't need to delete it.
+2024-10-21 00:51:52,577 - agents.developer - INFO - Start the 1-th unit test.
+2024-10-21 00:51:52,590 - agents.developer - INFO - There are 0 not pass tests.
+2024-10-21 00:51:52,590 - agents.developer - INFO - All unit tests passed.
+2024-10-21 00:51:52,592 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/pre_eda/pre_eda_not_pass_information.txt' doesn't exist, you don't need to delete it.
+2024-10-21 00:51:52,621 - agents.developer - INFO - State Preliminary Exploratory Data Analysis - Agent developer finishes working.
+2024-10-21 00:51:52,627 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-21 00:51:52,628 - agent_base - INFO - State Preliminary Exploratory Data Analysis - Agent reviewer is executing.
+2024-10-21 00:52:06,544 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:52:06,546 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:52:06,579 - agent_base - INFO - Agent summarizer is created with model gpt-4o-mini.
+2024-10-21 00:52:06,580 - agent_base - INFO - State Preliminary Exploratory Data Analysis - Agent summarizer is executing.
+2024-10-21 00:52:18,367 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:53:25,666 - root - INFO - Current State: State: Data Cleaning, Current Step: 0, Current Agent: Planner, Finished: False
+2024-10-21 00:53:25,676 - agent_base - INFO - Agent planner is created with model gpt-4o.
+2024-10-21 00:53:25,677 - agent_base - INFO - State Data Cleaning - Agent planner is executing.
+2024-10-21 00:54:17,165 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:54:17,194 - agent_base - INFO - Agent developer is created with model gpt-4o.
+2024-10-21 00:54:17,194 - agent_base - INFO - State Data Cleaning - Agent developer is executing.
+2024-10-21 00:54:19,583 - agent_base - INFO - Extracting tools' description for developer in phase: Data Cleaning
+2024-10-21 00:54:20,523 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:54:46,145 - agents.developer - INFO - The 1-th try.
+2024-10-21 00:54:48,461 - agents.developer - INFO - Code executed successfully without errors.
+2024-10-21 00:54:48,464 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/data_cleaning/data_cleaning_error.txt' doesn't exist, you don't need to delete it.
+2024-10-21 00:54:48,471 - agents.developer - INFO - Start the 1-th unit test.
+2024-10-21 00:54:48,479 - tools.unit_test - INFO - Test 'test_document_exist' succeeded
+2024-10-21 00:54:48,502 - tools.unit_test - INFO - Test 'test_cleaned_train_no_missing_values' succeeded
+2024-10-21 00:54:48,515 - tools.unit_test - INFO - Test 'test_cleaned_test_no_missing_values' succeeded
+2024-10-21 00:54:48,538 - tools.unit_test - INFO - Test 'test_cleaned_train_no_duplicated_features' succeeded
+2024-10-21 00:54:48,552 - tools.unit_test - INFO - Test 'test_cleaned_test_no_duplicated_features' succeeded
+2024-10-21 00:54:48,631 - tools.unit_test - INFO - Test 'test_cleaned_difference_train_test_columns' succeeded
+2024-10-21 00:54:48,689 - tools.unit_test - INFO - Test 'test_cleaned_train_no_missing_target' succeeded
+2024-10-21 00:54:48,708 - tools.unit_test - INFO - Test 'test_cleaned_train_id_column' succeeded
+2024-10-21 00:54:48,720 - tools.unit_test - INFO - Test 'test_cleaned_test_id_column' succeeded
+2024-10-21 00:54:48,762 - tools.unit_test - INFO - Test 'test_cleaned_test_no_target_column' succeeded
+2024-10-21 00:54:48,801 - tools.unit_test - INFO - Test 'test_cleaned_train_no_missing_rows' succeeded
+2024-10-21 00:54:48,824 - tools.unit_test - INFO - Test 'test_cleaned_test_no_missing_rows' succeeded
+2024-10-21 00:54:48,825 - agents.developer - INFO - There are 0 not pass tests.
+2024-10-21 00:54:48,825 - agents.developer - INFO - All unit tests passed.
+2024-10-21 00:54:48,827 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/data_cleaning/data_cleaning_not_pass_information.txt' doesn't exist, you don't need to delete it.
+2024-10-21 00:54:48,848 - agents.developer - INFO - State Data Cleaning - Agent developer finishes working.
+2024-10-21 00:54:48,855 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-21 00:54:48,855 - agent_base - INFO - State Data Cleaning - Agent reviewer is executing.
+2024-10-21 00:54:59,295 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:54:59,296 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:54:59,342 - agent_base - INFO - Agent summarizer is created with model gpt-4o-mini.
+2024-10-21 00:54:59,343 - agent_base - INFO - State Data Cleaning - Agent summarizer is executing.
+2024-10-21 00:55:26,034 - root - INFO - Current State: State: In-depth Exploratory Data Analysis, Current Step: 0, Current Agent: Planner, Finished: False
+2024-10-21 00:55:26,052 - agent_base - INFO - Agent planner is created with model gpt-4o.
+2024-10-21 00:55:26,053 - agent_base - INFO - State In-depth Exploratory Data Analysis - Agent planner is executing.
+2024-10-21 00:56:09,469 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:56:09,506 - agent_base - INFO - Agent developer is created with model gpt-4o.
+2024-10-21 00:56:09,507 - agent_base - INFO - State In-depth Exploratory Data Analysis - Agent developer is executing.
+2024-10-21 00:56:51,056 - agents.developer - INFO - The 1-th try.
+2024-10-21 00:56:51,290 - agents.developer - INFO - All files in directory '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/deep_eda/images/' have been deleted successfully.
+2024-10-21 00:58:48,439 - agents.developer - INFO - Code executed successfully without errors.
+2024-10-21 00:58:48,482 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/deep_eda/deep_eda_error.txt' has been deleted successfully.
+2024-10-21 00:58:48,539 - agents.developer - INFO - Start the 1-th unit test.
+2024-10-21 00:58:48,548 - agents.developer - INFO - There are 0 not pass tests.
+2024-10-21 00:58:48,548 - agents.developer - INFO - All unit tests passed.
+2024-10-21 00:58:48,551 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/deep_eda/deep_eda_not_pass_information.txt' doesn't exist, you don't need to delete it.
+2024-10-21 00:58:48,581 - agents.developer - INFO - State In-depth Exploratory Data Analysis - Agent developer finishes working.
+2024-10-21 00:58:48,592 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-21 00:58:48,593 - agent_base - INFO - State In-depth Exploratory Data Analysis - Agent reviewer is executing.
+2024-10-21 00:58:59,869 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:58:59,870 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 00:58:59,913 - agent_base - INFO - Agent summarizer is created with model gpt-4o-mini.
+2024-10-21 00:58:59,913 - agent_base - INFO - State In-depth Exploratory Data Analysis - Agent summarizer is executing.
+2024-10-21 00:59:14,233 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:01:11,147 - openai._base_client - INFO - Retrying request to /chat/completions in 0.408802 seconds
+2024-10-21 01:01:53,013 - root - INFO - Current State: State: Feature Engineering, Current Step: 0, Current Agent: Planner, Finished: False
+2024-10-21 01:01:53,037 - agent_base - INFO - Agent planner is created with model gpt-4o.
+2024-10-21 01:01:53,038 - agent_base - INFO - State Feature Engineering - Agent planner is executing.
+2024-10-21 01:02:45,392 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:02:45,417 - agent_base - INFO - Agent developer is created with model gpt-4o.
+2024-10-21 01:02:45,418 - agent_base - INFO - State Feature Engineering - Agent developer is executing.
+2024-10-21 01:02:48,967 - agent_base - INFO - Extracting tools' description for developer in phase: Feature Engineering
+2024-10-21 01:02:50,874 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:03:12,330 - agents.developer - INFO - The 1-th try.
+2024-10-21 01:03:15,993 - agents.developer - INFO - Process exited with non-zero status: 1
+2024-10-21 01:03:16,053 - agents.developer - INFO - Start debugging the code.
+2024-10-21 01:03:16,161 - agent_base - INFO - Extracting tools' description for developer in phase: Feature Engineering
+2024-10-21 01:03:18,462 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:03:21,852 - tools.debug - INFO - Debug times: 1
+2024-10-21 01:03:44,159 - agents.developer - INFO - The 2-th try.
+2024-10-21 01:03:47,499 - agents.developer - INFO - Process exited with non-zero status: 1
+2024-10-21 01:03:47,558 - agents.developer - INFO - Start debugging the code.
+2024-10-21 01:03:47,654 - agent_base - INFO - Extracting tools' description for developer in phase: Feature Engineering
+2024-10-21 01:03:49,111 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:03:52,793 - tools.debug - INFO - Debug times: 2
+2024-10-21 01:04:24,943 - agents.developer - INFO - The 3-th try.
+2024-10-21 01:04:27,864 - agents.developer - INFO - Process exited with non-zero status: 1
+2024-10-21 01:04:27,901 - agents.developer - INFO - Start debugging the code.
+2024-10-21 01:04:28,014 - agent_base - INFO - Extracting tools' description for developer in phase: Feature Engineering
+2024-10-21 01:04:29,066 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:04:32,386 - tools.debug - INFO - Debug times: 3
+2024-10-21 01:04:44,297 - agents.developer - INFO - The developer asks for help when debugging the code. Regenerating the code.
+2024-10-21 01:04:44,298 - agents.developer - INFO - The 4-th try.
+2024-10-21 01:04:47,857 - agent_base - INFO - Extracting tools' description for developer in phase: Feature Engineering
+2024-10-21 01:04:49,214 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:05:09,494 - agents.developer - INFO - All error messages saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/feature_engineering/all_error_messages.txt
+2024-10-21 01:05:09,495 - agents.developer - INFO - The developer asks for help when debugging the code. Regenerating the code.
+2024-10-21 01:05:09,503 - agents.developer - INFO - The 4-th try.
+2024-10-21 01:05:12,543 - agents.developer - INFO - Process exited with non-zero status: 1
+2024-10-21 01:05:12,579 - agents.developer - INFO - Start debugging the code.
+2024-10-21 01:05:12,655 - agent_base - INFO - Extracting tools' description for developer in phase: Feature Engineering
+2024-10-21 01:05:14,619 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:05:18,067 - tools.debug - INFO - Debug times: 1
+2024-10-21 01:05:47,342 - agents.developer - INFO - The 5-th try.
+2024-10-21 01:05:50,498 - agents.developer - INFO - Process exited with non-zero status: 1
+2024-10-21 01:05:50,556 - agents.developer - INFO - State Feature Engineering - Agent developer finishes working with error.
+2024-10-21 01:05:50,563 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-21 01:05:50,564 - agent_base - INFO - State Feature Engineering - Agent reviewer is executing.
+2024-10-21 01:06:02,728 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:06:02,729 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:06:02,755 - agent_base - INFO - Agent summarizer is created with model gpt-4o-mini.
+2024-10-21 01:06:02,755 - agent_base - INFO - State Feature Engineering - Agent summarizer is executing.
+2024-10-21 01:06:02,769 - root - INFO - Current State: State: Feature Engineering, Current Step: 0, Current Agent: Planner, Finished: False
+2024-10-21 01:06:02,781 - agent_base - INFO - Agent planner is created with model gpt-4o.
+2024-10-21 01:06:02,781 - agent_base - INFO - State Feature Engineering - Agent planner is executing.
+2024-10-21 01:06:08,244 - agent_base - INFO - Agent developer is created with model gpt-4o.
+2024-10-21 01:06:08,244 - agent_base - INFO - State Feature Engineering - Agent developer is executing.
+2024-10-21 01:06:11,708 - agent_base - INFO - Extracting tools' description for developer in phase: Feature Engineering
+2024-10-21 01:06:13,704 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:07:15,796 - agents.developer - INFO - The 1-th try.
+2024-10-21 01:07:20,272 - agents.developer - INFO - Code executed successfully without errors.
+2024-10-21 01:07:20,277 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/feature_engineering/feature_engineering_error.txt' has been deleted successfully.
+2024-10-21 01:07:20,285 - agents.developer - INFO - Start the 1-th unit test.
+2024-10-21 01:07:20,301 - tools.unit_test - INFO - Test 'test_document_exist' succeeded
+2024-10-21 01:07:20,402 - tools.unit_test - INFO - Test 'test_processed_train_feature_number' failed: There are too many features after handling features in the feature engineering phase.processed_train.csv is the processed data of cleaned_train.csv after feature engineering.
+During the feature engineering phase, improper feature handling has resulted in an excessive number of features. 
+One possible reason is that during the feature processing, certain categorical features (such as brand, transmission, etc.) have too many categories, leading to a large number of features being generated after one-hot encoding.
+
+Here is the information about the categorical features of cleaned_train.csv and their unique value counts:
+Categorical features of cleaned_train.csv and their unique value counts:
+PassengerId    number of unique values: 8693
+Name    number of unique values: 8473
+Cabin    number of unique values: 6560
+HomePlanet    number of unique values: 3
+Destination    number of unique values: 3
+CryoSleep    number of unique values: 2
+VIP    number of unique values: 2
+Transported    number of unique values: 2
+
+Here is the information about the features of cleaned_train.csv:
+Index(['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age',
+       'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck',
+       'Name', 'Transported'],
+      dtype='object')
+
+Here is the information about the features of processed_train.csv:
+Index(['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age',
+       'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck',
+       'Name', 'Transported', 'RoomService_flag', 'FoodCourt_flag',
+       'ShoppingMall_flag', 'Spa_flag', 'VRDeck_flag', 'AgeGroup',
+       'Cabin_deck', 'Cabin_number', 'Cabin_side', 'RoomService_log',
+       'FoodCourt_log', 'ShoppingMall_log', 'Spa_log', 'VRDeck_log',
+       'HomePlanet_Earth', 'HomePlanet_Europa', 'HomePlanet_Mars',
+       'CryoSleep_False', 'CryoSleep_True', 'Cabin_deck_A', 'Cabin_deck_B',
+       'Cabin_deck_C', 'Cabin_deck_D', 'Cabin_deck_E', 'Cabin_deck_F',
+       'Cabin_deck_G', 'Cabin_deck_T', 'Cabin_side_P', 'Cabin_side_S',
+       'Destination_55 Cancri e', 'Destination_PSO J318.5-22',
+       'Destination_TRAPPIST-1e', 'VIP_False', 'VIP_True', 'AgeGroup_0-18',
+       'AgeGroup_19-35', 'AgeGroup_36-50', 'AgeGroup_51-65', 'AgeGroup_nan'],
+      dtype='object')
+
+2024-10-21 01:07:20,458 - tools.unit_test - INFO - Test 'test_processed_train_no_duplicated_features' succeeded
+2024-10-21 01:07:20,486 - tools.unit_test - INFO - Test 'test_processed_test_no_duplicated_features' succeeded
+2024-10-21 01:07:20,611 - tools.unit_test - INFO - Test 'test_processed_difference_train_test_columns' succeeded
+2024-10-21 01:07:20,684 - tools.unit_test - INFO - Test 'test_processed_train_no_missing_target' succeeded
+2024-10-21 01:07:20,725 - tools.unit_test - INFO - Test 'test_processed_train_id_column' succeeded
+2024-10-21 01:07:20,748 - tools.unit_test - INFO - Test 'test_processed_test_id_column' succeeded
+2024-10-21 01:07:20,803 - tools.unit_test - INFO - Test 'test_processed_test_no_target_column' succeeded
+2024-10-21 01:07:20,861 - tools.unit_test - INFO - Test 'test_processed_train_no_missing_rows' succeeded
+2024-10-21 01:07:20,897 - tools.unit_test - INFO - Test 'test_processed_test_no_missing_rows' succeeded
+2024-10-21 01:07:20,897 - agents.developer - INFO - There are 1 not pass tests.
+2024-10-21 01:07:20,897 - agents.developer - INFO - Unit tests failed.
+2024-10-21 01:07:20,898 - agents.developer - INFO - Test 15: There are too many features after handling features in the feature engineering phase.processed_train.csv is the processed data of cleaned_train.csv after feature engineering.
+During the feature engineering phase, improper feature handling has resulted in an excessive number of features. 
+One possible reason is that during the feature processing, certain categorical features (such as brand, transmission, etc.) have too many categories, leading to a large number of features being generated after one-hot encoding.
+
+Here is the information about the categorical features of cleaned_train.csv and their unique value counts:
+Categorical features of cleaned_train.csv and their unique value counts:
+PassengerId    number of unique values: 8693
+Name    number of unique values: 8473
+Cabin    number of unique values: 6560
+HomePlanet    number of unique values: 3
+Destination    number of unique values: 3
+CryoSleep    number of unique values: 2
+VIP    number of unique values: 2
+Transported    number of unique values: 2
+
+Here is the information about the features of cleaned_train.csv:
+Index(['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age',
+       'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck',
+       'Name', 'Transported'],
+      dtype='object')
+
+Here is the information about the features of processed_train.csv:
+Index(['PassengerId', 'HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age',
+       'VIP', 'RoomService', 'FoodCourt', 'ShoppingMall', 'Spa', 'VRDeck',
+       'Name', 'Transported', 'RoomService_flag', 'FoodCourt_flag',
+       'ShoppingMall_flag', 'Spa_flag', 'VRDeck_flag', 'AgeGroup',
+       'Cabin_deck', 'Cabin_number', 'Cabin_side', 'RoomService_log',
+       'FoodCourt_log', 'ShoppingMall_log', 'Spa_log', 'VRDeck_log',
+       'HomePlanet_Earth', 'HomePlanet_Europa', 'HomePlanet_Mars',
+       'CryoSleep_False', 'CryoSleep_True', 'Cabin_deck_A', 'Cabin_deck_B',
+       'Cabin_deck_C', 'Cabin_deck_D', 'Cabin_deck_E', 'Cabin_deck_F',
+       'Cabin_deck_G', 'Cabin_deck_T', 'Cabin_side_P', 'Cabin_side_S',
+       'Destination_55 Cancri e', 'Destination_PSO J318.5-22',
+       'Destination_TRAPPIST-1e', 'VIP_False', 'VIP_True', 'AgeGroup_0-18',
+       'AgeGroup_19-35', 'AgeGroup_36-50', 'AgeGroup_51-65', 'AgeGroup_nan'],
+      dtype='object')
+
+2024-10-21 01:07:20,926 - agents.developer - INFO - Start debugging the code.
+2024-10-21 01:08:06,510 - agents.developer - INFO - Code executed successfully without errors.
+2024-10-21 01:08:06,513 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/feature_engineering/feature_engineering_error.txt' doesn't exist, you don't need to delete it.
+2024-10-21 01:08:06,523 - agents.developer - INFO - Start the 2-th unit test.
+2024-10-21 01:08:06,538 - tools.unit_test - INFO - Test 'test_document_exist' succeeded
+2024-10-21 01:08:06,586 - tools.unit_test - INFO - Test 'test_processed_train_feature_number' succeeded
+2024-10-21 01:08:06,615 - tools.unit_test - INFO - Test 'test_processed_train_no_duplicated_features' succeeded
+2024-10-21 01:08:06,633 - tools.unit_test - INFO - Test 'test_processed_test_no_duplicated_features' succeeded
+2024-10-21 01:08:06,712 - tools.unit_test - INFO - Test 'test_processed_difference_train_test_columns' succeeded
+2024-10-21 01:08:06,766 - tools.unit_test - INFO - Test 'test_processed_train_no_missing_target' succeeded
+2024-10-21 01:08:06,793 - tools.unit_test - INFO - Test 'test_processed_train_id_column' succeeded
+2024-10-21 01:08:06,812 - tools.unit_test - INFO - Test 'test_processed_test_id_column' succeeded
+2024-10-21 01:08:06,861 - tools.unit_test - INFO - Test 'test_processed_test_no_target_column' succeeded
+2024-10-21 01:08:06,909 - tools.unit_test - INFO - Test 'test_processed_train_no_missing_rows' succeeded
+2024-10-21 01:08:06,944 - tools.unit_test - INFO - Test 'test_processed_test_no_missing_rows' succeeded
+2024-10-21 01:08:06,944 - agents.developer - INFO - There are 0 not pass tests.
+2024-10-21 01:08:06,945 - agents.developer - INFO - All unit tests passed.
+2024-10-21 01:08:06,948 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/feature_engineering/feature_engineering_not_pass_information.txt' doesn't exist, you don't need to delete it.
+2024-10-21 01:08:06,990 - agents.developer - INFO - State Feature Engineering - Agent developer finishes working.
+2024-10-21 01:08:06,999 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-21 01:08:07,000 - agent_base - INFO - State Feature Engineering - Agent reviewer is executing.
+2024-10-21 01:08:22,850 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:08:22,851 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:08:22,889 - agent_base - INFO - Agent summarizer is created with model gpt-4o-mini.
+2024-10-21 01:08:22,889 - agent_base - INFO - State Feature Engineering - Agent summarizer is executing.
+2024-10-21 01:08:49,925 - root - INFO - Current State: State: Model Building, Validation, and Prediction, Current Step: 0, Current Agent: Planner, Finished: False
+2024-10-21 01:08:49,936 - agent_base - INFO - Agent planner is created with model gpt-4o.
+2024-10-21 01:08:49,937 - agent_base - INFO - State Model Building, Validation, and Prediction - Agent planner is executing.
+2024-10-21 01:09:47,899 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:09:47,934 - agent_base - INFO - Agent developer is created with model gpt-4o.
+2024-10-21 01:09:47,935 - agent_base - INFO - State Model Building, Validation, and Prediction - Agent developer is executing.
+2024-10-21 01:09:52,455 - agent_base - INFO - Extracting tools' description for developer in phase: Model Building, Validation, and Prediction
+2024-10-21 01:09:53,636 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:10:04,147 - agents.developer - INFO - The 1-th try.
+2024-10-21 01:10:04,229 - agents.developer - INFO - Process exited with non-zero status: 1
+2024-10-21 01:10:04,258 - agents.developer - INFO - Start debugging the code.
+2024-10-21 01:10:04,340 - agent_base - INFO - Extracting tools' description for developer in phase: Model Building, Validation, and Prediction
+2024-10-21 01:10:05,092 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:10:05,802 - tools.debug - INFO - Debug times: 1
+2024-10-21 01:10:26,036 - agents.developer - INFO - The 2-th try.
+2024-10-21 01:10:30,598 - agents.developer - INFO - Process exited with non-zero status: 1
+2024-10-21 01:10:30,646 - agents.developer - INFO - Start debugging the code.
+2024-10-21 01:10:30,764 - agent_base - INFO - Extracting tools' description for developer in phase: Model Building, Validation, and Prediction
+2024-10-21 01:10:31,880 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:10:32,624 - tools.debug - INFO - Debug times: 2
+2024-10-21 01:10:51,949 - agents.developer - INFO - The 3-th try.
+2024-10-21 01:10:55,638 - agents.developer - INFO - Process exited with non-zero status: 1
+2024-10-21 01:10:55,679 - agents.developer - INFO - Start debugging the code.
+2024-10-21 01:10:55,779 - agent_base - INFO - Extracting tools' description for developer in phase: Model Building, Validation, and Prediction
+2024-10-21 01:10:57,202 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:10:58,151 - tools.debug - INFO - Debug times: 3
+2024-10-21 01:11:07,632 - agents.developer - INFO - The developer asks for help when debugging the code. Regenerating the code.
+2024-10-21 01:11:07,633 - agents.developer - INFO - The 4-th try.
+2024-10-21 01:11:11,665 - agent_base - INFO - Extracting tools' description for developer in phase: Model Building, Validation, and Prediction
+2024-10-21 01:11:12,428 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:11:23,090 - agents.developer - INFO - All error messages saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/model_build_predict/all_error_messages.txt
+2024-10-21 01:11:23,090 - agents.developer - INFO - The developer asks for help when debugging the code. Regenerating the code.
+2024-10-21 01:11:23,109 - agents.developer - INFO - The 4-th try.
+2024-10-21 01:13:56,605 - agents.developer - INFO - Code executed successfully without errors.
+2024-10-21 01:13:56,610 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/model_build_predict/model_build_predict_error.txt' has been deleted successfully.
+2024-10-21 01:13:56,620 - agents.developer - INFO - Start the 1-th unit test.
+2024-10-21 01:13:56,635 - tools.unit_test - INFO - Test 'test_document_exist' succeeded
+2024-10-21 01:13:56,673 - tools.unit_test - INFO - Test 'test_column_names_submission' succeeded
+2024-10-21 01:13:56,730 - tools.unit_test - INFO - Test 'test_submission_validity' succeeded
+2024-10-21 01:13:56,748 - tools.unit_test - INFO - Test 'test_submission_no_missing_rows' succeeded
+2024-10-21 01:13:56,749 - agents.developer - INFO - There are 0 not pass tests.
+2024-10-21 01:13:56,749 - agents.developer - INFO - All unit tests passed.
+2024-10-21 01:13:56,751 - agents.developer - INFO - File '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/spaceship_titanic/model_build_predict/model_build_predict_not_pass_information.txt' doesn't exist, you don't need to delete it.
+2024-10-21 01:13:56,797 - agents.developer - INFO - State Model Building, Validation, and Prediction - Agent developer finishes working.
+2024-10-21 01:13:56,806 - agent_base - INFO - Agent reviewer is created with model gpt-4o-mini.
+2024-10-21 01:13:56,806 - agent_base - INFO - State Model Building, Validation, and Prediction - Agent reviewer is executing.
+2024-10-21 01:14:08,819 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:14:08,820 - agent_base - INFO - Attempting to extract JSON from raw reply.
+2024-10-21 01:14:08,856 - agent_base - INFO - Agent summarizer is created with model gpt-4o-mini.
+2024-10-21 01:14:08,856 - agent_base - INFO - State Model Building, Validation, and Prediction - Agent summarizer is executing.
+2024-10-21 01:14:47,058 - root - INFO - Competition spaceship_titanic SOP is completed.

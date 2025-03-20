@@ -1,0 +1,108 @@
+# Data Information
+
+## Data Type
+### ID type
+- `Id`
+
+### Numerical type
+- `LotFrontage`
+- `LotArea`
+- `OverallQual`
+- `OverallCond`
+- `YearBuilt`
+- `YearRemodAdd`
+- `MasVnrArea`
+- `BsmtFinSF1`
+- `BsmtFinSF2`
+- `BsmtUnfSF`
+- `TotalBsmtSF`
+- `1stFlrSF`
+- `2ndFlrSF`
+- `GrLivArea`
+- `BsmtFullBath`
+- `BsmtHalfBath`
+- `FullBath`
+- `HalfBath`
+- `BedroomAbvGr`
+- `KitchenAbvGr`
+- `TotRmsAbvGrd`
+- `Fireplaces`
+- `GarageCars`
+- `GarageArea`
+- `WoodDeckSF`
+- `OpenPorchSF`
+- `EnclosedPorch`
+- `3SsnPorch`
+- `ScreenPorch`
+- `PoolArea`
+- `MiscVal`
+- `MoSold`
+- `YrSold`
+- `SalePrice` (target variable)
+
+### Categorical type
+- `MSSubClass`
+- `MSZoning`
+- `Street`
+- `Alley`
+- `LotShape`
+- `LandContour`
+- `Utilities`
+- `LotConfig`
+- `LandSlope`
+- `Neighborhood`
+- `Condition1`
+- `Condition2`
+- `BldgType`
+- `HouseStyle`
+- `RoofStyle`
+- `RoofMatl`
+- `Exterior1st`
+- `Exterior2nd`
+- `MasVnrType`
+- `ExterQual`
+- `ExterCond`
+- `Foundation`
+- `BsmtQual`
+- `BsmtCond`
+- `BsmtExposure`
+- `BsmtFinType1`
+- `BsmtFinType2`
+- `Heating`
+- `HeatingQC`
+- `CentralAir`
+- `Electrical`
+- `KitchenQual`
+- `Functional`
+- `FireplaceQu`
+- `GarageType`
+- `GarageFinish`
+- `GarageQual`
+- `GarageCond`
+- `PavedDrive`
+- `Fence`
+- `MiscFeature`
+- `SaleType`
+- `SaleCondition`
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset contains information about residential properties, with various features that can influence the sale price. Notable features include:
+
+- **Lot Information**: `LotFrontage` and `LotArea` provide dimensions of the lot.
+- **House Characteristics**: Features like `OverallQual`, `OverallCond`, `YearBuilt`, and `YearRemodAdd` give insight into the quality and age of the houses.
+- **Basement Information**: Various features related to the basement, such as `BsmtQual`, `TotalBsmtSF`, and `BsmtFinType1`, indicate the type and quality of the basement.
+- **Garage Information**: Features like `GarageType`, `GarageCars`, and `GarageArea` provide details about garage availability and size.
+- **Sale Information**: The `SaleType` and `SaleCondition` features describe how and under what conditions the property was sold.
+
+The target variable, `SalePrice`, is the price at which the property sold, making it crucial for regression analysis.
+
+## Target Variable
+- `SalePrice`: Represents the final sale price of a residential property. This variable is continuous and is the primary focus of the predictive modeling task.
+
+# Submission format (if applicable)
+The expected submission format should include the following columns:
+- `Id`: Unique identifier for each property.
+- `SalePrice`: Predicted sale price for each property (a numerical value).

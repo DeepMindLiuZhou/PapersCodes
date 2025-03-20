@@ -1,0 +1,24 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What new features were created during the Feature Engineering phase, and how do they relate to the target variable (`type`)?
+
+### Question 4
+Which categorical encoding method was applied to the `color` feature, and how might this choice impact model performance?
+
+### Question 5
+What normalization or scaling techniques were applied to the numerical features, and are there specific algorithms that would benefit from these transformations?
+
+### Question 6
+How did the feature selection process influence the final set of features used for modeling? What criteria were used to retain or discard features?
+
+### Question 7
+Were there any interactions or transformations among numerical features that showed significant correlations with the target variable? If so, which ones?
+
+### Question 8
+What challenges or limitations were encountered during the Feature Engineering phase, and how should they be addressed in the Model Building phase?

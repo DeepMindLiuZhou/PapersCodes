@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What models were trained, and which one was selected as the best performing model?
+
+### Question 2
+What were the cross-validation accuracy scores for the models, and how did they compare?
+
+### Question 3
+What were the key performance metrics (e.g., confusion matrix, classification report) for the selected model, and what insights can be drawn from them?
+
+### Question 4
+Were there any significant issues or challenges encountered during model training or validation, such as overfitting or underfitting?
+
+### Question 5
+What features had the most influence on the model's predictions, and how can this information be used in future analyses?
+
+### Question 6
+What are the next steps or recommendations for further investigations based on the findings from this phase?

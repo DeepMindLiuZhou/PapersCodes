@@ -1,0 +1,66 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Survived
+## FEATURES BEFORE THIS PHASE
+['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked', 'Title', 'FamilySize', 'IsAlone', 'FarePerPerson', 'AgeGroup', 'FareGroup', 'Pclass_1', 'Pclass_2', 'Pclass_3', 'Sex_female', 'Sex_male', 'Embarked_C', 'Embarked_Q', 'Embarked_S', 'Title_Master', 'Title_Miss', 'Title_Mr', 'Title_Mrs', 'Title_Rare', 'AgeGroup_Adult', 'AgeGroup_Child', 'AgeGroup_MiddleAged', 'AgeGroup_Teen', 'FareGroup_High', 'FareGroup_Low', 'FareGroup_Medium', 'FareGroup_VeryHigh']
+## FEATURES AFTER THIS PHASE
+['PassengerId', 'Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked', 'Title', 'FamilySize', 'IsAlone', 'FarePerPerson', 'AgeGroup', 'FareGroup', 'Pclass_1', 'Pclass_2', 'Pclass_3', 'Sex_female', 'Sex_male', 'Embarked_C', 'Embarked_Q', 'Embarked_S', 'Title_Master', 'Title_Miss', 'Title_Mr', 'Title_Mrs', 'Title_Rare', 'AgeGroup_Adult', 'AgeGroup_Child', 'AgeGroup_MiddleAged', 'AgeGroup_Teen', 'FareGroup_High', 'FareGroup_Low', 'FareGroup_Medium', 'FareGroup_VeryHigh']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What models were trained during this phase, and which one performed the best based on validation metrics?  
+### Answer 1
+During this phase, the following models were trained:
+- XGBoost
+- Support Vector Machine (SVM)
+- Random Forest
+- Decision Tree
+- Logistic Regression
+
+The best performing model based on validation metrics was **Random Forest**, with a score of **0.8379**.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.  
+### Answer 2
+The following features were involved in this phase:
+- **Features Deleted**: Non-numeric columns, specifically `PassengerId`, `Name`, `Ticket`, and `Cabin`, were removed from both training and test datasets to focus on relevant numerical and categorical data.
+- **Features Created**: Categorical features underwent one-hot encoding to convert them into a numerical format suitable for model training. The categorical features encoded include `Pclass`, `Sex`, `Embarked`, `Title`, `AgeGroup`, and `FareGroup`.
+- **Feature Modification**: Numerical features such as `Age`, `Fare`, `FarePerPerson`, and `FamilySize` were standardized using `StandardScaler` to ensure they contribute equally during model training.
+
+### Question 3
+Were there any significant features that contributed to model predictions? Which features were identified as the most impactful?  
+### Answer 3
+The output does not explicitly list significant features contributing to the model predictions. However, typical impactful features in Titanic survival prediction tasks include:
+- **Sex** (especially female passengers)
+- **Pclass** (1st class passengers had higher survival rates)
+- **Age** (younger passengers tended to have better survival rates)
+- **Fare** (higher fare could correlate with better accommodations and thus higher survival rates)
+
+### Question 4
+How did you ensure that the training and test datasets were consistent in terms of features?  
+### Answer 4
+To ensure consistency between training and test datasets:
+1. Non-numeric columns were removed from both datasets.
+2. Categorical features were encoded using one-hot encoding.
+3. Both datasets were aligned using the `align` method, which ensured they had the same columns, filling any missing columns in the test set with zero.
+
+### Question 5
+What were the limitations encountered during model training and validation, and how did they influence the results?  
+### Answer 5
+Limitations included:
+- Computational resource constraints that limited the training to only three models.
+- Potential overfitting for models like Decision Tree if they were overly complex for the training data.
+- Lack of extensive hyperparameter tuning, which could have further optimized model performance.
+
+These limitations may have influenced the selection of models and their respective scores, potentially leaving room for better performance with a more exhaustive approach.
+
+### Question 6
+What recommendations do you have for future work based on the findings from this phase?  
+### Answer 6
+Recommendations for future work include:
+1. **Feature Engineering**: Implement additional feature engineering techniques to explore interactions between features.
+2. **Cross-Validation**: Include cross-validation to better assess model performance and avoid overfitting.
+3. **Hyperparameter Tuning**: Consider hyperparameter tuning for the selected models to optimize performance.
+4. **Feature Selection Validation**: Include validation of feature selection to ensure that only the most relevant features are used for model training.

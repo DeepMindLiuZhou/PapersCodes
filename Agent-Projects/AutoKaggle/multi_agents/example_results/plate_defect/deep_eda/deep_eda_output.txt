@@ -1,0 +1,261 @@
+Descriptive Statistics for Numerical Features:
+          X_Minimum     X_Maximum  ...  Luminosity_Index  SigmoidOfAreas
+count  19219.000000  19219.000000  ...      19219.000000    19219.000000
+mean     709.854675    753.857641  ...         -0.139921        0.571902
+std      531.544189    499.836603  ...          0.094077        0.332219
+min        0.000000      4.000000  ...         -0.355250        0.119000
+25%       49.000000    214.000000  ...         -0.192500        0.253200
+50%      777.000000    796.000000  ...         -0.142600        0.472900
+75%     1152.000000   1165.000000  ...         -0.084000        0.999400
+max     1705.000000   1713.000000  ...          0.078750        1.000000
+
+[8 rows x 25 columns]
+
+Frequency Distribution for Categorical Features:
+
+TypeOfSteel_A300:
+TypeOfSteel_A300
+False    11480
+True      7739
+Name: count, dtype: int64
+
+TypeOfSteel_A400:
+TypeOfSteel_A400
+True     11461
+False     7758
+Name: count, dtype: int64
+Heatmap of the correlation matrix saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/correlation_matrix_heatmap.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Minimum_Pastry.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Minimum_Pastry.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Minimum_Z_Scratch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Minimum_Z_Scratch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Minimum_K_Scatch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Minimum_K_Scatch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Minimum_Stains.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Minimum_Stains.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Minimum_Dirtiness.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Minimum_Dirtiness.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Minimum_Bumps.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Minimum_Bumps.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Minimum_Other_Faults.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Minimum_Other_Faults.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Maximum_Pastry.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Maximum_Pastry.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Maximum_Z_Scratch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Maximum_Z_Scratch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Maximum_K_Scatch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Maximum_K_Scatch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Maximum_Stains.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Maximum_Stains.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Maximum_Dirtiness.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Maximum_Dirtiness.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Maximum_Bumps.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Maximum_Bumps.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_X_Maximum_Other_Faults.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_X_Maximum_Other_Faults.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Minimum_Pastry.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Minimum_Pastry.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Minimum_Z_Scratch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Minimum_Z_Scratch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Minimum_K_Scatch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Minimum_K_Scatch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Minimum_Stains.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Minimum_Stains.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Minimum_Dirtiness.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Minimum_Dirtiness.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Minimum_Bumps.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Minimum_Bumps.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Minimum_Other_Faults.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Minimum_Other_Faults.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Maximum_Pastry.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Maximum_Pastry.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Maximum_Z_Scratch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Maximum_Z_Scratch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Maximum_K_Scatch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Maximum_K_Scatch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Maximum_Stains.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Maximum_Stains.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Maximum_Dirtiness.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Maximum_Dirtiness.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Maximum_Bumps.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Maximum_Bumps.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Y_Maximum_Other_Faults.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Y_Maximum_Other_Faults.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Pixels_Areas_Pastry.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Pixels_Areas_Pastry.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Pixels_Areas_Z_Scratch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Pixels_Areas_Z_Scratch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Pixels_Areas_K_Scatch.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Pixels_Areas_K_Scatch.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Pixels_Areas_Stains.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Pixels_Areas_Stains.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Pixels_Areas_Dirtiness.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Pixels_Areas_Dirtiness.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Pixels_Areas_Bumps.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Pixels_Areas_Bumps.png
+Histogram saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/hist_Pixels_Areas_Other_Faults.png
+Boxplot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/boxplot_Pixels_Areas_Other_Faults.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A300_Pastry.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A300_Z_Scratch.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A300_K_Scatch.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A300_Stains.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A300_Dirtiness.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A300_Bumps.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A300_Other_Faults.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A400_Pastry.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A400_Z_Scratch.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A400_K_Scatch.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A400_Stains.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A400_Dirtiness.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A400_Bumps.png
+Count Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/countplot_TypeOfSteel_A400_Other_Faults.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Minimum_Pastry.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Minimum_Z_Scratch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Minimum_K_Scatch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Minimum_Stains.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Minimum_Dirtiness.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Minimum_Bumps.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Minimum_Other_Faults.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Maximum_Pastry.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Maximum_Z_Scratch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Maximum_K_Scatch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Maximum_Stains.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Maximum_Dirtiness.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Maximum_Bumps.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_X_Maximum_Other_Faults.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Minimum_Pastry.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Minimum_Z_Scratch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Minimum_K_Scatch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Minimum_Stains.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Minimum_Dirtiness.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Minimum_Bumps.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Minimum_Other_Faults.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Maximum_Pastry.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Maximum_Z_Scratch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Maximum_K_Scatch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Maximum_Stains.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Maximum_Dirtiness.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Maximum_Bumps.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Y_Maximum_Other_Faults.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Pixels_Areas_Pastry.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Pixels_Areas_Z_Scratch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Pixels_Areas_K_Scatch.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Pixels_Areas_Stains.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Pixels_Areas_Dirtiness.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Pixels_Areas_Bumps.png
+Scatter Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/scatter_Pixels_Areas_Other_Faults.png
+Interaction Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_X_Minimum_Y_Maximum.png
+Interaction Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_X_Minimum_Pixels_Areas.png
+Interaction Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_X_Minimum_X_Perimeter.png
+Interaction Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_X_Maximum_Y_Maximum.png
+Interaction Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_X_Maximum_Pixels_Areas.png
+Interaction Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_X_Maximum_X_Perimeter.png
+Interaction Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_Y_Minimum_Y_Maximum.png
+Interaction Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_Y_Minimum_Pixels_Areas.png
+Interaction Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/interaction_Y_Minimum_X_Perimeter.png
+
+Cross-tabulation between TypeOfSteel_A300 and Pastry:
+
+Pastry                0    1
+TypeOfSteel_A300            
+False             10586  894
+True               7167  572
+
+Cross-tabulation between TypeOfSteel_A300 and Z_Scratch:
+
+Z_Scratch             0    1
+TypeOfSteel_A300            
+False             11218  262
+True               6851  888
+
+Cross-tabulation between TypeOfSteel_A300 and K_Scatch:
+
+K_Scatch             0     1
+TypeOfSteel_A300            
+False             8076  3404
+True              7711    28
+
+Cross-tabulation between TypeOfSteel_A300 and Stains:
+
+Stains                0    1
+TypeOfSteel_A300            
+False             10946  534
+True               7705   34
+
+Cross-tabulation between TypeOfSteel_A300 and Dirtiness:
+
+Dirtiness             0    1
+TypeOfSteel_A300            
+False             11072  408
+True               7662   77
+
+Cross-tabulation between TypeOfSteel_A300 and Bumps:
+
+Bumps                0     1
+TypeOfSteel_A300            
+False             9636  1844
+True              4820  2919
+
+Cross-tabulation between TypeOfSteel_A300 and Other_Faults:
+
+Other_Faults         0     1
+TypeOfSteel_A300            
+False             7852  3628
+True              4809  2930
+
+Cross-tabulation between TypeOfSteel_A400 and Pastry:
+
+Pastry                0    1
+TypeOfSteel_A400            
+False              7185  573
+True              10568  893
+
+Cross-tabulation between TypeOfSteel_A400 and Z_Scratch:
+
+Z_Scratch             0    1
+TypeOfSteel_A400            
+False              6870  888
+True              11199  262
+
+Cross-tabulation between TypeOfSteel_A400 and K_Scatch:
+
+K_Scatch             0     1
+TypeOfSteel_A400            
+False             7715    43
+True              8072  3389
+
+Cross-tabulation between TypeOfSteel_A400 and Stains:
+
+Stains                0    1
+TypeOfSteel_A400            
+False              7723   35
+True              10928  533
+
+Cross-tabulation between TypeOfSteel_A400 and Dirtiness:
+
+Dirtiness             0    1
+TypeOfSteel_A400            
+False              7681   77
+True              11053  408
+
+Cross-tabulation between TypeOfSteel_A400 and Bumps:
+
+Bumps                0     1
+TypeOfSteel_A400            
+False             4839  2919
+True              9617  1844
+
+Cross-tabulation between TypeOfSteel_A400 and Other_Faults:
+
+Other_Faults         0     1
+TypeOfSteel_A400            
+False             4825  2933
+True              7836  3625
+Summary Bar Plot saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/plate_defect/deep_eda/images/summary_TypeOfSteel_A300_Pastry.png
+Recommendations for Feature Engineering:
+
+    1. Consider creating polynomial features from 'X_Minimum', 'X_Maximum', 'Y_Minimum', and 'Y_Maximum'.
+    2. Combine 'Sum_of_Luminosity', 'Minimum_of_Luminosity', and 'Maximum_of_Luminosity' to create new features capturing luminosity ranges.
+    3. Use interaction terms between key indices like 'Edges_Index', 'Square_Index', and 'Orientation_Index'.
+    4. Consider feature scaling for numerical features to improve model performance.
+    

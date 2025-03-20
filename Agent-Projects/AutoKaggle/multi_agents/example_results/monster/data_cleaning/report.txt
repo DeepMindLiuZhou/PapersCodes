@@ -1,0 +1,77 @@
+# FEATURE INFO
+## TARGET VARIABLE
+type
+## FEATURES BEFORE THIS PHASE
+['id', 'bone_length', 'rotting_flesh', 'hair_length', 'has_soul', 'color', 'type']
+## FEATURES AFTER THIS PHASE
+['id', 'bone_length', 'rotting_flesh', 'hair_length', 'has_soul', 'color', 'type']
+# REPORT
+## QUESTIONS AND ANSWERS  
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - Training Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/train.csv`
+  - Testing Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/test.csv`
+
+- **Generated Files:**
+  - Cleaned Training Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/cleaned_train.csv`
+  - Cleaned Testing Data: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/cleaned_test.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Involved Features:**
+  - **Numerical Features:**
+    - `bone_length`: Outliers clipped.
+    - `rotting_flesh`: Outliers clipped.
+    - `hair_length`: Outliers clipped.
+    - `has_soul`: Outliers clipped.
+
+  - **Categorical Features:**
+    - `color`: Standardized to lowercase; no discrepancies found.
+  
+- **Feature Modifications:**
+  - **Numerical Features:**
+    - Outliers in training data were removed through capping, and testing data outliers were clipped.
+  
+  - **Categorical Features:**
+    - `color` was standardized to ensure consistency between training and testing datasets, with no inconsistencies detected.
+
+### Question 3
+What outlier handling techniques were applied to the numerical features, and what impact did they have on the datasets?
+### Answer 3
+- **Techniques:**
+  - **Training Data:** Outliers were handled using the IQR method with a clipping technique, where extreme values were capped at defined limits. 
+  - **Testing Data:** Outliers were clipped to the nearest boundary values.
+
+- **Impact:**
+  - The training dataset size changed from the original to 371 records, indicating some rows were affected by outlier removal.
+  - The testing dataset retained its size of 529 records, with outliers clipped to maintain the original sample size.
+
+### Question 4
+What categorical features were standardized across the training and testing datasets, and how were inconsistencies resolved?
+### Answer 4
+- **Standardized Feature:**
+  - `color`: The categories were converted to lowercase to ensure consistency.
+
+- **Inconsistencies:**
+  - No discrepancies were found in the `color` categories across training and testing datasets. 
+
+### Question 5
+What proportion of the data was affected by the removal of duplicates, and how does this influence the integrity of the datasets?
+### Answer 5
+- **Proportion Affected:**
+  - The exact proportion is not specified, but the developer confirmed that duplicate records were identified and removed based on the `id` feature. The training and testing datasets were checked for duplicates successfully.
+
+- **Influence on Data Integrity:**
+  - Removing duplicates enhances data integrity by ensuring that each unique `id` corresponds to one record, which is crucial for accurate analysis and modeling.
+
+### Question 6
+What overall patterns or anomalies were identified during data cleaning that should be explored further in the in-depth EDA?
+### Answer 6
+- **Identified Patterns/Anomalies:**
+  - No specific patterns or anomalies were reported in the provided information. However, the successful handling of outliers and standardization of categorical features suggests a more consistent dataset for further exploration.
+  
+- **Future Exploration:**
+  - The impact of outlier handling and potential residuals in the distributions of numerical features should be examined in the upcoming in-depth EDA phase to understand their effects on model performance.

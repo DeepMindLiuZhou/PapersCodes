@@ -1,0 +1,80 @@
+# Data Information
+## Data Type
+### ID type
+- id
+
+### Numerical type
+- X_Minimum
+- X_Maximum
+- Y_Minimum
+- Y_Maximum
+- Pixels_Areas
+- X_Perimeter
+- Y_Perimeter
+- Sum_of_Luminosity
+- Minimum_of_Luminosity
+- Maximum_of_Luminosity
+- Length_of_Conveyer
+- Steel_Plate_Thickness
+- Edges_Index
+- Empty_Index
+- Square_Index
+- Outside_X_Index
+- Edges_X_Index
+- Edges_Y_Index
+- Outside_Global_Index
+- LogOfAreas
+- Log_X_Index
+- Log_Y_Index
+- Orientation_Index
+- Luminosity_Index
+- SigmoidOfAreas
+
+### Categorical type
+- TypeOfSteel_A300 (Boolean)
+- TypeOfSteel_A400 (Boolean)
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset contains information on steel plates with various features. The data is divided into training and test sets. Each row represents a steel plate with unique characteristics. Here are some notable observations:
+
+1. **Numerical Features**:
+   - `X_Minimum` and `X_Maximum`: These values represent the minimum and maximum X coordinates.
+   - `Y_Minimum` and `Y_Maximum`: These values represent the minimum and maximum Y coordinates.
+   - `Pixels_Areas`: The area of the plate in pixels.
+   - `X_Perimeter` and `Y_Perimeter`: These indicate the perimeter in the X and Y directions respectively.
+   - `Sum_of_Luminosity`, `Minimum_of_Luminosity`, `Maximum_of_Luminosity`: These metrics provide information about the luminosity of the plate.
+   - Various indices such as `Edges_Index`, `Empty_Index`, `Square_Index`, `Outside_X_Index`, `Edges_X_Index`, `Edges_Y_Index`, `Outside_Global_Index`, `LogOfAreas`, `Log_X_Index`, `Log_Y_Index`, `Orientation_Index`, `Luminosity_Index`, and `SigmoidOfAreas` provide different calculated values related to the geometry and luminosity properties of the steel plate.
+
+2. **Categorical Features**:
+   - `TypeOfSteel_A300` and `TypeOfSteel_A400`: These boolean values indicate the type of steel.
+
+3. **ID**:
+   - Each row has a unique `id` which serves as the identifier for the data point.
+
+## Target Variable
+The target variable consists of multiple labels indicating different types of faults in the steel plates:
+- `Pastry`
+- `Z_Scratch`
+- `K_Scatch`
+- `Stains`
+- `Dirtiness`
+- `Bumps`
+- `Other_Faults`
+
+These categories describe different types of defects that can occur on the steel plates.
+
+# Submission format (if applicable)
+The submission file should contain the following columns:
+- `id` (integer): Unique identifier for each steel plate.
+- Target variables (`Pastry`, `Z_Scratch`, `K_Scatch`, `Stains`, `Dirtiness`, `Bumps`, `Other_Faults`), each represented as a boolean (0 or 1) indicating the presence of the defect.
+
+Example format:
+```plaintext
+id,Pastry,Z_Scratch,K_Scatch,Stains,Dirtiness,Bumps,Other_Faults
+0,0,0,0,1,0,0,0
+1,0,0,0,0,0,0,1
+...
+```

@@ -1,0 +1,81 @@
+## PLAN
+
+### STEP 1
+Task: Handle Missing Values
+Tools, involved features and correct parameters:
+- **Age:**
+  - **Tool:** `fill_missing_values`
+  - **Parameters:** 
+    - `columns`: `['Age']`
+    - `method`: `mean`
+- **Cabin:**
+  - **Tool:** `fill_missing_values`
+  - **Parameters:** 
+    - `columns`: `['Cabin']`
+    - `method`: `constant`
+    - `fill_value`: `'Missing'`
+- **Embarked:**
+  - **Tool:** `fill_missing_values`
+  - **Parameters:** 
+    - `columns`: `['Embarked']`
+    - `method`: `mode`
+Expected output or Impact on data:
+- **Age:** Missing ages filled with the mean age.
+- **Cabin:** Missing cabin values filled with 'Missing'.
+- **Embarked:** Missing embarkation points filled with the most common value.
+Constraints: Ensure that the imputation methods do not introduce significant bias, especially for the `Age` and `Embarked` features.
+
+### STEP 2
+Task: Treat Outliers
+Tools, involved features and correct parameters:
+- **Fare:**
+  - **Tool:** `detect_and_handle_outliers_iqr`
+  - **Parameters:**
+    - `columns`: `['Fare']`
+    - `factor`: `1.5`
+    - `method`: `clip`
+- **Age:**
+  - **Tool:** `detect_and_handle_outliers_iqr`
+  - **Parameters:**
+    - `columns`: `['Age']`
+    - `factor`: `1.5`
+    - `method`: `clip`
+Expected output or Impact on data:
+- **Fare:** Extreme fare values capped to the upper and lower bounds defined by the IQR method.
+- **Age:** Extreme age values capped to the upper and lower bounds defined by the IQR method.
+Constraints: Ensure that the outlier treatment does not remove any valid data points, especially for the `Age` and `Fare` features.
+
+### STEP 3
+Task: Ensure Consistency Across Datasets
+Tools, involved features and correct parameters:
+- **Convert Data Types:**
+  - **Tool:** `convert_data_types`
+  - **Parameters:**
+    - `columns`: `['Pclass', 'Age', 'SibSp', 'Parch', 'Fare']`
+    - `target_type`: `int` (for `Pclass`, `SibSp`, `Parch`) and `float` (for `Age`, `Fare`)
+- **Remove Duplicates:**
+  - **Tool:** `remove_duplicates`
+  - **Parameters:**
+    - `columns`: `None` (consider all columns)
+    - `keep`: `first`
+    - `inplace`: `True`
+Expected output or Impact on data: 
+- **Convert Data Types:** Ensures numerical consistency, preventing type-related issues during modeling.
+- **Remove Duplicates:** Ensures each passenger is unique.
+Constraints: Ensure that the data type conversion and duplicate removal do not lead to loss of critical information.
+
+### STEP 4
+Task: Save Cleaned Datasets
+Tools, involved features and correct parameters:
+- **Save Cleaned Train Data:**
+  - **Tool:** pandas `to_csv`
+  - **Parameters:**
+    - `file_path`: `cleaned_train.csv`
+- **Save Cleaned Test Data:**
+  - **Tool:** pandas `to_csv`
+  - **Parameters:**
+    - `file_path`: `cleaned_test.csv`
+Expected output or Impact on data:
+- **Save Cleaned Train Data:** Saves the cleaned training data for subsequent phases.
+- **Save Cleaned Test Data:** Saves the cleaned testing data for subsequent phases.
+Constraints: Ensure that both cleaned datasets are saved in the correct format without any data loss.

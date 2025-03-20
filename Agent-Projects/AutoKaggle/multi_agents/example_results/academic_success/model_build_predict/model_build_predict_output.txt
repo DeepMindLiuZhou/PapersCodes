@@ -1,0 +1,220 @@
+Target variable separated and 'id' column removed from training and test sets.
+Non-numeric columns to be removed: []
+Non-numeric columns removed from training and test sets.
+Feature alignment between training and test sets ensured.
+Prepared datasets saved at '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/model_build_predict/ready_train.csv' and '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/model_build_predict/ready_test.csv'.
+Prepared training and test datasets loaded.
+All features are numeric in both training and test sets.
+Feature scaling applied to training and test sets.
+
+Training Data - Mean after scaling:
+ Marital status                                   -1.635257e-16
+Application mode                                 -5.757292e-18
+Application order                                -2.692927e-17
+Course                                            2.834074e-16
+Daytime/evening attendance                        4.308683e-17
+Previous qualification                            7.243045e-18
+Previous qualification (grade)                    2.553638e-17
+Nacionality                                       2.934362e-17
+Mother's qualification                           -1.207174e-17
+Father's qualification                            5.627289e-17
+Mother's occupation                              -3.955817e-17
+Father's occupation                              -1.912907e-17
+Admission grade                                   4.550118e-18
+Displaced                                        -1.371536e-16
+Educational special needs                         5.571573e-19
+Debtor                                           -1.146815e-17
+Tuition fees up to date                           4.642978e-18
+Gender                                           -1.250354e-16
+Scholarship holder                                6.620886e-17
+Age at enrollment                                -3.147939e-17
+International                                    -1.625042e-17
+Curricular units 1st sem (credited)               0.000000e+00
+Curricular units 1st sem (enrolled)               1.132887e-17
+Curricular units 1st sem (evaluations)            1.450931e-17
+Curricular units 1st sem (approved)              -4.763695e-17
+Curricular units 1st sem (grade)                 -2.210057e-17
+Curricular units 1st sem (without evaluations)    0.000000e+00
+Curricular units 2nd sem (credited)               0.000000e+00
+Curricular units 2nd sem (enrolled)              -4.828697e-18
+Curricular units 2nd sem (evaluations)            2.135770e-17
+Curricular units 2nd sem (approved)              -1.439323e-17
+Curricular units 2nd sem (grade)                  4.810125e-17
+Curricular units 2nd sem (without evaluations)    0.000000e+00
+Unemployment rate                                -3.166511e-17
+Inflation rate                                   -1.931479e-17
+GDP                                              -3.157225e-18
+Admission_grade_x_GDP                            -7.428764e-18
+Age_at_enrollment_x_Educational_special_needs     5.107275e-19
+Admission grade.1                                 4.550118e-18
+GDP.1                                            -3.157225e-18
+Age at enrollment.1                              -3.147939e-17
+Admission grade^2                                -3.389374e-17
+Admission grade GDP                              -7.428764e-18
+Admission grade Age at enrollment                -1.615756e-17
+GDP^2                                             5.274423e-17
+GDP Age at enrollment                             3.900101e-18
+Age at enrollment^2                               2.897218e-17
+dtype: float64
+
+Training Data - Std Dev after scaling:
+ Marital status                                    1.000007
+Application mode                                  1.000007
+Application order                                 1.000007
+Course                                            1.000007
+Daytime/evening attendance                        1.000007
+Previous qualification                            1.000007
+Previous qualification (grade)                    1.000007
+Nacionality                                       1.000007
+Mother's qualification                            1.000007
+Father's qualification                            1.000007
+Mother's occupation                               1.000007
+Father's occupation                               1.000007
+Admission grade                                   1.000007
+Displaced                                         1.000007
+Educational special needs                         1.000007
+Debtor                                            1.000007
+Tuition fees up to date                           1.000007
+Gender                                            1.000007
+Scholarship holder                                1.000007
+Age at enrollment                                 1.000007
+International                                     1.000007
+Curricular units 1st sem (credited)               0.000000
+Curricular units 1st sem (enrolled)               1.000007
+Curricular units 1st sem (evaluations)            1.000007
+Curricular units 1st sem (approved)               1.000007
+Curricular units 1st sem (grade)                  1.000007
+Curricular units 1st sem (without evaluations)    0.000000
+Curricular units 2nd sem (credited)               0.000000
+Curricular units 2nd sem (enrolled)               1.000007
+Curricular units 2nd sem (evaluations)            1.000007
+Curricular units 2nd sem (approved)               1.000007
+Curricular units 2nd sem (grade)                  1.000007
+Curricular units 2nd sem (without evaluations)    0.000000
+Unemployment rate                                 1.000007
+Inflation rate                                    1.000007
+GDP                                               1.000007
+Admission_grade_x_GDP                             1.000007
+Age_at_enrollment_x_Educational_special_needs     1.000007
+Admission grade.1                                 1.000007
+GDP.1                                             1.000007
+Age at enrollment.1                               1.000007
+Admission grade^2                                 1.000007
+Admission grade GDP                               1.000007
+Admission grade Age at enrollment                 1.000007
+GDP^2                                             1.000007
+GDP Age at enrollment                             1.000007
+Age at enrollment^2                               1.000007
+dtype: float64
+
+Test Data - Mean after scaling:
+ Marital status                                   -0.006436
+Application mode                                  0.000760
+Application order                                 0.003050
+Course                                            0.013873
+Daytime/evening attendance                        0.010773
+Previous qualification                           -0.002754
+Previous qualification (grade)                   -0.005080
+Nacionality                                      -0.007815
+Mother's qualification                            0.004912
+Father's qualification                            0.007398
+Mother's occupation                              -0.004421
+Father's occupation                              -0.005396
+Admission grade                                   0.003827
+Displaced                                         0.000501
+Educational special needs                         0.006532
+Debtor                                           -0.013883
+Tuition fees up to date                           0.004917
+Gender                                           -0.006227
+Scholarship holder                               -0.008586
+Age at enrollment                                -0.010405
+International                                    -0.010390
+Curricular units 1st sem (credited)               0.000000
+Curricular units 1st sem (enrolled)               0.009131
+Curricular units 1st sem (evaluations)            0.012287
+Curricular units 1st sem (approved)               0.014632
+Curricular units 1st sem (grade)                  0.032621
+Curricular units 1st sem (without evaluations)    0.000000
+Curricular units 2nd sem (credited)               0.000000
+Curricular units 2nd sem (enrolled)               0.006990
+Curricular units 2nd sem (evaluations)            0.012736
+Curricular units 2nd sem (approved)               0.011717
+Curricular units 2nd sem (grade)                  0.013796
+Curricular units 2nd sem (without evaluations)    0.000000
+Unemployment rate                                 0.000102
+Inflation rate                                    0.000358
+GDP                                              -0.002468
+Admission_grade_x_GDP                             0.006840
+Age_at_enrollment_x_Educational_special_needs    -0.005939
+Admission grade.1                                 0.003827
+GDP.1                                            -0.002468
+Age at enrollment.1                              -0.010405
+Admission grade^2                                 0.000924
+Admission grade GDP                               0.006840
+Admission grade Age at enrollment                 0.005930
+GDP^2                                             0.000246
+GDP Age at enrollment                            -0.005631
+Age at enrollment^2                              -0.013211
+dtype: float64
+
+Test Data - Std Dev after scaling:
+ Marital status                                    0.991889
+Application mode                                  0.998320
+Application order                                 1.004903
+Course                                            0.971111
+Daytime/evening attendance                        0.983749
+Previous qualification                            0.994612
+Previous qualification (grade)                    0.981333
+Nacionality                                       0.962434
+Mother's qualification                            0.998991
+Father's qualification                            0.997077
+Mother's occupation                               0.984056
+Father's occupation                               0.995746
+Admission grade                                   1.000657
+Displaced                                         0.999940
+Educational special needs                         1.051771
+Debtor                                            0.976525
+Tuition fees up to date                           0.993699
+Gender                                            0.997520
+Scholarship holder                                0.994933
+Age at enrollment                                 0.981314
+International                                     0.934633
+Curricular units 1st sem (credited)               0.000000
+Curricular units 1st sem (enrolled)               0.990843
+Curricular units 1st sem (evaluations)            0.991191
+Curricular units 1st sem (approved)               0.991145
+Curricular units 1st sem (grade)                  0.969313
+Curricular units 1st sem (without evaluations)    0.000000
+Curricular units 2nd sem (credited)               0.000000
+Curricular units 2nd sem (enrolled)               0.991708
+Curricular units 2nd sem (evaluations)            0.987344
+Curricular units 2nd sem (approved)               0.991428
+Curricular units 2nd sem (grade)                  0.993104
+Curricular units 2nd sem (without evaluations)    0.000000
+Unemployment rate                                 0.999154
+Inflation rate                                    1.002835
+GDP                                               1.000126
+Admission_grade_x_GDP                             0.997718
+Age_at_enrollment_x_Educational_special_needs     1.008643
+Admission grade.1                                 1.000657
+GDP.1                                             1.000126
+Age at enrollment.1                               0.981314
+Admission grade^2                                 1.001204
+Admission grade GDP                               0.997718
+Admission grade Age at enrollment                 0.989923
+GDP^2                                             0.998862
+GDP Age at enrollment                             0.993522
+Age at enrollment^2                               0.965776
+dtype: float64
+Scaled datasets saved at '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/model_build_predict/scaled_train.csv' and '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/model_build_predict/scaled_test.csv'.
+Scaled training data and target variable loaded.
+Starting model training with models: ['random forest', 'logistic regression'] for a multiclass problem.
+Finished model training: random forest
+Finished model training: logistic regression
+Model: random forest, Best Params: {'max_depth': None, 'min_samples_split': 10, 'n_estimators': 100}, Score: 0.8256273475942499
+Model: logistic regression, Best Params: {'C': 0.1, 'l1_ratio': 0.5, 'penalty': 'l1', 'solver': 'saga'}, Score: 0.8114331648830512
+Best model selected: RandomForestClassifier(min_samples_split=10)
+Scaled test data loaded.
+Generating predictions on the test set.
+Warning: Some 'Target' predictions are outside the expected labels. Please verify model outputs.
+Submission file 'submission.csv' created successfully at '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/submission.csv'.

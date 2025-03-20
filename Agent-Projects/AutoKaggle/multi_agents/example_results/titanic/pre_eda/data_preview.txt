@@ -1,0 +1,47 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- PassengerId: Unique identifier for each passenger.
+
+### Numerical type
+- Age: Age of the passenger.
+- SibSp: Number of siblings or spouses aboard the Titanic.
+- Parch: Number of parents or children aboard the Titanic.
+- Fare: Ticket fare paid by the passenger.
+
+### Categorical type
+- Survived: Survival status (0 = No, 1 = Yes).
+- Pclass: Passenger class (1 = 1st, 2 = 2nd, 3 = 3rd).
+- Name: Name of the passenger.
+- Sex: Gender of the passenger.
+- Ticket: Ticket number.
+- Cabin: Cabin number.
+- Embarked: Port of Embarkation (C = Cherbourg, Q = Queenstown, S = Southampton).
+
+### Datetime type
+None
+
+## Detailed data description
+The provided Titanic dataset consists of both training and test data. The training data includes the target variable 'Survived' while the test data does not. The data comprises various features such as passenger demographics, ticket information, and travel class. Here are some notable patterns and characteristics:
+
+- PassengerId is a unique identifier for each passenger and will not be used in model training.
+- Survived is the target variable, indicating whether a passenger survived or not.
+- Pclass ranges from 1 to 3 and represents the socio-economic status of the passenger (1st = upper class, 2nd = middle class, 3rd = lower class).
+- Names are given in a structured format, often including titles which can be useful for extracting additional features.
+- Sex is a binary categorical variable with values 'male' and 'female'.
+- Age contains some missing values and spans a wide range from infants (age 2) to older adults (age 62).
+- SibSp and Parch provide information on family relations aboard the Titanic.
+- Ticket numbers are alphanumeric and vary in format.
+- Fare is a continuous variable with a significant range, indicating the different amounts paid for the tickets.
+- Cabin has many missing values and appears to be sparsely populated.
+- Embarked has three possible values: C, Q, and S, indicating the port from which the passenger boarded.
+
+## Target Variable
+- Survived: Indicates whether the passenger survived (1) or not (0).
+
+# Submission format (if applicable)
+For submissions, include the following columns:
+- PassengerId (int)
+- Survived (int, 0 or 1)

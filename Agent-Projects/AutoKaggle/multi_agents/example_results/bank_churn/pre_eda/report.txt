@@ -1,0 +1,68 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Exited
+## FEATURES BEFORE THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited']
+## FEATURES AFTER THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited']
+# REPORT
+
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files**:
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/train.csv`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/test.csv`
+- **Generated Files** (visualizations):
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/pre_eda/images/distribution_<feature>.png`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/pre_eda/images/count_<feature>.png`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/pre_eda/images/boxplot_<feature>.png`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/pre_eda/images/correlation_matrix.png`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/pre_eda/images/pairplot.png`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Involved Features**: All features in the dataset, including:
+  - **Numerical**: CreditScore, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary
+  - **Categorical**: Surname, Geography, Gender
+  - **Target Variable**: Exited
+- **Changes**: 
+  - No features were deleted or created.
+  - No feature types were modified; all features maintained their original types.
+  - Outliers were identified, particularly in **Age** and **CreditScore**, which may require further investigation in the data cleaning phase.
+
+### Question 3
+What basic statistics did you observe for each feature, and were there any anomalies or unexpected distributions?
+### Answer 3
+- **CreditScore**: Ranges from 539 to 845, no significant anomalies detected.
+- **Age**: Ranges from 22 to 47, with a median around 37. Outliers present in older ages.
+- **Tenure**: Ranges from 1 to 10 years; the median tenure is 4 years.
+- **Balance**: Ranges from 0 to 148,882.54, with no visible outliers.
+- **NumOfProducts**: Limited to 1 or 2 products.
+- **HasCrCard** and **IsActiveMember**: Binary features (0 or 1).
+- **EstimatedSalary**: Ranges from 15,068.83 to 184,866.69; the median is around 100,000, suggesting variability but no significant anomalies detected.
+
+### Question 4
+What percentage of missing values exists in each feature, and which features have the highest rates of missingness?
+### Answer 4
+All features in both training and test datasets have **0% missing values**. No features exhibited any missingness.
+
+### Question 5
+Which features exhibited outliers, and what methods were used to identify them?
+### Answer 5
+- **Outliers Identified**:
+  - **Age**: Outliers present above the upper whisker in the box plot.
+  - **CreditScore**: Several outliers observed below 400.
+  - **Balance**: No outliers detected in the box plot.
+  - **EstimatedSalary**: No outliers present.
+- **Methods Used**: Identified through box plots and the IQR method.
+
+### Question 6
+Were there any inconsistencies in the categorical features, such as unexpected categories or incorrect data types?
+### Answer 6
+- **Geography**: Limited to three categories: France, Spain, Germany; no inconsistencies detected.
+- **Gender**: Limited to Male and Female; no unexpected categories found.
+- All categorical features are correctly formatted with valid data types.

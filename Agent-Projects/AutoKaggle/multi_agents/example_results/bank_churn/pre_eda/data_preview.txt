@@ -1,0 +1,54 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- id
+- CustomerId
+
+### Numerical type
+- CreditScore
+- Age
+- Tenure
+- Balance
+- NumOfProducts
+- HasCrCard
+- IsActiveMember
+- EstimatedSalary
+
+### Categorical type
+- Surname
+- Geography
+- Gender
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset is split into training and test sets, each containing information about customers of a bank. The training set includes a target variable "Exited," which indicates whether a customer has exited the bank (1) or not (0). Below are some notable observations:
+
+- **CreditScore**: This numerical feature represents the creditworthiness of a customer. Values range from 539 to 845 in the provided data.
+- **Geography**: This categorical feature indicates the country of residence of the customer (France, Spain, Germany).
+- **Gender**: This categorical feature indicates the gender of the customer (Male, Female).
+- **Age**: The age of the customers ranges from 22 to 47 years.
+- **Tenure**: This numerical feature represents the number of years a customer has been with the bank, ranging from 1 to 10 years.
+- **Balance**: This feature represents the bank balance of the customer. It ranges from 0 to 148882.54 in the training data and from 0 to 121263.62 in the test data.
+- **NumOfProducts**: The number of products a customer has purchased from the bank (1 or 2).
+- **HasCrCard**: Indicates whether the customer has a credit card (1) or not (0).
+- **IsActiveMember**: Indicates whether the customer is an active member (1) or not (0).
+- **EstimatedSalary**: The estimated salary of the customer, ranging from 15068.83 to 184866.69 in the training data and from 51907.72 to 160976.75 in the test data.
+
+## Target Variable
+- **Exited**: This is the target variable in the training data. It indicates whether a customer has exited the bank (1) or not (0).
+
+# Submission format (if applicable)
+The submission file format should include the following columns:
+- id (int): Unique identifier for each test data point.
+- Exited (int): The predicted outcome, where 1 indicates the customer has exited and 0 indicates the customer has not exited.
+
+Example:
+| id     | Exited |
+|--------|--------|
+| 165034 | 0      |
+| 165035 | 1      |
+| ...    | ...    |

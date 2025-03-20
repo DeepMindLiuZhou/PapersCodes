@@ -1,0 +1,137 @@
+Training Data Shape: (371, 7)
+Testing Data Shape: (529, 6)
+
+Training Data Types:
+id                 int64
+bone_length      float64
+rotting_flesh    float64
+hair_length      float64
+has_soul         float64
+color             object
+type              object
+dtype: object
+
+Testing Data Types:
+id                 int64
+bone_length      float64
+rotting_flesh    float64
+hair_length      float64
+has_soul         float64
+color             object
+dtype: object
+
+
+Unique Values in Categorical Features (Training Data):
+- color: 6 unique values -> ['clear' 'green' 'black' 'white' 'blue' 'blood']
+- type: 3 unique values -> ['Ghoul' 'Goblin' 'Ghost']
+
+Unique Values in Categorical Features (Testing Data):
+- color: 6 unique values -> ['black' 'white' 'blue' 'clear' 'green' 'blood']
+Descriptive Statistics for Numerical Features (Training Data):
+       bone_length  rotting_flesh  hair_length    has_soul
+count   371.000000     371.000000   371.000000  371.000000
+mean      0.434160       0.506848     0.529114    0.471392
+std       0.132833       0.146358     0.169902    0.176129
+min       0.061032       0.095687     0.134600    0.009402
+25%       0.340006       0.414812     0.407428    0.348002
+50%       0.434891       0.501552     0.538642    0.466372
+75%       0.517223       0.603977     0.647244    0.600610
+max       0.817001       0.932466     1.000000    0.935721
+
+
+Frequency Counts for Categorical Features (Training Data):
+
+- color Value Counts:
+color
+white    137
+clear    120
+green     42
+black     41
+blue      19
+blood     12
+Name: count, dtype: int64
+
+- type Value Counts:
+type
+Ghoul     129
+Goblin    125
+Ghost     117
+Name: count, dtype: int64
+
+Frequency Counts for Categorical Features (Testing Data):
+
+- color Value Counts:
+color
+white    197
+clear    172
+black     63
+green     53
+blue      35
+blood      9
+Name: count, dtype: int64
+Missing Values in Training Data:
+id               0
+bone_length      0
+rotting_flesh    0
+hair_length      0
+has_soul         0
+color            0
+type             0
+dtype: int64
+
+Missing Values in Testing Data:
+id               0
+bone_length      0
+rotting_flesh    0
+hair_length      0
+has_soul         0
+color            0
+dtype: int64
+
+
+Number of Duplicate Rows in Training Data: 0
+Number of Duplicate Rows in Testing Data: 0
+
+Categorical Feature Consistency (Training Data):
+- color: 6 unique values -> ['clear' 'green' 'black' 'white' 'blue' 'blood']
+- type: 3 unique values -> ['Ghoul' 'Goblin' 'Ghost']
+
+Outlier Detection in Numerical Features (Training Data):
+- bone_length: 2 outliers detected
+- rotting_flesh: 3 outliers detected
+- hair_length: 0 outliers detected
+- has_soul: 0 outliers detected
+Detailed Descriptive Statistics for Numerical Features (Training Data):
+       bone_length  rotting_flesh  hair_length    has_soul
+count   371.000000     371.000000   371.000000  371.000000
+mean      0.434160       0.506848     0.529114    0.471392
+std       0.132833       0.146358     0.169902    0.176129
+min       0.061032       0.095687     0.134600    0.009402
+25%       0.340006       0.414812     0.407428    0.348002
+50%       0.434891       0.501552     0.538642    0.466372
+75%       0.517223       0.603977     0.647244    0.600610
+95%       0.652024       0.743891     0.801361    0.767883
+max       0.817001       0.932466     1.000000    0.935721
+
+
+Correlation Matrix for Numerical Features (Training Data):
+               bone_length  rotting_flesh  hair_length  has_soul
+bone_length       1.000000      -0.041716     0.353881  0.381675
+rotting_flesh    -0.041716       1.000000    -0.220353 -0.132051
+hair_length       0.353881      -0.220353     1.000000  0.474835
+has_soul          0.381675      -0.132051     0.474835  1.000000
+
+
+Correlation matrix heatmap saved to /mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/pre_eda/images/correlation_matrix_heatmap.png
+
+Relationship Between 'color' and Numerical Features (Training Data):
+       bone_length  rotting_flesh  hair_length  has_soul
+color                                                   
+black     0.447786       0.538532     0.517582  0.457945
+blood     0.403458       0.531120     0.499491  0.477230
+blue      0.481672       0.549136     0.461715  0.525404
+clear     0.426179       0.479179     0.556542  0.486162
+green     0.447810       0.512057     0.532017  0.436679
+white     0.428988       0.512015     0.519593  0.465119
+
+

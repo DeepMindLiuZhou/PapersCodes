@@ -1,0 +1,75 @@
+Descriptive Statistics for Numerical Features:
+
+                   mean    median      mode  ...       50%       75%       max
+bone_length    0.434160  0.434891  0.061032  ...  0.434891  0.517223  0.817001
+rotting_flesh  0.506848  0.501552  0.095687  ...  0.501552  0.603977  0.932466
+hair_length    0.529114  0.538642  0.134600  ...  0.538642  0.647244  1.000000
+has_soul       0.471392  0.466372  0.009402  ...  0.466372  0.600610  0.935721
+
+[4 rows x 12 columns]
+Histogram for 'bone_length' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/bone_length_distribution.png'.
+Histogram for 'rotting_flesh' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/rotting_flesh_distribution.png'.
+Histogram for 'hair_length' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/hair_length_distribution.png'.
+Histogram for 'has_soul' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/has_soul_distribution.png'.
+Box plot for 'bone_length' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/bone_length_boxplot.png'.
+Box plot for 'rotting_flesh' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/rotting_flesh_boxplot.png'.
+Box plot for 'hair_length' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/hair_length_boxplot.png'.
+Box plot for 'has_soul' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/has_soul_boxplot.png'.
+Violin plot for 'bone_length' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/bone_length_violinplot.png'.
+Violin plot for 'rotting_flesh' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/rotting_flesh_violinplot.png'.
+Violin plot for 'hair_length' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/hair_length_violinplot.png'.
+Violin plot for 'has_soul' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/has_soul_violinplot.png'.
+
+Frequency Distribution of 'color':
+
+       Count  Percentage
+color                   
+white    137       36.93
+clear    120       32.35
+green     42       11.32
+black     41       11.05
+blue      19        5.12
+blood     12        3.23
+Bar chart for 'color' distribution saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/color_frequency_bar.png'.
+
+Contingency Table between 'color' and 'type':
+
+type   Ghost  Ghoul  Goblin
+color                      
+black     14     14      13
+blood      6      4       2
+blue       6      6       7
+clear     32     42      46
+green     15     13      14
+white     44     50      43
+Grouped bar chart for 'color' vs 'type' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/color_type_grouped_bar.png'.
+
+Pearson Correlation Matrix:
+
+               bone_length  rotting_flesh  hair_length  has_soul
+bone_length       1.000000      -0.041716     0.353881  0.381675
+rotting_flesh    -0.041716       1.000000    -0.220353 -0.132051
+hair_length       0.353881      -0.220353     1.000000  0.474835
+has_soul          0.381675      -0.132051     0.474835  1.000000
+
+Spearman Correlation Matrix:
+
+               bone_length  rotting_flesh  hair_length  has_soul
+bone_length       1.000000      -0.045337     0.351525  0.390165
+rotting_flesh    -0.045337       1.000000    -0.221262 -0.134484
+hair_length       0.351525      -0.221262     1.000000  0.477141
+has_soul          0.390165      -0.134484     0.477141  1.000000
+Pearson correlation heatmap saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/pearson_correlation_heatmap.png'.
+Spearman correlation heatmap saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/spearman_correlation_heatmap.png'.
+Scatter plot for 'bone_length' vs 'rotting_flesh' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/scatter_bone_length_vs_rotting_flesh.png'.
+Scatter plot for 'hair_length' vs 'has_soul' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/scatter_hair_length_vs_has_soul.png'.
+Box plot for 'bone_length' by 'type' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/bone_length_boxplot_by_type.png'.
+Box plot for 'rotting_flesh' by 'type' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/rotting_flesh_boxplot_by_type.png'.
+Box plot for 'hair_length' by 'type' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/hair_length_boxplot_by_type.png'.
+Box plot for 'has_soul' by 'type' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/has_soul_boxplot_by_type.png'.
+Violin plot for 'bone_length' by 'type' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/bone_length_violinplot_by_type.png'.
+Violin plot for 'rotting_flesh' by 'type' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/rotting_flesh_violinplot_by_type.png'.
+Violin plot for 'hair_length' by 'type' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/hair_length_violinplot_by_type.png'.
+Violin plot for 'has_soul' by 'type' saved to '/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/ghouls_goblins_and_ghosts_boo/deep_eda/images/has_soul_violinplot_by_type.png'.
+
+Key insights visualizations have been saved individually in the images directory.

@@ -1,0 +1,99 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `id`: Unique identifier for each data point, not used in model training.
+
+### Numerical type
+- `X_Minimum`
+- `X_Maximum`
+- `Y_Minimum`
+- `Y_Maximum`
+- `Pixels_Areas`
+- `X_Perimeter`
+- `Y_Perimeter`
+- `Sum_of_Luminosity`
+- `Minimum_of_Luminosity`
+- `Maximum_of_Luminosity`
+- `Length_of_Conveyer`
+- `Steel_Plate_Thickness`
+- `Edges_Index`
+- `Empty_Index`
+- `Square_Index`
+- `Outside_X_Index`
+- `Edges_X_Index`
+- `Edges_Y_Index`
+- `Outside_Global_Index`
+- `LogOfAreas`
+- `Log_X_Index`
+- `Log_Y_Index`
+- `Orientation_Index`
+- `Luminosity_Index`
+- `SigmoidOfAreas`
+- `X_Range`
+- `Y_Range`
+- `X_Y_Ratio`
+- `Luminosity_Area_Product`
+- `Perimeter_Area_Ratio`
+- `X_Minimum^2`
+- `X_Maximum^2`
+- `Y_Minimum^2`
+- `Y_Maximum^2`
+- `X_Minimum*X_Maximum`
+- `Y_Minimum*Y_Maximum`
+- `Log_Sum_of_Luminosity`
+- `Log_Pixels_Areas`
+
+### Categorical type
+- `TypeOfSteel_A300_True`
+- `TypeOfSteel_A400_True`
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of features related to the quality and characteristics of steel plates. Key features include:
+
+- `X_Minimum` and `X_Maximum`: Range of X coordinates.
+- `Y_Minimum` and `Y_Maximum`: Range of Y coordinates.
+- `Pixels_Areas`: Area covered by pixels.
+- `X_Perimeter`, `Y_Perimeter`: Perimeter measurements.
+- `Sum_of_Luminosity`, `Minimum_of_Luminosity`, `Maximum_of_Luminosity`: Luminosity characteristics.
+- `Length_of_Conveyer`: Length of the conveyor.
+- `Steel_Plate_Thickness`: Thickness of the steel plate.
+- `Edges_Index`, `Empty_Index`, `Square_Index`: Indices representing various defects or characteristics.
+- `Outside_X_Index`, `Edges_X_Index`, `Edges_Y_Index`, `Outside_Global_Index`, `LogOfAreas`: Various indices related to the geometry and positioning of defects.
+- `Log_X_Index`, `Log_Y_Index`, `Orientation_Index`, `Luminosity_Index`, `SigmoidOfAreas`: Logarithmic and other transformed values of the original features.
+- `X_Range`, `Y_Range`, `X_Y_Ratio`: Derived features representing ranges and ratios.
+- `Luminosity_Area_Product`, `Perimeter_Area_Ratio`: Products and ratios involving luminosity and perimeter.
+- `X_Minimum^2`, `X_Maximum^2`, `Y_Minimum^2`, `Y_Maximum^2`, `X_Minimum*X_Maximum`, `Y_Minimum*Y_Maximum`: Squared and multiplied values of minimum and maximum coordinates.
+- `Log_Sum_of_Luminosity`, `Log_Pixels_Areas`: Logarithmic transformations of luminosity and pixel areas.
+- `TypeOfSteel_A300_True`, `TypeOfSteel_A400_True`: Categorical indicators of the type of steel.
+
+The training data also includes binary indicators for various types of defects such as `Pastry`, `Z_Scratch`, `K_Scatch`, `Stains`, `Dirtiness`, `Bumps`, and `Other_Faults`.
+
+## Target Variable
+The target variable consists of seven defect categories:
+- `Pastry`
+- `Z_Scratch`
+- `K_Scatch`
+- `Stains`
+- `Dirtiness`
+- `Bumps`
+- `Other_Faults`
+
+Each defect category is a binary indicator (0 or 1) representing the presence or absence of the defect.
+
+# Submission format (if applicable)
+The submission file should be formatted as follows:
+
+- Columns: `id`, `Pastry`, `Z_Scratch`, `K_Scatch`, `Stains`, `Dirtiness`, `Bumps`, `Other_Faults`
+- Example:
+  ```csv
+  id,Pastry,Z_Scratch,K_Scatch,Stains,Dirtiness,Bumps,Other_Faults
+  19219,0.5,0.5,0.5,0.5,0.5,0.5,0.5
+  19220,0.5,0.5,0.5,0.5,0.5,0.5,0.5
+  ```
+
+Submissions are evaluated using the Area Under the ROC Curve (AUC), calculated for each of the seven defect categories and averaged for the final score.

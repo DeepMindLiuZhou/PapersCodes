@@ -1,0 +1,67 @@
+# FEATURE INFO
+## TARGET VARIABLE
+NObeyesdad
+## FEATURES BEFORE THIS PHASE
+['id', 'Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS', 'NObeyesdad']
+## FEATURES AFTER THIS PHASE
+['id', 'Gender', 'Age', 'Height', 'Weight', 'family_history_with_overweight', 'FAVC', 'FCVC', 'NCP', 'CAEC', 'SMOKE', 'CH2O', 'SCC', 'FAF', 'TUE', 'CALC', 'MTRANS', 'NObeyesdad', 'BMI', 'Age_Category', 'FAF_TUE_Interaction', 'FCVC_Category', 'NCP_Category', 'Gender_female', 'Gender_male', 'CAEC_always', 'CAEC_frequently', 'CAEC_no', 'CAEC_sometimes', 'CALC_always', 'CALC_frequently', 'CALC_no', 'CALC_sometimes', 'MTRANS_automobile', 'MTRANS_bike', 'MTRANS_motorbike', 'MTRANS_public_transportation', 'MTRANS_walking', 'family_history_with_overweight_encoded', 'FAVC_encoded', 'SMOKE_encoded', 'SCC_encoded']
+# REPORT
+## QUESTIONS AND ANSWERS  
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - **Input Files:**
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/obesity_risks/cleaned_train.csv`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/obesity_risks/cleaned_test.csv`
+  - **Output Files:**
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/obesity_risks/processed_train.csv`
+    - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/obesity_risks/processed_test.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Features Involved:**
+  - **New Features Created:**
+    - `BMI`: Calculated as `Weight / (Height^2)`.
+    - `Age_Category`: Categorized into bins (`Youth`, `Young_Adult`, `Middle_Aged`, `Senior`, `Elderly`).
+    - `FAF_TUE_Interaction`: Interaction feature created by multiplying `FAF` and `TUE`.
+    - `FCVC_Category`: Binned into categories (`Low`, `Medium`, `High`, `Very_High`).
+    - `NCP_Category`: Binned into categories (`Very_Low`, `Low`, `Medium`, `High`, `Very_High`).
+    
+  - **Feature Types Modified:**
+    - Numerical features `FCVC` and `NCP` were transformed into categorical features through binning.
+
+### Question 3
+What new features were created during this phase, and how do they enhance the dataset?
+### Answer 3
+- **New Features Created:**
+  - **BMI**: Provides a quantitative measure of body weight relative to height, which is a common indicator in obesity studies.
+  - **Age_Category**: Simplifies age representation into meaningful groups, making it easier for models to learn patterns related to age.
+  - **FAF_TUE_Interaction**: Captures the interaction between physical activity and technology use, potentially revealing how these factors together influence obesity.
+  - **FCVC_Category** & **NCP_Category**: These categorical features simplify the understanding of frequency-related behaviors, enhancing interpretability and model performance.
+
+### Question 4
+What transformations were applied to existing features, and what are the implications of these transformations?
+### Answer 4
+- **Transformations Applied:**
+  - **Binning of `FCVC` and `NCP`:** 
+    - Converted continuous numerical values into discrete categories. This transformation can reduce noise and make the data more interpretable, but care must be taken to choose meaningful bin thresholds.
+    
+- **Implications:**
+  - These transformations can help the model perform better by reducing the complexity of the relationships, allowing it to focus on the categories rather than the raw numerical values.
+
+### Question 5
+How were categorical variables handled, and what encoding techniques were used?
+### Answer 5
+- **Encoding Techniques Used:**
+  - **One-Hot Encoding:** Applied to `Gender`, `CAEC`, `CALC`, and `MTRANS`, which creates binary columns for each category, allowing models to interpret these variables without assuming any ordinal relationship.
+  - **Label Encoding:** Applied to `family_history_with_overweight`, `FAVC`, `SMOKE`, and `SCC`, converting these categorical variables into numerical format for models that can handle ordinal data.
+
+### Question 6
+What challenges or constraints were encountered during feature engineering, and how might they affect model building?
+### Answer 6
+- **Challenges and Constraints:**
+  - **Choosing Bins for Binning Features:** The thresholds for binning age, `FCVC`, and `NCP` need to be carefully considered to avoid losing important information and to ensure meaningful distinctions.
+  - **Dimensionality Increase:** One-hot encoding can lead to a significant increase in the number of features, which may introduce sparsity and increase the risk of overfitting.
+  - **Data Leakage Prevention:** Scaling must be applied after splitting into training and test sets to avoid leakage, ensuring that the model generalizes well.

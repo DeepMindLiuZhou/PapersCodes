@@ -1,0 +1,58 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- PassengerId
+
+### Numerical type
+- Age
+- RoomService
+- FoodCourt
+- ShoppingMall
+- Spa
+- VRDeck
+
+### Categorical type
+- HomePlanet
+- CryoSleep
+- Cabin
+- Destination
+- VIP
+- Name
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset contains information about passengers and their travel details. Here are some notable patterns and characteristics:
+
+- **PassengerId**: A unique identifier for each passenger, structured as a combination of numbers and underscores.
+- **HomePlanet**: Indicates the home planet of the passenger. Common values include 'Europa' and 'Earth'.
+- **CryoSleep**: A boolean indicator of whether the passenger was in cryosleep during the journey.
+- **Cabin**: The cabin number where the passenger was staying, formatted as Deck/Num/Side.
+- **Destination**: The destination of the passenger, with common values such as 'TRAPPIST-1e' and '55 Cancri e'.
+- **Age**: Numerical value indicating the age of the passenger.
+- **VIP**: A boolean indicator of whether the passenger is a VIP.
+- **RoomService, FoodCourt, ShoppingMall, Spa, VRDeck**: Numerical values indicating the passenger's expenditures in various services.
+- **Name**: The full name of the passenger.
+- **Transported**: The target variable, indicating whether the passenger was transported to another dimension (boolean).
+
+### Train Data Patterns:
+- The majority of passengers are from Earth and Europa.
+- CryoSleep status is a mix of True and False, with some passengers missing this information.
+- Expenditures on RoomService, FoodCourt, ShoppingMall, Spa, and VRDeck vary widely, with many passengers having zero expenditures in some categories.
+- The target variable 'Transported' is balanced between True and False in the provided sample.
+
+### Test Data Patterns:
+- Similar to the train data, the test data includes passengers from both Earth and Europa.
+- There are multiple instances of passengers in cryosleep.
+- Expenditures in various services show a similar pattern to the train data, with several passengers having no expenditures.
+
+## Target Variable
+- **Transported**: This is a boolean variable indicating whether the passenger was transported to another dimension. The values are `True` or `False`.
+
+# Submission format (if applicable)
+The submission file should contain the following columns:
+- **PassengerId**: Unique identifier for each passenger.
+- **Transported**: The predicted target variable indicating whether the passenger was transported (boolean).

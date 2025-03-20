@@ -1,0 +1,69 @@
+## PLAN
+
+### STEP 1
+Task: Detailed Univariate Analysis of Numerical Features
+Tools, involved features and correct parameters:
+- **Tools:** Pandas for statistical computations; Seaborn or Matplotlib for visualizations.
+- **Features:** `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`
+- **Parameters:**
+  - **Descriptive Statistics:** Calculate mean, median, mode, standard deviation, variance, skewness, kurtosis, minimum, maximum, and quartiles for each numerical feature.
+  - **Visualization:** Generate histograms with density plots, box plots, and violin plots for each numerical feature to assess distribution shapes and identify potential outliers.
+
+Expected output or Impact on data:
+- Comprehensive textual summaries presenting key statistical metrics for each numerical feature.
+- Up to 8 visualizations (2 per numerical feature) illustrating distributions, skewness, kurtosis, and potential anomalies.
+
+Constraints:
+- Maintain clarity and conciseness in statistical summaries to facilitate easy interpretation.
+- Limit the number of visualizations to essential insights, adhering to the maximum image limit.
+
+### STEP 2
+Task: Comprehensive Categorical Feature Analysis
+Tools, involved features and correct parameters:
+- **Tools:** Pandas for frequency calculations and cross-tabulations; Seaborn or Matplotlib for creating bar charts.
+- **Features:** `color`, `type`
+- **Parameters:**
+  - **Frequency Distribution:** Calculate the count and percentage of each category within the `color` feature.
+  - **Association with Target Variable:** Create contingency tables between `color` and `type`, and generate stacked or grouped bar charts to visualize the relationships.
+
+Expected output or Impact on data:
+- Textual summaries detailing the frequency and proportion of each color category.
+- Visualizations showcasing the relationship between `color` and `type`, highlighting any significant associations or patterns.
+
+Constraints:
+- Present data in clear and interpretable formats, such as tables and straightforward bar charts.
+- Ensure visualizations effectively convey relationships without unnecessary complexity.
+
+### STEP 3
+Task: Multivariate Analysis to Uncover Feature Interactions
+Tools, involved features and correct parameters:
+- **Tools:** Pandas for correlation computations; Seaborn or Matplotlib for heatmaps and scatter plots.
+- **Features:** `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`, `type`
+- **Parameters:**
+  - **Correlation Analysis:** Compute Pearson and Spearman correlation coefficients among numerical features.
+  - **Visualization:** Generate a heatmap of the correlation matrix and create scatter plots colored by `type` for selected pairs of numerical features.
+
+Expected output or Impact on data:
+- A correlation matrix heatmap displaying the strength and direction of relationships between numerical features.
+- Selected scatter plots illustrating how pairs of numerical features differentiate between `Ghoul`, `Goblin`, and `Ghost`.
+
+Constraints:
+- Simplify the heatmap by disabling annotations if necessary to enhance readability.
+- Limit scatter plots to the most promising feature pairs based on initial correlation findings to stay within the image limit.
+
+### STEP 4
+Task: Visualization of Key Insights and Pattern Summaries
+Tools, involved features and correct parameters:
+- **Tools:** Seaborn or Matplotlib for creating box plots, violin plots, and assembling dashboards using subplot features.
+- **Features:** `bone_length`, `rotting_flesh`, `hair_length`, `has_soul`, `type`
+- **Parameters:**
+  - **Feature Distribution Across Target Classes:** Create box plots or violin plots for each numerical feature segmented by `type`.
+  - **Summary Dashboard:** Arrange the most informative plots into a cohesive dashboard layout to provide an overview of key insights.
+
+Expected output or Impact on data:
+- Up to 4 visualizations showing the distribution of each numerical feature across different creature types.
+- A comprehensive dashboard summarizing the major insights from the in-depth EDA, facilitating informed decision-making for feature engineering and modeling.
+
+Constraints:
+- Ensure each plot focuses on one feature to maintain clarity and avoid overcrowding.
+- Limit the dashboard to the most impactful visualizations to adhere to the 10-image maximum and concentrate on valuable insights.

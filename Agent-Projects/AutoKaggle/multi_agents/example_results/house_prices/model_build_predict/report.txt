@@ -1,0 +1,62 @@
+# FEATURE INFO
+## TARGET VARIABLE
+SalePrice
+## FEATURES BEFORE THIS PHASE
+['Id', 'MSSubClass', 'LotFrontage', 'LotArea', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1', 'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual', 'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual', 'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC', 'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType', 'SaleCondition', 'SalePrice', 'HouseAge', 'YearsSinceRemod', 'TotalBath', 'TotalPorchSF', 'TotalSF', 'OverallQual_SF', 'MSZoning_C (all)', 'MSZoning_FV', 'MSZoning_RH', 'MSZoning_RL', 'MSZoning_RM', 'Street_Grvl', 'Street_Pave', 'Alley_Grvl', 'Alley_Missing', 'Alley_Pave', 'Neighborhood_Blmngtn', 'Neighborhood_Blueste', 'Neighborhood_BrDale', 'Neighborhood_BrkSide', 'Neighborhood_ClearCr', 'Neighborhood_CollgCr', 'Neighborhood_Crawfor', 'Neighborhood_Edwards', 'Neighborhood_Gilbert', 'Neighborhood_IDOTRR', 'Neighborhood_MeadowV', 'Neighborhood_Mitchel', 'Neighborhood_NAmes', 'Neighborhood_NPkVill', 'Neighborhood_NWAmes', 'Neighborhood_NoRidge', 'Neighborhood_NridgHt', 'Neighborhood_OldTown', 'Neighborhood_SWISU', 'Neighborhood_Sawyer', 'Neighborhood_SawyerW', 'Neighborhood_Somerst', 'Neighborhood_StoneBr', 'Neighborhood_Timber', 'Neighborhood_Veenker', 'HouseStyle_1.5Fin', 'HouseStyle_1.5Unf', 'HouseStyle_1Story', 'HouseStyle_2.5Fin', 'HouseStyle_2.5Unf', 'HouseStyle_2Story', 'HouseStyle_SFoyer', 'HouseStyle_SLvl', 'RoofStyle_Flat', 'RoofStyle_Gable', 'RoofStyle_Gambrel', 'RoofStyle_Hip', 'RoofStyle_Mansard', 'RoofStyle_Shed', 'Condition1_Artery', 'Condition1_Feedr', 'Condition1_Norm', 'Condition1_PosA', 'Condition1_PosN', 'Condition1_RRAe', 'Condition1_RRAn', 'Condition1_RRNe', 'Condition1_RRNn', 'Condition2_Artery', 'Condition2_Feedr', 'Condition2_Norm', 'Condition2_PosA', 'Condition2_PosN', 'Condition2_RRAe', 'Condition2_RRAn', 'Condition2_RRNn', 'BldgType_1Fam', 'BldgType_2fmCon', 'BldgType_Duplex', 'BldgType_Twnhs', 'BldgType_TwnhsE']
+## FEATURES AFTER THIS PHASE
+['Id', 'MSSubClass', 'LotFrontage', 'LotArea', 'LotShape', 'LandContour', 'Utilities', 'LotConfig', 'LandSlope', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'RoofMatl', 'Exterior1st', 'Exterior2nd', 'MasVnrArea', 'ExterQual', 'ExterCond', 'Foundation', 'BsmtQual', 'BsmtCond', 'BsmtExposure', 'BsmtFinType1', 'BsmtFinSF1', 'BsmtFinType2', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', 'Heating', 'HeatingQC', 'CentralAir', 'Electrical', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'KitchenQual', 'TotRmsAbvGrd', 'Functional', 'Fireplaces', 'GarageType', 'GarageYrBlt', 'GarageFinish', 'GarageCars', 'GarageArea', 'GarageQual', 'GarageCond', 'PavedDrive', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'PoolQC', 'Fence', 'MiscFeature', 'MiscVal', 'MoSold', 'YrSold', 'SaleType', 'SaleCondition', 'SalePrice', 'HouseAge', 'YearsSinceRemod', 'TotalBath', 'TotalPorchSF', 'TotalSF', 'OverallQual_SF', 'MSZoning_C (all)', 'MSZoning_FV', 'MSZoning_RH', 'MSZoning_RL', 'MSZoning_RM', 'Street_Grvl', 'Street_Pave', 'Alley_Grvl', 'Alley_Missing', 'Alley_Pave', 'Neighborhood_Blmngtn', 'Neighborhood_Blueste', 'Neighborhood_BrDale', 'Neighborhood_BrkSide', 'Neighborhood_ClearCr', 'Neighborhood_CollgCr', 'Neighborhood_Crawfor', 'Neighborhood_Edwards', 'Neighborhood_Gilbert', 'Neighborhood_IDOTRR', 'Neighborhood_MeadowV', 'Neighborhood_Mitchel', 'Neighborhood_NAmes', 'Neighborhood_NPkVill', 'Neighborhood_NWAmes', 'Neighborhood_NoRidge', 'Neighborhood_NridgHt', 'Neighborhood_OldTown', 'Neighborhood_SWISU', 'Neighborhood_Sawyer', 'Neighborhood_SawyerW', 'Neighborhood_Somerst', 'Neighborhood_StoneBr', 'Neighborhood_Timber', 'Neighborhood_Veenker', 'HouseStyle_1.5Fin', 'HouseStyle_1.5Unf', 'HouseStyle_1Story', 'HouseStyle_2.5Fin', 'HouseStyle_2.5Unf', 'HouseStyle_2Story', 'HouseStyle_SFoyer', 'HouseStyle_SLvl', 'RoofStyle_Flat', 'RoofStyle_Gable', 'RoofStyle_Gambrel', 'RoofStyle_Hip', 'RoofStyle_Mansard', 'RoofStyle_Shed', 'Condition1_Artery', 'Condition1_Feedr', 'Condition1_Norm', 'Condition1_PosA', 'Condition1_PosN', 'Condition1_RRAe', 'Condition1_RRAn', 'Condition1_RRNe', 'Condition1_RRNn', 'Condition2_Artery', 'Condition2_Feedr', 'Condition2_Norm', 'Condition2_PosA', 'Condition2_PosN', 'Condition2_RRAe', 'Condition2_RRAn', 'Condition2_RRNn', 'BldgType_1Fam', 'BldgType_2fmCon', 'BldgType_Duplex', 'BldgType_Twnhs', 'BldgType_TwnhsE']
+# REPORT
+## QUESTIONS AND ANSWERS  
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files**:
+  - Training Set: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/processed_train.csv`
+  - Test Set: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/processed_test.csv`
+
+- **Generated File**:
+  - Submission File: `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/house_prices/submission.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+### Answer 2
+- **Features Involved**: 
+  - The features involved included all numeric columns from the training set, excluding the target variable `SalePrice` and any non-numeric columns.
+
+- **Changes Made**:
+  - **Deleted Features**: Non-numeric columns were removed from both training (`X_train`) and test (`X_test`) datasets to maintain consistency. The specific non-numeric columns were not enumerated in the output.
+  
+- **Created Features**: No new features were created during this phase.
+
+- **Feature Types**: No feature types were modified; only non-numeric features were removed.
+
+### Question 3
+What models were selected and trained during this phase, and what were the reasons for choosing these specific models?
+### Answer 3
+The following three models were selected and trained:
+1. **Linear Regression**: A simple model suitable for establishing a baseline due to its interpretability and speed.
+2. **Random Forest Regressor**: Chosen for its ability to handle non-linearity and interactions between features, as well as its robustness against overfitting.
+3. **Gradient Boosting Regressor**: Selected for its high performance in regression tasks and its capability to model complex patterns in the data.
+
+### Question 4
+What were the cross-validation performance metrics (e.g., RMSE) for each model, and which model performed the best?
+### Answer 4
+The cross-validation performance metrics (RMSE) for each model were:
+- **Linear Regression**: RMSE = 0.1354 (+/- 0.0132)
+- **Random Forest Regressor**: RMSE = 0.1432 (+/- 0.0089)
+- **Gradient Boosting Regressor**: RMSE = 0.1325 (+/- 0.0085)
+
+The **Gradient Boosting Regressor** performed the best among the three models.
+
+### Question 5
+What were the key findings regarding feature importance or the impact of specific features on model predictions?
+### Answer 5
+There were no specific insights regarding feature importance provided in the code or output. However, the choice of models suggests that the Gradient Boosting Regressor likely leveraged various features' interactions and non-linear relationships to improve predictions. Further analysis on feature importance could be performed using techniques such as SHAP or permutation importance.
+
+### Question 6
+What recommendations do you have for future data science competitions based on the experiences and findings from this phase?
+### Answer 6
+1. **Experiment with More Models**: While the current selection is solid, consider incorporating models like XGBoost or LightGBM for potentially better performance.
+2. **Feature Importance Analysis**: Conduct thorough feature importance analysis to understand which features significantly impact predictions.
+3. **Hyperparameter Tuning**: Perform hyperparameter optimization on the selected models to improve performance further.
+4. **Ensemble Techniques**: Explore ensemble methods by combining predictions from multiple models to enhance accuracy.

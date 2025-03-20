@@ -1,0 +1,57 @@
+## PLAN
+
+### STEP 1
+Task: Conduct Thorough Statistical Analysis on Cleaned Data
+- **Tools, Involved Features, and Correct Parameters:**
+  - Use pandas' `describe()` method for descriptive statistics.
+  - Use pandas' `value_counts()` for categorical features.
+  - Compute correlation matrix using pandas' `corr()`.
+  - Visualize correlation matrix using seaborn's `heatmap()`.
+  - **Features Involved:** All numerical and categorical features.
+- **Expected Output or Impact on Data:**
+  - Summary statistics for numerical features.
+  - Frequency distribution for categorical features.
+  - Correlation matrix and heatmap visualization.
+- **Constraints:**
+  - Ensure no modifications to the dataset, only analysis.
+  - Limit the image generation to one heatmap for efficiency.
+
+### STEP 2
+Task: Explore Relationships Between Features and Target Variables
+- **Tools, Involved Features, and Correct Parameters:**
+  - Plot histograms and boxplots for numerical features, stratified by target variables using Matplotlib and Seaborn.
+  - Use count plots for categorical features, stratified by target variables.
+  - Perform pairwise scatter plots for numerical features against target variables using Seaborn's pairplot or scatterplot with hue.
+  - **Features Involved:** All numerical and categorical features.
+- **Expected Output or Impact on Data:**
+  - Histograms, boxplots, and count plots showing distributions and potential correlations.
+  - Scatter plots highlighting relationships between features and target variables.
+- **Constraints:**
+  - Limit generated images to a maximum of 10, focusing on key features and target variables with the most variance.
+  - Ensure efficient plotting, avoid overloading with too many plots.
+
+### STEP 3
+Task: Identify Potential Feature Interactions
+- **Tools, Involved Features, and Correct Parameters:**
+  - Create interaction plots for pairs of features using Seaborn's `lmplot()` or `interaction_plot()` from statsmodels.
+  - Perform cross-tabulation for categorical features using pandas' `crosstab()`.
+  - **Features Involved:** Selected pairs of numerical features and categorical features.
+- **Expected Output or Impact on Data:**
+  - Interaction plots showing potential feature interactions.
+  - Cross-tabulation tables showing interaction frequencies.
+- **Constraints:**
+  - Focus on key interactions that show significant variance.
+  - Keep tables concise and focused on significant interactions.
+
+### STEP 4
+Task: Visualize Key Insights and Patterns
+- **Tools, Involved Features, and Correct Parameters:**
+  - Create summary plots using bar plots, line plots, or heatmaps as needed with Matplotlib and Seaborn.
+  - Provide recommendations for potential feature engineering steps.
+  - **Features Involved:** All key features identified from previous tasks.
+- **Expected Output or Impact on Data:**
+  - Summary visualizations showing key patterns and insights.
+  - A list of actionable recommendations for feature engineering.
+- **Constraints:**
+  - Ensure clarity and avoid redundancy in visualizations.
+  - Focus on practical and impactful feature engineering steps.

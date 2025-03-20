@@ -1,0 +1,65 @@
+## PLAN
+
+### STEP 1
+**Task:** Data Preparation for Model Training  
+**Tools, involved features and correct parameters:**
+- **Tools:** Pandas
+- **Involved Features:** All columns in `processed_train.csv`
+- **Correct Parameters:**
+  - Extract target columns: `['Pastry', 'Z_Scratch', 'K_Scatch', 'Stains', 'Dirtiness', 'Bumps', 'Other_Faults']`
+  - Drop `id` and target columns from the training data
+
+**Expected output or Impact on data:**
+- Cleaned training data (`X_train`)
+- Target variables (`y_train`)
+
+**Constraints:**
+- Ensure no data leakage by not using target columns in the features.
+
+### STEP 2
+**Task:** Model Selection and Training  
+**Tools, involved features and correct parameters:**
+- **Tools:** `train_and_validation_and_select_the_best_model` from available tools
+- **Involved Features:** All features in `X_train`
+- **Correct Parameters:**
+  - Define models: `["random forest", "XGBoost", "SVM"]`
+  - Use cross-validation to evaluate performance
+  - Use AUC as the evaluation metric
+
+**Expected output or Impact on data:**
+- Trained models
+- Cross-validation performance metrics
+
+**Constraints:**
+- Limit to three models due to computational resource limitations.
+
+### STEP 3
+**Task:** Model Validation and Selection  
+**Tools, involved features and correct parameters:**
+- **Tools:** Scikit-learn (GridSearchCV, RandomizedSearchCV)
+- **Involved Features:** All features in `X_train` and `y_train`
+- **Correct Parameters:**
+  - Evaluate cross-validation AUC scores
+  - Perform hyperparameter tuning if needed
+
+**Expected output or Impact on data:**
+- Best model with optimized hyperparameters
+
+**Constraints:**
+- Focus on AUC scores for model comparison and selection.
+
+### STEP 4
+**Task:** Prediction on Test Set  
+**Tools, involved features and correct parameters:**
+- **Tools:** Scikit-learn (predict_proba method)
+- **Involved Features:** All features in `processed_test.csv`
+- **Correct Parameters:**
+  - Remove `id` column from the test set
+  - Ensure consistency with training data preprocessing
+  - Predict probabilities for each defect category
+
+**Expected output or Impact on data:**
+- Submission file with predicted probabilities
+
+**Constraints:**
+- Ensure consistency between training and test data preprocessing.

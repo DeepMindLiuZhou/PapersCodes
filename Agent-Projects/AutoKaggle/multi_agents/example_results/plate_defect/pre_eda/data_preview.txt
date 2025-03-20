@@ -1,0 +1,73 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- `id`: Unique identifier for each data point, will NOT be used in model training.
+
+### Numerical type
+- `X_Minimum`
+- `X_Maximum`
+- `Y_Minimum`
+- `Y_Maximum`
+- `Pixels_Areas`
+- `X_Perimeter`
+- `Y_Perimeter`
+- `Sum_of_Luminosity`
+- `Minimum_of_Luminosity`
+- `Maximum_of_Luminosity`
+- `Length_of_Conveyer`
+- `Steel_Plate_Thickness`
+- `Edges_Index`
+- `Empty_Index`
+- `Square_Index`
+- `Outside_X_Index`
+- `Edges_X_Index`
+- `Edges_Y_Index`
+- `Outside_Global_Index`
+- `LogOfAreas`
+- `Log_X_Index`
+- `Log_Y_Index`
+- `Orientation_Index`
+- `Luminosity_Index`
+- `SigmoidOfAreas`
+
+### Categorical type
+- `TypeOfSteel_A300`: Binary categorical feature (0 or 1)
+- `TypeOfSteel_A400`: Binary categorical feature (0 or 1)
+
+### Datetime type
+- No datetime features are present in the data.
+
+## Detailed data description
+The dataset contains information about steel plates and their various attributes which are either numerical or binary categorical. Each row represents a steel plate with various measured features such as dimensions (`X_Minimum`, `X_Maximum`, `Y_Minimum`, `Y_Maximum`), perimeter values (`X_Perimeter`, `Y_Perimeter`), luminosity values (`Sum_of_Luminosity`, `Minimum_of_Luminosity`, `Maximum_of_Luminosity`), and other indices (`Edges_Index`, `Empty_Index`, etc.). The `Length_of_Conveyer` and `Steel_Plate_Thickness` features provide additional physical details of the steel plates.
+
+Notable patterns include:
+- Luminosity values vary significantly across different plates.
+- Indices like `Edges_Index`, `Empty_Index`, `Square_Index`, etc., are calculated based on geometric properties.
+- The dataset shows the presence of both types of steel (`A300` and `A400`), indicated by the binary categorical features `TypeOfSteel_A300` and `TypeOfSteel_A400`.
+
+## Target Variable
+The target variables are binary indicators of various faults in the steel plates:
+- `Pastry`
+- `Z_Scratch`
+- `K_Scatch`
+- `Stains`
+- `Dirtiness`
+- `Bumps`
+- `Other_Faults`
+
+Each target variable signifies the presence (1) or absence (0) of a specific type of fault in the steel plate.
+
+# Submission format (if applicable)
+The submission file should have the following format:
+- `id`: Unique identifier for each data point.
+- Columns for each target variable (`Pastry`, `Z_Scratch`, `K_Scatch`, `Stains`, `Dirtiness`, `Bumps`, `Other_Faults`), indicating the predicted presence (1) or absence (0) of each fault type.
+
+Example of submission file format:
+```
+id,Pastry,Z_Scratch,K_Scatch,Stains,Dirtiness,Bumps,Other_Faults
+0,0,0,0,1,0,0,0
+1,0,0,0,0,0,0,1
+...
+```

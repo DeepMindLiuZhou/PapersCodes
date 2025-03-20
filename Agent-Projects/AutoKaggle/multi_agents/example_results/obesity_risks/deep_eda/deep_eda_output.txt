@@ -1,0 +1,234 @@
+Summary statistics for Age:
+count    20758.000000
+mean        23.576395
+std          4.892902
+min         14.000000
+25%         20.000000
+50%         22.815416
+75%         26.000000
+max         35.000000
+Name: Age, dtype: float64
+Summary statistics for Height:
+count    20758.000000
+mean         1.700242
+std          0.087302
+min          1.450000
+25%          1.631856
+50%          1.700000
+75%          1.762887
+max          1.959434
+Name: Height, dtype: float64
+Summary statistics for Weight:
+count    20758.000000
+mean        87.887768
+std         26.379443
+min         39.000000
+25%         66.000000
+50%         84.064875
+75%        111.600553
+max        165.057269
+Name: Weight, dtype: float64
+Summary statistics for FCVC:
+count    20758.000000
+mean         2.445908
+std          0.533218
+min          1.000000
+25%          2.000000
+50%          2.393837
+75%          3.000000
+max          3.000000
+Name: FCVC, dtype: float64
+Summary statistics for NCP:
+count    20758.0
+mean         3.0
+std          0.0
+min          3.0
+25%          3.0
+50%          3.0
+75%          3.0
+max          3.0
+Name: NCP, dtype: float64
+Summary statistics for CH2O:
+count    20758.000000
+mean         2.029418
+std          0.608467
+min          1.000000
+25%          1.792022
+50%          2.000000
+75%          2.549617
+max          3.000000
+Name: CH2O, dtype: float64
+Summary statistics for FAF:
+count    20758.000000
+mean         0.981747
+std          0.838302
+min          0.000000
+25%          0.008013
+50%          1.000000
+75%          1.587406
+max          3.000000
+Name: FAF, dtype: float64
+Summary statistics for TUE:
+count    20758.000000
+mean         0.616756
+std          0.602113
+min          0.000000
+25%          0.000000
+50%          0.573887
+75%          1.000000
+max          2.000000
+Name: TUE, dtype: float64
+Frequency counts for Gender:
+Gender
+female    10422
+male      10336
+Name: count, dtype: int64
+Frequency counts for family_history_with_overweight:
+family_history_with_overweight
+yes    17014
+no      3744
+Name: count, dtype: int64
+Frequency counts for FAVC:
+FAVC
+yes    18982
+no      1776
+Name: count, dtype: int64
+Frequency counts for CAEC:
+CAEC
+sometimes     17529
+frequently     2472
+always          478
+no              279
+Name: count, dtype: int64
+Frequency counts for SMOKE:
+SMOKE
+no     20513
+yes      245
+Name: count, dtype: int64
+Frequency counts for SCC:
+SCC
+no     20071
+yes      687
+Name: count, dtype: int64
+Frequency counts for CALC:
+CALC
+sometimes     15066
+no             5163
+frequently      529
+Name: count, dtype: int64
+Frequency counts for MTRANS:
+MTRANS
+public_transportation    16687
+automobile                3534
+walking                    467
+motorbike                   38
+bike                        32
+Name: count, dtype: int64
+Frequency counts for NObeyesdad:
+NObeyesdad
+Obesity_Type_III       4046
+Obesity_Type_II        3248
+Normal_Weight          3082
+Obesity_Type_I         2910
+Insufficient_Weight    2523
+Overweight_Level_II    2522
+Overweight_Level_I     2427
+Name: count, dtype: int64
+Chi-Square Test for Gender vs NObeyesdad:
+Chi2: 7953.767544285371, p-value: 0.0, Degrees of Freedom: 6
+Expected Frequencies:
+[[1266.72637056 1547.38433375 1461.02803738 1630.72820118 2031.3812506
+  1218.52750747 1266.22429907]
+ [1256.27362944 1534.61566625 1448.97196262 1617.27179882 2014.6187494
+  1208.47249253 1255.77570093]]
+
+
+Chi-Square Test for family_history_with_overweight vs NObeyesdad:
+Chi2: 6423.317090815157, p-value: 0.0, Degrees of Freedom: 6
+Expected Frequencies:
+[[ 455.05886887  555.88245496  524.85981308  585.82291165  729.7535408
+   437.74390596  454.87850467]
+ [2067.94113113 2526.11754504 2385.14018692 2662.17708835 3316.2464592
+  1989.25609404 2067.12149533]]
+
+
+Chi-Square Test for FAVC vs NObeyesdad:
+Chi2: 1553.6297505782907, p-value: 0.0, Degrees of Freedom: 6
+Expected Frequencies:
+[[ 215.86125831  263.6878312   248.97196262  277.89035553  346.16514115
+   207.64775026  215.77570093]
+ [2307.13874169 2818.3121688  2661.02803738 2970.10964447 3699.83485885
+  2219.35224974 2306.22429907]]
+
+
+Chi-Square Test for CAEC vs NObeyesdad:
+Chi2: 6897.329566047415, p-value: 0.0, Degrees of Freedom: 18
+Expected Frequencies:
+[[  58.09779362   70.97003565   67.00934579   74.7925619    93.16832065
+    55.88717603   58.07476636]
+ [ 300.45553522  367.02495423  346.54205607  386.79333269  481.82445322
+   289.02321996  300.3364486 ]
+ [  33.91063686   41.42393294   39.11214953   43.65507274   54.38067251
+    32.62033915   33.89719626]
+ [2130.5360343  2602.58107718 2457.3364486  2742.75903266 3416.62655362
+  2049.46926486 2129.69158879]]
+
+
+Chi-Square Test for SMOKE vs NObeyesdad:
+Chi2: 216.3006126923555, p-value: 6.396981747148517e-44, Degrees of Freedom: 6
+Expected Frequencies:
+[[2493.22184218 3045.62414491 2875.65420561 3209.66490028 3998.24636285
+  2398.35489932 2492.23364486]
+ [  29.77815782   36.37585509   34.34579439   38.33509972   47.75363715
+    28.64510068   29.76635514]]
+
+
+Chi-Square Test for SCC vs NObeyesdad:
+Chi2: 1024.7984666527484, p-value: 3.870102954479357e-218, Degrees of Freedom: 6
+Expected Frequencies:
+[[2439.49961461 2979.99913286 2813.69158879 3140.50525099 3912.09490317
+  2346.67679931 2438.53271028]
+ [  83.50038539  102.00086714   96.30841121  107.49474901  133.90509683
+    80.32320069   83.46728972]]
+
+
+Chi-Square Test for CALC vs NObeyesdad:
+Chi2: 4013.082706081725, p-value: 0.0, Degrees of Freedom: 12
+Expected Frequencies:
+[[  64.29651219   78.54215242   74.1588785    82.77252144  103.10887369
+    61.85003372   64.27102804]
+ [ 627.52909722  766.56546873  723.78504673  807.85355044 1006.33481068
+   603.65165237  627.28037383]
+ [1831.1743906  2236.89237884 2112.05607477 2357.37392812 2936.55631564
+  1761.4983139  1830.44859813]]
+
+
+Chi-Square Test for MTRANS vs NObeyesdad:
+Chi2: 2349.082567778232, p-value: 0.0, Degrees of Freedom: 24
+Expected Frequencies:
+[[ 429.5347336   524.70315059  495.42056075  552.96425475  688.82185182
+   413.19096252  429.36448598]
+ [   3.88939204    4.75113209    4.48598131    5.00703343    6.23720975
+     3.74140091    3.88785047]
+ [   4.61865305    5.64196936    5.3271028     5.9458522     7.40668658
+     4.44291358    4.61682243]
+ [2028.1964062  2477.56691396 2339.29906542 2611.01146546 3252.50997206
+  1951.02365353 2027.39252336]
+ [  56.76081511   69.33683399   65.46728972   73.07139416   91.0242798
+    54.60106947   56.73831776]]
+
+
+
+    Key Insights and Patterns:
+    1. Age, Height, and Weight show distinct distributions and ranges.
+    2. Gender distribution is almost balanced.
+    3. Family history of overweight is prevalent.
+    4. High caloric food consumption is common.
+    5. Most individuals consume vegetables frequently and have regular meals.
+    6. Water consumption varies widely.
+    7. Physical activity frequency and technology usage show diverse patterns.
+    8. Alcohol consumption and transportation modes are varied.
+    9. The target variable 'NObeyesdad' has a varied distribution across different levels of obesity.
+    10. Correlation analysis shows certain relationships between numerical features and the target variable.
+    11. Chi-square tests indicate dependencies between categorical features and the target variable.
+    

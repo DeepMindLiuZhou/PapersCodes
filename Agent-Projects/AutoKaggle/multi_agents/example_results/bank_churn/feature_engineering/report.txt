@@ -1,0 +1,91 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Exited
+## FEATURES BEFORE THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Geography', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited']
+## FEATURES AFTER THIS PHASE
+['id', 'CustomerId', 'Surname', 'CreditScore', 'Gender', 'Age', 'Tenure', 'Balance', 'NumOfProducts', 'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Exited', 'AgeGroup', 'HasBalance', 'Region_Balance_Interaction', 'Active_Card_User', 'Geography_Germany', 'Geography_Spain']
+# REPORT
+## QUESTIONS AND ANSWERS  
+
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Input Files**: 
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/cleaned_train.csv`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/cleaned_test.csv`
+- **Output Files**:
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/processed_train.csv`
+  - `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/bank_churn/processed_test.csv`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+### Answer 2
+- **Created Features**:
+  - `AgeGroup`: Categorical feature categorizing `Age` into 'Young', 'Middle-aged', and 'Senior'.
+  - `HasBalance`: Binary feature indicating if `Balance` is greater than 0.
+  - `Region_Balance_Interaction`: Categorical feature combining `Geography` and `HasBalance`.
+  - `Active_Card_User`: Binary feature indicating if both `HasCrCard` and `IsActiveMember` are 1.
+
+- **Modified Features**:
+  - `CreditScore`: Normalized to a range of 0-1 using MinMaxScaler.
+  - `EstimatedSalary`: Logarithmically transformed using `np.log1p()`.
+  - `Age`: Standardized (mean 0, std 1) using StandardScaler.
+  - `Balance`: Standardized (mean 0, std 1) using StandardScaler.
+
+- **Deleted Features**: No features were deleted in this phase.
+
+### Question 3
+What new features were created during the Feature Engineering phase, and what insights were used to determine their relevance?
+### Answer 3
+- **New Features**:
+  - `AgeGroup`: Based on age distribution to capture demographic segments.
+  - `HasBalance`: Important for understanding customer engagement.
+  - `Region_Balance_Interaction`: Combines geographic information with financial status, potentially revealing regional trends.
+  - `Active_Card_User`: Indicates customer engagement by combining two binary features.
+
+### Question 4
+How were the existing features transformed, and what specific changes were made to enhance model performance?
+### Answer 4
+- **Transformations**:
+  - `CreditScore`: Normalized to a [0, 1] range to ensure consistent input scale.
+  - `EstimatedSalary`: Log transformation applied to reduce skewness and handle outliers effectively.
+  - `Age` and `Balance`: Standardized to center the data around the mean, improving the performance of algorithms sensitive to feature scaling.
+
+### Question 5
+What encoding techniques were applied to the categorical variables, and how were they chosen to avoid pitfalls like the dummy variable trap?
+### Answer 5
+- **Encoding Techniques**:
+  - `Geography`: One-hot encoded using `pd.get_dummies()` with `drop_first=True` to avoid the dummy variable trap.
+  - `Gender`: Encoded using `LabelEncoder`, converting 'Male' to 1 and 'Female' to 0.
+
+### Question 6
+Which features were standardized or normalized, and what considerations were taken into account during this process?
+### Answer 6
+- **Standardized Features**:
+  - `Age` and `Balance`: Standardized to mean 0 and standard deviation 1 to ensure they are on a similar scale for modeling.
+
+- **Normalized Feature**:
+  - `CreditScore`: Normalized to a [0, 1] range for consistent scaling.
+
+### Question 7
+What potential multicollinearity issues might arise from the newly created features, and how can these be addressed before modeling?
+### Answer 7
+- **Potential Issues**:
+  - Features like `Region_Balance_Interaction` may correlate with `Balance`, which could introduce multicollinearity.
+  - `Active_Card_User` may correlate with `HasCrCard` and `IsActiveMember`.
+
+- **Addressing Multicollinearity**:
+  - Conduct a correlation analysis post-feature creation to identify highly correlated features.
+  - Consider removing or combining features that exhibit high multicollinearity.
+
+### Question 8
+Based on the findings from the Feature Engineering phase, what features do you believe are most critical for the model, and what criteria will you use to select features for modeling?
+### Answer 8
+- **Critical Features**:
+  - `CreditScore`, `AgeGroup`, `HasBalance`, `Active_Card_User`: These are expected to have strong predictive power based on business logic and EDA insights.
+
+- **Selection Criteria**:
+  - Use correlation analysis to assess the relationship with the target variable (`Exited`).
+  - Evaluate feature importance scores from preliminary models.
+  - Consider the interpretability and relevance of features in the context of the business problem.

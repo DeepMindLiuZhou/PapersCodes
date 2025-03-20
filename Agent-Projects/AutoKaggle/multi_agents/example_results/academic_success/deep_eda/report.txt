@@ -1,0 +1,75 @@
+# FEATURE INFO
+## TARGET VARIABLE
+Target
+## FEATURES BEFORE THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target']
+## FEATURES AFTER THIS PHASE
+['id', 'Marital status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP', 'Target']
+# REPORT
+## QUESTIONS AND ANSWERS  
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+### Answer 1
+- **Processed Files:**
+  - `train.csv`: Loaded for analysis from the directory `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/`
+
+- **Generated Files:**
+  - **Descriptive Statistics CSV:** Saved at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/numerical_descriptive_stats.csv`
+  - **Categorical Value Counts CSV:** Generated for each categorical feature and saved under the format `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/{feature}_value_counts.csv`
+  - **Numerical Target Correlations CSV:** Saved at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/numerical_target_correlations.csv`
+  - **Categorical Target Chi-Square P-values CSV:** Saved at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/categorical_target_chi2_pvalues.csv`
+  - **High Correlation Pairs CSV:** Saved at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/high_correlations_numerical_features.csv`
+  - **VIF Results CSV:** Saved at `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/vif_numerical_features.csv`
+  - **Various Visualizations:** Histograms, box plots, and count plots saved under the directory `/mnt/d/PythonProjects/AutoKaggleMaster/multi_agents/competition/classification_with_an_academic_success_dataset/deep_eda/images/`
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations.
+### Answer 2
+- **Involved Features:**
+  - **Numerical Features:** 
+    - `Previous qualification (grade)`, `Admission grade`, `Curricular units (credited/enrolled/evaluations/approved/grade)`, `Unemployment rate`, `Inflation rate`, `GDP`, `Age at enrollment`.
+  - **Categorical Features:** 
+    - `Marital status`, `Application mode`, `Course`, `Previous qualification`, `Nacionality`, `Mother's qualification`, `Father's qualification`, `Mother's occupation`, `Father's occupation`, `Displaced`, `Educational special needs`, `Debtor`, `Tuition fees up to date`, `Gender`, `Scholarship holder`, `International`, `Target`.
+
+- **Changes:**
+  - **Numerical Features:**
+    - All numerical features were ensured to be of numeric type using `pd.to_numeric()`, converting any non-numeric entries to NaN.
+  
+  - **Categorical Features:**
+    - No features were deleted or created, but value counts were generated for each categorical feature, identifying categories with low representation.
+
+### Question 3
+What were the main statistical characteristics and distributions observed for the numerical features?
+### Answer 3
+- **Key Characteristics:**
+  - **Mean, Median, Standard Deviation**:
+    - Most features exhibited a mean and median close to each other, indicating relatively symmetric distributions.
+  - **Skewness and Kurtosis**:
+    - Most features showed low skewness and kurtosis, indicating normal-like distributions. 
+  - **Outliers**:
+    - Identified in features like `Admission grade` and `Curricular units` where certain values exceeded typical ranges.
+
+### Question 4
+Which categorical features displayed significant class imbalances, and how might these imbalances affect model performance?
+### Answer 4
+- **Significant Class Imbalances:**
+  - Features such as `Course` and `Marital status` displayed categories with less than 5% representation:
+    - For instance, certain courses had very few students, leading to potential class imbalances.
+  
+- **Impact on Model Performance:**
+  - Class imbalance can cause models to be biased towards majority classes, potentially leading to poor predictive performance for minority classes. This can affect accuracy and recall for underrepresented categories.
+
+### Question 5
+What correlations were identified between the numerical features and the target variable?
+### Answer 5
+- **Notable Correlations:**
+  - Features like `Admission grade` showed a positive correlation with the `Target`, indicating that higher admission grades are associated with a higher likelihood of graduation.
+  - Other features also showed varying degrees of correlation, with some being statistically significant (|r| > 0.1), guiding feature selection for modeling.
+
+### Question 6
+What insights or patterns emerged from the exploratory analysis that could suggest new features or transformations for better model performance?
+### Answer 6
+- **Insights:**
+  - **Admission Grades & Graduation:** Higher admission grades correlate with graduation, suggesting a potential threshold feature or interaction term.
+  - **Age Influence:** Older students tend to drop out more often; hence, creating age brackets could provide informative categorical features.
+  - **Curricular Units:** The number of approved curricular units shows a strong relationship with student outcomes, suggesting the potential for creating a composite feature reflecting academic engagement.

@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What models were trained during this phase, and what were their respective cross-validated accuracy scores?
+
+### Question 2
+Which features were most influential in the model predictions, and how did feature importance vary across different models?
+
+### Question 3
+What were the specific preprocessing steps taken to prepare the data for modeling, and how did they affect the model performance?
+
+### Question 4
+How did the selected model perform on the validation dataset compared to the training dataset, and what does this indicate about potential overfitting or underfitting?
+
+### Question 5
+What challenges or obstacles did you encounter during model training and validation, and how were they addressed?
+
+### Question 6
+What are the key insights or recommendations for future competitions based on the model building and validation outcomes?

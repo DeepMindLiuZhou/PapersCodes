@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What specific missing values were addressed, and what imputation methods were used for each feature? 
+
+### Question 2
+Which outliers were detected, and what actions were taken to handle them? 
+
+### Question 3
+What discrepancies or inconsistencies were found between the training and test datasets, and how were they resolved? 
+
+### Question 4
+Were any features removed or created during the data cleaning process? If so, what were the reasons for these changes? 
+
+### Question 5
+What transformations were applied to the data types of any features, and how do they align with the intended analysis for the next phase? 
+
+### Question 6
+What are the key findings or patterns observed during the data cleaning process that should be further investigated in the exploratory analysis?

@@ -1,0 +1,44 @@
+# Data Information
+## Data Type
+### ID type
+- PassengerId
+
+### Numerical type
+- Age
+- RoomService
+- FoodCourt
+- ShoppingMall
+- Spa
+- VRDeck
+
+### Categorical type
+- HomePlanet
+- CryoSleep
+- Cabin
+- Destination
+- VIP
+- Name
+- Transported (only in training data)
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of two parts: training data and test data. The training data includes 8 features and a target variable, Transported, which indicates whether a passenger was transported (True) or not (False). The test data contains similar features except for the target variable.
+
+### Notable patterns:
+- **HomePlanet**: Passengers originate from either Earth or Europa.
+- **CryoSleep**: Indicates whether passengers are in a state of suspended animation. Both True and False values are present.
+- **Age**: Ranges from 14 to 58 years among the provided examples.
+- **VIP**: Indicates if a passenger is classified as a VIP, predominantly showing as False.
+- **Cabin**: Coded with a combination of letters and numbers, potentially indicating location or type.
+- **Spending**: Features like RoomService, FoodCourt, ShoppingMall, Spa, and VRDeck represent monetary values, with notable variations in spending among passengers.
+- The target variable, Transported, shows a mix of True and False values in the training set. 
+
+## Target Variable
+- **Transported**: A binary variable indicating whether a passenger was successfully transported (True) or not (False).
+
+# Submission format (if applicable)
+The submission file should contain:
+- PassengerId (ID type)
+- Predicted Transported (categorical type: True/False)

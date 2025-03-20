@@ -1,0 +1,934 @@
+{
+    "fill_missing_values": {
+        "name": "fill_missing_values",
+        "description": "Fill missing values in specified columns of a DataFrame. This tool can handle both numerical and categorical features by using different filling methods.",
+        "applicable_situations": "handle missing values in various types of features",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "The name(s) of the column(s) where missing values should be filled."
+            },
+            "method": {
+                "type": "string",
+                "description": "The method to use for filling missing values.",
+                "enum": ["auto", "mean", "median", "mode", "constant"],
+                "default": "auto"
+            },
+            "fill_value": {
+                "type": ["number", "string", "null"],
+                "description": "The value to use when method is 'constant'.",
+                "default": null
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "Successfully fill missing values in the specified column(s) of data",
+        "additionalProperties": false,
+        "notes": [
+            "The 'auto' method uses mean for numeric columns and mode for non-numeric columns.",
+            "Using 'mean' or 'median' on non-numeric columns will raise an error.",
+            "The 'mode' method uses the most frequent value, which may not always be appropriate.",
+            "Filling missing values can introduce bias, especially if the data is not missing completely at random.",
+            "Consider the impact of filling missing values on your analysis and model performance."
+        ]
+    },
+    "remove_columns_with_missing_data": {
+        "name": "remove_columns_with_missing_data",
+        "description": "Remove columns containing excessive missing values from a DataFrame based on a threshold. This tool provides a flexible way to clean datasets by removing columns with too many missing values, adaptable to different dataset sizes.",
+        "applicable_situations": "remove columns with excessive missing values from a dataset",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset."
+            },
+            "thresh": {
+                "type": "number",
+                "description": "The minimum proportion of missing values required to drop a column. Should be between 0 and 1.",
+                "minimum": 0,
+                "maximum": 1,
+                "default": 0.5
+            },
+            "columns": {
+                "type": ["string", "array", "null"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Labels of columns to consider. If not specified, all columns will be considered.",
+                "default": null,
+                "examples": [
+                    "age",
+                    ["age", "income", "education"],
+                    null
+                ]
+            }
+        },
+        "required": ["data"],
+        "result": "Successfully remove columns containing excessive missing values from the DataFrame",
+        "additionalProperties": false,
+        "notes": [
+            "This method modifies the structure of your dataset by removing entire columns.",
+            "Setting a low threshold might result in loss of important features.",
+            "Setting a high threshold might retain columns with too many missing values.",
+            "Consider the impact of removing columns on your analysis and model performance.",
+            "It's often better to understand why data is missing before deciding to remove it."
+        ]
+    },
+    "detect_and_handle_outliers_zscore": {
+        "name": "detect_and_handle_outliers_zscore",
+        "description": "Detect and handle outliers in specified columns using the Z-score method. This tool is useful for identifying and managing extreme values in numerical features based on their distance from the mean in terms of standard deviations.",
+        "applicable_situations": "detect and handle outliers in numerical features, especially when the data is approximately normally distributed and the sample size is large",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "The name(s) of the column(s) to check for outliers."
+            },
+            "threshold": {
+                "type": "number",
+                "description": "The Z-score threshold to identify outliers. Values with absolute Z-scores above this threshold are considered outliers. Typically 3.0 or 2.5.",
+                "default": 3.0,
+                "minimum": 0
+            },
+            "method": {
+                "type": "string",
+                "description": "The method to handle outliers.",
+                "enum": ["clip", "remove"],
+                "default": "clip"
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "Successfully detect and handle outliers in the specified column(s) of data",
+        "additionalProperties": false,
+        "notes": [
+            "This method assumes the data is approximately normally distributed.",
+            "It may be sensitive to extreme outliers as they can affect the mean and standard deviation.",
+            "Not suitable for highly skewed distributions.",
+            "The choice of threshold affects the sensitivity of outlier detection."
+        ]
+    },
+    "detect_and_handle_outliers_iqr": {
+        "name": "detect_and_handle_outliers_iqr",
+        "description": "Detect and handle outliers in specified columns using the Interquartile Range (IQR) method. This tool is useful for identifying and managing extreme values in numerical features without assuming a specific distribution of the data.",
+        "applicable_situations": "detect and handle outliers in numerical features, especially when the data distribution is unknown, non-normal, or when the dataset is small or contains extreme outliers",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "The name(s) of the column(s) to check for outliers."
+            },
+            "factor": {
+                "type": "number",
+                "description": "The IQR factor to determine the outlier threshold. Typically 1.5 for outliers or 3 for extreme outliers.",
+                "default": 1.5,
+                "minimum": 0
+            },
+            "method": {
+                "type": "string",
+                "description": "The method to handle outliers.",
+                "enum": ["clip", "remove"],
+                "default": "clip"
+            },
+            "return_mask": {
+                "type": "boolean",
+                "description": "If True, return a boolean mask indicating outliers instead of removing them.",
+                "default": false
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "Successfully detect and handle outliers in the specified column(s) of data using the IQR method",
+        "additionalProperties": false,
+        "notes": [
+            "This method does not assume any specific data distribution.",
+            "It is less sensitive to extreme outliers compared to the Z-score method.",
+            "May be less precise for normally distributed data compared to the Z-score method.",
+            "The choice of factor affects the range of what is considered an outlier.",
+            "Using the 'remove' method may delete data entries, which is not recommended for test sets."
+        ]
+    },
+    "remove_duplicates": {
+        "name": "remove_duplicates",
+        "description": "Remove duplicate rows from a DataFrame. This tool provides flexible options for identifying and handling duplicate entries in a dataset.",
+        "applicable_situations": "remove duplicate entries from a dataset, especially when dealing with data that may have been entered multiple times or when consolidating data from multiple sources",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset."
+            },
+            "columns": {
+                "type": ["string", "array", "null"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or sequence of labels to consider for identifying duplicates. If None, use all columns.",
+                "default": null,
+                "examples": [
+                    "id",
+                    ["name", "age", "city"],
+                    null
+                ]
+            },
+            "keep": {
+                "type": "string",
+                "description": "Determines which duplicates (if any) to keep.",
+                "enum": ["first", "last", false],
+                "default": "first"
+            },
+            "inplace": {
+                "type": "boolean",
+                "description": "Whether to drop duplicates in place or return a copy.",
+                "default": false
+            }
+        },
+        "required": ["data"],
+        "result": "Successfully remove duplicate rows from the DataFrame",
+        "additionalProperties": false,
+        "notes": [
+            "If 'columns' is None, all columns are used for identifying duplicates.",
+            "The 'keep' parameter determines which duplicate rows are retained.",
+            "Setting 'inplace' to True will modify the original DataFrame.",
+            "Be cautious when removing duplicates, as it may affect the integrity of your dataset.",
+            "Consider the impact of removing duplicates on your analysis and model performance.",
+            "This method is useful for data cleaning, but make sure you understand why duplicates exist before removing them."
+        ]
+    },
+    "convert_data_types": {
+        "name": "convert_data_types",
+        "description": "Convert the data type of specified columns in a DataFrame. This tool is useful for ensuring data consistency and preparing data for analysis or modeling.",
+        "applicable_situations": "data type conversion, data preprocessing, ensuring data consistency across columns",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or sequence of labels to convert."
+            },
+            "target_type": {
+                "type": "string",
+                "description": "The target data type to convert to.",
+                "enum": ["int", "float", "str", "bool", "datetime"]
+            }
+        },
+        "required": ["data", "columns", "target_type"],
+        "result": "Successfully convert the data type of specified column(s) in the DataFrame",
+        "additionalProperties": false,
+        "notes": [
+            "For 'int' and 'float' conversions, non-numeric values will be converted to NaN.",
+            "The 'int' conversion uses the 'Int64' type, which supports NaN values.",
+            "The 'datetime' conversion will set invalid date/time values to NaT (Not a Time).",
+            "The 'bool' conversion may produce unexpected results for non-boolean data.",
+            "Consider the impact of type conversion on your data analysis and model performance.",
+            "Always verify the results after conversion to ensure data integrity."
+        ]
+    },
+    "format_datetime": {
+        "name": "format_datetime",
+        "description": "Format datetime columns in a DataFrame to a specified format. This tool is useful for standardizing date and time representations across your dataset.",
+        "applicable_situations": "datetime standardization, data preprocessing, ensuring consistent datetime formats",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or sequence of labels to format."
+            },
+            "format": {
+                "type": "string",
+                "description": "The desired output format for datetime.",
+                "default": "%Y-%m-%d %H:%M:%S"
+            },
+            "errors": {
+                "type": "string",
+                "description": "How to handle parsing errors.",
+                "enum": ["raise", "coerce", "ignore"],
+                "default": "coerce"
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "Successfully format the datetime columns in the DataFrame",
+        "additionalProperties": false,
+        "notes": [
+            "The method first converts the specified columns to datetime using pd.to_datetime before formatting.",
+            "The 'format' parameter uses Python's strftime and strptime format codes.",
+            "When 'errors' is set to 'coerce', invalid parsing will be set to NaT (Not a Time).",
+            "When 'errors' is set to 'ignore', invalid parsing will return the input.",
+            "When 'errors' is set to 'raise', invalid parsing will raise an exception.",
+            "Ensure that the specified format matches the expected datetime structure in your data.",
+            "Consider the impact of datetime formatting on your data analysis and model performance."
+        ]
+    },
+    "one_hot_encode": {
+        "name": "one_hot_encode",
+        "description": "Perform one-hot encoding on specified categorical columns. The resulting columns will follow the format 'original_column_value'",
+        "applicable_situations": "Encoding categorical variables with no ordinal relationship, especially useful for machine learning models that cannot handle categorical data directly (e.g., linear regression, neural networks). Best for categorical variables with relatively few unique categories.",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "The input DataFrame containing categorical columns to be encoded."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or list of column labels to encode."
+            },
+            "handle_unknown": {
+                "type": "string",
+                "description": "How to handle unknown categories during transform.",
+                "enum": ["error", "ignore"],
+                "default": "error"
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "DataFrame with one-hot encoded columns",
+        "additionalProperties": false,
+        "notes": [
+            "One-hot encoding creates a new binary column for each category in the original column.",
+            "It can significantly increase the number of features, especially for columns with many unique categories.",
+            "May lead to the 'curse of dimensionality' if used on high-cardinality categorical variables.",
+            "Suitable for nominal categorical data where there's no inherent order among categories.",
+            "The function will raise a warning if applied to non-categorical columns.",
+            "Setting handle_unknown='ignore' will create an all-zero row for unknown categories during transform.",
+            "Consider using other encoding methods for high-cardinality features to avoid dimensionality issues."
+        ],
+        "example": {
+            "input": {
+                "data": {
+                    "color": ["red", "blue", "green"]
+                },
+                "columns": "color"
+            },
+            "output": {
+                "data": {
+                    "color": ["red", "blue", "green"],
+                    "color_blue": [0, 1, 0],
+                    "color_green": [0, 0, 1],
+                    "color_red": [1, 0, 0]
+                },
+                "columns": ["color", "color_blue", "color_green", "color_red"]
+            }
+        }
+    },
+    "label_encode": {
+        "name": "label_encode",
+        "description": "Perform label encoding on specified categorical columns. The resulting columns will follow the format 'original_column_encoded'",
+        "applicable_situations": "Encoding categorical variables with an ordinal relationship, or when the number of categories is large and one-hot encoding would lead to too many features. Useful for tree-based models that can handle categorical data.",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "The input DataFrame containing categorical columns to be encoded."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or list of column labels to encode."
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "DataFrame with label encoded columns",
+        "additionalProperties": false,
+        "notes": [
+            "Label encoding assigns a unique integer to each category based on alphabetical order.",
+            "It preserves memory compared to one-hot encoding, especially for high-cardinality features.",
+            "Suitable for ordinal categorical data where there's a clear order among categories.",
+            "May introduce an ordinal relationship where none exists, which can be problematic for some models.",
+            "The function will raise a warning if applied to non-categorical columns.",
+            "Tree-based models can often handle label-encoded categorical variables well.",
+            "Be cautious when using with linear models, as they may interpret the labels as having an ordinal relationship."
+        ],
+        "example": {
+            "input": {
+                "data": {
+                    "fruit": ["apple", "banana", "apple", "cherry"]
+                },
+                "columns": "fruit"
+            },
+            "output": {
+                "data": {
+                    "fruit": ["apple", "banana", "apple", "cherry"],
+                    "fruit_encoded": [0, 1, 0, 2]
+                },
+                "columns": ["fruit", "fruit_encoded"]
+            }
+        }
+    },
+    "frequency_encode": {
+        "name": "frequency_encode",
+        "description": "Perform frequency encoding on specified categorical columns. The resulting columns will follow the format 'original_column_freq'",
+        "applicable_situations": "Encoding high-cardinality categorical variables, especially when the frequency of categories is informative. Useful for both tree-based and linear models.",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "The input DataFrame containing categorical columns to be encoded."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or list of column labels to encode."
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "DataFrame with frequency encoded columns",
+        "additionalProperties": false,
+        "notes": [
+            "Frequency encoding replaces each category with its relative frequency in the dataset.",
+            "It can capture some information about the importance of each category.",
+            "Useful for high-cardinality categorical variables where one-hot encoding would create too many features.",
+            "Preserves information about the distribution of categories.",
+            "May be particularly useful when the frequency of a category is informative for the target variable.",
+            "The function will raise a warning if applied to non-categorical columns.",
+            "Be aware that this method can potentially introduce a false sense of ordinality among categories."
+        ],
+        "example": {
+            "input": {
+                "data": {
+                    "fruit": ["apple", "banana", "apple", "cherry"]
+                },
+                "columns": "fruit"
+            },
+            "output": {
+                "data": {
+                    "fruit": ["apple", "banana", "apple", "cherry"],
+                    "fruit_freq": [0.50, 0.25, 0.50, 0.25]
+                },
+                "columns": ["fruit", "fruit_freq"]
+            }
+        }
+    },
+    "target_encode": {
+        "name": "target_encode",
+        "description": "Perform target encoding on specified categorical columns. The resulting columns will follow the format 'original_column_target_enc'.",
+        "applicable_situations": "Encoding categorical variables in supervised learning tasks, especially effective for high-cardinality features. Useful when there's a clear relationship between categories and the target variable.",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "The input DataFrame containing categorical columns to be encoded and the target variable."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or list of column labels to encode."
+            },
+            "target": {
+                "type": "string",
+                "description": "The name of the target column in the DataFrame."
+            },
+            "min_samples_leaf": {
+                "type": "integer",
+                "description": "Minimum samples to take category average into account.",
+                "default": 1
+            },
+            "smoothing": {
+                "type": "number",
+                "description": "Smoothing effect to balance categorical average vs prior.",
+                "default": 1.0
+            }
+        },
+        "required": ["data", "columns", "target"],
+        "result": "DataFrame with target encoded columns",
+        "additionalProperties": false,
+        "notes": [
+            "Target encoding replaces a categorical value with the mean of the target variable for that value.",
+            "It can capture complex relationships between categorical variables and the target.",
+            "Particularly useful for high-cardinality categorical variables in supervised learning tasks.",
+            "The smoothing parameter helps prevent overfitting, especially for categories with few samples.",
+            "Be cautious of potential data leakage; consider using cross-validation techniques for encoding.",
+            "The function will raise a warning if applied to non-categorical columns.",
+            "This method can be sensitive to outliers in the target variable.",
+            "Consider the impact of target encoding on model interpretability."
+        ],
+        "example": {
+            "input": {
+                "data": {
+                    "fruit": ["apple", "banana", "apple", "cherry", "banana", "apple", "cherry", "banana", "apple", "cherry", "kiwi"],
+                    "region": ["north", "north", "south", "south", "north", "south", "north", "south", "north", "north", "south"],
+                    "price": [1, 0, 1, 0, 2, 3, 1, 0, 1, 2, 3]
+                },
+                "columns": ["fruit", "region"],
+                "target": "price",
+                "min_samples_leaf": 2,
+                "smoothing": 2.0
+            },
+            "output": {
+                "data": {
+                    "fruit": ["apple", "banana", "apple", "cherry", "banana", "apple", "cherry", "banana", "apple", "cherry", "kiwi"],
+                    "region": ["north", "north", "south", "south", "north", "south", "north", "south", "north", "north", "south"],
+                    "price": [1, 0, 1, 0, 2, 3, 1, 0, 1, 2, 3],
+                    "fruit_target_enc": [1.437566, 0.912568, 1.437566, 0.796902, 0.912568, 1.437566, 0.796902, 0.912568, 1.437566, 0.796902, 1.750000],
+                    "region_target_enc": [1.509699, 1.509699, 1.250000, 1.250000, 1.509699, 1.250000, 1.509699, 1.250000, 1.509699, 1.509699, 1.250000]
+                },
+                "columns": ["fruit", "region", "price", "fruit_price_enc", "region_price_enc"]
+            }
+        }
+    },
+    "correlation_feature_selection": {
+        "name": "correlation_feature_selection",
+        "description": "Perform feature selection based on correlation analysis. This tool helps identify features that have a strong correlation with the target variable.",
+        "applicable_situations": "feature selection, dimensionality reduction, identifying important features for predictive modeling",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset, including features and target."
+            },
+            "target": {
+                "type": "string",
+                "description": "The name of the target column in the DataFrame."
+            },
+            "method": {
+                "type": "string",
+                "description": "The correlation method to use.",
+                "enum": ["pearson", "spearman", "kendall"],
+                "default": "pearson"
+            },
+            "threshold": {
+                "type": "number",
+                "description": "The correlation threshold for feature selection. Features with absolute correlation greater than this value will be selected.",
+                "minimum": 0,
+                "maximum": 1,
+                "default": 0.5
+            }
+        },
+        "required": ["data", "target"],
+        "result": "DataFrame with selected features and their correlation with the target",
+        "additionalProperties": false,
+        "notes": [
+            "Pearson correlation assumes a linear relationship and is sensitive to outliers.",
+            "Spearman correlation is rank-based and can capture monotonic relationships.",
+            "Kendall correlation is another rank-based method, often used for small sample sizes.",
+            "This method is most suitable for numerical features and targets.",
+            "Be cautious with high correlations between features (multicollinearity).",
+            "Consider the domain knowledge when interpreting the results and selecting features.",
+            "This method does not account for interactions between features or non-linear relationships with the target."
+        ]
+    },
+    "variance_feature_selection": {
+        "name": "variance_feature_selection",
+        "description": "Perform feature selection based on variance analysis. This tool helps identify and remove features with low variance, which often contribute little to model performance.",
+        "applicable_situations": "feature selection, dimensionality reduction, removing constant or near-constant features",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset with features."
+            },
+            "threshold": {
+                "type": "number",
+                "description": "Features with a variance lower than this threshold will be removed.",
+                "minimum": 0,
+                "default": 0.0
+            },
+            "columns": {
+                "type": ["string", "array", "null"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or sequence of labels to consider. If None, use all columns.",
+                "default": null
+            }
+        },
+        "required": ["data"],
+        "result": "DataFrame with selected features and their variances",
+        "additionalProperties": false,
+        "notes": [
+            "This method is most suitable for numerical features.",
+            "A threshold of 0.0 will remove features that are constant across all samples.",
+            "For binary features, a threshold of 0.8 * (1 - 0.8) = 0.16 would remove features that have the same value in more than 80% of the samples.",
+            "Consider scaling your features before applying this method if they are on different scales.",
+            "This method does not consider the relationship between features and the target variable.",
+            "Be cautious when using this method with small datasets, as variance estimates may be unreliable.",
+            "Features with high variance are not necessarily informative; consider combining this method with other feature selection techniques."
+        ]
+    },
+    "scale_features": {
+        "name": "scale_features",
+        "description": "Scale numerical features in the specified columns of a DataFrame using various scaling methods.",
+        "applicable_situations": "feature scaling for numerical data, data preprocessing for numerical features, preparing numerical data for machine learning models that are sensitive to the scale of input features (e.g., neural networks, SVM, K-means clustering)",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset with numerical features to be scaled."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or sequence of labels of numerical features to scale."
+            },
+            "method": {
+                "type": "string",
+                "description": "The scaling method to use.",
+                "enum": ["standard", "minmax", "robust"],
+                "default": "standard"
+            },
+            "copy": {
+                "type": "boolean",
+                "description": "If False, try to avoid a copy and do inplace scaling instead.",
+                "default": true
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "DataFrame with scaled features",
+        "additionalProperties": false,
+        "notes": [
+            "This function is designed for numerical features only. It should not be used on categorical data.",
+            "StandardScaler: Standardizes features by removing the mean and scaling to unit variance.",
+            "MinMaxScaler: Scales features to a given range, usually between 0 and 1.",
+            "RobustScaler: Scales features using statistics that are robust to outliers.",
+            "Scaling is sensitive to the presence of outliers, especially for StandardScaler and MinMaxScaler.",
+            "RobustScaler is a good choice when your data contains many outliers.",
+            "Scaling should typically be done after splitting your data into training and test sets to avoid data leakage.",
+            "For categorical data, consider using encoding techniques instead of scaling."
+        ]
+    },
+    "perform_pca": {
+        "name": "perform_pca",
+        "description": "Perform Principal Component Analysis (PCA) on specified columns of a DataFrame. This tool is useful for dimensionality reduction, feature extraction, and data visualization.",
+        "applicable_situations": "dimensionality reduction, feature extraction, data visualization, handling multicollinearity",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset with features."
+            },
+            "n_components": {
+                "type": ["integer", "number", "string"],
+                "description": "Number of components to keep. If int, it represents the exact number of components. If float between 0 and 1, it represents the proportion of variance to be retained. If 'mle', Minka's MLE is used to guess the dimension.",
+                "default": 0.95
+            },
+            "columns": {
+                "type": ["string", "array", "null"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or sequence of labels to consider. If None, use all columns.",
+                "default": null
+            },
+            "scale": {
+                "type": "boolean",
+                "description": "Whether to scale the data before applying PCA. Recommended when features are not on the same scale.",
+                "default": true
+            }
+        },
+        "required": ["data"],
+        "result": "DataFrame with PCA results",
+        "additionalProperties": false,
+        "notes": [
+            "PCA assumes linear relationships between features.",
+            "It's sensitive to the scale of the features, so scaling is often recommended.",
+            "PCA may not be suitable for categorical data or when preserving feature interpretability is crucial.",
+            "The number of components to keep is a trade-off between dimensionality reduction and information retention.",
+            "Consider visualizing the cumulative explained variance to choose an appropriate number of components.",
+            "PCA can help address multicollinearity in regression problems.",
+            "The resulting principal components are orthogonal (uncorrelated) to each other.",
+            "The function now returns only the DataFrame with PCA results, without additional information about explained variance or the PCA model."
+        ],
+        "example": {
+            "input": {
+                "data": {
+                    "feature1": [1, 2, 3, 4, 5],
+                    "feature2": [2, 4, 5, 4, 5],
+                    "feature3": [3, 6, 7, 8, 9]
+                },
+                "n_components": 2
+            },
+            "output": {
+                "PC1": [-2.121320, -0.707107, 0.000000, 0.707107, 2.121320],
+                "PC2": [-0.707107, 0.707107, 0.000000, -0.707107, 0.707107]
+            }
+        }
+    },
+    "perform_rfe": {
+        "name": "perform_rfe",
+        "description": "Perform Recursive Feature Elimination (RFE) on specified columns of a DataFrame. This tool is useful for feature selection, especially when dealing with high-dimensional data.",
+        "applicable_situations": "feature selection, dimensionality reduction, identifying important features for predictive modeling",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "A pandas DataFrame object representing the dataset with features."
+            },
+            "target": {
+                "type": ["string", "pd.Series"],
+                "description": "The target variable. If string, it should be the name of the target column in data."
+            },
+            "n_features_to_select": {
+                "type": ["integer", "number"],
+                "description": "Number of features to select. If int, it represents the exact number of features. If float between 0 and 1, it represents the proportion of features to select.",
+                "default": 0.5
+            },
+            "step": {
+                "type": "integer",
+                "description": "Number of features to remove at each iteration.",
+                "default": 1
+            },
+            "estimator": {
+                "type": "string",
+                "description": "The estimator to use for feature importance ranking.",
+                "enum": ["auto", "logistic", "rf", "linear", "rf_regressor"],
+                "default": "auto"
+            },
+            "columns": {
+                "type": ["string", "array", "null"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or sequence of labels to consider. If None, use all columns except the target (if target is a column name in data).",
+                "default": null
+            }
+        },
+        "required": ["data", "target"],
+        "result": "DataFrame with selected features",
+        "additionalProperties": false,
+        "notes": [
+            "RFE is computationally expensive, especially with a large number of features.",
+            "The choice of estimator can significantly affect the results.",
+            "The 'auto' estimator option will automatically choose based on the target variable type.",
+            "RFE does not consider interactions between features.",
+            "The step parameter can be increased to speed up the process, but may result in less optimal feature selection.",
+            "Consider cross-validation for more robust feature selection.",
+            "The selected features may not always be the optimal set for all models or tasks.",
+            "RFE assumes that the importance of a feature is reflected in the magnitude of its coefficient or feature importance score.",
+            "The function returns only the DataFrame with selected features, without additional information about feature rankings or the RFE model."
+        ]
+    },
+    "create_polynomial_features": {
+        "name": "create_polynomial_features",
+        "description": "Create polynomial features from specified numerical columns of a DataFrame.",
+        "applicable_situations": "Capturing non-linear relationships between features and the target variable. Useful for linear models to learn non-linear patterns, or for enhancing the feature space of any model when non-linear interactions are suspected.",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "The input DataFrame containing numerical columns for polynomial feature creation."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or list of column labels to use for creating polynomial features."
+            },
+            "degree": {
+                "type": "integer",
+                "description": "The degree of the polynomial features.",
+                "default": 2
+            },
+            "interaction_only": {
+                "type": "boolean",
+                "description": "If True, only interaction features are produced.",
+                "default": false
+            },
+            "include_bias": {
+                "type": "boolean",
+                "description": "If True, include a bias column (all 1s).",
+                "default": false
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "DataFrame with original and new polynomial features",
+        "additionalProperties": false,
+        "notes": [
+            "Only works with numerical features. Will raise an error if non-numeric columns are specified.",
+            "Can significantly increase the number of features, potentially leading to overfitting or computational issues.",
+            "Higher degrees capture more complex non-linear relationships but increase the risk of overfitting.",
+            "Consider using regularization techniques when using polynomial features with linear models.",
+            "The function will warn if the resulting DataFrame has over 1000 columns.",
+            "Polynomial features can be particularly useful for regression problems or for capturing complex interactions in classification tasks.",
+            "Be cautious of multicollinearity when using polynomial features, especially with high degrees."
+        ]
+    },
+    "create_feature_combinations": {
+        "name": "create_feature_combinations",
+        "description": "Create feature combinations from specified numerical columns of a DataFrame.",
+        "applicable_situations": "Capturing interactions between features that may be important for the target variable. Useful for both linear and non-linear models to learn from feature interactions.",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "The input DataFrame containing numerical columns for feature combination."
+            },
+            "columns": {
+                "type": ["string", "array"],
+                "items": {
+                    "type": "string"
+                },
+                "description": "Column label or list of column labels to use for creating feature combinations."
+            },
+            "combination_type": {
+                "type": "string",
+                "description": "Type of combination to create.",
+                "enum": ["multiplication", "addition"],
+                "default": "multiplication"
+            },
+            "max_combination_size": {
+                "type": "integer",
+                "description": "Maximum number of features to combine.",
+                "default": 2
+            }
+        },
+        "required": ["data", "columns"],
+        "result": "DataFrame with original and new combined features",
+        "additionalProperties": false,
+        "notes": [
+            "Only works with numerical features. Will raise an error if non-numeric columns are specified.",
+            "Can significantly increase the number of features, potentially leading to overfitting or computational issues.",
+            "Multiplication combinations are useful for capturing non-linear interactions.",
+            "Addition combinations can be useful for creating aggregate features.",
+            "The function will warn if the resulting DataFrame has over 1000 columns.",
+            "Consider the interpretability of the resulting features, especially with high-order combinations.",
+            "Feature combinations can help in discovering complex patterns that individual features might not capture.",
+            "Be mindful of the computational cost, especially with a large number of input features or high max_combination_size."
+        ]
+    },
+    "extract_time_series_features": {
+        "name": "extract_time_series_features",
+        "description": "Extract various time series features from specified date and value columns of a DataFrame.",
+        "applicable_situations": "Time series analysis, forecasting tasks, and any scenario where temporal patterns and trends are important. Useful for enhancing the feature space of time-based machine learning models.",
+        "parameters": {
+            "data": {
+                "type": "pd.DataFrame",
+                "description": "The input DataFrame containing time series data."
+            },
+            "date_column": {
+                "type": "string",
+                "description": "Name of the column containing datetime information."
+            },
+            "value_column": {
+                "type": "string",
+                "description": "Name of the column containing the time series values."
+            },
+            "features": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "enum": ["basic", "lags", "rolling", "expanding"]
+                },
+                "description": "List of feature types to extract.",
+                "default": ["basic", "lags", "rolling", "expanding"]
+            },
+            "lag_periods": {
+                "type": "array",
+                "items": {
+                    "type": "integer"
+                },
+                "description": "Periods for lag features.",
+                "default": [1, 7, 30]
+            },
+            "window_sizes": {
+                "type": "array",
+                "items": {
+                    "type": "integer"
+                },
+                "description": "Window sizes for rolling features.",
+                "default": [7, 30]
+            },
+            "expanding_functions": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "description": "Functions to apply for expanding window features.",
+                "default": ["mean", "std", "min", "max"]
+            }
+        },
+        "required": ["data", "date_column", "value_column"],
+        "result": "DataFrame with original and new time series features",
+        "additionalProperties": false,
+        "notes": [
+            "Ensures the date column is in datetime format, attempting conversion if necessary.",
+            "Sorts the data by date to ensure proper time-based feature extraction.",
+            "Basic features include year, month, day, day of week, quarter, and weekend indicator.",
+            "Lag features capture past values at specified intervals.",
+            "Rolling features compute statistics over fixed-size windows.",
+            "Expanding features compute cumulative statistics up to each point.",
+            "Warns about potential data leakage if multiple entries per day are detected.",
+            "Alerts users to large gaps in the time series data.",
+            "Cautions if the dataset might be too short for reliable feature extraction.",
+            "Consider the impact of missing data on feature quality, especially for lag and window-based features.",
+            "Be mindful of the look-ahead bias when using these features in predictive models.",
+            "Some features may not be suitable for all types of time series data; choose features based on domain knowledge and the specific problem."
+        ]
+    },
+    "train_and_validation_and_select_the_best_model": {
+        "name": "train_and_validation_and_select_the_best_model",
+        "description": "Automate model training, validation, selection, and hyperparameter tuning for various machine learning tasks, returning the best performing model and their performance metrics.",
+        "applicable_situations": "model selection, hyperparameter tuning, automated machine learning workflows",
+        "parameters": {
+            "X": {
+                "type": "pd.DataFrame",
+                "description": "Features for training."
+            },
+            "y": {
+                "type": "pd.Series",
+                "description": "Labels for training."
+            },
+            "problem_type": {
+                "type": "string",
+                "description": "Type of problem ('binary', 'multiclass', 'regression').",
+                "default": "binary"
+            },
+            "selected_models": {
+                "type": "list",
+                "description": "List of model names to consider for selection.",
+                "default": ["XGBoost", "SVM", "random forest"],
+                "enum (for binary and multiclass problems)": ["XGBoost", "SVM", "random forest", "decision tree", "logistic regression"],
+                "enum (for regression problems)": ["linear regression", "decision tree", "random forest", "XGBoost", "SVM"]
+            }
+        },
+        "required": ["X", "y"],
+        "result": "The best performing trained model.",
+        "additionalProperties": false,
+        "notes": [
+            "Utilizes cross-validation for performance evaluation.",
+            "Supports binary, multiclass classification, and regression tasks.",
+            "Employs GridSearchCV for hyperparameter optimization.",
+            "Outputs performance scores and best hyperparameters for each model.",
+            "Requires scikit-learn and relevant model libraries."
+        ],
+        "example": {
+            "input": {
+                "X": {
+                    "feature1": [1, 2, 3, 4, 5],
+                    "feature2": [2, 4, 5, 4, 5],
+                    "feature3": [3, 6, 7, 8, 9]
+                },
+                "y": [0, 1, 0, 1, 0],
+                "problem_type": "binary",
+                "selected_models": ["XGBoost", "SVM"]
+            },
+            "output": {
+                "best_model (The best performing trained model)": "XGBoost()"
+            }
+        }
+    }
+}

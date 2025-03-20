@@ -1,0 +1,91 @@
+## PLAN
+
+### STEP 1
+Task: **Data Preparation for Modeling**
+  
+Tools, involved features and correct parameters:
+- **Tools:** Pandas (`pd.read_csv`, `df.pop`, `df.select_dtypes`, `df.drop`)
+- **Involved Features:**
+  - Training Set: `id`, `hair_length_has_soul`, `hair_length`, `has_soul`, `bone_to_flesh_ratio`, `bone_length`, `bone_length_squared`, `rotting_flesh`, `rotting_flesh_squared`, `soul_to_hair_ratio`, `bone_length_rotting_flesh`, `type`
+  - Test Set: `id`, `hair_length_has_soul`, `hair_length`, `has_soul`, `bone_to_flesh_ratio`, `bone_length`, `bone_length_squared`, `rotting_flesh`, `rotting_flesh_squared`, `soul_to_hair_ratio`, `bone_length_rotting_flesh`
+- **Parameters:**
+  - For separating target: `df.pop('type')`
+  - For selecting numeric columns: `df.select_dtypes(include=[np.number])`
+  - For dropping `id`: `df.drop('id', axis=1)`
+
+Expected output or Impact on data:
+- **Training Set:**
+  - `X_train`: DataFrame without the `type` column, containing only numeric features.
+  - `y_train`: Series containing the target variable `type`.
+- **Test Set:**
+  - `X_test`: DataFrame with the same numeric feature columns as `X_train`.
+  - `test_ids`: Series containing the `id` column for submission alignment.
+- **Impact:** Ensures that both training and testing datasets are clean, consistent, and ready for model training without irrelevant or non-numeric data interfering with the modeling process.
+
+Constraints:
+- Maintain alignment between `X_train` and `y_train` to ensure accurate model training.
+- Ensure that the test set undergoes identical column removal to maintain consistency with the training set.
+
+---
+
+### STEP 2
+Task: **Model Training and Validation**
+  
+Tools, involved features and correct parameters:
+- **Tools:** `train_and_validation_and_select_the_best_model` function
+- **Involved Features:** All numeric features in `X_train`
+- **Parameters:**
+  - `X`: `X_train`
+  - `y`: `y_train`
+  - `problem_type`: `"multiclass"`
+  - `selected_models`: `["XGBoost", "SVM", "random forest"]`
+
+Expected output or Impact on data:
+- **Output:** Trained models (XGBoost, SVM, Random Forest) with associated performance metrics such as cross-validation accuracy scores.
+- **Impact:** Generates trained models capable of performing the classification task, with validated performance metrics to facilitate the selection of the best-performing model.
+
+Constraints:
+- Limit the number of models to a maximum of three due to computational resource restrictions.
+- Optimize model training configurations to balance performance and runtime efficiency, avoiding excessive hyperparameter tuning that could increase computation time.
+
+---
+
+### STEP 3
+Task: **Model Selection and Evaluation**
+  
+Tools, involved features and correct parameters:
+- **Tools:** Outputs from `train_and_validation_and_select_the_best_model` function
+- **Involved Features:** Performance metrics (e.g., accuracy scores) of each trained model
+- **Parameters:** None (manual or automated selection based on performance metrics)
+
+Expected output or Impact on data:
+- **Output:** Identification of the best-performing model based on the highest cross-validation accuracy score (e.g., selecting XGBoost).
+- **Impact:** Selection of a reliable and accurate model that generalizes well to unseen data, ensuring robust performance in predictions.
+
+Constraints:
+- Prevent overfitting by favoring models that generalize consistently across cross-validation folds rather than those with the highest single-fold performance.
+- Ensure compatibility of the selected model with the test set features and preprocessing applied during training.
+
+---
+
+### STEP 4
+Task: **Prediction and Submission File Preparation**
+  
+Tools, involved features and correct parameters:
+- **Tools:** Selected model's `predict` method, Pandas (`pd.DataFrame`, `df.to_csv`, `df.sample()`, `df.head()`)
+- **Involved Features:** All features present in `X_test`, `id` from `processed_test.csv`
+- **Parameters:** None (use default prediction settings unless specified)
+
+Expected output or Impact on data:
+- **Predictions:** Predicted `type` labels for each entry in `X_test`.
+- **Submission File:** A CSV file (`submission.csv`) containing two columns:
+  - `id`: Corresponding to each test data point.
+  - `type`: Predicted category (`Ghoul`, `Goblin`, or `Ghost`).
+- **Impact:** Produces a compliant and accurate submission file ready for competition evaluation, ensuring correct alignment between `id`s and their corresponding predictions.
+
+Constraints:
+- Adhere strictly to the competition's CSV structure requirements, including correct column names and data types.
+- Maintain accurate alignment between `id`s and predicted `type` labels to prevent mismatches in the submission.
+- Perform sanity checks on the submission file to ensure format compliance and data accuracy.
+
+---

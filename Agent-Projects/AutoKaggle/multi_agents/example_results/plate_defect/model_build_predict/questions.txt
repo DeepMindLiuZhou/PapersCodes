@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What models were trained during this phase, and what were their respective AUC scores on the validation set?
+
+### Question 2
+What preprocessing steps were applied to the training and test datasets, and were there any inconsistencies encountered?
+
+### Question 3
+Which features had the most significant impact on model performance, and how did you determine their importance?
+
+### Question 4
+Were there any challenges faced during model training or validation, and how were they addressed?
+
+### Question 5
+What are the predicted probabilities for each defect category in the test set, and how do they compare to the expected distributions?
+
+### Question 6
+What recommendations can be made for potential next steps in model improvement or for preparing for deployment based on the current findings?

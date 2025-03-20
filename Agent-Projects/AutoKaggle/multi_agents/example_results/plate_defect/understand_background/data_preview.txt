@@ -1,0 +1,74 @@
+# Data Information
+
+## Data Type
+### ID type
+- `id` (Unique identifier for each data point)
+
+### Numerical type
+- `X_Minimum`
+- `X_Maximum`
+- `Y_Minimum`
+- `Y_Maximum`
+- `Pixels_Areas`
+- `X_Perimeter`
+- `Y_Perimeter`
+- `Sum_of_Luminosity`
+- `Minimum_of_Luminosity`
+- `Maximum_of_Luminosity`
+- `Length_of_Conveyer`
+- `Steel_Plate_Thickness`
+- `Edges_Index`
+- `Empty_Index`
+- `Square_Index`
+- `Outside_X_Index`
+- `Edges_X_Index`
+- `Edges_Y_Index`
+- `Outside_Global_Index`
+- `LogOfAreas`
+- `Log_X_Index`
+- `Log_Y_Index`
+- `Orientation_Index`
+- `Luminosity_Index`
+- `SigmoidOfAreas`
+
+### Categorical type
+- `TypeOfSteel_A300`
+- `TypeOfSteel_A400`
+- `Pastry`
+- `Z_Scratch`
+- `K_Scatch`
+- `Stains`
+- `Dirtiness`
+- `Bumps`
+- `Other_Faults`
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of training and test data containing various features related to steel plate quality analysis. Each data point includes both numerical and categorical features that might be indicative of the quality of the steel plates. Numerical features represent measurements such as minimum and maximum coordinates, pixel areas, luminosity values, and indices related to edges and shapes. Categorical features indicate the presence of various faults or types of steel.
+
+The training data contains labels for different types of faults, while the test data does not. The target variables (faults) include `Pastry`, `Z_Scratch`, `K_Scatch`, `Stains`, `Dirtiness`, `Bumps`, and `Other_Faults`. 
+
+Notably, the dataset appears to contain a mix of normal and defective samples, providing a basis for classification tasks. 
+
+## Target Variable
+The target variables are:
+- `Pastry`: Indicates the presence of pastry-like defects.
+- `Z_Scratch`: Indicates the presence of Z-scratch defects.
+- `K_Scatch`: Indicates the presence of K-scatch defects.
+- `Stains`: Indicates the presence of stains on the steel plate.
+- `Dirtiness`: Indicates dirtiness present on the steel plate surface.
+- `Bumps`: Indicates the presence of bumps on the steel plate.
+- `Other_Faults`: Indicates any other types of faults not classified above.
+
+# Submission format (if applicable)
+The submission file should consist of the following columns:
+- `id` (int): Unique identifier for each data point.
+- `Pastry` (int): Binary indicator (0 or 1) for the presence of pastry defects.
+- `Z_Scratch` (int): Binary indicator (0 or 1) for the presence of Z-scratch defects.
+- `K_Scatch` (int): Binary indicator (0 or 1) for the presence of K-scatch defects.
+- `Stains` (int): Binary indicator (0 or 1) for the presence of stains.
+- `Dirtiness` (int): Binary indicator (0 or 1) for the presence of dirtiness.
+- `Bumps` (int): Binary indicator (0 or 1) for the presence of bumps.
+- `Other_Faults` (int): Binary indicator (0 or 1) for the presence of other faults.

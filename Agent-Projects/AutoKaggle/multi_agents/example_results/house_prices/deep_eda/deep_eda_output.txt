@@ -1,0 +1,82 @@
+           SalePrice       LotArea  ...  OverallQual    YearBuilt
+count    1460.000000   1460.000000  ...  1460.000000  1460.000000
+mean   180921.195890   9647.388014  ...     6.099315  1971.267808
+std     79442.502883   3594.356399  ...     1.382997    30.202904
+min     34900.000000   1481.500000  ...     1.000000  1872.000000
+25%    129975.000000   7553.500000  ...     5.000000  1954.000000
+50%    163000.000000   9478.500000  ...     6.000000  1973.000000
+75%    214000.000000  11601.500000  ...     7.000000  2000.000000
+max    755000.000000  17673.500000  ...    10.000000  2010.000000
+
+[8 rows x 6 columns]
+
+Frequency of categories in MSZoning:
+MSZoning
+RL         1151
+RM          218
+FV           65
+RH           16
+C (all)      10
+Name: count, dtype: int64
+
+Frequency of categories in Neighborhood:
+Neighborhood
+NAmes      225
+CollgCr    150
+OldTown    113
+Edwards    100
+Somerst     86
+Gilbert     79
+NridgHt     77
+Sawyer      74
+NWAmes      73
+SawyerW     59
+BrkSide     58
+Crawfor     51
+Mitchel     49
+NoRidge     41
+Timber      38
+IDOTRR      37
+ClearCr     28
+StoneBr     25
+SWISU       25
+MeadowV     17
+Blmngtn     17
+BrDale      16
+Veenker     11
+NPkVill      9
+Blueste      2
+Name: count, dtype: int64
+
+Frequency of categories in BldgType:
+BldgType
+1Fam      1220
+TwnhsE     114
+Duplex      52
+Twnhs       43
+2fmCon      31
+Name: count, dtype: int64
+
+Frequency of categories in HouseStyle:
+HouseStyle
+1Story    726
+2Story    445
+1.5Fin    154
+SLvl       65
+SFoyer     37
+1.5Unf     14
+2.5Unf     11
+2.5Fin      8
+Name: count, dtype: int64
+   OverallQual  YearBuilt     mean  count
+0            1       1922  61000.0      1
+1            1       1946  39300.0      1
+2            2       1920  60000.0      1
+3            2       1936  60000.0      1
+4            2       1949  35311.0      1
+
+    1. Consider `OverallQual` as a significant predictor for `SalePrice`.
+    2. Create interaction features between `OverallQual` and `YearBuilt`.
+    3. Consider neighborhood-based features, as `Neighborhood` shows significant variance in `SalePrice`.
+    4. Engineer features to capture the overall property size, combining `GrLivArea`, `TotalBsmtSF`, and `LotArea`.
+    

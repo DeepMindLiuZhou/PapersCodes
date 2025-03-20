@@ -1,0 +1,60 @@
+# Competition Information
+## 1. Competition Overview
+The "bank_churn" competition is a binary classification challenge aimed at predicting whether a bank customer will continue their account or close it (churn). It is part of the Kaggle Playground Series, designed to help participants practice machine learning skills using synthetic datasets. The competition runs from January 2, 2024, to February 1, 2024, with submissions evaluated based on the area under the ROC curve (AUC).
+
+## 2. Files
+- **train.csv**: Contains the training dataset with features and the binary target variable `Exited`.
+- **test.csv**: Contains the test dataset without the target variable; participants must predict the probability of `Exited`.
+- **sample_submission.csv**: A template illustrating the required format for submissions.
+
+## 3. Problem Definition
+The objective is to predict the likelihood of customer churn (whether a customer exits the bank) based on various features. Participants must develop a model that outputs predicted probabilities for the `Exited` variable in the test set.
+
+## 4. Data Information
+### 4.1 Data type
+#### 4.1.1 ID type
+- `id`: Unique identifier for each entry.
+- `CustomerId`: Unique identifier for each customer.
+  
+#### 4.1.2 Numerical type
+- `CreditScore`
+- `Age`
+- `Tenure`
+- `Balance`
+- `NumOfProducts`
+- `HasCrCard`
+- `IsActiveMember`
+- `EstimatedSalary`
+- `Exited` (only in training data)
+
+#### 4.1.3 Categorical type
+- `Geography`
+- `Gender`
+
+#### 4.1.4 Datetime type
+- None.
+
+### 4.2 Detailed data description
+The dataset comprises customer information, including demographic details, banking behavior, and account status. Most customers have credit scores between 580 and 750, are primarily from France, and have ages ranging from 22 to 47 years.
+
+## 5. Target Variable
+The target variable is `Exited`, indicating whether a customer has churned (1) or not (0).
+
+## 6. Evaluation Metrics
+The evaluation metric for the competition is the area under the ROC curve (AUC), which assesses the model's ability to distinguish between exited and non-exited customers.
+
+## 7. Submission Format
+The submission file must include:
+- **Columns**: `id`, `Exited`
+- **Format**:
+```
+id,Exited
+165034,0.9
+165035,0.1
+165036,0.5
+```
+
+## 8. Other Key Aspects
+- The dataset is synthetically generated, allowing a balance between realism and integrity for the competition.
+- Participants are encouraged to explore feature relationships and apply various feature engineering techniques for better model performance.
+- The original bank customer churn dataset can be used for additional insights and feature comparisons.

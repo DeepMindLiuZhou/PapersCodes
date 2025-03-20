@@ -1,0 +1,60 @@
+# Data Information
+## Data Type
+### ID type
+- `id`
+
+### Numerical type
+- `bone_length`
+- `rotting_flesh`
+- `hair_length`
+- `has_soul`
+
+### Categorical type
+- `color`
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of both training and testing data related to different creature types. 
+
+- **ID**: Each data point is uniquely identified by the `id` column.
+  
+- **Numerical Features**:
+  - `bone_length`: Ranges approximately between 0.28 to 0.78, indicating variability in bone length among creatures.
+  - `rotting_flesh`: Values range from about 0.14 to 0.88, suggesting varying levels of flesh decomposition.
+  - `hair_length`: Varies between approximately 0.17 to 0.81, showing differences in hair length.
+  - `has_soul`: Values range from 0.10 to 0.88, representing the presence or absence of a soul on a scale.
+  
+- **Categorical Feature**:
+  - `color`: Includes categories such as 'black', 'green', 'clear', 'white', and 'blue', reflecting the color diversity among creatures.
+
+Notable patterns include:
+- **Ghoul**: Typically associated with higher `has_soul` values and colors like 'clear' and 'black'.
+- **Goblin**: Often linked with 'green', 'white', and 'black' colors and varying `has_soul` values.
+- **Ghost**: Generally associated with 'green', 'blue', 'clear', and 'white' colors with lower `has_soul` values.
+
+The distribution of numerical features shows a wide range, indicating diversity in physical and metaphysical attributes among different creature types.
+
+## Target Variable
+- **`type`**: This is the target variable representing the category of each creature. The possible classes are:
+  - `Ghoul`
+  - `Goblin`
+  - `Ghost`
+
+The goal is to predict the `type` of a creature based on its physical and metaphysical attributes.
+
+# Submission format
+The submission file should be in CSV format containing the following columns:
+
+- `id` (Integer): Unique identifier for each test data point.
+- `type` (String): Predicted class label for each creature (`Ghoul`, `Goblin`, or `Ghost`).
+
+**Example:**
+```csv
+id,type
+3,Ghoul
+6,Goblin
+9,Ghost
+...
+```

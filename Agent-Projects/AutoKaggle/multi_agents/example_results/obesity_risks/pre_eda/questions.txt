@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What datasets were processed, and what preliminary statistics were generated for both the training and testing datasets?
+
+### Question 2
+Which features exhibited missing values, and what were their respective proportions?
+
+### Question 3
+What outliers were identified in the numerical features, and which features were most affected?
+
+### Question 4
+What inconsistencies or anomalies were found in categorical features, particularly in their value distributions?
+
+### Question 5
+Were there any notable correlations or patterns observed among the features that could influence data cleaning decisions?
+
+### Question 6
+What specific recommendations or actions should be taken in the Data Cleaning phase based on the findings from the Preliminary Exploratory Data Analysis?

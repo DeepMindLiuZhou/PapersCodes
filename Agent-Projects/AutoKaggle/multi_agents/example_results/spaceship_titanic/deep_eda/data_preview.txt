@@ -1,0 +1,53 @@
+# Data Information
+
+## Data Type
+
+### ID type
+- PassengerId
+
+### Numerical type
+- Age
+- RoomService
+- FoodCourt
+- ShoppingMall
+- Spa
+- VRDeck
+
+### Categorical type
+- HomePlanet
+- CryoSleep
+- Cabin
+- Destination
+- VIP
+- Name
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of information about passengers on a space transport journey. The data include both categorical and numerical features that describe various aspects of the passengers' journey and personal details. Here are some notable patterns and characteristics observed in the data:
+
+- **HomePlanet:** The passengers come from different planets, primarily Earth and Europa.
+- **CryoSleep:** This boolean feature indicates whether passengers were in cryosleep during the journey.
+- **Cabin:** The cabin feature is a combination of three values (deck/num/side).
+- **Destination:** The primary destinations are TRAPPIST-1e and 55 Cancri e.
+- **Age:** Ages range from 14 to 58 based on the provided sample.
+- **VIP:** Indicates whether the passenger has VIP status.
+- **Expenditure Features (RoomService, FoodCourt, ShoppingMall, Spa, VRDeck):** These features represent the amount spent by passengers on different services during the journey. The values vary significantly, with some passengers spending nothing, while others have notable amounts in these categories.
+
+## Target Variable
+- **Transported:** This boolean feature indicates whether the passenger was transported to another dimension during the journey.
+
+# Submission format (if applicable)
+The submission file should contain the following columns:
+- **PassengerId** (string): Unique identifier for each passenger.
+- **Transported** (boolean): Indicates whether the passenger was transported to another dimension.
+
+Example submission format:
+```
+PassengerId,Transported
+0001_01,False
+0002_01,True
+...
+```
+```

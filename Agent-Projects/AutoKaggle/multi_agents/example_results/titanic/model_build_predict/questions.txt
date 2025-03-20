@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What models were trained during this phase, and which one performed the best based on validation metrics?
+
+### Question 2
+What were the key performance metrics for the selected model, and how do they compare to the other models tested?
+
+### Question 3
+Were there any significant features that contributed to model predictions? Which features were identified as the most impactful?
+
+### Question 4
+How did you ensure that the training and test datasets were consistent in terms of features?
+
+### Question 5
+What were the limitations encountered during model training and validation, and how did they influence the results?
+
+### Question 6
+What recommendations do you have for future work based on the findings from this phase?

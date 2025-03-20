@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What statistical insights did you gather from the numerical features, and how do these insights inform potential transformations or new feature creation?
+
+### Question 4
+How did the categorical features correlate with the target variable `Exited`, and what potential new categorical features could be derived from these insights?
+
+### Question 5
+What were the key interactions observed between pairs of features, and how could these interactions be expressed as new features?
+
+### Question 6
+Based on the findings from correlation analysis, which features should be prioritized for engineering, and what specific transformations would optimize their predictive power?

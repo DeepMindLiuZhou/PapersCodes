@@ -1,0 +1,53 @@
+# Data Information
+## Data Type
+### ID type
+- `id`
+- `CustomerId`
+
+### Numerical type
+- `CreditScore`
+- `Age`
+- `Tenure`
+- `Balance`
+- `NumOfProducts`
+- `HasCrCard`
+- `IsActiveMember`
+- `EstimatedSalary`
+- `Exited` (in training data only)
+
+### Categorical type
+- `Geography`
+- `Gender`
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of customer information from a bank, with both training and test sets. The training set includes features such as credit score, geographic location, gender, age, tenure with the bank, account balance, number of products held, credit card status, membership status, estimated salary, and the target variable indicating whether the customer exited. 
+
+- The `Exited` variable in the training data is binary, indicating whether a customer has left the bank (1) or remained (0).
+- Most customers have a credit score between 580 and 750.
+- The majority of customers are male, with a notable representation of females as well.
+- Customers are primarily from France, with some from Spain and Germany.
+- Age ranges from 22 to 47 years, with most customers in their 30s and 40s.
+- The balance of accounts varies widely, with many customers showing a balance of 0. 
+
+## Target Variable
+The target variable is `Exited`, which indicates if a customer has exited (1) or not (0). This is crucial for predictive modeling to assess customer retention or churn.
+
+# Submission format (if applicable)
+The submission file for predictions should include the following columns:
+- `id` (int)
+- `CustomerId` (int)
+- `Surname` (string)
+- `CreditScore` (int)
+- `Geography` (string)
+- `Gender` (string)
+- `Age` (float)
+- `Tenure` (int)
+- `Balance` (float)
+- `NumOfProducts` (int)
+- `HasCrCard` (int)
+- `IsActiveMember` (int)
+- `EstimatedSalary` (float)
+- `Exited` (int, only for training data)

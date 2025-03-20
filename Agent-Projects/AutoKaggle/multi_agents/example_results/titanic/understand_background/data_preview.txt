@@ -1,0 +1,49 @@
+# Data Information
+## Data Type
+### ID type
+- PassengerId
+
+### Numerical type
+- Age
+- SibSp (Number of siblings/spouses aboard)
+- Parch (Number of parents/children aboard)
+- Fare
+
+### Categorical type
+- Survived (0 = No, 1 = Yes)
+- Pclass (Passenger class: 1, 2, 3)
+- Name
+- Sex
+- Ticket
+- Cabin
+- Embarked (C = Cherbourg, Q = Queenstown, S = Southampton)
+
+### Datetime type
+- None
+
+## Detailed data description
+The dataset consists of two parts: training data and test data. The training data contains 10 samples with features such as passenger class, name, sex, age, number of siblings/spouses aboard (SibSp), number of parents/children aboard (Parch), ticket number, fare paid, cabin number, and embarkation port. The ages vary, with some missing values. Most passengers are male and belong to different passenger classes, with a notable number of survivors (1) and non-survivors (0) in the training set. The fare values exhibit a wide range, indicating varying levels of ticket prices.
+
+The test data also follows a similar structure but lacks the 'Survived' target variable. It contains 10 samples and similarly includes both male and female passengers across different ages and classes. 
+
+Notable patterns in the training data include:
+- Higher survival rates among females and first-class passengers.
+- Missing age data for certain passengers, which may require imputation or special handling in modeling.
+
+## Target Variable
+The target variable is 'Survived', which indicates whether a passenger survived the disaster (1) or not (0). This binary classification is essential for understanding the factors that contributed to survival.
+
+# Submission format (if applicable)
+The submission file should include the following columns:
+- PassengerId (ID type)
+- Survived (Predicted survival status: 0 or 1)
+- Pclass (Categorical)
+- Name (Categorical)
+- Sex (Categorical)
+- Age (Numerical)
+- SibSp (Numerical)
+- Parch (Numerical)
+- Ticket (Categorical)
+- Fare (Numerical)
+- Cabin (Categorical)
+- Embarked (Categorical)

@@ -1,0 +1,18 @@
+## QUESTIONS
+### Question 1
+What files did you process? Which files were generated? Answer with detailed file path.
+
+### Question 2
+Which features were involved in this phase? What changes did they undergo? If any feature types were modified, answer which features are modified and how they are modified. If any features were deleted or created, answer which features are deleted or created and provide detailed explanations. (This is a FIXED question for each phase.)
+
+### Question 3
+What new features were created during this phase, and how do they enhance the dataset?
+
+### Question 4
+What transformations were applied to existing features, and what are the implications of these transformations?
+
+### Question 5
+How were categorical variables handled, and what encoding techniques were used?
+
+### Question 6
+What challenges or constraints were encountered during feature engineering, and how might they affect model building?
